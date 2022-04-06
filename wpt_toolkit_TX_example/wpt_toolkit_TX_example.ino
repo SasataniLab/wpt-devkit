@@ -20,6 +20,20 @@ void setup()
   bool i2c_found;
   pinMode(DCDC_ENABLE, OUTPUT);
   digitalWrite(DCDC_ENABLE, LOW);
+  // スリープ中の消費電力を最小限に抑えるために、
+  //  i) 出力ピンは電流を供給なし
+  // ii) 入力ピンは一定
+  // にする。
+  // i) ii) を実現する簡単な方法は、内部プルアップ抵抗を有効にすること。
+  for( int i = 0; i < 20; i++ )
+  {
+    pinMode(i, INPUT_PULLUP);
+  }
+
+  // LEDピンのセットアップ
+  pinMode( LEDPIN, OUTPUT );
+  digitalWrite( LEDPIN, LOW );
+
 
   Serial.begin(57600);
   i2c_found = si5351.init(SI5351_CRYSTAL_LOAD_8PF, 0, 0);
@@ -61,7 +75,7 @@ void loop()
     Current[i] = Sense.GetSenseVoltage(i); //Get sensing voltage
     // Current[i] = Sense.GetCurrent(i, ResVals[i]); //Get calculated current
   }
-  sprintf(Data, "Vbus1 = %dmV\tVsense1 = %+dmA\tVbus2 = %dmV\tVsense2 = %+dmA\n", int(Bus[0]*1000.0), int(Current[0]/ResVals[0]*1000), int(Bus[1]*1000.0), int(Current[1]/ResVals[1]*1000)); //Format string for sufficient resolution for each value and +/- indication for clarity on current 
+  sprintf(Data, "Vbus1 = %dmV\tAbus1 = %+dmA\tVbus2 = %dmV\tAbus2 = %+dmA\n", int(Bus[0]*1000.0), int(Current[0]/ResVals[0]*1000), int(Bus[1]*1000.0), int(Current[1]/ResVals[1]*1000)); //Format string for sufficient resolution for each value and +/- indication for clarity on current 
   Serial.print(Data); //Print out preformatted data string
   // Serial.println(Current[0], 8); //DEBUG!
   delay(Period);
