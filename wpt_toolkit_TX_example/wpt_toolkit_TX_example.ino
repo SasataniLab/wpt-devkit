@@ -66,7 +66,7 @@ void loop()
   // Serial.println(Current[0], 8); //DEBUG!
   delay(Period);
   
-  Sleep();
+  //Sleep();
   
 
 }
