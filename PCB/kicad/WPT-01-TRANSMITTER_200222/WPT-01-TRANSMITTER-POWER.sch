@@ -1,0 +1,3118 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 2 3
+Title ""
+Date "2020-02-19"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L microchip:MCP45HV51-104E_ST U204
+U 1 1 5C909DC9
+P 4500 6450
+F 0 "U204" H 4500 7244 40  0000 C CNN
+F 1 "MCP45HV51-104E_ST" H 4500 7168 40  0000 C CNN
+F 2 "Housings_SSOP:TSSOP-14_4.4x5mm_P0.65mm" H 4500 6400 20  0001 C CNN
+F 3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en569827" H 4500 6450 50  0001 C CNN
+F 4 "microchip" H 4500 6450 40  0001 C CNN "Manufacturer"
+F 5 "MCP45HV51-104E_ST" H 4500 6450 40  0001 C CNN "Manufacturer Part Number"
+	1    4500 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L TensilityInternationalCorp:54-00129 J201
+U 1 1 5C90F2FC
+P 1550 3000
+F 0 "J201" H 1628 3325 50  0000 C CNN
+F 1 "54-00129" H 1628 3234 50  0000 C CNN
+F 2 "Tensility_International_Corp:54-00129" H 1600 2960 50  0001 C CNN
+F 3 "http://www.tensility.com/pdffiles/54-00129.pdf" H 1600 2960 50  0001 C CNN
+F 4 "Tensility International Corp" H 1650 3310 50  0001 C CNN "Manufacturer"
+F 5 "54-00129" H 1750 3410 50  0001 C CNN "Manufacturer Part Number"
+	1    1550 3000
+	1    0    0    -1  
+$EndComp
+Text Label 5250 10150 0    50   ~ 0
+PWRGD_5V
+$Comp
+L yageo:RC0402FR-0710KL R?
+U 1 1 5C98F68D
+P 5750 9950
+AR Path="/5D28FBB5/5C98F68D" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5C98F68D" Ref="R234"  Part="1" 
+F 0 "R234" V 5699 9998 40  0000 L CNN
+F 1 "10kF" V 5775 9998 40  0000 L CNN
+F 2 "yageo:R_0402" H 5750 9880 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 5750 10030 30  0001 C CNN
+F 4 "1005" V 5826 9998 10  0000 L CNN "Size"
+F 5 "Yageo" H 5950 10050 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0710KL" H 6000 10100 50  0001 C CNN "Manufacturer Part Number"
+	1    5750 9950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5750 10000 5750 10150
+Wire Wire Line
+	5200 10150 5750 10150
+Wire Wire Line
+	5750 9800 5750 9900
+Text Label 5250 3950 0    50   ~ 0
+PWRGD_HV
+$Comp
+L yageo:RC0402FR-0710KL R?
+U 1 1 5C9E1526
+P 5750 3750
+AR Path="/5D28FBB5/5C9E1526" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5C9E1526" Ref="R212"  Part="1" 
+F 0 "R212" V 5699 3798 40  0000 L CNN
+F 1 "10kF" V 5775 3798 40  0000 L CNN
+F 2 "yageo:R_0402" H 5750 3680 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 5750 3830 30  0001 C CNN
+F 4 "1005" V 5826 3798 10  0000 L CNN "Size"
+F 5 "Yageo" H 5950 3850 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0710KL" H 6000 3900 50  0001 C CNN "Manufacturer Part Number"
+	1    5750 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5750 3800 5750 3950
+Wire Wire Line
+	5750 3600 5750 3700
+Connection ~ 2550 2900
+Wire Wire Line
+	4900 5900 5150 5900
+Wire Wire Line
+	4900 6100 5150 6100
+Wire Wire Line
+	5150 6100 5150 6150
+$Comp
+L power:GND #PWR0220
+U 1 1 5CA12F12
+P 5150 6150
+F 0 "#PWR0220" H 5150 5900 50  0001 C CNN
+F 1 "GND" H 5050 6050 40  0000 C CNN
+F 2 "" H 5150 6150 50  0001 C CNN
+F 3 "" H 5150 6150 50  0001 C CNN
+	1    5150 6150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0222
+U 1 1 5CA12F7D
+P 4000 6200
+F 0 "#PWR0222" H 4000 5950 50  0001 C CNN
+F 1 "GND" H 3900 6100 40  0000 C CNN
+F 2 "" H 4000 6200 50  0001 C CNN
+F 3 "" H 4000 6200 50  0001 C CNN
+	1    4000 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 6200 4000 6100
+Wire Wire Line
+	4000 6100 4100 6100
+Wire Wire Line
+	4900 6450 5000 6450
+Wire Wire Line
+	5000 6450 5000 6350
+Connection ~ 5000 6350
+Wire Wire Line
+	5000 6350 4900 6350
+Wire Wire Line
+	4100 5900 4000 5900
+$Comp
+L murata:GCM155R71H104KE02D C209
+U 1 1 5CA565F6
+P 4000 6000
+F 0 "C209" H 3850 6100 40  0000 C CNN
+F 1 "0.1u/50(X7R)" H 4000 6050 40  0000 C CNN
+F 2 "murata:GRM15" H 4150 6038 20  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx" H 4000 6000 20  0001 C CNN
+F 4 "1005" H 4050 5975 10  0000 C CNN "Size"
+F 5 "Murata Electronics " H 4200 6300 50  0001 C CNN "Manufacturer"
+F 6 "GCM155R71H104KE02D" H 4300 6400 50  0001 C CNN "Manufacturer Part Number"
+	1    4000 6000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4000 5950 4000 5900
+Connection ~ 4000 5900
+Wire Wire Line
+	4000 6050 4000 6100
+Connection ~ 4000 6100
+Wire Wire Line
+	4100 6650 4000 6650
+Wire Wire Line
+	4000 6650 4000 6750
+Wire Wire Line
+	4000 6750 4100 6750
+Wire Wire Line
+	4000 6750 4000 6800
+Connection ~ 4000 6750
+$Comp
+L power:GND #PWR0226
+U 1 1 5CA9DF35
+P 4000 6800
+F 0 "#PWR0226" H 4000 6550 50  0001 C CNN
+F 1 "GND" H 3900 6700 40  0000 C CNN
+F 2 "" H 4000 6800 50  0001 C CNN
+F 3 "" H 4000 6800 50  0001 C CNN
+	1    4000 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 7050 3800 7050
+Wire Wire Line
+	3800 7050 3800 6800
+Wire Wire Line
+	9400 2600 9400 2500
+$Comp
+L power:VPP #PWR?
+U 1 1 5CAECF17
+P 9400 2500
+AR Path="/5D28FBB5/5CAECF17" Ref="#PWR?"  Part="1" 
+AR Path="/5D26E750/5CAECF17" Ref="#PWR0204"  Part="1" 
+F 0 "#PWR0204" H 9400 2350 50  0001 C CNN
+F 1 "VPP" H 9415 2673 50  0000 C CNN
+F 2 "" H 9400 2500 50  0001 C CNN
+F 3 "" H 9400 2500 50  0001 C CNN
+	1    9400 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1850 3350 1850
+$Comp
+L power:GND #PWR0206
+U 1 1 5CB370C9
+P 13050 2850
+F 0 "#PWR0206" H 13050 2600 50  0001 C CNN
+F 1 "GND" H 13050 2700 40  0000 C CNN
+F 2 "" H 13050 2850 50  0001 C CNN
+F 3 "" H 13050 2850 50  0001 C CNN
+	1    13050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0207
+U 1 1 5CB372B2
+P 14600 2850
+F 0 "#PWR0207" H 14600 2600 50  0001 C CNN
+F 1 "GND" H 14600 2700 40  0000 C CNN
+F 2 "" H 14600 2850 50  0001 C CNN
+F 3 "" H 14600 2850 50  0001 C CNN
+	1    14600 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 3100 2150 3200
+$Comp
+L power:GND #PWR0208
+U 1 1 5CB7CB7C
+P 2150 3200
+F 0 "#PWR0208" H 2150 2950 50  0001 C CNN
+F 1 "GND" H 2150 3050 50  0000 C CNN
+F 2 "" H 2150 3200 50  0001 C CNN
+F 3 "" H 2150 3200 50  0001 C CNN
+	1    2150 3200
+	1    0    0    -1  
+$EndComp
+Text Notes 550  3100 0    50   ~ 0
+12-24V DC Input
+Text Label 15250 1150 2    50   ~ 0
+VIN
+Text Notes 14250 1150 0    50   ~ 0
+VIN
+Text Notes 13150 1450 0    50   ~ 0
+GND
+Text Notes 14250 1450 0    50   ~ 0
+5V
+Text Notes 14250 2450 0    50   ~ 0
+3.3V
+Text Notes 13150 1350 0    50   ~ 0
+RESET
+Text Notes 14250 2250 0    50   ~ 0
+A0
+Text Notes 14250 2150 0    50   ~ 0
+A1
+Text Notes 14250 2050 0    50   ~ 0
+A2
+Text Notes 14250 1950 0    50   ~ 0
+A3
+Text Notes 13150 1250 0    50   ~ 0
+D0(RX)
+Text Notes 13150 1150 0    50   ~ 0
+D1(TX)
+Text Notes 13150 1550 0    50   ~ 0
+D2
+Text Notes 13150 1650 0    50   ~ 0
+D3
+Text Notes 13150 1750 0    50   ~ 0
+D4
+Text Notes 13150 1850 0    50   ~ 0
+D5
+Text Notes 13150 1950 0    50   ~ 0
+D6
+Text Notes 13150 2050 0    50   ~ 0
+D7
+Text Notes 13150 2150 0    50   ~ 0
+D8
+Text Notes 13150 2250 0    50   ~ 0
+D9
+Text Notes 13150 2350 0    50   ~ 0
+D10
+Text Notes 13150 2450 0    50   ~ 0
+D11
+Text Notes 13150 2550 0    50   ~ 0
+D12
+Text Notes 14250 2550 0    50   ~ 0
+D13
+Text Notes 14250 1250 0    50   ~ 0
+GND
+Text Notes 14250 2350 0    50   ~ 0
+AREF
+Text Notes 14250 1850 0    50   ~ 0
+SDA/A4
+Text Notes 14250 1750 0    50   ~ 0
+SCL/A5
+Wire Wire Line
+	5150 5400 2550 5400
+Wire Wire Line
+	2550 2900 2550 5400
+Wire Wire Line
+	5150 5400 5150 5900
+Wire Wire Line
+	7550 2200 7550 2600
+Wire Wire Line
+	7550 2600 7400 2600
+Wire Wire Line
+	7650 2200 7650 2600
+Wire Wire Line
+	2350 9250 2350 9350
+$Comp
+L power:GND #PWR0237
+U 1 1 5CE6D04A
+P 2350 9350
+F 0 "#PWR0237" H 2350 9100 50  0001 C CNN
+F 1 "GND" H 2350 9200 40  0000 C CNN
+F 2 "" H 2350 9350 50  0001 C CNN
+F 3 "" H 2350 9350 50  0001 C CNN
+	1    2350 9350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 8800 7550 8800
+Text Label 12350 1550 0    50   ~ 0
+HVDCDC_EN
+Text Label 15250 1850 2    50   ~ 0
+SDA
+Text Label 14050 7100 0    50   ~ 0
+SCL
+Text Label 14050 7000 0    50   ~ 0
+SDA
+$Comp
+L power:+5V #PWR0219
+U 1 1 5D220505
+P 4000 5600
+F 0 "#PWR0219" H 4000 5450 50  0001 C CNN
+F 1 "+5V" H 4015 5766 40  0000 C CNN
+F 2 "" H 4000 5600 50  0001 C CNN
+F 3 "" H 4000 5600 50  0001 C CNN
+	1    4000 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0225
+U 1 1 5D220641
+P 3800 6800
+F 0 "#PWR0225" H 3800 6650 50  0001 C CNN
+F 1 "+5V" H 3815 6966 40  0000 C CNN
+F 2 "" H 3800 6800 50  0001 C CNN
+F 3 "" H 3800 6800 50  0001 C CNN
+	1    3800 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 7250 2550 7250
+Wire Wire Line
+	2550 7250 2550 5400
+Connection ~ 2550 5400
+Wire Wire Line
+	2250 7350 2550 7350
+Wire Wire Line
+	2550 7350 2550 8800
+Wire Wire Line
+	2250 7450 2350 7450
+Text Notes 1150 9350 0    50   ~ 0
+Throught Hole\nfor External DC Input\n(24-40 V)
+Connection ~ 7550 8800
+Wire Wire Line
+	2250 9150 2350 9150
+Wire Wire Line
+	2350 9150 2350 8950
+Connection ~ 2350 7450
+Wire Wire Line
+	2350 7450 7750 7450
+Wire Wire Line
+	7750 2200 7750 7450
+Wire Wire Line
+	2250 9250 2350 9250
+Text Label 4300 1850 2    50   ~ 0
+ADC_VDC
+Wire Wire Line
+	2900 4200 3400 4200
+Text Label 2900 4200 0    50   ~ 0
+HVDCDC_EN
+Wire Wire Line
+	3100 6950 3400 6950
+Text Label 3100 6450 0    50   ~ 0
+SCL_5V
+Text Label 3100 6550 0    50   ~ 0
+SDA_5V
+Text Label 3100 6950 0    50   ~ 0
+~WLAT
+Wire Notes Line
+	11800 500  11800 3550
+Wire Notes Line
+	11800 3550 16000 3550
+Text Notes 13350 750  0    50   ~ 0
+Through Holes for Extention
+$Comp
+L yageo:RC0402FR-0775KL R201
+U 1 1 5D73856D
+P 3400 1850
+F 0 "R201" H 3400 2038 40  0000 C CNN
+F 1 "75kF" H 3400 1962 40  0000 C CNN
+F 2 "yageo:R_0402" H 3400 1780 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 3400 1930 30  0001 C CNN
+F 4 "1005" H 3400 1911 10  0000 C CNN "Size"
+F 5 "Yageo" H 3600 1950 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0775KL" H 3650 2000 50  0001 C CNN "Manufacturer Part Number"
+	1    3400 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 1850 3650 1850
+$Comp
+L yageo:RC0402FR-073K6L R202
+U 1 1 5D738935
+P 3650 2000
+F 0 "R202" V 3599 2048 40  0000 L CNN
+F 1 "3.6kF" V 3675 2048 40  0000 L CNN
+F 2 "yageo:R_0402" H 3650 1930 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 3650 2080 30  0001 C CNN
+F 4 "1005" V 3726 2048 10  0000 L CNN "Size"
+F 5 "Yageo" H 3850 2100 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-073K6L" H 3900 2150 50  0001 C CNN "Manufacturer Part Number"
+	1    3650 2000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 1950 3650 1850
+Wire Wire Line
+	3650 2050 3650 2150
+$Comp
+L power:GND #PWR0201
+U 1 1 5D7636C7
+P 3650 2150
+F 0 "#PWR0201" H 3650 1900 50  0001 C CNN
+F 1 "GND" H 3550 2050 50  0000 C CNN
+F 2 "" H 3650 2150 50  0001 C CNN
+F 3 "" H 3650 2150 50  0001 C CNN
+	1    3650 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 1850 4300 1850
+Connection ~ 3650 1850
+Text Notes 3550 1700 0    50   ~ 0
+24V full-scale\nADC_VDC = 24 * 3.6k / (3.6k + 75k) = 1.099 V
+NoConn ~ 1850 3000
+$Comp
+L power:PWR_FLAG #FLG0206
+U 1 1 5D9441DA
+P 2900 8800
+F 0 "#FLG0206" H 2900 8875 50  0001 C CNN
+F 1 "PWR_FLAG" H 2900 8966 40  0000 C CNN
+F 2 "" H 2900 8800 50  0001 C CNN
+F 3 "" H 2900 8800 50  0001 C CNN
+	1    2900 8800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 8800 2550 8800
+$Comp
+L power:PWR_FLAG #FLG0203
+U 1 1 5D9AEED0
+P 2150 3100
+F 0 "#FLG0203" H 2150 3175 50  0001 C CNN
+F 1 "PWR_FLAG" H 2150 3266 40  0001 C CNN
+F 2 "" H 2150 3100 50  0001 C CNN
+F 3 "" H 2150 3100 50  0001 C CNN
+	1    2150 3100
+	1    0    0    -1  
+$EndComp
+Connection ~ 2150 3100
+Wire Wire Line
+	1850 2900 2150 2900
+$Comp
+L power:PWR_FLAG #FLG0202
+U 1 1 5D9C583C
+P 2150 2900
+F 0 "#FLG0202" H 2150 2975 50  0001 C CNN
+F 1 "PWR_FLAG" H 2150 3066 40  0001 C CNN
+F 2 "" H 2150 2900 50  0001 C CNN
+F 3 "" H 2150 2900 50  0001 C CNN
+	1    2150 2900
+	1    0    0    -1  
+$EndComp
+Connection ~ 2150 2900
+Wire Wire Line
+	2150 2900 2550 2900
+$Comp
+L power:PWR_FLAG #FLG0201
+U 1 1 5D9C5D09
+P 9150 2600
+F 0 "#FLG0201" H 9150 2675 50  0001 C CNN
+F 1 "PWR_FLAG" H 9150 2766 40  0000 C CNN
+F 2 "" H 9150 2600 50  0001 C CNN
+F 3 "" H 9150 2600 50  0001 C CNN
+	1    9150 2600
+	1    0    0    -1  
+$EndComp
+Connection ~ 9150 2600
+$Comp
+L yageo:RL1206FR-070R027L R205
+U 1 1 5C9A990A
+P 8800 2600
+F 0 "R205" H 8800 2788 40  0000 C CNN
+F 1 "27mF(1/4W)" H 8800 2712 40  0000 C CNN
+F 2 "yageo:R_1206" H 8800 2530 10  0001 C CNN
+F 3 "http://rohmfs.rohm.com/jp/products/databook/datasheet/passive/resistor/chip_resistor/mcr_g-j.pdf" H 8800 2680 10  0001 C CNN
+F 4 "3216" H 8800 2661 10  0000 C CNN "Size"
+F 5 "Yageo" H 9000 2900 50  0001 C CNN "Manufacturer"
+F 6 "RL1206FR-070R027L" H 9100 3000 50  0001 C CNN "Manufacturer Part Number"
+F 7 "Ever Ohms Tech" H 9200 3100 50  0001 C CNN "Substitute Manufacturer"
+F 8 "CR1206F0R027P05" H 9300 3200 50  0001 C CNN "Substitute Manufacturer Part Number"
+	1    8800 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L yageo:RL1206FR-070R027L R226
+U 1 1 5C9A9DAD
+P 9200 8800
+F 0 "R226" H 9200 8750 40  0000 C CNN
+F 1 "27mF(1/4W)" H 9200 8650 40  0000 C CNN
+F 2 "yageo:R_1206" H 9200 8730 10  0001 C CNN
+F 3 "http://rohmfs.rohm.com/jp/products/databook/datasheet/passive/resistor/chip_resistor/mcr_g-j.pdf" H 9200 8880 10  0001 C CNN
+F 4 "3216" H 9200 8861 10  0000 C CNN "Size"
+F 5 "Yageo" H 9400 9100 50  0001 C CNN "Manufacturer"
+F 6 "RL1206FR-070R027L" H 9500 9200 50  0001 C CNN "Manufacturer Part Number"
+F 7 "Ever Ohms Tech" H 9600 9300 50  0001 C CNN "Substitute Manufacturer"
+F 8 "CR1206F0R027P05" H 9700 9400 50  0001 C CNN "Substitute Manufacturer Part Number"
+	1    9200 8800
+	1    0    0    -1  
+$EndComp
+$Comp
+L ulo:ULO-PH409-1*2SF11 J202
+U 1 1 5CA2D8C5
+P 2050 9200
+F 0 "J202" H 2450 9450 50  0000 C CNN
+F 1 "ULO-PH409-1*2SF11" H 2200 9350 50  0000 C CNN
+F 2 "ulo:ULO-PH409-1x2SX1" H 2050 9150 50  0001 C CNN
+F 3 "http://www.ulogroup.com/upload/2013101815053045.pdf" H 2050 9150 50  0001 C CNN
+F 4 "ULO Electronic" H 2150 9450 50  0001 C CNN "Manufacturer"
+F 5 "ULO-PH409-1x2SX1" H 2250 9550 50  0001 C CNN "Manufacturer Part Number"
+	1    2050 9200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L ulo:ULO-PH409-1*3SF11 CN207
+U 1 1 5CA723F2
+P 2050 7350
+F 0 "CN207" H 1969 7665 50  0000 C CNN
+F 1 "ULO-PH409-1*3SF11" H 1969 7574 50  0000 C CNN
+F 2 "ulo:ULO-PH409-1x3SX1" H 2050 7300 50  0001 C CNN
+F 3 "http://www.ulogroup.com/upload/2013101815053045.pdf" H 2050 7300 50  0001 C CNN
+F 4 "ULO Electronics" H 2150 7650 50  0001 C CNN "Manufacturer"
+F 5 "ULO-PH409-1*3SF11" H 2250 7750 50  0001 C CNN "Manufacturer Part Number"
+	1    2050 7350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L ulo:ULO-PH409-1*3SF11 CN203
+U 1 1 5CAB6334
+P 7650 2000
+F 0 "CN203" V 7615 1812 50  0000 R CNN
+F 1 "ULO-PH409-1*3SF11" V 7524 1812 50  0000 R CNN
+F 2 "ulo:ULO-PH409-1x3SX1" H 7650 1950 50  0001 C CNN
+F 3 "http://www.ulogroup.com/upload/2013101815053045.pdf" H 7650 1950 50  0001 C CNN
+F 4 "ULO Electronics" H 7750 2300 50  0001 C CNN "Manufacturer"
+F 5 "ULO-PH409-1*3SF11" H 7850 2400 50  0001 C CNN "Manufacturer Part Number"
+	1    7650 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L murata:BLM18PG330SN1D FB201
+U 1 1 5CB13B2E
+P 7200 2600
+F 0 "FB201" H 7200 2792 40  0000 C CNN
+F 1 "BLM18PG330SN1D" H 7200 2716 40  0000 C CNN
+F 2 "murata:BLM18" H 7200 2600 30  0001 C CNN
+F 3 "http://search.murata.co.jp/Ceramy/image/img/PDF/ENG/L0110S0100BLM18P.pdf" H 7175 2600 60  0001 C CNN
+F 4 "Murata Electronics " H 7300 2800 50  0001 C CNN "Manufacturer"
+F 5 "BLM18PG330SN1D" H 7400 2900 50  0001 C CNN "Manufacturer Part Number"
+	1    7200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L murata:BLM18PG330SN1D FB202
+U 1 1 5CB13FB6
+P 7200 8800
+F 0 "FB202" H 7200 8992 40  0000 C CNN
+F 1 "BLM18PG330SN1D" H 7200 8916 40  0000 C CNN
+F 2 "murata:BLM18" H 7200 8800 30  0001 C CNN
+F 3 "http://search.murata.co.jp/Ceramy/image/img/PDF/ENG/L0110S0100BLM18P.pdf" H 7175 8800 60  0001 C CNN
+F 4 "Murata Electronics " H 7300 9000 50  0001 C CNN "Manufacturer"
+F 5 "BLM18PG330SN1D" H 7400 9100 50  0001 C CNN "Manufacturer Part Number"
+	1    7200 8800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 8800 9800 8750
+Text Notes 6050 2450 0    50   ~ 0
+Vout\n = 24 V(@Rab: 100k ohm)\n = 0.9V(@Rab: 0 ohm)
+Text Notes 5000 6850 0    50   ~ 0
+Full Scale: 100k ohm\n256 tap
+$Comp
+L testpooint:TEST-1 TP210
+U 1 1 5C982131
+P 5750 3950
+F 0 "TP210" V 5800 4050 40  0000 L CNN
+F 1 "TEST-1" V 5850 4050 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 5650 3950 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 5750 3950 50  0001 C CNN
+	1    5750 3950
+	0    1    1    0   
+$EndComp
+Connection ~ 5750 3950
+$Comp
+L testpooint:TEST-1 TP218
+U 1 1 5C98258A
+P 5750 10150
+F 0 "TP218" V 5800 10250 40  0000 L CNN
+F 1 "TEST-1" V 5850 10250 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 5650 10150 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 5750 10150 50  0001 C CNN
+	1    5750 10150
+	0    1    1    0   
+$EndComp
+Connection ~ 5750 10150
+$Comp
+L testpooint:TP1.0 TP208
+U 1 1 5C982D69
+P 2150 2900
+F 0 "TP208" H 2228 2938 40  0000 L CNN
+F 1 "TP1.0" H 2228 2862 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 2050 2900 50  0001 C CNN
+F 3 "" H 2150 2900 50  0000 C CNN
+	1    2150 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L testpooint:TP1.0 TP211
+U 1 1 5C983017
+P 2550 7350
+F 0 "TP211" H 2628 7388 40  0000 L CNN
+F 1 "TP1.0" H 2628 7312 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 2450 7350 50  0001 C CNN
+F 3 "" H 2550 7350 50  0000 C CNN
+	1    2550 7350
+	1    0    0    -1  
+$EndComp
+Connection ~ 2550 7350
+$Comp
+L testpooint:TP1.0 TP216
+U 1 1 5C983179
+P 2350 8950
+F 0 "TP216" H 2450 9000 40  0000 L CNN
+F 1 "TP1.0" H 2450 8950 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 2250 8950 50  0001 C CNN
+F 3 "" H 2350 8950 50  0000 C CNN
+	1    2350 8950
+	1    0    0    -1  
+$EndComp
+$Comp
+L testpooint:TEST-1 TP217
+U 1 1 5C983500
+P 2350 9250
+F 0 "TP217" H 2450 9250 40  0000 L CNN
+F 1 "TEST-1" H 2450 9200 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 2250 9250 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 2350 9250 50  0001 C CNN
+	1    2350 9250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2350 9250
+$Comp
+L testpooint:TEST-1 TP213
+U 1 1 5C9ABB46
+P 9800 9750
+F 0 "TP213" V 9725 9775 40  0000 L CNN
+F 1 "TEST-1" V 9650 9750 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 9700 9750 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 9800 9750 50  0001 C CNN
+	1    9800 9750
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9800 8800
+$Comp
+L testpooint:TEST-1 TP212
+U 1 1 5C9ABFA9
+P 7550 8800
+F 0 "TP212" H 7300 8900 40  0000 L CNN
+F 1 "TEST-1" H 7300 8950 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 7450 8800 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 7550 8800 50  0001 C CNN
+	1    7550 8800
+	-1   0    0    1   
+$EndComp
+$Comp
+L testpooint:TEST-1 TP206
+U 1 1 5C9AC32D
+P 9400 2600
+F 0 "TP206" V 9500 2700 40  0000 L CNN
+F 1 "TEST-1" V 9550 2700 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 9300 2600 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 9400 2600 50  0001 C CNN
+	1    9400 2600
+	0    1    1    0   
+$EndComp
+Connection ~ 9400 2600
+$Comp
+L testpooint:TP1.0 TP201
+U 1 1 5C9D5D79
+P 14850 1750
+F 0 "TP201" H 14600 1800 40  0000 L CNN
+F 1 "TP1.0" H 14900 1800 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 14750 1750 50  0001 C CNN
+F 3 "" H 14850 1750 50  0000 C CNN
+	1    14850 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L testpooint:TP1.0 TP202
+U 1 1 5C9D6051
+P 14850 1850
+F 0 "TP202" H 14600 1800 40  0000 L CNN
+F 1 "TP1.0" H 14900 1800 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 14750 1850 50  0001 C CNN
+F 3 "" H 14850 1850 50  0000 C CNN
+	1    14850 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L testpooint:TP1.0 TP207
+U 1 1 5CA14ECA
+P 12850 1550
+F 0 "TP207" H 12625 1475 40  0000 L CNN
+F 1 "TP1.0" H 12875 1475 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 12750 1550 50  0001 C CNN
+F 3 "" H 12850 1550 50  0000 C CNN
+	1    12850 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L testpooint:TP1.0 TP203
+U 1 1 5CA68F5C
+P 3650 1850
+F 0 "TP203" H 3728 1888 40  0000 L CNN
+F 1 "TP1.0" H 3728 1812 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 3550 1850 50  0001 C CNN
+F 3 "" H 3650 1850 50  0000 C CNN
+	1    3650 1850
+	1    0    0    -1  
+$EndComp
+Text Notes 1300 7300 0    50   ~ 0
+Select by Jumber
+Text Notes 7350 1900 0    50   ~ 0
+Select by Jumber
+$Comp
+L microchip:MIC5504-3.3YM5-TR U206
+U 1 1 5CD0CE85
+P 11050 8900
+F 0 "U206" H 11050 9199 50  0000 C CNN
+F 1 "MIC5504-3.3YM5-TR" H 11050 9115 40  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:microchip_SOT23-5LD-PL-1" H 11050 9025 20  0001 C CNN
+F 3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en580292" H 11050 9025 20  0001 C CNN
+F 4 "Microchip Technology" H 11300 8804 50  0001 C CNN "Manufacturer"
+F 5 "MIC5504-3.3YM5-TR" H 11400 8904 50  0001 C CNN "Manufacturer Part Number"
+	1    11050 8900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 8800 10150 8800
+Wire Wire Line
+	10650 9000 10650 8800
+Wire Wire Line
+	10650 9000 10750 9000
+Connection ~ 10650 8800
+Wire Wire Line
+	10650 8800 10750 8800
+Wire Wire Line
+	11350 8800 11500 8800
+$Comp
+L samsung:CL21B105KBFNNNG C?
+U 1 1 5CD60F8F
+P 11650 8950
+AR Path="/5D28FBB5/5CD60F8F" Ref="C?"  Part="1" 
+AR Path="/5D26E750/5CD60F8F" Ref="C214"  Part="1" 
+F 0 "C214" H 11718 9001 40  0000 L CNN
+F 1 "1u/50(X7R)" H 11718 8925 40  0000 L CNN
+F 2 "murata:GRM21" H 11650 8880 10  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B105KBFNNNG.jsp" H 11650 9030 10  0001 C CNN
+F 4 "2012" H 11718 8874 10  0000 L CNN "Size"
+F 5 "Samsung Electro-Mechanics" H 11850 9250 50  0001 C CNN "Manufacturer"
+F 6 "CL21B105KBFNNNG" H 11950 9350 50  0001 C CNN "Manufacturer Part Number"
+	1    11650 8950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11650 8900 11650 8800
+Connection ~ 11650 8800
+Wire Wire Line
+	11650 9000 11650 9100
+$Comp
+L power:GND #PWR0235
+U 1 1 5CDA096F
+P 11650 9250
+F 0 "#PWR0235" H 11650 9000 50  0001 C CNN
+F 1 "GND" H 11550 9150 40  0000 C CNN
+F 2 "" H 11650 9250 50  0001 C CNN
+F 3 "" H 11650 9250 50  0001 C CNN
+	1    11650 9250
+	1    0    0    -1  
+$EndComp
+$Comp
+L samsung:CL21B105KBFNNNG C?
+U 1 1 5CDB615B
+P 10150 8950
+AR Path="/5D28FBB5/5CDB615B" Ref="C?"  Part="1" 
+AR Path="/5D26E750/5CDB615B" Ref="C213"  Part="1" 
+F 0 "C213" H 10218 9001 40  0000 L CNN
+F 1 "1u/50(X7R)" H 10218 8925 40  0000 L CNN
+F 2 "murata:GRM21" H 10150 8880 10  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B105KBFNNNG.jsp" H 10150 9030 10  0001 C CNN
+F 4 "2012" H 10218 8874 10  0000 L CNN "Size"
+F 5 "Samsung Electro-Mechanics" H 10350 9250 50  0001 C CNN "Manufacturer"
+F 6 "CL21B105KBFNNNG" H 10450 9350 50  0001 C CNN "Manufacturer Part Number"
+	1    10150 8950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 8900 10150 8800
+Wire Wire Line
+	10150 9000 10150 9100
+$Comp
+L power:GND #PWR0232
+U 1 1 5CDB6163
+P 10150 9100
+F 0 "#PWR0232" H 10150 8850 50  0001 C CNN
+F 1 "GND" H 10050 9000 40  0000 C CNN
+F 2 "" H 10150 9100 50  0001 C CNN
+F 3 "" H 10150 9100 50  0001 C CNN
+	1    10150 9100
+	1    0    0    -1  
+$EndComp
+Connection ~ 10150 8800
+Wire Wire Line
+	10150 8800 10650 8800
+Wire Wire Line
+	10750 8900 10700 8900
+Wire Wire Line
+	10700 8900 10700 9100
+$Comp
+L power:GND #PWR0233
+U 1 1 5CDE1BD8
+P 10700 9100
+F 0 "#PWR0233" H 10700 8850 50  0001 C CNN
+F 1 "GND" H 10600 9000 40  0000 C CNN
+F 2 "" H 10700 9100 50  0001 C CNN
+F 3 "" H 10700 9100 50  0001 C CNN
+	1    10700 9100
+	1    0    0    -1  
+$EndComp
+$Comp
+L testpooint:TEST-1 TP214
+U 1 1 5CDE1D2B
+P 11650 8800
+F 0 "TP214" V 11600 8900 40  0000 L CNN
+F 1 "TEST-1" V 11650 8900 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 11550 8800 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 11650 8800 50  0001 C CNN
+	1    11650 8800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3.3V #PWR0231
+U 1 1 5CDE1E3B
+P 11650 8750
+F 0 "#PWR0231" H 11650 8600 50  0001 C CNN
+F 1 "+3.3V" H 11665 8916 40  0000 C CNN
+F 2 "" H 11650 8750 50  0001 C CNN
+F 3 "" H 11650 8750 50  0001 C CNN
+	1    11650 8750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11650 8750 11650 8800
+$Comp
+L testpooint:TEST-1 TP215
+U 1 1 5D023C5E
+P 11650 9100
+F 0 "TP215" V 11650 9200 40  0000 L CNN
+F 1 "TEST-1" V 11700 9200 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 11550 9100 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 11650 9100 50  0001 C CNN
+	1    11650 9100
+	0    1    1    0   
+$EndComp
+Connection ~ 11650 9100
+Wire Wire Line
+	13600 7200 13850 7200
+$Comp
+L power:GND #PWR0209
+U 1 1 5D081A4B
+P 13850 7500
+F 0 "#PWR0209" H 13850 7250 50  0001 C CNN
+F 1 "GND" H 13850 7350 40  0000 C CNN
+F 2 "" H 13850 7500 50  0001 C CNN
+F 3 "" H 13850 7500 50  0001 C CNN
+	1    13850 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13850 7200 13850 7300
+Text Notes 12850 7200 0    50   ~ 0
+Connect to \nReceiver\n(For Debug)
+$Comp
+L microchip:PAC1720-1-AIA-TR U?
+U 1 1 5CA85643
+P 8650 5250
+AR Path="/5CA06761/5CA85643" Ref="U?"  Part="1" 
+AR Path="/5D26E750/5CA85643" Ref="U203"  Part="1" 
+F 0 "U203" H 8650 4733 40  0000 C CNN
+F 1 "PAC1720-1-AIA-TR" H 8650 4657 40  0000 C CNN
+F 2 "Housings_DFN_QFN:DFN-10-1EP_3x3mm_Pitch0.5mm_microchip_9Q" H 8550 4950 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005386B.pdf" H 8650 5250 50  0001 C CNN
+F 4 "microchip" H 8650 5250 40  0001 C CNN "Manufacturer"
+F 5 "PAC1720-1-AIA-TR" H 8650 5250 40  0001 C CNN "Manufacturer Part Number"
+	1    8650 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5250 8000 5150
+Wire Wire Line
+	8000 5150 8100 5150
+Wire Wire Line
+	8000 5550 8100 5550
+Wire Wire Line
+	8000 5350 8000 5550
+Wire Wire Line
+	8000 5550 8000 5650
+Wire Wire Line
+	8000 5650 8100 5650
+Connection ~ 8000 5550
+Wire Wire Line
+	8000 5150 8000 5000
+Connection ~ 8000 5150
+$Comp
+L power:GND #PWR?
+U 1 1 5CA85671
+P 9300 5950
+AR Path="/5CA06761/5CA85671" Ref="#PWR?"  Part="1" 
+AR Path="/5D26E750/5CA85671" Ref="#PWR0228"  Part="1" 
+F 0 "#PWR0228" H 9300 5700 50  0001 C CNN
+F 1 "GND" H 9400 5850 40  0000 C CNN
+F 2 "" H 9300 5950 50  0001 C CNN
+F 3 "" H 9300 5950 50  0001 C CNN
+	1    9300 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 5950 9300 5850
+$Comp
+L power:GND #PWR?
+U 1 1 5CA85678
+P 8000 5950
+AR Path="/5CA06761/5CA85678" Ref="#PWR?"  Part="1" 
+AR Path="/5D26E750/5CA85678" Ref="#PWR0227"  Part="1" 
+F 0 "#PWR0227" H 8000 5700 50  0001 C CNN
+F 1 "GND" H 8100 5850 40  0000 C CNN
+F 2 "" H 8000 5950 50  0001 C CNN
+F 3 "" H 8000 5950 50  0001 C CNN
+	1    8000 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 5950 8000 5650
+Connection ~ 8000 5650
+Wire Wire Line
+	9200 5150 9300 5150
+Wire Wire Line
+	9300 5750 9300 5150
+Wire Wire Line
+	9200 5650 9700 5650
+Wire Wire Line
+	7650 2600 8700 2600
+Wire Wire Line
+	8850 2600 8900 2600
+Wire Wire Line
+	9250 8800 9300 8800
+Wire Wire Line
+	9100 8800 9100 7150
+Wire Wire Line
+	9100 7150 10100 7150
+Wire Wire Line
+	10100 7150 10100 4150
+Connection ~ 9100 8800
+Wire Wire Line
+	9100 8800 9150 8800
+Wire Wire Line
+	10200 7250 9300 7250
+Wire Wire Line
+	9300 7250 9300 8800
+Wire Wire Line
+	10200 4250 10200 7250
+Connection ~ 9300 8800
+Wire Wire Line
+	8700 2600 8700 2900
+Wire Wire Line
+	8700 2900 8750 2900
+Connection ~ 8700 2600
+Wire Wire Line
+	8700 2600 8750 2600
+Connection ~ 8900 2600
+Wire Wire Line
+	8900 2600 9150 2600
+Text Label 9700 5350 2    50   ~ 0
+SCL_5V
+Text Label 9700 5450 2    50   ~ 0
+SDA_5V
+Text Label 9700 5650 2    50   ~ 0
+~ALERT
+$Comp
+L yageo:RC0402FR-070RL R224
+U 1 1 5CB900C8
+P 9300 5800
+F 0 "R224" V 9249 5848 40  0000 L CNN
+F 1 "0" V 9325 5848 40  0000 L CNN
+F 2 "yageo:R_0402" H 9300 5730 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 9300 5880 30  0001 C CNN
+F 4 "1005" V 9376 5848 10  0000 L CNN "Size"
+F 5 "Yageo" H 9500 5900 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-070RL" H 9550 5950 50  0001 C CNN "Manufacturer Part Number"
+	1    9300 5800
+	0    1    1    0   
+$EndComp
+Text Notes 7350 1800 0    50   ~ 0
+Ext. DC Input < 40 V
+$Comp
+L power:+5V #PWR0202
+U 1 1 5CBDDF2C
+P 13850 6550
+F 0 "#PWR0202" H 13850 6400 50  0001 C CNN
+F 1 "+5V" H 13865 6716 40  0000 C CNN
+F 2 "" H 13850 6550 50  0001 C CNN
+F 3 "" H 13850 6550 50  0001 C CNN
+	1    13850 6550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13850 6550 13850 6650
+Wire Wire Line
+	13850 6900 13600 6900
+$Comp
+L yageo:RC0402FR-0710KL R?
+U 1 1 5CC0E079
+P 3600 7100
+AR Path="/5D28FBB5/5CC0E079" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5CC0E079" Ref="R225"  Part="1" 
+F 0 "R225" V 3549 7148 40  0000 L CNN
+F 1 "10kF" V 3625 7148 40  0000 L CNN
+F 2 "yageo:R_0402" H 3600 7030 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 3600 7180 30  0001 C CNN
+F 4 "1005" V 3676 7148 10  0000 L CNN "Size"
+F 5 "Yageo" H 3800 7200 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0710KL" H 3850 7250 50  0001 C CNN "Manufacturer Part Number"
+	1    3600 7100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0229
+U 1 1 5CC3C41F
+P 3600 7250
+F 0 "#PWR0229" H 3600 7000 50  0001 C CNN
+F 1 "GND" H 3500 7150 40  0000 C CNN
+F 2 "" H 3600 7250 50  0001 C CNN
+F 3 "" H 3600 7250 50  0001 C CNN
+	1    3600 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 7250 3600 7150
+Wire Wire Line
+	3600 7050 3600 6950
+Connection ~ 3600 6950
+Wire Wire Line
+	3600 6950 4100 6950
+Wire Wire Line
+	3500 6950 3600 6950
+$Comp
+L yageo:RC0402FR-070RL R223
+U 1 1 5CCB13D3
+P 3450 6950
+F 0 "R223" H 3450 7138 40  0000 C CNN
+F 1 "0" H 3450 7062 40  0000 C CNN
+F 2 "yageo:R_0402" H 3450 6880 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 3450 7030 30  0001 C CNN
+F 4 "1005" H 3450 7011 10  0000 C CNN "Size"
+F 5 "Yageo" H 3650 7050 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-070RL" H 3700 7100 50  0001 C CNN "Manufacturer Part Number"
+	1    3450 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L yageo:RC0402FR-070RL R213
+U 1 1 5CCE4602
+P 3450 4200
+F 0 "R213" H 3450 4388 40  0000 C CNN
+F 1 "0" H 3450 4312 40  0000 C CNN
+F 2 "yageo:R_0402" H 3450 4130 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 3450 4280 30  0001 C CNN
+F 4 "1005" H 3450 4261 10  0000 C CNN "Size"
+F 5 "Yageo" H 3650 4300 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-070RL" H 3700 4350 50  0001 C CNN "Manufacturer Part Number"
+	1    3450 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L jst:SM04B-SRSS-TB(LF)(SN) CN206
+U 1 1 5CE6B039
+P 13400 7150
+F 0 "CN206" H 13850 7550 40  0000 C CNN
+F 1 "SM04B-SRSS-TB(LF)(SN)" H 13550 7500 40  0000 C CNN
+F 2 "Connectors_JST:SM04B-SRSS-TB" H 13400 7000 60  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eSH.pdf" H 13319 7431 60  0001 C CNN
+F 4 "JST" H 2600 4250 50  0001 C CNN "Manufacturer"
+F 5 "SM04B-SRSS-TB(LF)(SN)" H 2600 4250 50  0001 C CNN "Manufacturer Part Number"
+	1    13400 7150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L murata:GCM155R71H104KE02D C211
+U 1 1 5CAE088E
+P 8000 5300
+F 0 "C211" H 7850 5400 40  0000 C CNN
+F 1 "0.1u/50(X7R)" H 8000 5350 40  0000 C CNN
+F 2 "murata:GRM15" H 8150 5338 20  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx" H 8000 5300 20  0001 C CNN
+F 4 "1005" H 8050 5275 10  0000 C CNN "Size"
+F 5 "Murata Electronics " H 8200 5600 50  0001 C CNN "Manufacturer"
+F 6 "GCM155R71H104KE02D" H 8300 5700 50  0001 C CNN "Manufacturer Part Number"
+	1    8000 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR0221
+U 1 1 5CA1E587
+P 8000 5000
+F 0 "#PWR0221" H 8000 4850 50  0001 C CNN
+F 1 "+5V" H 8015 5166 40  0000 C CNN
+F 2 "" H 8000 5000 50  0001 C CNN
+F 3 "" H 8000 5000 50  0001 C CNN
+	1    8000 5000
+	1    0    0    -1  
+$EndComp
+Text Notes 8350 6050 0    50   ~ 0
+I2C Address(7-bit)\n0b1001100
+Text Notes 5000 7050 0    50   ~ 0
+I2C Address(7-bit)\n0b0111100
+$Comp
+L power:+3.3V #PWR0203
+U 1 1 5CCE3433
+P 14050 6550
+F 0 "#PWR0203" H 14050 6400 50  0001 C CNN
+F 1 "+3.3V" H 14065 6716 40  0000 C CNN
+F 2 "" H 14050 6550 50  0001 C CNN
+F 3 "" H 14050 6550 50  0001 C CNN
+	1    14050 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L yageo:RC0603FR-070RL R203
+U 1 1 5CCFB7A9
+P 13850 6700
+F 0 "R203" V 13799 6748 40  0000 L CNN
+F 1 "0" V 13875 6748 40  0000 L CNN
+F 2 "yageo:R_0603" H 13850 6630 10  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 13850 6780 10  0001 C CNN
+F 4 "1608" V 13926 6748 10  0000 L CNN "Size"
+F 5 "Yageo" H 14050 7000 50  0001 C CNN "Manufacturer"
+F 6 "RC0603FR-070RL" H 14150 7100 50  0001 C CNN "Manufacturer Part Number"
+	1    13850 6700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	13850 6750 13850 6900
+$Comp
+L yageo:RC0603FR-070RL R204
+U 1 1 5CCFBAF3
+P 14050 6700
+F 0 "R204" V 13999 6748 40  0000 L CNN
+F 1 "OPEN" V 14075 6748 40  0000 L CNN
+F 2 "yageo:R_0603" H 14050 6630 10  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 14050 6780 10  0001 C CNN
+F 4 "1608" V 14126 6748 10  0000 L CNN "Size"
+F 5 "Yageo" H 14250 7000 50  0001 C CNN "Manufacturer"
+F 6 "RC0603" H 14350 7100 50  0001 C CNN "Manufacturer Part Number"
+	1    14050 6700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	14050 6650 14050 6550
+Wire Wire Line
+	13850 6900 14050 6900
+Wire Wire Line
+	14050 6900 14050 6750
+Connection ~ 13850 6900
+Text Label 11400 5750 0    50   ~ 0
+SDA
+Text Label 11400 5650 0    50   ~ 0
+SCL
+Text HLabel 11350 4100 0    50   Input ~ 0
+SCL_3.3V
+Text HLabel 11350 4200 0    50   BiDi ~ 0
+SDA_3.3V
+Wire Wire Line
+	14350 4700 14650 4700
+Wire Wire Line
+	14350 4800 14900 4800
+$Comp
+L yageo:RC0402FR-0710KL R?
+U 1 1 5CDA9FAC
+P 14900 4550
+AR Path="/5D28FBB5/5CDA9FAC" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5CDA9FAC" Ref="R218"  Part="1" 
+F 0 "R218" V 14849 4598 40  0000 L CNN
+F 1 "10kF" V 14925 4598 40  0000 L CNN
+F 2 "yageo:R_0402" H 14900 4480 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 14900 4630 30  0001 C CNN
+F 4 "1005" V 14976 4598 10  0000 L CNN "Size"
+F 5 "Yageo" H 15100 4650 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0710KL" H 15150 4700 50  0001 C CNN "Manufacturer Part Number"
+	1    14900 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L yageo:RC0402FR-0710KL R?
+U 1 1 5CDA9FB6
+P 14650 4550
+AR Path="/5D28FBB5/5CDA9FB6" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5CDA9FB6" Ref="R217"  Part="1" 
+F 0 "R217" V 14599 4598 40  0000 L CNN
+F 1 "10kF" V 14675 4598 40  0000 L CNN
+F 2 "yageo:R_0402" H 14650 4480 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 14650 4630 30  0001 C CNN
+F 4 "1005" V 14726 4598 10  0000 L CNN "Size"
+F 5 "Yageo" H 14850 4650 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0710KL" H 14900 4700 50  0001 C CNN "Manufacturer Part Number"
+	1    14650 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	14650 4600 14650 4700
+Wire Wire Line
+	14900 4600 14900 4800
+$Comp
+L yageo:RC0402FR-07200KL R?
+U 1 1 5CDA9FC2
+P 14400 4300
+AR Path="/5D28FBB5/5CDA9FC2" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5CDA9FC2" Ref="R214"  Part="1" 
+F 0 "R214" V 14349 4348 40  0000 L CNN
+F 1 "200kF" V 14425 4348 40  0000 L CNN
+F 2 "yageo:R_0402" H 14400 4230 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 14400 4380 30  0001 C CNN
+F 4 "1005" V 14476 4348 10  0000 L CNN "Size"
+F 5 "Yageo" H 14600 4400 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-07200KL" H 14650 4450 50  0001 C CNN "Manufacturer Part Number"
+	1    14400 4300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	14400 4250 14400 4150
+Wire Wire Line
+	14400 4150 14650 4150
+Wire Wire Line
+	14650 4150 14650 4500
+Wire Wire Line
+	14650 4150 14900 4150
+Wire Wire Line
+	14900 4150 14900 4500
+Connection ~ 14650 4150
+Wire Wire Line
+	14400 4150 14400 4100
+Connection ~ 14400 4150
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5CDA9FD1
+P 13450 4100
+AR Path="/5D28FBB5/5CDA9FD1" Ref="#PWR?"  Part="1" 
+AR Path="/5D26E750/5CDA9FD1" Ref="#PWR0217"  Part="1" 
+F 0 "#PWR0217" H 13450 3950 50  0001 C CNN
+F 1 "+3.3V" H 13465 4273 40  0000 C CNN
+F 2 "" H 13450 4100 50  0001 C CNN
+F 3 "" H 13450 4100 50  0001 C CNN
+	1    13450 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5CDA9FD7
+P 14400 4100
+AR Path="/5D28FBB5/5CDA9FD7" Ref="#PWR?"  Part="1" 
+AR Path="/5D26E750/5CDA9FD7" Ref="#PWR0218"  Part="1" 
+F 0 "#PWR0218" H 14400 3950 50  0001 C CNN
+F 1 "+5V" H 14415 4273 50  0000 C CNN
+F 2 "" H 14400 4100 50  0001 C CNN
+F 3 "" H 14400 4100 50  0001 C CNN
+	1    14400 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CDA9FDD
+P 13500 5100
+AR Path="/5D28FBB5/5CDA9FDD" Ref="#PWR?"  Part="1" 
+AR Path="/5D26E750/5CDA9FDD" Ref="#PWR0223"  Part="1" 
+F 0 "#PWR0223" H 13500 4850 50  0001 C CNN
+F 1 "GND" H 13505 4927 50  0000 C CNN
+F 2 "" H 13500 5100 50  0001 C CNN
+F 3 "" H 13500 5100 50  0001 C CNN
+	1    13500 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	13500 5100 13500 4500
+Wire Wire Line
+	13500 4500 13550 4500
+Wire Wire Line
+	13550 4600 13450 4600
+Wire Wire Line
+	13450 4600 13450 4150
+$Comp
+L yageo:RC0402FR-0710KL R?
+U 1 1 5CDA9FEA
+P 13250 4550
+AR Path="/5D28FBB5/5CDA9FEA" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5CDA9FEA" Ref="R216"  Part="1" 
+F 0 "R216" V 13199 4598 40  0000 L CNN
+F 1 "10kF" V 13275 4598 40  0000 L CNN
+F 2 "yageo:R_0402" H 13250 4480 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 13250 4630 30  0001 C CNN
+F 4 "1005" V 13326 4598 10  0000 L CNN "Size"
+F 5 "Yageo" H 13450 4650 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0710KL" H 13500 4700 50  0001 C CNN "Manufacturer Part Number"
+	1    13250 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L yageo:RC0402FR-0710KL R?
+U 1 1 5CDA9FF4
+P 13000 4550
+AR Path="/5D28FBB5/5CDA9FF4" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5CDA9FF4" Ref="R215"  Part="1" 
+F 0 "R215" V 12949 4598 40  0000 L CNN
+F 1 "10kF" V 13025 4598 40  0000 L CNN
+F 2 "yageo:R_0402" H 13000 4480 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 13000 4630 30  0001 C CNN
+F 4 "1005" V 13076 4598 10  0000 L CNN "Size"
+F 5 "Yageo" H 13200 4650 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0710KL" H 13250 4700 50  0001 C CNN "Manufacturer Part Number"
+	1    13000 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	13000 4600 13000 4700
+Wire Wire Line
+	13000 4700 13550 4700
+Wire Wire Line
+	13250 4600 13250 4800
+Wire Wire Line
+	13250 4800 13550 4800
+Wire Wire Line
+	13250 4150 13450 4150
+Connection ~ 13450 4150
+Wire Wire Line
+	13450 4150 13450 4100
+Wire Wire Line
+	13000 4500 13000 4150
+Wire Wire Line
+	13000 4150 13250 4150
+Connection ~ 13250 4150
+Wire Wire Line
+	13250 4150 13250 4500
+$Comp
+L yageo:CC0402KRX7R8BB104 C?
+U 1 1 5CDAA009
+P 14400 4950
+AR Path="/5D28FBB5/5CDAA009" Ref="C?"  Part="1" 
+AR Path="/5D26E750/5CDAA009" Ref="C210"  Part="1" 
+F 0 "C210" V 14500 4700 40  0000 L CNN
+F 1 "0.1u/50(X7R)" V 14550 4700 40  0000 L CNN
+F 2 "murata:GRM15" H 14400 4880 10  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en" H 14400 5030 10  0001 C CNN
+F 4 "1005" V 14350 4930 10  0000 L CNN "Size"
+F 5 "Murata Electronics " H 14600 5250 50  0001 C CNN "Manufacturer"
+F 6 "GCM155R71H104KE02D" H 14700 5350 50  0001 C CNN "Manufacturer Part Number"
+	1    14400 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5CDAA010
+P 14400 5100
+AR Path="/5D28FBB5/5CDAA010" Ref="#PWR?"  Part="1" 
+AR Path="/5D26E750/5CDAA010" Ref="#PWR0224"  Part="1" 
+F 0 "#PWR0224" H 14400 4850 50  0001 C CNN
+F 1 "GND" H 14405 4927 50  0000 C CNN
+F 2 "" H 14400 5100 50  0001 C CNN
+F 3 "" H 14400 5100 50  0001 C CNN
+	1    14400 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14400 5100 14400 5000
+$Comp
+L texas_instruments:PCA9306DCUR U?
+U 1 1 5CDAA019
+P 13950 4650
+AR Path="/5D28FBB5/5CDAA019" Ref="U?"  Part="1" 
+AR Path="/5D26E750/5CDAA019" Ref="U202"  Part="1" 
+F 0 "U202" H 13950 4994 40  0000 C CNN
+F 1 "PCA9306DCUR" H 13950 4918 40  0000 C CNN
+F 2 "Housings_SSOP:Texas_S-PDSO-G8" H 13950 4700 30  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/pca9306.pdf" H 13650 4900 30  0001 C CNN
+F 4 "Texas Instruments" H 13950 4650 50  0001 C CNN "Manufacturer"
+F 5 "PCA9306DCUR" H 13950 4650 50  0001 C CNN "Manufacturer Part Number"
+	1    13950 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14350 4500 14400 4500
+Connection ~ 14400 4500
+Wire Wire Line
+	14400 4500 14400 4600
+Wire Wire Line
+	14350 4600 14400 4600
+Connection ~ 14400 4600
+Wire Wire Line
+	14400 4600 14400 4900
+Connection ~ 13000 4700
+Connection ~ 13250 4800
+Wire Wire Line
+	14650 4700 15100 4700
+Wire Wire Line
+	15100 4700 15100 5650
+Connection ~ 14650 4700
+Wire Wire Line
+	15200 5750 15200 4800
+Wire Wire Line
+	15200 4800 14900 4800
+Connection ~ 14900 4800
+Text Label 12650 4700 0    50   ~ 0
+SCL_3.3V
+Text Label 12650 4800 0    50   ~ 0
+SDA_3.3V
+$Comp
+L yageo:RC0402FR-070RL R?
+U 1 1 5CDAA037
+P 12250 5650
+AR Path="/5D28FBB5/5CDAA037" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5CDAA037" Ref="R221"  Part="1" 
+F 0 "R221" H 12150 5750 40  0000 C CNN
+F 1 "0" H 12150 5700 40  0000 C CNN
+F 2 "yageo:R_0402" H 12250 5580 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 12250 5730 30  0001 C CNN
+F 4 "1005" H 12310 5630 10  0000 C CNN "Size"
+F 5 "Yageo" H 12450 5750 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-070RL" H 12500 5800 50  0001 C CNN "Manufacturer Part Number"
+	1    12250 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12300 5650 12600 5650
+$Comp
+L yageo:RC0402FR-070RL R?
+U 1 1 5CDAA042
+P 12250 5750
+AR Path="/5D28FBB5/5CDAA042" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5CDAA042" Ref="R222"  Part="1" 
+F 0 "R222" H 12150 5700 40  0000 C CNN
+F 1 "0" H 12150 5650 40  0000 C CNN
+F 2 "yageo:R_0402" H 12250 5680 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 12250 5830 30  0001 C CNN
+F 4 "1005" H 12310 5730 10  0000 C CNN "Size"
+F 5 "Yageo" H 12450 5850 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-070RL" H 12500 5900 50  0001 C CNN "Manufacturer Part Number"
+	1    12250 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12300 5750 12500 5750
+Text Label 12650 5650 0    50   ~ 0
+SCL_5V
+Text Label 12650 5750 0    50   ~ 0
+SDA_5V
+$Comp
+L yageo:RC0402FR-070RL R?
+U 1 1 5CDAA04F
+P 12250 4700
+AR Path="/5D28FBB5/5CDAA04F" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5CDAA04F" Ref="R219"  Part="1" 
+F 0 "R219" H 12150 4800 40  0000 C CNN
+F 1 "OPEN" H 12150 4750 40  0000 C CNN
+F 2 "yageo:R_0402" H 12250 4630 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 12250 4780 30  0001 C CNN
+F 4 "1005" H 12310 4680 10  0000 C CNN "Size"
+F 5 "Yageo" H 12450 4800 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-070RL" H 12500 4850 50  0001 C CNN "Manufacturer Part Number"
+	1    12250 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L yageo:RC0402FR-070RL R?
+U 1 1 5CDAA059
+P 12250 4800
+AR Path="/5D28FBB5/5CDAA059" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5CDAA059" Ref="R220"  Part="1" 
+F 0 "R220" H 12150 4750 40  0000 C CNN
+F 1 "OPEN" H 12150 4700 40  0000 C CNN
+F 2 "yageo:R_0402" H 12250 4730 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 12250 4880 30  0001 C CNN
+F 4 "1005" H 12310 4780 10  0000 C CNN "Size"
+F 5 "Yageo" H 12450 4900 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-070RL" H 12500 4950 50  0001 C CNN "Manufacturer Part Number"
+	1    12250 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12600 5350 12600 5650
+Connection ~ 12600 5650
+Wire Wire Line
+	12600 5650 15100 5650
+Wire Wire Line
+	12500 5450 12500 5750
+Connection ~ 12500 5750
+Wire Wire Line
+	12500 5750 15200 5750
+Wire Wire Line
+	12200 4700 11900 4700
+Wire Wire Line
+	11900 4700 11900 5650
+Wire Wire Line
+	11900 5650 12200 5650
+Wire Wire Line
+	12200 4800 12000 4800
+Wire Wire Line
+	12000 4800 12000 5750
+Wire Wire Line
+	12000 5750 12200 5750
+Wire Wire Line
+	12300 4700 12600 4700
+Wire Wire Line
+	12300 4800 12500 4800
+Wire Wire Line
+	9200 5450 12500 5450
+Wire Wire Line
+	9200 5350 12600 5350
+Wire Wire Line
+	11400 5650 11900 5650
+Connection ~ 11900 5650
+Wire Wire Line
+	11400 5750 12000 5750
+Connection ~ 12000 5750
+Text Label 15250 1750 2    50   ~ 0
+SCL
+Wire Wire Line
+	12600 4100 12600 4700
+Wire Wire Line
+	11350 4100 12600 4100
+Connection ~ 12600 4700
+Wire Wire Line
+	12600 4700 13000 4700
+Wire Wire Line
+	12500 4800 12500 4200
+Wire Wire Line
+	11350 4200 12500 4200
+Connection ~ 12500 4800
+Wire Wire Line
+	12500 4800 13250 4800
+Text Label 11400 4100 0    50   ~ 0
+SCL_3.3V
+Text Label 11400 4200 0    50   ~ 0
+SDA_3.3V
+$Comp
+L power:PWR_FLAG #FLG0204
+U 1 1 5D01472D
+P 14400 4500
+F 0 "#FLG0204" H 14400 4575 50  0001 C CNN
+F 1 "PWR_FLAG" H 14400 4666 40  0001 C CNN
+F 2 "" H 14400 4500 50  0001 C CNN
+F 3 "" H 14400 4500 50  0001 C CNN
+	1    14400 4500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	14400 4350 14400 4500
+Wire Wire Line
+	9300 8800 9550 8800
+Wire Wire Line
+	9550 8800 9800 8800
+Connection ~ 9550 8800
+$Comp
+L power:PWR_FLAG #FLG0205
+U 1 1 5D9AEAF4
+P 9550 8800
+F 0 "#FLG0205" H 9550 8875 50  0001 C CNN
+F 1 "PWR_FLAG" H 9550 8966 40  0000 C CNN
+F 2 "" H 9550 8800 50  0001 C CNN
+F 3 "" H 9550 8800 50  0001 C CNN
+	1    9550 8800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 6550 4100 6550
+Wire Wire Line
+	3100 6450 4100 6450
+Wire Wire Line
+	4000 5600 4000 5900
+Text Label 15250 2250 2    50   ~ 0
+ADC_VDC
+$Comp
+L power:GND #PWR01
+U 1 1 5CABEDEF
+P 4700 4250
+F 0 "#PWR01" H 4700 4000 50  0001 C CNN
+F 1 "GND" H 4700 4100 50  0000 C CNN
+F 2 "" H 4700 4250 50  0001 C CNN
+F 3 "" H 4700 4250 50  0001 C CNN
+	1    4700 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 4200 4700 4200
+Wire Wire Line
+	4700 4200 4700 4250
+Wire Wire Line
+	3950 4200 4200 4200
+Wire Wire Line
+	13600 7000 14050 7000
+Wire Wire Line
+	13600 7100 14050 7100
+Wire Wire Line
+	8400 4150 8400 4550
+Wire Wire Line
+	8400 4150 10100 4150
+Wire Wire Line
+	8550 4550 8550 4250
+Wire Wire Line
+	8550 4250 10200 4250
+Wire Wire Line
+	8750 4550 8750 2900
+$Comp
+L ulo:ULO-FH411-1*15SF11 CN202
+U 1 1 5E4BF3DE
+P 13600 1600
+F 0 "CN202" H 13525 550 40  0000 L CNN
+F 1 "ULO-FH411-1*15SF11" H 13825 475 40  0000 L CNN
+F 2 "ulo:ULO-FH411-1x15SX1" H 13600 1600 50  0001 C CNN
+F 3 "" H 13600 1900 50  0001 C CNN
+F 4 "ULO Electronics" H 13600 1600 50  0001 C CNN "Manufacturer"
+F 5 "ULO-FH411-1*15SF11" H 13600 1600 50  0001 C CNN "Manufacturer Part Number"
+	1    13600 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L ulo:ULO-FH411-1*15SF11 CN204
+U 1 1 5E52737B
+P 14000 1600
+F 0 "CN204" H 13875 550 40  0000 L CNN
+F 1 "ULO-FH411-1*15SF11" H 14200 475 40  0000 L CNN
+F 2 "ulo:ULO-FH411-1x15SX1" H 14000 1600 50  0001 C CNN
+F 3 "" H 14000 1900 50  0001 C CNN
+F 4 "ULO Electronics" H 14000 1600 50  0001 C CNN "Manufacturer"
+F 5 "ULO-FH411-1*15SF11" H 14000 1600 50  0001 C CNN "Manufacturer Part Number"
+	1    14000 1600
+	-1   0    0    -1  
+$EndComp
+Text Notes 14250 1650 0    50   ~ 0
+A6
+Text Notes 14250 1550 0    50   ~ 0
+A7
+Text Notes 14250 1350 0    50   ~ 0
+RESET
+Wire Wire Line
+	14850 1750 14200 1750
+Connection ~ 14850 1750
+Wire Wire Line
+	14200 1850 14850 1850
+Connection ~ 14850 1850
+Text Label 12350 1950 0    50   ~ 0
+~WLAT
+Wire Wire Line
+	12350 2050 12850 2050
+Text Label 12350 2050 0    50   ~ 0
+~ALERT
+Wire Wire Line
+	12350 1950 12850 1950
+Connection ~ 12850 1950
+Wire Wire Line
+	12850 1950 13400 1950
+Connection ~ 12850 2050
+Wire Wire Line
+	12850 2050 13400 2050
+Wire Wire Line
+	12850 1550 13400 1550
+Wire Wire Line
+	12350 1550 12850 1550
+Connection ~ 12850 1550
+Wire Wire Line
+	13400 1450 13050 1450
+Wire Wire Line
+	13050 1450 13050 2850
+Text Notes 14600 2700 0    50   ~ 0
+AREF require 1.1V internal reference
+$Comp
+L ulo:ULO-FH411-1*15SF11 CN205
+U 1 1 5E9F2108
+P 15450 1600
+F 0 "CN205" V 15550 1550 40  0000 L CNN
+F 1 "ULO-FH411-1*15SF11" V 15600 1250 40  0000 L CNN
+F 2 "ulo:ULO-FH411-1x15SX1" H 15450 1600 50  0001 C CNN
+F 3 "" H 15450 1900 50  0001 C CNN
+F 4 "ULO Electronics" H 15450 1600 50  0001 C CNN "Manufacturer"
+F 5 "ULO-FH411-1*15SF11" H 15450 1600 50  0001 C CNN "Manufacturer Part Number"
+	1    15450 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14200 1150 15250 1150
+Wire Wire Line
+	14600 2850 14600 1250
+Wire Wire Line
+	15250 1250 14600 1250
+Connection ~ 14600 1250
+Wire Wire Line
+	14200 1250 14600 1250
+Wire Wire Line
+	14200 1350 15250 1350
+Wire Wire Line
+	14200 1550 15250 1550
+Wire Wire Line
+	15250 1650 14200 1650
+Wire Wire Line
+	14200 1950 15250 1950
+Wire Wire Line
+	14200 2050 15250 2050
+Wire Wire Line
+	14200 2150 15250 2150
+Wire Wire Line
+	14200 2350 15250 2350
+Wire Wire Line
+	14200 2250 15250 2250
+Wire Wire Line
+	14200 2450 15250 2450
+Wire Wire Line
+	14200 2550 15250 2550
+Wire Wire Line
+	14850 1750 15250 1750
+Wire Wire Line
+	14850 1850 15250 1850
+$Comp
+L ulo:ULO-FH411-1*15SF11 CN201
+U 1 1 5EC650CE
+P 12150 1600
+F 0 "CN201" V 12250 1550 40  0000 L CNN
+F 1 "ULO-FH411-1*15SF11" V 12300 1250 40  0000 L CNN
+F 2 "ulo:ULO-FH411-1x15SX1" H 12150 1600 50  0001 C CNN
+F 3 "" H 12150 1900 50  0001 C CNN
+F 4 "ULO Electronics" H 12150 1600 50  0001 C CNN "Manufacturer"
+F 5 "ULO-FH411-1*15SF11" H 12150 1600 50  0001 C CNN "Manufacturer Part Number"
+	1    12150 1600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	12350 1150 13400 1150
+Wire Wire Line
+	13400 1250 12350 1250
+Wire Wire Line
+	12350 1350 13400 1350
+Wire Wire Line
+	13050 1450 12350 1450
+Connection ~ 13050 1450
+Wire Wire Line
+	12350 1650 13400 1650
+Wire Wire Line
+	12350 1750 13400 1750
+Wire Wire Line
+	12350 1850 13400 1850
+Wire Wire Line
+	12350 2150 13400 2150
+Wire Wire Line
+	12350 2250 13400 2250
+Wire Wire Line
+	12350 2350 13400 2350
+Wire Wire Line
+	12350 2450 13400 2450
+Wire Wire Line
+	12350 2550 13400 2550
+Wire Wire Line
+	4050 8800 3950 8800
+Connection ~ 2900 8800
+Wire Wire Line
+	4050 8900 3950 8900
+Wire Wire Line
+	3950 8900 3950 8800
+Connection ~ 3950 8800
+Wire Wire Line
+	3950 8800 3650 8800
+Wire Wire Line
+	4050 9000 3950 9000
+Wire Wire Line
+	3950 9000 3950 8900
+Connection ~ 3950 8900
+Wire Wire Line
+	4050 9200 3850 9200
+$Comp
+L testpooint:TEST-1 TP220
+U 1 1 5F0040CD
+P 3850 9200
+F 0 "TP220" H 3850 9350 40  0000 L CNN
+F 1 "TEST-1" H 3850 9300 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 3750 9200 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 3850 9200 50  0001 C CNN
+	1    3850 9200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 9700 3950 9700
+Wire Wire Line
+	3950 9700 3950 9850
+$Comp
+L power:GND #PWR0214
+U 1 1 5F01EDF5
+P 3950 9850
+F 0 "#PWR0214" H 3950 9600 50  0001 C CNN
+F 1 "GND" H 3950 9700 40  0000 C CNN
+F 2 "" H 3950 9850 50  0001 C CNN
+F 3 "" H 3950 9850 50  0001 C CNN
+	1    3950 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0216
+U 1 1 5F01F20F
+P 5050 9850
+F 0 "#PWR0216" H 5050 9600 50  0001 C CNN
+F 1 "GND" H 5050 9700 40  0000 C CNN
+F 2 "" H 5050 9850 50  0001 C CNN
+F 3 "" H 5050 9850 50  0001 C CNN
+	1    5050 9850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 9700 5050 9700
+Wire Wire Line
+	5050 9700 5050 9850
+Wire Wire Line
+	4950 9600 5050 9600
+Wire Wire Line
+	5050 9600 5050 9700
+Connection ~ 5050 9700
+Wire Wire Line
+	4950 9500 5050 9500
+Wire Wire Line
+	5050 9500 5050 9600
+Connection ~ 5050 9600
+Wire Wire Line
+	4950 8800 5050 8800
+Wire Wire Line
+	5050 8800 5050 8900
+Wire Wire Line
+	5050 8900 4950 8900
+Wire Wire Line
+	4950 9000 5050 9000
+Wire Wire Line
+	5050 9000 5050 8900
+Connection ~ 5050 8900
+Wire Wire Line
+	4950 9100 5050 9100
+Wire Wire Line
+	5050 9100 5050 9000
+Connection ~ 5050 9000
+Wire Wire Line
+	3650 8950 3650 8800
+Connection ~ 3650 8800
+Wire Wire Line
+	3650 8800 3400 8800
+Wire Wire Line
+	3650 9050 3650 9200
+$Comp
+L power:GND #PWR0212
+U 1 1 5F127366
+P 3650 9200
+F 0 "#PWR0212" H 3650 8950 50  0001 C CNN
+F 1 "GND" H 3650 9050 40  0000 C CNN
+F 2 "" H 3650 9200 50  0001 C CNN
+F 3 "" H 3650 9200 50  0001 C CNN
+	1    3650 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Semtech:TS30042-M000QFNR U207
+U 1 1 5F18102F
+P 4500 9200
+F 0 "U207" H 4500 9902 40  0000 C CNN
+F 1 "TS30042-M000QFNR" H 4500 9826 40  0000 C CNN
+F 2 "Housings_DFN_QFN:QFN-16-1EP_3x3mm_Pitch0.5mm_Semtech" H 4500 9200 30  0001 C CIN
+F 3 "https://semtech.my.salesforce.com/sfc/dist/version/download/?oid=00DE0000000JelG&ids=06844000005gjKqAAI&d=/a/44000000MCKn/3e48v2lP4vpbRsfOboAxhxdut0jxr3IIftfBJdJulOE&operationContext=DELIVERY&asPdf=true&viewId=05H2R000000nRiTUAU&dpt=" H 4500 9250 60  0001 C CNN
+F 4 "Semtech" H 4500 9200 40  0001 C CNN "Manufacturer"
+F 5 "TS30042-M000QFNR" H 4500 9200 40  0001 C CNN "Manufacturer Part Number"
+	1    4500 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L samsung:CL31A106KBHNNNE C202
+U 1 1 5F184C24
+P 3400 9000
+F 0 "C202" V 3250 8800 40  0000 L CNN
+F 1 "10u/50(X7R)" V 3325 8800 40  0000 L CNN
+F 2 "murata:GRM31" H 3400 8930 10  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL31A106KBHNNNE.jsp" H 3400 9080 10  0001 C CNN
+F 4 "3216" H 3425 8950 10  0000 L CNN "Size"
+F 5 "Samsung Electro-Mechanics" H 3600 9300 50  0001 C CNN "Manufacturer"
+F 6 "CL31A106KBHNNNE" H 3700 9400 50  0001 C CNN "Manufacturer Part Number"
+	1    3400 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L murata:GCM155R71H104KE02D C204
+U 1 1 5F186B5B
+P 3650 9000
+F 0 "C204" H 3800 8850 40  0000 L CNN
+F 1 "0.1u/50(X7R)" H 3450 8925 40  0000 L CNN
+F 2 "murata:GRM15" H 3800 9038 20  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en" H 3650 9000 20  0001 C CNN
+F 4 "1005" V 3700 9025 10  0000 L CNN "Size"
+F 5 "Murata Electronics " H 3850 9300 50  0001 C CNN "Manufacturer"
+F 6 "GCM155R71H104KE02D" H 3950 9400 50  0001 C CNN "Manufacturer Part Number"
+	1    3650 9000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 9050 3400 9200
+$Comp
+L power:GND #PWR0210
+U 1 1 5F260AC2
+P 3400 9200
+F 0 "#PWR0210" H 3400 8950 50  0001 C CNN
+F 1 "GND" H 3400 9050 40  0000 C CNN
+F 2 "" H 3400 9200 50  0001 C CNN
+F 3 "" H 3400 9200 50  0001 C CNN
+	1    3400 9200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 8950 3400 8800
+Connection ~ 3400 8800
+Wire Wire Line
+	3400 8800 2900 8800
+$Comp
+L on_semiconductor:S210FA D203
+U 1 1 5F29DF91
+P 5250 9000
+F 0 "D203" H 5300 9100 40  0000 L CNN
+F 1 "S210FA" H 5150 9150 40  0000 L CNN
+F 2 "Diodes_SMD:SOD-123FA_OnSemi" H 5265 9000 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/SS29FA-D.pdf" H 5265 9000 50  0001 C CNN
+F 4 "ON Semiconductor" H 5350 9200 50  0001 C CNN "Manufacturer"
+F 5 "S210FA" H 5450 9300 50  0001 C CNN "Manufacturer Part Number"
+	1    5250 9000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 8800 5250 8800
+Connection ~ 5050 8800
+Wire Wire Line
+	4950 9200 5450 9200
+$Comp
+L power:+5V #PWR?
+U 1 1 5F3014BA
+P 5750 9800
+AR Path="/5D28FBB5/5F3014BA" Ref="#PWR?"  Part="1" 
+AR Path="/5D26E750/5F3014BA" Ref="#PWR0240"  Part="1" 
+F 0 "#PWR0240" H 5750 9650 50  0001 C CNN
+F 1 "+5V" H 5765 9973 50  0000 C CNN
+F 2 "" H 5750 9800 50  0001 C CNN
+F 3 "" H 5750 9800 50  0001 C CNN
+	1    5750 9800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 9400 5200 9400
+Wire Wire Line
+	5200 9400 5200 10150
+$Comp
+L murata:GRM155R71H223KA12D C206
+U 1 1 5F387D9B
+P 5100 8700
+F 0 "C206" H 5100 8893 40  0000 C CNN
+F 1 "0.022u/50(X7R)" H 5100 8817 40  0000 C CNN
+F 2 "murata:GRM15" V 5250 8738 20  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en" H 5100 8700 20  0001 C CNN
+F 4 "1005" H 5100 8766 10  0000 C CNN "Size"
+F 5 "Murata Electronics " H 5300 9000 50  0001 C CNN "Manufacturer"
+F 6 "GRM155R71H223KA12D" H 5400 9100 50  0001 C CNN "Manufacturer Part Number"
+	1    5100 8700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 8700 5050 8700
+Wire Wire Line
+	5150 8700 5350 8700
+Wire Wire Line
+	5350 8700 5350 8800
+Wire Wire Line
+	5250 8800 5250 8900
+Connection ~ 5250 8800
+Wire Wire Line
+	5250 8800 5350 8800
+Connection ~ 5350 8800
+Wire Wire Line
+	5350 8800 5450 8800
+$Comp
+L murata:GCM155R71H104KE02D C208
+U 1 1 5F496F59
+P 5800 9000
+F 0 "C208" H 5950 8850 40  0000 L CNN
+F 1 "0.1u/50(X7R)" H 5600 8925 40  0000 L CNN
+F 2 "murata:GRM15" H 5950 9038 20  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en" H 5800 9000 20  0001 C CNN
+F 4 "1005" H 5725 8975 10  0000 L CNN "Size"
+F 5 "Murata Electronics " H 6000 9300 50  0001 C CNN "Manufacturer"
+F 6 "GCM155R71H104KE02D" H 6100 9400 50  0001 C CNN "Manufacturer Part Number"
+	1    5800 9000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 8800 5800 8800
+Wire Wire Line
+	5800 8800 5800 8950
+Wire Wire Line
+	5800 8800 6000 8800
+Wire Wire Line
+	6000 8800 6000 8950
+Connection ~ 5800 8800
+Wire Wire Line
+	6000 8800 6200 8800
+Wire Wire Line
+	6200 8800 6200 8950
+Connection ~ 6000 8800
+Wire Wire Line
+	5450 9200 5450 9450
+Wire Wire Line
+	6550 9550 6550 9450
+Wire Wire Line
+	5450 9450 6550 9450
+Wire Wire Line
+	6550 9650 6550 9750
+$Comp
+L power:GND #PWR0248
+U 1 1 5F649968
+P 6550 9750
+F 0 "#PWR0248" H 6550 9500 50  0001 C CNN
+F 1 "GND" H 6650 9650 40  0000 C CNN
+F 2 "" H 6550 9750 50  0001 C CNN
+F 3 "" H 6550 9750 50  0001 C CNN
+	1    6550 9750
+	1    0    0    -1  
+$EndComp
+$Comp
+L yageo:CC0402KRX7R9BB103 C221
+U 1 1 5F67C557
+P 6400 9000
+F 0 "C221" V 6250 8800 40  0000 L CNN
+F 1 "10n/50(X7R)" V 6325 8800 40  0000 L CNN
+F 2 "murata:GRM15" H 6400 8930 10  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_X7R_6.3V-to-50V_18.pdf" H 6400 9080 10  0001 C CNN
+F 4 "1005" V 6375 9025 10  0000 L CNN "Size"
+F 5 "Yageo" H 6600 9300 50  0001 C CNN "Manufacturer"
+F 6 "CC0402KRX7R9BB103" H 6700 9400 50  0001 C CNN "Manufacturer Part Number"
+	1    6400 9000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 8950 6400 8800
+Wire Wire Line
+	6400 8800 6200 8800
+Connection ~ 6200 8800
+Wire Wire Line
+	6400 8800 6550 8800
+Wire Wire Line
+	6550 8800 6550 8950
+Connection ~ 6400 8800
+Wire Wire Line
+	6400 9050 6400 9200
+Wire Wire Line
+	6400 9200 6550 9200
+Wire Wire Line
+	6550 9200 6550 9050
+Wire Wire Line
+	6550 9200 6550 9450
+Connection ~ 6550 9200
+Connection ~ 6550 9450
+Wire Wire Line
+	6550 8800 7000 8800
+Connection ~ 6550 8800
+Wire Wire Line
+	8900 2600 8900 4550
+$Comp
+L samsung:CL21A226MOCLRNC C219
+U 1 1 5F94DF65
+P 6200 9000
+F 0 "C219" V 6050 8800 40  0000 L CNN
+F 1 "22u/16(X5R)" V 6125 8800 40  0000 L CNN
+F 2 "murata:GRM21" H 6200 8930 10  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B105KBFNNNG.jsp" H 6200 9080 10  0001 C CNN
+F 4 "2012" V 6175 9025 10  0000 L CNN "Size"
+F 5 "Samsung Electro-Mechanics" H 6400 9300 50  0001 C CNN "Manufacturer"
+F 6 "CL21A226MOCLRNC" H 6500 9400 50  0001 C CNN "Manufacturer Part Number"
+	1    6200 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L samsung:CL21A226MOCLRNC C217
+U 1 1 5F953C28
+P 6000 9000
+F 0 "C217" V 5850 8800 40  0000 L CNN
+F 1 "22u/16(X5R)" V 5925 8800 40  0000 L CNN
+F 2 "murata:GRM21" H 6000 8930 10  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL21B105KBFNNNG.jsp" H 6000 9080 10  0001 C CNN
+F 4 "2012" V 5975 9025 10  0000 L CNN "Size"
+F 5 "Samsung Electro-Mechanics" H 6200 9300 50  0001 C CNN "Manufacturer"
+F 6 "CL21A226MOCLRNC" H 6300 9400 50  0001 C CNN "Manufacturer Part Number"
+	1    6000 9000
+	1    0    0    -1  
+$EndComp
+Text Notes 5200 5900 0    25   ~ 0
+V+ to V-: 40V(abs,max)
+Wire Wire Line
+	3500 4200 3750 4200
+Wire Wire Line
+	5250 9100 5250 9250
+$Comp
+L power:GND #PWR0238
+U 1 1 5F2DCDE0
+P 5250 9250
+F 0 "#PWR0238" H 5250 9000 50  0001 C CNN
+F 1 "GND" H 5350 9150 40  0000 C CNN
+F 2 "" H 5250 9250 50  0001 C CNN
+F 3 "" H 5250 9250 50  0001 C CNN
+	1    5250 9250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 9050 6200 9250
+$Comp
+L power:GND #PWR0246
+U 1 1 5F5971D6
+P 6200 9250
+F 0 "#PWR0246" H 6200 9000 50  0001 C CNN
+F 1 "GND" H 6300 9150 40  0000 C CNN
+F 2 "" H 6200 9250 50  0001 C CNN
+F 3 "" H 6200 9250 50  0001 C CNN
+	1    6200 9250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 9050 6000 9250
+$Comp
+L power:GND #PWR0244
+U 1 1 5F596FF6
+P 6000 9250
+F 0 "#PWR0244" H 6000 9000 50  0001 C CNN
+F 1 "GND" H 6100 9150 40  0000 C CNN
+F 2 "" H 6000 9250 50  0001 C CNN
+F 3 "" H 6000 9250 50  0001 C CNN
+	1    6000 9250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 9050 5800 9250
+$Comp
+L power:GND #PWR0242
+U 1 1 5F4DA11D
+P 5800 9250
+F 0 "#PWR0242" H 5800 9000 50  0001 C CNN
+F 1 "GND" H 5900 9150 40  0000 C CNN
+F 2 "" H 5800 9250 50  0001 C CNN
+F 3 "" H 5800 9250 50  0001 C CNN
+	1    5800 9250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 2600 3950 2600
+Wire Wire Line
+	4050 2700 3950 2700
+Wire Wire Line
+	3950 2700 3950 2600
+Connection ~ 3950 2600
+Wire Wire Line
+	3950 2600 3650 2600
+Wire Wire Line
+	4050 2800 3950 2800
+Wire Wire Line
+	3950 2800 3950 2700
+Connection ~ 3950 2700
+Wire Wire Line
+	4050 3000 3850 3000
+$Comp
+L testpooint:TP1.0 TP219
+U 1 1 5E5EA1A3
+P 3850 3000
+F 0 "TP219" H 3900 3100 40  0000 L CNN
+F 1 "TP1.0" H 3900 3050 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 3750 3000 50  0001 C CNN
+F 3 "" H 3850 3000 50  0000 C CNN
+	1    3850 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 3500 3950 3500
+Wire Wire Line
+	3950 3500 3950 3650
+$Comp
+L power:GND #PWR0213
+U 1 1 5E5EA1AF
+P 3950 3650
+F 0 "#PWR0213" H 3950 3400 50  0001 C CNN
+F 1 "GND" H 3950 3500 40  0000 C CNN
+F 2 "" H 3950 3650 50  0001 C CNN
+F 3 "" H 3950 3650 50  0001 C CNN
+	1    3950 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0215
+U 1 1 5E5EA1B9
+P 5050 3650
+F 0 "#PWR0215" H 5050 3400 50  0001 C CNN
+F 1 "GND" H 5050 3500 40  0000 C CNN
+F 2 "" H 5050 3650 50  0001 C CNN
+F 3 "" H 5050 3650 50  0001 C CNN
+	1    5050 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3500 5050 3500
+Wire Wire Line
+	5050 3500 5050 3650
+Wire Wire Line
+	4950 3400 5050 3400
+Wire Wire Line
+	5050 3400 5050 3500
+Connection ~ 5050 3500
+Wire Wire Line
+	4950 3300 5050 3300
+Wire Wire Line
+	5050 3300 5050 3400
+Connection ~ 5050 3400
+Wire Wire Line
+	4950 2600 5050 2600
+Wire Wire Line
+	5050 2600 5050 2700
+Wire Wire Line
+	5050 2700 4950 2700
+Wire Wire Line
+	4950 2800 5050 2800
+Wire Wire Line
+	5050 2800 5050 2700
+Connection ~ 5050 2700
+Wire Wire Line
+	4950 2900 5050 2900
+Wire Wire Line
+	5050 2900 5050 2800
+Connection ~ 5050 2800
+Wire Wire Line
+	3650 2750 3650 2600
+Connection ~ 3650 2600
+Wire Wire Line
+	3650 2600 3400 2600
+Wire Wire Line
+	3650 2850 3650 3000
+$Comp
+L power:GND #PWR0211
+U 1 1 5E5EA1D8
+P 3650 3000
+F 0 "#PWR0211" H 3650 2750 50  0001 C CNN
+F 1 "GND" H 3650 2850 40  0000 C CNN
+F 2 "" H 3650 3000 50  0001 C CNN
+F 3 "" H 3650 3000 50  0001 C CNN
+	1    3650 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Semtech:TS30042-M000QFNR U201
+U 1 1 5E5EA1E4
+P 4500 3000
+F 0 "U201" H 4500 3702 40  0000 C CNN
+F 1 "TS30042-M000QFNR" H 4500 3626 40  0000 C CNN
+F 2 "Housings_DFN_QFN:QFN-16-1EP_3x3mm_Pitch0.5mm_Semtech" H 4500 3000 30  0001 C CIN
+F 3 "https://semtech.my.salesforce.com/sfc/dist/version/download/?oid=00DE0000000JelG&ids=06844000005gjKqAAI&d=/a/44000000MCKn/3e48v2lP4vpbRsfOboAxhxdut0jxr3IIftfBJdJulOE&operationContext=DELIVERY&asPdf=true&viewId=05H2R000000nRiTUAU&dpt=" H 4500 3050 60  0001 C CNN
+F 4 "Semtech" H 4500 3000 40  0001 C CNN "Manufacturer"
+F 5 "TS30042-M000QFNR" H 4500 3000 40  0001 C CNN "Manufacturer Part Number"
+	1    4500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L samsung:CL31A106KBHNNNE C201
+U 1 1 5E5EA1F1
+P 3400 2800
+F 0 "C201" V 3250 2600 40  0000 L CNN
+F 1 "10u/50(X7R)" V 3325 2600 40  0000 L CNN
+F 2 "murata:GRM31" H 3400 2730 10  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL31A106KBHNNNE.jsp" H 3400 2880 10  0001 C CNN
+F 4 "3216" H 3425 2750 10  0000 L CNN "Size"
+F 5 "Samsung Electro-Mechanics" H 3600 3100 50  0001 C CNN "Manufacturer"
+F 6 "CL31A106KBHNNNE" H 3700 3200 50  0001 C CNN "Manufacturer Part Number"
+	1    3400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L murata:GCM155R71H104KE02D C203
+U 1 1 5E5EA1FE
+P 3650 2800
+F 0 "C203" H 3800 2650 40  0000 L CNN
+F 1 "0.1u/50(X7R)" H 3450 2725 40  0000 L CNN
+F 2 "murata:GRM15" H 3800 2838 20  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en" H 3650 2800 20  0001 C CNN
+F 4 "1005" V 3700 2825 10  0000 L CNN "Size"
+F 5 "Murata Electronics " H 3850 3100 50  0001 C CNN "Manufacturer"
+F 6 "GCM155R71H104KE02D" H 3950 3200 50  0001 C CNN "Manufacturer Part Number"
+	1    3650 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3400 2850 3400 3000
+$Comp
+L power:GND #PWR0205
+U 1 1 5E5EA209
+P 3400 3000
+F 0 "#PWR0205" H 3400 2750 50  0001 C CNN
+F 1 "GND" H 3400 2850 40  0000 C CNN
+F 2 "" H 3400 3000 50  0001 C CNN
+F 3 "" H 3400 3000 50  0001 C CNN
+	1    3400 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2750 3400 2600
+Connection ~ 3400 2600
+$Comp
+L on_semiconductor:S210FA D202
+U 1 1 5E5EA218
+P 5250 2800
+F 0 "D202" H 5225 2875 40  0000 L CNN
+F 1 "S210FA" H 5175 2950 40  0000 L CNN
+F 2 "Diodes_SMD:SOD-123FA_OnSemi" H 5265 2800 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/SS29FA-D.pdf" H 5265 2800 50  0001 C CNN
+F 4 "ON Semiconductor" H 5350 3000 50  0001 C CNN "Manufacturer"
+F 5 "S210FA" H 5450 3100 50  0001 C CNN "Manufacturer Part Number"
+	1    5250 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 2600 5250 2600
+Connection ~ 5050 2600
+Wire Wire Line
+	4950 3000 5450 3000
+$Comp
+L power:+5V #PWR?
+U 1 1 5E5EA225
+P 5750 3600
+AR Path="/5D28FBB5/5E5EA225" Ref="#PWR?"  Part="1" 
+AR Path="/5D26E750/5E5EA225" Ref="#PWR0239"  Part="1" 
+F 0 "#PWR0239" H 5750 3450 50  0001 C CNN
+F 1 "+5V" H 5765 3773 50  0000 C CNN
+F 2 "" H 5750 3600 50  0001 C CNN
+F 3 "" H 5750 3600 50  0001 C CNN
+	1    5750 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 3200 5200 3200
+$Comp
+L murata:GRM155R71H223KA12D C205
+U 1 1 5E5EA234
+P 5100 2500
+F 0 "C205" H 5100 2693 40  0000 C CNN
+F 1 "0.022u/50(X7R)" H 5100 2617 40  0000 C CNN
+F 2 "murata:GRM15" V 5250 2538 20  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en" H 5100 2500 20  0001 C CNN
+F 4 "1005" H 5100 2566 10  0000 C CNN "Size"
+F 5 "Murata Electronics " H 5300 2800 50  0001 C CNN "Manufacturer"
+F 6 "GRM155R71H223KA12D" H 5400 2900 50  0001 C CNN "Manufacturer Part Number"
+	1    5100 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2500 5050 2500
+Wire Wire Line
+	5150 2500 5350 2500
+Wire Wire Line
+	5350 2500 5350 2600
+Wire Wire Line
+	5250 2600 5250 2700
+Connection ~ 5250 2600
+Wire Wire Line
+	5250 2600 5350 2600
+Connection ~ 5350 2600
+Wire Wire Line
+	5350 2600 5450 2600
+$Comp
+L murata:GCM155R71H104KE02D C207
+U 1 1 5E5EA249
+P 5800 2800
+F 0 "C207" H 5950 2650 40  0000 L CNN
+F 1 "0.1u/50(X7R)" H 5600 2725 40  0000 L CNN
+F 2 "murata:GRM15" H 5950 2838 20  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en" H 5800 2800 20  0001 C CNN
+F 4 "1005" H 5725 2775 10  0000 L CNN "Size"
+F 5 "Murata Electronics " H 6000 3100 50  0001 C CNN "Manufacturer"
+F 6 "GCM155R71H104KE02D" H 6100 3200 50  0001 C CNN "Manufacturer Part Number"
+	1    5800 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 2600 5800 2600
+Wire Wire Line
+	5800 2600 5800 2750
+Wire Wire Line
+	5800 2600 6000 2600
+Wire Wire Line
+	6000 2600 6000 2750
+Connection ~ 5800 2600
+Wire Wire Line
+	6000 2600 6200 2600
+Wire Wire Line
+	6200 2600 6200 2750
+Connection ~ 6000 2600
+Wire Wire Line
+	5450 3000 5450 3250
+$Comp
+L yageo:RC0402FR-073K9L R?
+U 1 1 5E5EA25F
+P 6800 3400
+AR Path="/5D28FBB5/5E5EA25F" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5E5EA25F" Ref="R210"  Part="1" 
+F 0 "R210" V 6749 3448 40  0000 L CNN
+F 1 "3.9kF" V 6825 3448 40  0000 L CNN
+F 2 "yageo:R_0402" H 6800 3330 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 6800 3480 30  0001 C CNN
+F 4 "1005" V 6876 3448 10  0000 L CNN "Size"
+F 5 "Yageo" H 7000 3500 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-073K9L" H 7050 3550 50  0001 C CNN "Manufacturer Part Number"
+	1    6800 3400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6800 3350 6800 3250
+Wire Wire Line
+	5450 3250 6800 3250
+Wire Wire Line
+	6800 3450 6800 3550
+$Comp
+L power:GND #PWR0250
+U 1 1 5E5EA26C
+P 6800 3550
+F 0 "#PWR0250" H 6800 3300 50  0001 C CNN
+F 1 "GND" H 6900 3450 40  0000 C CNN
+F 2 "" H 6800 3550 50  0001 C CNN
+F 3 "" H 6800 3550 50  0001 C CNN
+	1    6800 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L yageo:CC0402KRX7R9BB103 C223
+U 1 1 5E5EA286
+P 6800 2800
+F 0 "C223" V 6650 2600 40  0000 L CNN
+F 1 "10n/50(X7R)" V 6725 2600 40  0000 L CNN
+F 2 "murata:GRM15" H 6800 2730 10  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/UPY-GPHC_X7R_6.3V-to-50V_18.pdf" H 6800 2880 10  0001 C CNN
+F 4 "1005" V 6775 2825 10  0000 L CNN "Size"
+F 5 "Yageo" H 7000 3100 50  0001 C CNN "Manufacturer"
+F 6 "CC0402KRX7R9BB103" H 7100 3200 50  0001 C CNN "Manufacturer Part Number"
+	1    6800 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2750 6800 2600
+Wire Wire Line
+	6800 2600 6600 2600
+Connection ~ 6200 2600
+Connection ~ 6800 2600
+Wire Wire Line
+	6800 2850 6800 3050
+Wire Wire Line
+	6800 3050 6800 3250
+Connection ~ 6800 3250
+Text Notes 3700 2550 0    25   ~ 0
+VCC(abs,max)=42V
+Wire Wire Line
+	5250 2900 5250 3050
+$Comp
+L power:GND #PWR0234
+U 1 1 5E5EA2C6
+P 5250 3050
+F 0 "#PWR0234" H 5250 2800 50  0001 C CNN
+F 1 "GND" H 5350 2950 40  0000 C CNN
+F 2 "" H 5250 3050 50  0001 C CNN
+F 3 "" H 5250 3050 50  0001 C CNN
+	1    5250 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 2850 6200 3050
+$Comp
+L power:GND #PWR0245
+U 1 1 5E5EA2D1
+P 6200 3050
+F 0 "#PWR0245" H 6200 2800 50  0001 C CNN
+F 1 "GND" H 6300 2950 40  0000 C CNN
+F 2 "" H 6200 3050 50  0001 C CNN
+F 3 "" H 6200 3050 50  0001 C CNN
+	1    6200 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2850 6000 3050
+$Comp
+L power:GND #PWR0243
+U 1 1 5E5EA2DC
+P 6000 3050
+F 0 "#PWR0243" H 6000 2800 50  0001 C CNN
+F 1 "GND" H 6100 2950 40  0000 C CNN
+F 2 "" H 6000 3050 50  0001 C CNN
+F 3 "" H 6000 3050 50  0001 C CNN
+	1    6000 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2850 5800 3050
+$Comp
+L power:GND #PWR0241
+U 1 1 5E5EA2E7
+P 5800 3050
+F 0 "#PWR0241" H 5800 2800 50  0001 C CNN
+F 1 "GND" H 5900 2950 40  0000 C CNN
+F 2 "" H 5800 3050 50  0001 C CNN
+F 3 "" H 5800 3050 50  0001 C CNN
+	1    5800 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 3050 7050 3050
+Connection ~ 6800 3050
+Wire Wire Line
+	5000 6350 7050 6350
+Wire Wire Line
+	6800 2600 6950 2600
+$Comp
+L yageo:RC0402FR-07100RL R211
+U 1 1 5E708B2B
+P 6950 2800
+F 0 "R211" V 6899 2848 40  0000 L CNN
+F 1 "100F" V 6975 2848 40  0000 L CNN
+F 2 "yageo:R_0402" H 6950 2730 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 6950 2880 30  0001 C CNN
+F 4 "1005" V 7026 2848 10  0000 L CNN "Size"
+F 5 "Yageo" H 7150 2900 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-07100RL" H 7200 2950 50  0001 C CNN "Manufacturer Part Number"
+	1    6950 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 2750 6950 2600
+Connection ~ 6950 2600
+Wire Wire Line
+	6950 2600 7000 2600
+Wire Wire Line
+	6950 2850 6950 2950
+Wire Wire Line
+	6950 2950 7150 2950
+Wire Wire Line
+	5200 3950 5750 3950
+Connection ~ 3750 4200
+Wire Wire Line
+	3750 4200 3850 4200
+Wire Wire Line
+	2550 2600 2550 2900
+Wire Wire Line
+	2550 2600 3150 2600
+$Comp
+L yageo:RC0402FR-0710KL R?
+U 1 1 5E8E9E81
+P 3850 3150
+AR Path="/5D28FBB5/5E8E9E81" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5E8E9E81" Ref="R206"  Part="1" 
+F 0 "R206" V 3799 3198 40  0000 L CNN
+F 1 "10kF" V 3875 3198 40  0000 L CNN
+F 2 "yageo:R_0402" H 3850 3080 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 3850 3230 30  0001 C CNN
+F 4 "1005" V 3926 3198 10  0000 L CNN "Size"
+F 5 "Yageo" H 4050 3250 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0710KL" H 4100 3300 50  0001 C CNN "Manufacturer Part Number"
+	1    3850 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3850 3000 3850 3100
+Connection ~ 3850 3000
+Wire Wire Line
+	3850 3200 3850 3500
+Wire Wire Line
+	3850 3500 3950 3500
+Connection ~ 3950 3500
+Wire Wire Line
+	3850 3000 3750 3000
+Wire Wire Line
+	3750 3000 3750 4200
+$Comp
+L Taiyo_Yuden:NR5040T4R7N L201
+U 1 1 5E9ED8DC
+P 5550 2600
+F 0 "L201" H 5550 2767 40  0000 C CNN
+F 1 "NR5040T4R7N" H 5600 2700 40  0000 C CNN
+F 2 "taiyo-yuden:NR5040" H 5480 2540 60  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/ut/detail?pn=NR5040T4R7N%20%20&u=M" H 5580 2640 60  0001 C CNN
+	1    5550 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0247
+U 1 1 5EA8D49E
+P 6400 3050
+F 0 "#PWR0247" H 6400 2800 50  0001 C CNN
+F 1 "GND" H 6500 2950 40  0000 C CNN
+F 2 "" H 6400 3050 50  0001 C CNN
+F 3 "" H 6400 3050 50  0001 C CNN
+	1    6400 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L samsung:CL31A106KBHNNNE C212
+U 1 1 5EB0DB61
+P 6000 2800
+F 0 "C212" V 5850 2600 40  0000 L CNN
+F 1 "10u/50(X7R)" V 5925 2600 40  0000 L CNN
+F 2 "murata:GRM31" H 6000 2730 10  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL31A106KBHNNNE.jsp" H 6000 2880 10  0001 C CNN
+F 4 "3216" V 5975 2825 10  0000 L CNN "Size"
+F 5 "Samsung Electro-Mechanics" H 6200 3100 50  0001 C CNN "Manufacturer"
+F 6 "CL31A106KBHNNNE" H 6300 3200 50  0001 C CNN "Manufacturer Part Number"
+	1    6000 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L samsung:CL31A106KBHNNNE C218
+U 1 1 5EB64CF6
+P 6200 2800
+F 0 "C218" V 6050 2600 40  0000 L CNN
+F 1 "10u/50(X7R)" V 6125 2600 40  0000 L CNN
+F 2 "murata:GRM31" H 6200 2730 10  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL31A106KBHNNNE.jsp" H 6200 2880 10  0001 C CNN
+F 4 "3216" V 6175 2825 10  0000 L CNN "Size"
+F 5 "Samsung Electro-Mechanics" H 6400 3100 50  0001 C CNN "Manufacturer"
+F 6 "CL31A106KBHNNNE" H 6500 3200 50  0001 C CNN "Manufacturer Part Number"
+	1    6200 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2600 6400 2750
+Wire Wire Line
+	6600 2600 6600 2750
+Wire Wire Line
+	6600 2850 6600 3050
+Wire Wire Line
+	6400 2850 6400 3050
+$Comp
+L samsung:CL31A106KBHNNNE C220
+U 1 1 5EB92761
+P 6400 2800
+F 0 "C220" V 6250 2600 40  0000 L CNN
+F 1 "10u/50(X7R)" V 6325 2600 40  0000 L CNN
+F 2 "murata:GRM31" H 6400 2730 10  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL31A106KBHNNNE.jsp" H 6400 2880 10  0001 C CNN
+F 4 "3216" V 6375 2825 10  0000 L CNN "Size"
+F 5 "Samsung Electro-Mechanics" H 6600 3100 50  0001 C CNN "Manufacturer"
+F 6 "CL31A106KBHNNNE" H 6700 3200 50  0001 C CNN "Manufacturer Part Number"
+	1    6400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L samsung:CL31A106KBHNNNE C222
+U 1 1 5EB9276E
+P 6600 2800
+F 0 "C222" V 6450 2600 40  0000 L CNN
+F 1 "10u/50(X7R)" V 6525 2600 40  0000 L CNN
+F 2 "murata:GRM31" H 6600 2730 10  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL31A106KBHNNNE.jsp" H 6600 2880 10  0001 C CNN
+F 4 "3216" V 6575 2825 10  0000 L CNN "Size"
+F 5 "Samsung Electro-Mechanics" H 6800 3100 50  0001 C CNN "Manufacturer"
+F 6 "CL31A106KBHNNNE" H 6900 3200 50  0001 C CNN "Manufacturer Part Number"
+	1    6600 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 6400 2600
+Wire Wire Line
+	6400 2600 6200 2600
+Connection ~ 6600 2600
+Wire Wire Line
+	6600 2600 6400 2600
+$Comp
+L power:GND #PWR0249
+U 1 1 5EBBBAC6
+P 6600 3050
+F 0 "#PWR0249" H 6600 2800 50  0001 C CNN
+F 1 "GND" H 6700 2950 40  0000 C CNN
+F 2 "" H 6600 3050 50  0001 C CNN
+F 3 "" H 6600 3050 50  0001 C CNN
+	1    6600 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L optosupply:OSR5JA3Z74A D201
+U 1 1 5ED1D9E2
+P 4300 4200
+F 0 "D201" H 4300 4417 40  0000 C CNN
+F 1 "OSR5JA3Z74A" H 4300 4341 40  0000 C CNN
+F 2 "LED_THT:LED_D3.0mm" H 4200 4200 60  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/optosupply/OSXXXX3Z74A_VER_A1.pdf" H 4300 4300 60  0001 C CNN
+F 4 "OptoSupply" H 4400 4380 50  0001 C CNN "Manufacturer"
+F 5 "OSR5JA3Z74A" H 4500 4480 50  0001 C CNN "Manufacturer Part Number"
+	1    4300 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L yageo:RC0402FR-0710KL R?
+U 1 1 5ED1E9CC
+P 3900 4200
+AR Path="/5D28FBB5/5ED1E9CC" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5ED1E9CC" Ref="R207"  Part="1" 
+F 0 "R207" H 3860 4090 40  0000 L CNN
+F 1 "10kF" H 3820 4150 40  0000 L CNN
+F 2 "yageo:R_0402" H 3900 4130 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 3900 4280 30  0001 C CNN
+F 4 "1005" H 3880 4240 10  0000 L CNN "Size"
+F 5 "Yageo" H 4100 4300 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0710KL" H 4150 4350 50  0001 C CNN "Manufacturer Part Number"
+	1    3900 4200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3150 1850 3150 2600
+Connection ~ 3150 2600
+Wire Wire Line
+	3150 2600 3400 2600
+$Comp
+L ulo:ULO-PH409-1*2SF11 CN208
+U 1 1 5EF56080
+P 10200 9800
+F 0 "CN208" H 10278 9833 40  0000 L CNN
+F 1 "ULO-PH409-1*2SF11" H 10278 9757 40  0000 L CNN
+F 2 "ulo:ULO-PH409-1x2SX1" H 10200 9700 50  0001 C CNN
+F 3 "http://www.ulogroup.com/upload/2013101815053045.pdf" H 10200 9700 50  0001 C CNN
+F 4 "ULO Electronic" H 10300 10050 50  0001 C CNN "Manufacturer"
+F 5 "ULO-PH409-1x2SX1" H 10400 10150 50  0001 C CNN "Manufacturer Part Number"
+	1    10200 9800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 8800 9800 9750
+Wire Wire Line
+	9800 9750 10000 9750
+$Comp
+L ulo:ULO-PH409-1*2SF11 CN209
+U 1 1 5EF821C1
+P 10200 10050
+F 0 "CN209" H 10278 10083 40  0000 L CNN
+F 1 "ULO-PH409-1*2SF11" H 10278 10007 40  0000 L CNN
+F 2 "ulo:ULO-PH409-1x2SX1" H 10200 9950 50  0001 C CNN
+F 3 "http://www.ulogroup.com/upload/2013101815053045.pdf" H 10200 9950 50  0001 C CNN
+F 4 "ULO Electronic" H 10300 10300 50  0001 C CNN "Manufacturer"
+F 5 "ULO-PH409-1x2SX1" H 10400 10400 50  0001 C CNN "Manufacturer Part Number"
+	1    10200 10050
+	1    0    0    -1  
+$EndComp
+$Comp
+L ulo:ULO-PH409-1*2SF11 CN210
+U 1 1 5EF82758
+P 10200 10300
+F 0 "CN210" H 10278 10333 40  0000 L CNN
+F 1 "ULO-PH409-1*2SF11" H 10278 10257 40  0000 L CNN
+F 2 "ulo:ULO-PH409-1x2SX1" H 10200 10200 50  0001 C CNN
+F 3 "http://www.ulogroup.com/upload/2013101815053045.pdf" H 10200 10200 50  0001 C CNN
+F 4 "ULO Electronic" H 10300 10550 50  0001 C CNN "Manufacturer"
+F 5 "ULO-PH409-1x2SX1" H 10400 10650 50  0001 C CNN "Manufacturer Part Number"
+	1    10200 10300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 10000 9800 10000
+Wire Wire Line
+	9800 10000 9800 9750
+Connection ~ 9800 9750
+Wire Wire Line
+	10000 10250 9800 10250
+Wire Wire Line
+	9800 10250 9800 10000
+Connection ~ 9800 10000
+Wire Wire Line
+	10000 9850 9900 9850
+Wire Wire Line
+	9900 9850 9900 10100
+$Comp
+L power:GND #PWR0101
+U 1 1 5F02DE45
+P 9900 10500
+F 0 "#PWR0101" H 9900 10250 50  0001 C CNN
+F 1 "GND" H 9800 10400 40  0000 C CNN
+F 2 "" H 9900 10500 50  0001 C CNN
+F 3 "" H 9900 10500 50  0001 C CNN
+	1    9900 10500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 10350 10000 10350
+Connection ~ 9900 10350
+Wire Wire Line
+	9900 10350 9900 10500
+Wire Wire Line
+	9900 10100 10000 10100
+Connection ~ 9900 10100
+Wire Wire Line
+	9900 10100 9900 10350
+Text Notes 9900 9650 0    50   ~ 0
++5V/GND Through Holes for External Devices
+Text Notes 13350 1050 0    50   ~ 0
+Arduino Nano Connector
+Wire Notes Line
+	14500 700  15450 700 
+Wire Notes Line
+	15450 700  15450 1000
+Wire Notes Line
+	13250 700  12150 700 
+Wire Notes Line
+	12150 700  12150 1000
+Wire Notes Line
+	13100 950  14550 950 
+Wire Notes Line
+	14550 950  14550 2800
+Wire Notes Line
+	14550 2800 13100 2800
+Wire Notes Line
+	13100 2800 13100 950 
+Wire Notes Line
+	9550 9450 9550 10750
+Wire Notes Line
+	9550 10750 11700 10750
+Wire Notes Line
+	11700 10750 11700 9450
+Wire Notes Line
+	11700 9450 9550 9450
+Text Notes 3700 8750 0    25   ~ 0
+VCC(abs,max)=42V
+Wire Wire Line
+	7050 3050 7050 6350
+Wire Wire Line
+	7150 6550 7150 2950
+Wire Wire Line
+	4900 6550 7150 6550
+$Comp
+L Taiyo_Yuden:NR5040T4R7N L202
+U 1 1 5E4C07BB
+P 5550 8800
+F 0 "L202" H 5425 8950 40  0000 C CNN
+F 1 "NR5040T4R7N" H 5750 8875 40  0000 C CNN
+F 2 "taiyo-yuden:NR5040" H 5550 8800 50  0001 C CNN
+F 3 "https://ds.yuden.co.jp/TYCOMPAS/ut/detail?pn=NR5040T4R7N%20%20&u=M" H 5525 8800 60  0001 C CNN
+F 4 "Taiyo Yuden" H 5650 9050 80  0001 C CNN "Manufacturer"
+F 5 "NR5040T4R7N" H 5750 9150 80  0001 C CNN "Manufacturer Part Number"
+	1    5550 8800
+	1    0    0    -1  
+$EndComp
+$Comp
+L yageo:RC0402FR-0710KL R?
+U 1 1 5F600D1F
+P 6550 9600
+AR Path="/5D28FBB5/5F600D1F" Ref="R?"  Part="1" 
+AR Path="/5D26E750/5F600D1F" Ref="R209"  Part="1" 
+F 0 "R209" V 6499 9648 40  0000 L CNN
+F 1 "10kF" V 6575 9648 40  0000 L CNN
+F 2 "yageo:R_0402" H 6550 9530 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 6550 9680 30  0001 C CNN
+F 4 "1005" V 6626 9648 10  0000 L CNN "Size"
+F 5 "Yageo" H 6750 9700 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0710KL" H 6800 9750 50  0001 C CNN "Manufacturer Part Number"
+	1    6550 9600
+	0    1    1    0   
+$EndComp
+$Comp
+L yageo:RC0402FR-0768KL R208
+U 1 1 5F671D30
+P 6550 9000
+F 0 "R208" V 6499 9048 40  0000 L CNN
+F 1 "68kF" V 6575 9048 40  0000 L CNN
+F 2 "yageo:R_0402" H 6550 8930 30  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf" H 6550 9080 30  0001 C CNN
+F 4 "1005" V 6626 9048 10  0000 L CNN "Size"
+F 5 "Yageo" H 6750 9100 50  0001 C CNN "Manufacturer"
+F 6 "RC0402FR-0768KL" H 6800 9150 50  0001 C CNN "Manufacturer Part Number"
+	1    6550 9000
+	0    1    1    0   
+$EndComp
+Text Notes 5850 8650 0    50   ~ 0
+Vout\n = 0.9 * (1 + 68k / 10k)\n = 7.02 V
+Text Label 6550 8800 0    50   ~ 0
++7V
+$Comp
+L power:+5V #PWR0230
+U 1 1 5C98EC32
+P 9800 8750
+F 0 "#PWR0230" H 9800 8600 50  0001 C CNN
+F 1 "+5V" H 9815 8916 40  0000 C CNN
+F 2 "" H 9800 8750 50  0001 C CNN
+F 3 "" H 9800 8750 50  0001 C CNN
+	1    9800 8750
+	1    0    0    -1  
+$EndComp
+Text Notes 7850 8150 0    50   ~ 0
+VIN: Power Supply for Arduino
+Wire Wire Line
+	7550 8250 7550 8800
+Wire Wire Line
+	7550 8250 7950 8250
+Text Label 7950 8250 2    50   ~ 0
+VIN
+Wire Wire Line
+	8750 8800 9100 8800
+Wire Wire Line
+	7550 8800 7950 8800
+Wire Wire Line
+	7950 9050 7950 9200
+Wire Wire Line
+	7950 8950 7950 8800
+$Comp
+L murata:GRM188R61E106MA73D C215
+U 1 1 5D3A1353
+P 7950 9000
+F 0 "C215" H 8000 9050 40  0000 L CNN
+F 1 "10u/25(X5R)" H 7750 9100 40  0000 L CNN
+F 2 "murata:GRM18" H 8050 9025 10  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx" H 7950 9000 10  0001 C CNN
+F 4 "1608" H 7930 9040 10  0000 L CNN "Size"
+F 5 "Murata Electronics " H 3050 -500 50  0001 C CNN "Manufacturer"
+F 6 "GRM188R61E106MA73D" H 3050 -500 50  0001 C CNN "Manufacturer Part Number"
+	1    7950 9000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8750 8950 8750 8800
+Wire Wire Line
+	8750 9200 8750 9050
+$Comp
+L murata:GRM188R61E106MA73D C216
+U 1 1 5D3B5B05
+P 8750 9000
+F 0 "C216" H 8800 9050 40  0000 L CNN
+F 1 "10u/25(X5R)" H 8550 9100 40  0000 L CNN
+F 2 "murata:GRM18" H 8850 9025 10  0001 C CNN
+F 3 "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx" H 8750 9000 10  0001 C CNN
+F 4 "1608" H 8730 9040 10  0000 L CNN "Size"
+F 5 "Murata Electronics " H 3850 -500 50  0001 C CNN "Manufacturer"
+F 6 "GRM188R61E106MA73D" H 3850 -500 50  0001 C CNN "Manufacturer Part Number"
+	1    8750 9000
+	0    1    1    0   
+$EndComp
+Text Notes 8600 8550 0    50   ~ 0
+LDO: 5V/1A
+Wire Wire Line
+	8400 9200 8750 9200
+Wire Wire Line
+	8400 9200 8400 9100
+Connection ~ 8400 9200
+Wire Wire Line
+	7950 9200 8400 9200
+Connection ~ 7950 8800
+Wire Wire Line
+	7950 8800 8100 8800
+Wire Wire Line
+	8400 9250 8400 9200
+$Comp
+L power:GND #PWR0236
+U 1 1 5D38C53C
+P 8400 9250
+F 0 "#PWR0236" H 8400 9000 50  0001 C CNN
+F 1 "GND" H 8300 9150 40  0000 C CNN
+F 2 "" H 8400 9250 50  0001 C CNN
+F 3 "" H 8400 9250 50  0001 C CNN
+	1    8400 9250
+	1    0    0    -1  
+$EndComp
+Connection ~ 8750 8800
+Wire Wire Line
+	8700 8800 8750 8800
+$Comp
+L on_semiconductor:NCP1117LPST50T3G U205
+U 1 1 5D377A3D
+P 8400 8850
+F 0 "U205" H 8400 9150 50  0000 C CNN
+F 1 "NCP1117LPST50T3G" H 8400 9066 40  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3_TabPin2" H 8400 8975 20  0001 C CNN
+F 3 "http://www.onsemi.com/pub/Collateral/NCP1117LP-D.PDF" H 8400 8975 20  0001 C CNN
+F 4 "ON Semiconductor" H 8650 8754 50  0001 C CNN "Manufacturer"
+F 5 "NCP1117LPST50T3G" H 8750 8854 50  0001 C CNN "Manufacturer Part Number"
+	1    8400 8850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15250 1450 14200 1450
+$Comp
+L testpooint:TP1.0 TP205
+U 1 1 5CA14E1E
+P 12850 2050
+F 0 "TP205" H 12625 1975 40  0000 L CNN
+F 1 "TP1.0" H 12875 2225 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 12750 2050 50  0001 C CNN
+F 3 "" H 12850 2050 50  0000 C CNN
+	1    12850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L testpooint:TP1.0 TP204
+U 1 1 5C9D69AB
+P 12850 1950
+F 0 "TP204" H 12625 2025 40  0000 L CNN
+F 1 "TP1.0" H 12875 1775 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 12750 1950 50  0001 C CNN
+F 3 "" H 12850 1950 50  0000 C CNN
+	1    12850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L testpooint:TP1.0 TP221
+U 1 1 5E5113E1
+P 7150 2950
+F 0 "TP221" H 7228 2988 40  0000 L CNN
+F 1 "TP1.0" H 7228 2912 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 7050 2950 50  0001 C CNN
+F 3 "" H 7150 2950 50  0000 C CNN
+	1    7150 2950
+	1    0    0    -1  
+$EndComp
+Connection ~ 7150 2950
+$Comp
+L testpooint:TP1.0 TP222
+U 1 1 5E53D9BF
+P 7050 3050
+F 0 "TP222" H 6850 3000 40  0000 L CNN
+F 1 "TP1.0" H 6850 2950 40  0000 L CNN
+F 2 "TestPoint:TP_1mm" H 6950 3050 50  0001 C CNN
+F 3 "" H 7050 3050 50  0000 C CNN
+	1    7050 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 7050 3050
+$Comp
+L testpooint:TEST-1 TP225
+U 1 1 5E5C9CBA
+P 9900 10350
+F 0 "TP225" V 9900 10575 40  0000 C CNN
+F 1 "TEST-1" V 9825 10550 40  0000 C CNN
+F 2 "TestPoint:PTH_1mm" H 9900 10400 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 9900 10400 50  0001 C CNN
+	1    9900 10350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 3200 5200 3950
+$Comp
+L testpooint:TEST-1 TP223
+U 1 1 5E633473
+P 10150 8800
+F 0 "TP223" H 10250 8900 40  0000 L CNN
+F 1 "TEST-1" H 10250 8850 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 10050 8800 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 10150 8800 50  0001 C CNN
+	1    10150 8800
+	1    0    0    -1  
+$EndComp
+$Comp
+L testpooint:TEST-1 TP224
+U 1 1 5E6356ED
+P 11500 8800
+F 0 "TP224" H 11400 9000 40  0000 L CNN
+F 1 "TEST-1" H 11400 8950 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 11400 8800 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 11500 8800 50  0001 C CNN
+	1    11500 8800
+	1    0    0    -1  
+$EndComp
+Connection ~ 11500 8800
+Wire Wire Line
+	11500 8800 11650 8800
+Connection ~ 2350 8950
+Wire Wire Line
+	2350 8950 2350 7450
+$Comp
+L testpooint:TEST-1 TP209
+U 1 1 5C982A4A
+P 2150 3100
+F 0 "TP209" V 2150 3200 40  0000 L CNN
+F 1 "TEST-1" V 2200 3200 40  0000 L CNN
+F 2 "TestPoint:PTH_1mm" H 2050 3100 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/kangyang/TEST-1H.PDF" H 2150 3100 50  0001 C CNN
+	1    2150 3100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1850 3100 2150 3100
+Wire Wire Line
+	9150 2600 9400 2600
+Wire Wire Line
+	11650 9100 11650 9250
+Wire Wire Line
+	13600 7300 13850 7300
+Connection ~ 13850 7300
+Wire Wire Line
+	13850 7300 13850 7500
+$EndSCHEMATC

@@ -1,0 +1,36 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 3
+Title "WPT - Transmitter Block"
+Date "2020-02-22"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 2300 1700 2550 2150
+U 5D26E750
+F0 "WPT-01-TRANSMITTER-POWER" 50
+F1 "WPT-01-TRANSMITTER-POWER.sch" 50
+F2 "SCL_3.3V" O R 4850 2150 50 
+F3 "SDA_3.3V" B R 4850 2250 50 
+$EndSheet
+Wire Wire Line
+	4850 2250 7600 2250
+Wire Wire Line
+	4850 2150 7600 2150
+$Sheet
+S 7600 1650 2550 2200
+U 5D28FBB5
+F0 "WPT-01-TRANSMITTER-TX" 50
+F1 "WPT-01-TRANSMITTER-TX.sch" 50
+F2 "SCL_3.3V" I L 7600 2150 50 
+F3 "SDA_3.3V" B L 7600 2250 50 
+$EndSheet
+$EndSCHEMATC
