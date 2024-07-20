@@ -12,4 +12,4 @@ unsigned long long currentFrequency = 0;
 float currentVoltage = 0.0;
 float iLimit = 0;
 float vMin = 1.0;
-bool voltageOn = false;
+bool powerOn = false;

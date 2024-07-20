@@ -21,12 +21,12 @@ void init_wpt_devkit() {
 
 void power_on() {
   digitalWrite(DCDC_ENABLE_PIN, HIGH);
-  voltageOn = true;  // Update the voltage status flag
+  powerOn = true;  // Update the voltage status flag
 }
 
 void power_off() {
   digitalWrite(DCDC_ENABLE_PIN, LOW);
-  voltageOn = false;  // Update the voltage status flag
+  powerOn = false;  // Update the voltage status flag
 }
 
 int set_frequency(unsigned long long target_f) {
