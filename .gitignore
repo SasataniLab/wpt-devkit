@@ -1,0 +1,23 @@
+# Ignore macOS-specific files
+.DS_Store
+
+# Ignore Arduino build folders
+*.bin
+*.elf
+*.hex
+*.ino.*
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Optionally, uncomment these lines if you need some specific VS Code configurations
+# !.vscode/settings.json
+# !.vscode/tasks.json
+
+# Ignore temporary files and directories
+*.tmp
+*.log
+.idea/
+__pycache__/
+*.pyc
+build/
