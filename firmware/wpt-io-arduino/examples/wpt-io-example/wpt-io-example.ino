@@ -1,8 +1,4 @@
-#include <Arduino.h>
-#include "globals.h"
-#include "initDevKit.h"
-#include "SenseIV.h"
-#include "SCPICommands.h"
+#include <wpt-io.h>
 
 // Buffer to concatenate data for a single print
 char data[100];
