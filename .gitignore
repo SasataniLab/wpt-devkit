@@ -21,3 +21,5 @@
 __pycache__/
 *.pyc
 build/
+# Ignore local user data
+user_data/
