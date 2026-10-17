@@ -3004,10 +3004,6 @@
 		(uuid "fb96f126-ad94-4d03-9d03-aa5fc3495788")
 	)
 	(no_connect
-		(at 129.54 99.06)
-		(uuid "03494502-0677-4240-9902-d988f3237d10")
-	)
-	(no_connect
 		(at 165.1 129.54)
 		(uuid "03b82768-9b0a-4956-9ca8-36cef35cd7f0")
 	)
@@ -3046,10 +3042,6 @@
 	(no_connect
 		(at 165.1 132.08)
 		(uuid "bad81e13-1fad-40ba-82ba-c20d45ef1dfa")
-	)
-	(no_connect
-		(at 129.54 96.52)
-		(uuid "d5a7e122-40f1-44b2-8a9a-f6e62763e744")
 	)
 	(no_connect
 		(at 129.54 88.9)
@@ -4239,7 +4231,7 @@
 		)
 		(uuid "9937aff7-9051-4d59-841c-0d9df772897b")
 	)
-	(hierarchical_label "ADC2_IN2_EXTERNAL"
+	(hierarchical_label "VSWA_CMP"
 		(shape input)
 		(at 172.72 73.66 0)
 		(effects
@@ -5888,86 +5880,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 4.1911 7.3717 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a14ec9ea-63cc-4969-b58a-35bada8e09ed")
-		(property "Reference" "R3"
-			(at 4.1911 1.0217 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 4.1911 3.5617 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 4.1911 9.1497 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 4.1911 7.3717 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 4.1911 7.3717 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "f3044314-f5dc-42ed-80a0-240601edd8b8")
-		)
-		(pin "1"
-			(uuid "e077635e-e87f-4bfa-9089-7412a7431d5b")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/82df408d-9aab-4d11-a747-ac2cd4d0c268"
-					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 172.72 57.15 0)
 		(unit 1)
@@ -6815,5 +6727,47 @@
 				)
 			)
 		)
+	)
+	(wire
+		(pts
+			(xy 129.54 96.52) (xy 121.92 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad46b109-5478-4e3c-b28f-5c0845cdf4fa")
+	)
+	(hierarchical_label "VSWB_CMP"
+		(shape input)
+		(at 121.92 96.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3d550948-db88-4b5d-9e19-f3fe4a3f6d6c")
+	)
+	(wire
+		(pts
+			(xy 129.54 99.06) (xy 121.92 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fe4d343-bf40-4f7c-8418-f1004d475333")
+	)
+	(hierarchical_label "ADC2_IN8_EXTERNAL"
+		(shape input)
+		(at 121.92 99.06 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2d382c8e-2685-42a3-b116-6838133a5c59")
 	)
 )
