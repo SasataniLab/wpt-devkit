@@ -24,4 +24,10 @@ build/
 # Ignore local user data
 user_data/
 
-hardware/kicad/WPT-TX/WPT-01-TRANSMITTER-backups/
+
+# KiCad lock / autosave / local-only files
+*.lck
+_autosave-*
+fp-info-cache
+*-backups/
+*.kicad_prl
