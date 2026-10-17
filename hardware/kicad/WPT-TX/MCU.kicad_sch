@@ -3043,9 +3043,15 @@
 		(at 165.1 132.08)
 		(uuid "bad81e13-1fad-40ba-82ba-c20d45ef1dfa")
 	)
-	(no_connect
-		(at 129.54 119.38)
-		(uuid "c85d58ed-a7fd-44ae-944b-039b6aa81275")
+	(wire
+		(pts
+			(xy 121.92 119.38) (xy 129.54 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "444e6c16-ca34-40b7-9aa8-33c031648fb5")
 	)
 	(no_connect
 		(at 129.54 96.52)
@@ -3203,15 +3209,9 @@
 		)
 		(uuid "4840eb40-fec2-4fc9-b969-6834789d68b5")
 	)
-	(wire
-		(pts
-			(xy 165.1 96.52) (xy 172.72 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4bd72355-c28d-466c-9217-4f9240657b0c")
+	(no_connect
+		(at 165.1 96.52)
+		(uuid "8732c937-eab1-460d-88f7-fb8008f55eff")
 	)
 	(wire
 		(pts
@@ -3988,12 +3988,12 @@
 	)
 	(hierarchical_label "GPIO_VUSB_SENSE"
 		(shape input)
-		(at 172.72 96.52 0)
+		(at 121.92 119.38 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "1efd7718-70bf-4f35-87c0-4b53ce82a54a")
 	)
