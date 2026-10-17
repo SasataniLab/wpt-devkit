@@ -23,3 +23,5 @@ __pycache__/
 build/
 # Ignore local user data
 user_data/
+
+hardware/kicad/WPT-TX/WPT-01-TRANSMITTER-backups/
