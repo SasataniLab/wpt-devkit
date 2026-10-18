@@ -13186,7 +13186,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SOD-323"
+		(property "Footprint" "Diodes_SMD:SOD-323"
 			(at 303.53 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -17433,7 +17433,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "SOD-323"
+		(property "Footprint" "Diodes_SMD:SOD-323"
 			(at 303.53 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -24418,218 +24418,13 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 93.98) (xy 238.76 93.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "231c79c1-2765-4a37-919c-d037c1461ae6")
-	)
-	(label "H1_LEG"
-		(at 238.76 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bf31643c-411c-4c31-8608-96e81f54c1b5")
-	)
-	(wire
-		(pts
-			(xy 237.49 99.06) (xy 238.76 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dbd5aede-5f8f-4679-a239-12b58937c74f")
-	)
-	(label "L1_LEG"
-		(at 238.76 99.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "29f52ee8-0cb1-4386-8355-5d145586f375")
-	)
-	(wire
-		(pts
-			(xy 247.65 99.06) (xy 256.54 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e97ae074-3556-4d91-ad42-f16913f28bcc")
-	)
-	(wire
-		(pts
-			(xy 237.49 193.04) (xy 238.76 193.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b96a59e1-3b79-41cf-be07-8d906105c41b")
-	)
-	(label "H2_LEG"
-		(at 238.76 193.04 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1a26894b-d1f2-4b52-b868-9a075031931f")
-	)
-	(wire
-		(pts
-			(xy 237.49 198.12) (xy 238.76 198.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24556188-9d49-4bbe-a3d9-91a4006ff6be")
-	)
-	(label "L2_LEG"
-		(at 238.76 198.12 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "deeca526-1d7f-4223-a983-4a4f02b947db")
-	)
-	(wire
-		(pts
-			(xy 247.65 198.12) (xy 256.54 198.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bb2b9d29-1fb9-4b4b-bb59-e3cb971adb98")
-	)
-	(label "H1_LEG"
-		(at 190.5 220.98 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "32cb72ab-5f0f-4bb3-a082-1ee44573184d")
-	)
-	(wire
-		(pts
-			(xy 190.5 220.98) (xy 191.77 220.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9eb6fdb8-43f5-4388-b3ec-166d9ae2222e")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 195.58 220.98 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d4814154-f52a-4ca5-86d5-663e5458300a")
-		(property "Reference" "R319"
-			(at 195.58 218.44 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 195.58 223.52 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 195.58 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 195.58 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 195.58 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "37faa9fa-ed3e-46bd-9887-af28a9e5ee71")
-		)
-		(pin "2"
-			(uuid "f6ec73df-163a-49cb-b3b5-05c4ac36d968")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
-					(reference "R319")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 199.39 220.98) (xy 214.63 220.98)
+			(xy 203.2 220.98) (xy 214.63 220.98)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "0c7ab4fc-5e9d-43f3-a3aa-b06a4731a42c")
-	)
-	(junction
-		(at 203.2 220.98)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7ab0e172-4522-4cee-84f6-a4fa5c8e090b")
 	)
 	(label "H_Sig1"
 		(at 203.2 220.98 0)
@@ -24906,120 +24701,15 @@
 			)
 		)
 	)
-	(label "L1_LEG"
-		(at 190.5 236.22 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "6f5bfae8-e01d-4cbc-a860-c82ce2d27d79")
-	)
 	(wire
 		(pts
-			(xy 190.5 236.22) (xy 191.77 236.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2902f0fd-959b-4e25-bdd9-d410584039c3")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 195.58 236.22 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2aa1c121-9902-4767-a38b-abe08d19e033")
-		(property "Reference" "R322"
-			(at 195.58 233.68 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 195.58 238.76 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 195.58 236.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 195.58 236.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 195.58 236.22 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f13d4701-3297-4efd-854d-54ddbbdf4636")
-		)
-		(pin "2"
-			(uuid "c46083ed-29cc-4649-be8b-ba139f0157b4")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
-					(reference "R322")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 199.39 236.22) (xy 214.63 236.22)
+			(xy 203.2 236.22) (xy 214.63 236.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "80f4eddd-75f6-4226-ac2c-4ca0e854ef2e")
-	)
-	(junction
-		(at 203.2 236.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ba958a8e-01e4-4fa9-81fd-ccfb3f75c18e")
 	)
 	(label "L_Sig1"
 		(at 203.2 236.22 0)
@@ -25296,120 +24986,15 @@
 			)
 		)
 	)
-	(label "H2_LEG"
-		(at 190.5 251.46 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "a1b61ae5-35c2-41e3-8149-190bbc989631")
-	)
 	(wire
 		(pts
-			(xy 190.5 251.46) (xy 191.77 251.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64ebffdb-4812-45ab-874b-babafdc81928")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 195.58 251.46 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "1d92f930-9158-4c57-aa7c-fe0c9a43332b")
-		(property "Reference" "R325"
-			(at 195.58 248.92 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 195.58 254 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 195.58 251.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 195.58 251.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 195.58 251.46 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6bd5f929-8b9b-4ff3-81d0-7b9228537063")
-		)
-		(pin "2"
-			(uuid "ea8826dc-bcd2-4a01-9a51-f18267b7a3cf")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
-					(reference "R325")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 199.39 251.46) (xy 214.63 251.46)
+			(xy 203.2 251.46) (xy 214.63 251.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e53ca3d1-46f6-48ba-88f8-3faa12ad5ce7")
-	)
-	(junction
-		(at 203.2 251.46)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4b78cd45-5357-4f9f-83d9-86593c60f749")
 	)
 	(label "H_Sig2"
 		(at 203.2 251.46 0)
@@ -25686,120 +25271,15 @@
 			)
 		)
 	)
-	(label "L2_LEG"
-		(at 190.5 266.7 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "e450afcc-8d74-4fbc-b0c1-305856cdd790")
-	)
 	(wire
 		(pts
-			(xy 190.5 266.7) (xy 191.77 266.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2664ff07-e1f1-4fa1-bdb3-bedfdfc9961c")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 195.58 266.7 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c1467eb8-3ab0-4c04-b142-381bab6d091b")
-		(property "Reference" "R328"
-			(at 195.58 264.16 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 195.58 269.24 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 195.58 266.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 195.58 266.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 195.58 266.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "da288ac4-087a-4c52-b7de-6f871dab0890")
-		)
-		(pin "2"
-			(uuid "ce8cf337-c7dd-4418-93fb-6c659d63e6cd")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
-					(reference "R328")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 199.39 266.7) (xy 214.63 266.7)
+			(xy 203.2 266.7) (xy 214.63 266.7)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "e5cd3328-ff39-4045-afbb-2a1c93ac1e4b")
-	)
-	(junction
-		(at 203.2 266.7)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "af870076-31c1-41d6-9e0f-f14cefa1c15d")
 	)
 	(label "L_Sig2"
 		(at 203.2 266.7 0)
@@ -28684,5 +28164,45 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e51a7701-1a33-4d8c-b321-0d9b1f335fed")
+	)
+	(wire
+		(pts
+			(xy 237.49 93.98) (xy 246.38 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99101e34-7adf-4b35-9f17-9efd7917d99a")
+	)
+	(wire
+		(pts
+			(xy 237.49 99.06) (xy 256.54 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac34693d-c93e-4412-8ba5-2c0dad0753a9")
+	)
+	(wire
+		(pts
+			(xy 237.49 193.04) (xy 246.38 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff511f2d-0152-4e24-b525-c2afb7c5965e")
+	)
+	(wire
+		(pts
+			(xy 237.49 198.12) (xy 256.54 198.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c3c4b61-63d7-4cb0-a838-8bfc1c622ce9")
 	)
 )
