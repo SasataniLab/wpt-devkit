@@ -7201,7 +7201,7 @@
 				(justify left)
 			)
 		)
-		(pin "GPIO_DISP_DDC" input
+		(pin "GPIO_DISP_DC" input
 			(at 68.58 176.53 180)
 			(uuid "d3461ea5-232a-4d6a-81a2-a20957b9a708")
 			(effects
