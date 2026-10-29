@@ -7461,7 +7461,7 @@
 				(justify right)
 			)
 		)
-		(pin "USB_DM" input
+		(pin "USB_D_N" input
 			(at 106.68 147.32 90)
 			(uuid "ceea8ccf-e4bf-4264-8b48-7aacd12ada28")
 			(effects
@@ -7471,7 +7471,7 @@
 				(justify right)
 			)
 		)
-		(pin "USB_DP" input
+		(pin "USB_D_P" input
 			(at 109.22 147.32 90)
 			(uuid "b13f17c9-1fec-442f-8ec8-25d2adf8c596")
 			(effects
@@ -7879,7 +7879,7 @@
 		)
 		(uuid "6431d9bf-74a1-4a2f-a112-4829410a668f")
 	)
-	(label "USB_DP"
+	(label "USB_D_P"
 		(at 105.41 82.55 270)
 		(effects
 			(font
@@ -7919,7 +7919,7 @@
 		)
 		(uuid "b988f2ff-72f8-4dc8-b87e-be1d5b512ac8")
 	)
-	(label "USB_DM"
+	(label "USB_D_N"
 		(at 110.49 80.01 270)
 		(effects
 			(font
@@ -8114,7 +8114,7 @@
 		)
 		(uuid "2348fb72-aedc-4c02-b5bb-8451dc2fa6c9")
 	)
-	(label "USB_DP"
+	(label "USB_D_P"
 		(at 72.39 92.71 180)
 		(effects
 			(font
@@ -8134,7 +8134,7 @@
 		)
 		(uuid "02ba23b6-5191-41a4-8d1c-355541a02d11")
 	)
-	(label "USB_DM"
+	(label "USB_D_N"
 		(at 72.39 95.25 180)
 		(effects
 			(font
@@ -8154,7 +8154,7 @@
 		)
 		(uuid "afdda1df-b13a-4bd3-b555-14d84360b791")
 	)
-	(label "USB_DP"
+	(label "USB_D_P"
 		(at 92.71 92.71 0)
 		(effects
 			(font
@@ -8174,7 +8174,7 @@
 		)
 		(uuid "3bb94ab4-bf05-4496-af0d-44c3ae1172bb")
 	)
-	(label "USB_DM"
+	(label "USB_D_N"
 		(at 92.71 95.25 0)
 		(effects
 			(font
@@ -8290,7 +8290,7 @@
 		)
 		(uuid "b43e894a-4460-4b00-a981-89b8406341fa")
 	)
-	(label "USB_DM"
+	(label "USB_D_N"
 		(at 106.68 139.7 90)
 		(effects
 			(font
@@ -8310,7 +8310,7 @@
 		)
 		(uuid "39870593-7009-4896-ac47-9ffa2442667f")
 	)
-	(label "USB_DP"
+	(label "USB_D_P"
 		(at 109.22 139.7 90)
 		(effects
 			(font

@@ -143,9 +143,9 @@
       "rule_severitieslegacy_no_courtyard_defined": false,
       "rules": {
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.2,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.005,
+        "min_copper_edge_clearance": 0.3,
         "min_groove_width": 0.0,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
@@ -523,6 +523,82 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "HV",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.0,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "HV_SW",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 2.0,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.2,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.3,
+        "line_style": 0,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "USB",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -532,15 +608,27 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
-        "netclass": "Default",
+        "netclass": "Power",
         "pattern": "+3V3"
       },
       {
-        "netclass": "Default",
+        "netclass": "Power",
         "pattern": "+5V"
       },
       {
-        "netclass": "Default",
+        "netclass": "USB",
+        "pattern": "/USB_D_N"
+      },
+      {
+        "netclass": "USB",
+        "pattern": "/USB_D_P"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/VBUS"
+      },
+      {
+        "netclass": "Power",
         "pattern": "/WPT-01-TRANSMITTER-POWER/+7V"
       },
       {
@@ -584,7 +672,7 @@
         "pattern": "/WPT-01-TRANSMITTER-POWER/SDA_5V"
       },
       {
-        "netclass": "Default",
+        "netclass": "HV",
         "pattern": "/WPT-01-TRANSMITTER-POWER/VIN"
       },
       {
@@ -668,11 +756,11 @@
         "pattern": "/WPT-01-TRANSMITTER-TX/L_Sig2"
       },
       {
-        "netclass": "Default",
+        "netclass": "HV_SW",
         "pattern": "/WPT-01-TRANSMITTER-TX/OutA"
       },
       {
-        "netclass": "Default",
+        "netclass": "HV_SW",
         "pattern": "/WPT-01-TRANSMITTER-TX/OutB"
       },
       {
@@ -904,7 +992,7 @@
         "pattern": "Net-(TP220-Pad1)"
       },
       {
-        "netclass": "Default",
+        "netclass": "HV",
         "pattern": "VPP"
       }
     ]

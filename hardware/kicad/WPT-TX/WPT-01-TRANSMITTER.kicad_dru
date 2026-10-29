@@ -1,0 +1,8 @@
+(version 1)
+
+# GCT USB4105: the two NPTH alignment pegs sit 0.19 mm from the GND shell pads
+# inside the library footprint. Relax the board-wide 0.25 mm hole clearance
+# for those pegs only.
+(rule "USB4105 NPTH alignment pegs"
+	(condition "A.memberOfFootprint('J5') && A.Pad_Type == 'NPTH, mechanical'")
+	(constraint hole_clearance (min 0.15mm)))
