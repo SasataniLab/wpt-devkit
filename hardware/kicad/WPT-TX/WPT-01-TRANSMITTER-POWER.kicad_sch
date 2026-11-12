@@ -16459,7 +16459,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005cdaa037")
 		(property "Reference" "R221"
 			(at 308.61 140.97 0)
@@ -16569,7 +16569,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005cdaa042")
 		(property "Reference" "R222"
 			(at 308.61 147.32 0)

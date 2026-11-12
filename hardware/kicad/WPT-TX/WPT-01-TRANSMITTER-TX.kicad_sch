@@ -20908,7 +20908,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005ca4c696")
 		(property "Reference" "C332"
 			(at 83.82 190.246 0)
@@ -21018,7 +21018,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005ca4d258")
 		(property "Reference" "C330"
 			(at 83.82 175.006 0)
@@ -21356,7 +21356,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005cadd8bc")
 		(property "Reference" "R312"
 			(at 94.488 181.356 0)
@@ -23744,7 +23744,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005d1e8a5c")
 		(property "Reference" "C333"
 			(at 170.18 199.39 90)
