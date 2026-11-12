@@ -27626,15 +27626,28 @@
 		)
 		(uuid "ad853e58-b9e2-4331-a37e-ea6a8d925de0")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape passive)
 		(at 304.8 223.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left)
 		)
 		(uuid "417d3c62-2781-4c84-95f5-a9e1d5319f4b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 304.8 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(wire
 		(pts
@@ -27666,15 +27679,28 @@
 		)
 		(uuid "2409923b-5c8a-41c1-9e08-8be500a7685e")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape passive)
 		(at 304.8 228.6 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left)
 		)
 		(uuid "541b2bb0-321d-4460-afd0-b9fdc9af078a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 304.8 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(wire
 		(pts
