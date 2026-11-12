@@ -25316,7 +25316,7 @@
 		)
 		(uuid "02aad0e4-b1fc-4ccb-a115-9aaf64ab1de3")
 	)
-	(hierarchical_label "HRTIM1_CHD1"
+	(hierarchical_label "HRTIM1_CHD2"
 		(shape input)
 		(at 224.79 251.46 0)
 		(effects
@@ -25649,7 +25649,7 @@
 		)
 		(uuid "e77cfa30-d92f-444a-96e6-09a58a80fc24")
 	)
-	(hierarchical_label "HRTIM1_CHD2"
+	(hierarchical_label "HRTIM1_CHD1"
 		(shape input)
 		(at 224.79 266.7 0)
 		(effects
