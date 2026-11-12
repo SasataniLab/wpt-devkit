@@ -16404,7 +16404,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "OPEN"
 			(at 308.61 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16514,7 +16514,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "OPEN"
 			(at 308.61 148.59 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16624,7 +16624,7 @@
 				)
 			)
 		)
-		(property "Value" "OPEN"
+		(property "Value" "0"
 			(at 308.61 118.11 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16734,7 +16734,7 @@
 				)
 			)
 		)
-		(property "Value" "OPEN"
+		(property "Value" "0"
 			(at 308.61 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
