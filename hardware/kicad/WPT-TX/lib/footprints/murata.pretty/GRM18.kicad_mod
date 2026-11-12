@@ -1,0 +1,215 @@
+(footprint "GRM18"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Capacitor SMD 0402, reflow soldering, AVX (see smccp.pdf)")
+	(tags "capacitor 0402")
+	(property "Reference" "REF**"
+		(at 0 -1.5 180)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "866f67b2-aad7-4c8d-a9b2-ee422e71f7ad")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "GRM18"
+		(at 0 1.5 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2baf46c0-21c1-4190-b5cb-c93cdbfd6072")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "369d68b3-b01a-4727-b14c-80f7cdf04ba7")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "be71a5ba-ac9c-427e-98a5-b3f19ba16f3a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.25 0.475)
+		(end 0.25 0.475)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "529b331f-3850-4f58-acf2-935eb41cdae1")
+	)
+	(fp_line
+		(start 0.25 -0.475)
+		(end -0.25 -0.475)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "33cadb6e-9fe4-4b6c-bc0b-6f9f0b0333ed")
+	)
+	(fp_line
+		(start -1.35 -0.65)
+		(end -1.35 0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "da644a27-fb28-460e-b674-453ecf832952")
+	)
+	(fp_line
+		(start -1.35 -0.65)
+		(end 1.35 -0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e643222a-4806-461a-b93c-6fe9992aee8c")
+	)
+	(fp_line
+		(start -1.35 0.65)
+		(end 1.35 0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "d3c9887b-a7c6-4774-b447-bcf60ed42bcd")
+	)
+	(fp_line
+		(start 1.35 -0.65)
+		(end 1.35 0.65)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "75a719f0-d548-4c7b-86bf-c6825f725a7d")
+	)
+	(fp_line
+		(start -0.8 -0.4)
+		(end 0.8 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f446b2ea-4448-45a7-8923-7ac6930fc3cd")
+	)
+	(fp_line
+		(start -0.8 0.4)
+		(end -0.8 -0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "378128b0-1fbd-444a-a2bb-3ab6410a790a")
+	)
+	(fp_line
+		(start -0.25 0)
+		(end 0.25 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "15b81219-af3a-4783-83b2-d8d651262770")
+	)
+	(fp_line
+		(start 0 -0.25)
+		(end 0 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d7655449-2f42-4415-b107-76696a5b79d8")
+	)
+	(fp_line
+		(start 0.8 -0.4)
+		(end 0.8 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6d7f9353-4916-41b5-b953-977fb55f953c")
+	)
+	(fp_line
+		(start 0.8 0.4)
+		(end -0.8 0.4)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a2c63994-44f1-48aa-a9de-577e16ea3e8d")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 2.15 0 180)
+		(layer "F.Fab")
+		(uuid "01f362d7-bc30-4377-bcc8-9e9dde072f09")
+		(effects
+			(font
+				(size 0.3 0.3)
+				(thickness 0.05)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.75 0)
+		(size 0.7 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(solder_paste_margin -0.05)
+		(uuid "b7e09726-7437-4e37-b547-3390f5fe3c00")
+	)
+	(pad "2" smd roundrect
+		(at 0.75 0)
+		(size 0.7 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.2)
+		(solder_paste_margin -0.05)
+		(uuid "6fd5ccef-f84f-4de7-b790-4da880b1dd5e")
+	)
+	(embedded_fonts no)
+	(model "murata.3dshapes/C_0603.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

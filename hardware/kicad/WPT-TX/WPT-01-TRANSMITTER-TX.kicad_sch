@@ -2903,8 +2903,12 @@
 		)
 		(symbol "power:+3.3V"
 			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2922,7 +2926,7 @@
 					)
 				)
 			)
-			(property "Value" "power_+3.3V"
+			(property "Value" "+3.3V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2954,7 +2958,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2972,7 +2987,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -2984,7 +2999,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -2996,7 +3011,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3007,8 +3022,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+3V3"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3028,8 +3042,12 @@
 		)
 		(symbol "power:+5V"
 			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3047,7 +3065,7 @@
 					)
 				)
 			)
-			(property "Value" "power_+5V"
+			(property "Value" "+5V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3079,7 +3097,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3097,7 +3126,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3109,7 +3138,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3121,7 +3150,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3132,8 +3161,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+5V"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3153,8 +3181,12 @@
 		)
 		(symbol "power:GND"
 			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3172,7 +3204,7 @@
 					)
 				)
 			)
-			(property "Value" "power_GND"
+			(property "Value" "GND"
 				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3204,7 +3236,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3222,7 +3265,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3233,8 +3276,7 @@
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
-					(hide yes)
-					(name "GND"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3277,7 +3319,7 @@
 					)
 				)
 			)
-			(property "Value" "power_PWR_FLAG"
+			(property "Value" "PWR_FLAG"
 				(at 0 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3309,7 +3351,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3324,7 +3377,7 @@
 				(pin power_out line
 					(at 0 0 90)
 					(length 0)
-					(name "pwr"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3347,7 +3400,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3358,8 +3411,12 @@
 		)
 		(symbol "power:VPP"
 			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3377,8 +3434,8 @@
 					)
 				)
 			)
-			(property "Value" "power_VPP"
-				(at 0 3.81 0)
+			(property "Value" "VPP"
+				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3409,7 +3466,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Power symbol creates a global label with name \"VPP\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3427,7 +3495,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3439,7 +3507,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3451,7 +3519,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3462,8 +3530,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "VPP"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -13739,6 +13806,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R305")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -13839,6 +13910,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D305")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -13939,6 +14014,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D306")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -17986,6 +18065,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R315")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -18086,6 +18169,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D311")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -18186,6 +18273,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D312")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -20718,6 +20809,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R307")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -20828,6 +20923,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R318")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -20841,7 +20940,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005ca4c696")
 		(property "Reference" "C332"
 			(at 83.82 190.246 0)
@@ -20951,7 +21050,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005ca4d258")
 		(property "Reference" "C330"
 			(at 83.82 175.006 0)
@@ -21289,7 +21388,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005cadd8bc")
 		(property "Reference" "R312"
 			(at 94.488 181.356 0)
@@ -23677,7 +23776,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005d1e8a5c")
 		(property "Reference" "C333"
 			(at 170.18 199.39 90)
@@ -24500,6 +24599,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 218.44 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "43049d92-4c72-444e-987a-d34578b4c642")
 		)
@@ -24511,6 +24632,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R320")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -24600,6 +24725,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -24785,6 +24932,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 218.44 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fc70ac91-fe24-4661-828a-ecffdc346ff1")
 		)
@@ -24796,6 +24965,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R323")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -24885,6 +25058,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -25070,6 +25265,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 218.44 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8e6ad59e-3815-4753-bd63-1b31a5a420c5")
 		)
@@ -25081,6 +25298,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R326")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -25170,6 +25391,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 256.54 0)
 			(hide yes)
 			(show_name no)
@@ -25355,6 +25598,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 218.44 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8ab61de6-055b-48c0-8004-6e26c77f4326")
 		)
@@ -25366,6 +25631,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R329")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -25455,6 +25724,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 271.78 0)
 			(hide yes)
 			(show_name no)
@@ -25657,6 +25948,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 214.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0710KL"
+			(at 270.51 214.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "18774a13-dd4f-4231-b96d-eda91d015edb")
 		)
@@ -25812,6 +26125,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 270.51 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0710KL"
 			(at 270.51 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -26014,6 +26349,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0710KL"
+			(at 270.51 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "294ed0e2-b04f-465f-9509-134b92ed8649")
 		)
@@ -26169,6 +26526,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 270.51 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0710KL"
 			(at 270.51 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -26354,6 +26733,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 340.36 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 340.36 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fd13f32b-e961-4f0c-a7fb-6fb10728f3e4")
 		)
@@ -26460,6 +26861,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 346.71 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 346.71 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100KL"
 			(at 346.71 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -26645,6 +27068,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 340.36 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 340.36 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0c775fdc-7e42-4414-86c0-e20a029c13b7")
 		)
@@ -26751,6 +27196,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 346.71 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 346.71 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100KL"
 			(at 346.71 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -26936,6 +27403,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 368.3 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0715KL"
+			(at 368.3 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3a12a2cf-835c-4c8a-9181-20b57fa63552")
 		)
@@ -27041,6 +27530,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 368.3 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 368.3 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-071KL"
 			(at 368.3 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -27226,6 +27737,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 388.62 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0715KL"
+			(at 388.62 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "68741151-ac76-4c64-84ff-1f7522bae668")
 		)
@@ -27331,6 +27864,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 388.62 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 388.62 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-071KL"
 			(at 388.62 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -27496,6 +28051,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" ""
+			(at 297.18 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
+			(at 297.18 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "59446b77-03e6-4447-ba37-f2e0e2bdba17")
 		)
@@ -27559,15 +28136,28 @@
 		)
 		(uuid "ad853e58-b9e2-4331-a37e-ea6a8d925de0")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape passive)
 		(at 304.8 223.52 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left)
 		)
 		(uuid "417d3c62-2781-4c84-95f5-a9e1d5319f4b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 304.8 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(wire
 		(pts
@@ -27599,15 +28189,28 @@
 		)
 		(uuid "2409923b-5c8a-41c1-9e08-8be500a7685e")
 	)
-	(label "GND"
+	(global_label "GND"
+		(shape passive)
 		(at 304.8 228.6 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify left)
 		)
 		(uuid "541b2bb0-321d-4460-afd0-b9fdc9af078a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 304.8 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 	(wire
 		(pts
@@ -27781,6 +28384,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 365.76 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-071KL"
+			(at 365.76 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7000c6bc-4a34-40c4-a5d6-4a4d1e8e0069")
 		)
@@ -27871,6 +28496,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 363.22 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 363.22 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GRM1555C1H1R0CA01D"
 			(at 363.22 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -28018,6 +28665,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 365.76 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-071KL"
+			(at 365.76 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "05b1c07c-f6d9-440a-9422-31b883206f39")
 		)
@@ -28108,6 +28777,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 393.7 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 393.7 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GRM1555C1H1R0CA01D"
 			(at 393.7 223.52 0)
 			(hide yes)
 			(show_name no)
