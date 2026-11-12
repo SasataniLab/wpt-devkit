@@ -21305,6 +21305,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Taiyo Yuden"
+			(at 140.97 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "NR5040T4R7N"
+			(at 140.97 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4da0bf28-76d0-4873-9850-7c51fb61a8df")
 		)

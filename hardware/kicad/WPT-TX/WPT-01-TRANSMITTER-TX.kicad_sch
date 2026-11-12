@@ -24567,6 +24567,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 218.44 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "43049d92-4c72-444e-987a-d34578b4c642")
 		)
@@ -24667,6 +24689,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -24852,6 +24896,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 218.44 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fc70ac91-fe24-4661-828a-ecffdc346ff1")
 		)
@@ -24952,6 +25018,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -25137,6 +25225,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 218.44 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8e6ad59e-3815-4753-bd63-1b31a5a420c5")
 		)
@@ -25237,6 +25347,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 256.54 0)
 			(hide yes)
 			(show_name no)
@@ -25422,6 +25554,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 218.44 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8ab61de6-055b-48c0-8004-6e26c77f4326")
 		)
@@ -25522,6 +25676,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 271.78 0)
 			(hide yes)
 			(show_name no)
@@ -25724,6 +25900,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 214.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0710KL"
+			(at 270.51 214.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "18774a13-dd4f-4231-b96d-eda91d015edb")
 		)
@@ -25879,6 +26077,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 270.51 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0710KL"
 			(at 270.51 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -26081,6 +26301,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0710KL"
+			(at 270.51 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "294ed0e2-b04f-465f-9509-134b92ed8649")
 		)
@@ -26236,6 +26478,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 270.51 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0710KL"
 			(at 270.51 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -26421,6 +26685,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 340.36 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 340.36 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fd13f32b-e961-4f0c-a7fb-6fb10728f3e4")
 		)
@@ -26527,6 +26813,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 346.71 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 346.71 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100KL"
 			(at 346.71 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -26712,6 +27020,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 340.36 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 340.36 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0c775fdc-7e42-4414-86c0-e20a029c13b7")
 		)
@@ -26818,6 +27148,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 346.71 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 346.71 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100KL"
 			(at 346.71 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -27003,6 +27355,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 368.3 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0715KL"
+			(at 368.3 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3a12a2cf-835c-4c8a-9181-20b57fa63552")
 		)
@@ -27108,6 +27482,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 368.3 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 368.3 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-071KL"
 			(at 368.3 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -27293,6 +27689,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 388.62 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0715KL"
+			(at 388.62 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "68741151-ac76-4c64-84ff-1f7522bae668")
 		)
@@ -27398,6 +27816,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 388.62 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 388.62 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-071KL"
 			(at 388.62 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -27553,6 +27993,28 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x08"
+			(at 297.18 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 297.18 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" ""
 			(at 297.18 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -27874,6 +28336,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 365.76 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-071KL"
+			(at 365.76 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7000c6bc-4a34-40c4-a5d6-4a4d1e8e0069")
 		)
@@ -27964,6 +28448,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 363.22 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 363.22 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GRM1555C1H1R0CA01D"
 			(at 363.22 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -28111,6 +28617,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 365.76 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-071KL"
+			(at 365.76 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "05b1c07c-f6d9-440a-9422-31b883206f39")
 		)
@@ -28201,6 +28729,28 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 393.7 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 393.7 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GRM1555C1H1R0CA01D"
 			(at 393.7 223.52 0)
 			(hide yes)
 			(show_name no)
