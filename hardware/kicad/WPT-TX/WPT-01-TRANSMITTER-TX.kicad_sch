@@ -13806,6 +13806,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R305")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -13906,6 +13910,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D305")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -14006,6 +14014,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D306")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -18053,6 +18065,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R315")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -18153,6 +18169,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D311")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -18253,6 +18273,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D312")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -20785,6 +20809,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R307")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -20895,6 +20923,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R318")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -24600,6 +24632,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R320")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -24929,6 +24965,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R323")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -25258,6 +25298,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R326")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -25587,6 +25631,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R329")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)

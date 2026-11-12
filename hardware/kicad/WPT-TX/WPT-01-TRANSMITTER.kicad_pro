@@ -1141,7 +1141,16 @@
       }
     ],
     "used_designators": "SW1,R1-6,C1-12,#PWR251-273,J1-5,Y1,U1-2",
-    "variants": []
+    "variants": [
+      {
+        "description": "HRTIM build: R320, R323, R326, R329 fitted; R305, R307, R315, R318, D305, D306, D311, D312 not fitted",
+        "name": "HRTIM"
+      },
+      {
+        "description": "Legacy build (same as the base schematic): R305, R307, R315, R318, D305, D306, D311, D312 fitted; R320, R323, R326, R329 not fitted",
+        "name": "Legacy"
+      }
+    ]
   },
   "sheets": [
     [
