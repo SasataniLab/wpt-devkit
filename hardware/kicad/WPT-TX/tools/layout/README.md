@@ -20,7 +20,33 @@ The board file in the repository is the result; nothing here has to be run to us
 | 9 | `improve.py BOARD REG.json 2 --inner` | Re-routes one net at a time with everything else in place and keeps the new route only when it is shorter |
 | 10 | `finalize.py BOARD PROJECT_DIR PCB_SIDE_PY` | Board-side data sync from the schematic netlist (DNP flags, manufacturer fields, variants, values), board-only mounting holes, DRC with schematic parity |
 
-Helpers: `router.py` (the grid router itself), `pcbdump.py` / `pcbview.py` (board to JSON, JSON to PNG with mm axes), `netq.py` (netlist queries), `win.py` (list copper in a window).
+Steps 1 to 10 gave a connected, rule-clean board in which everything except the MCU fan-out and the USB section was auto-routed.
+The second pass replaced the auto-routed copper of the nets that matter by hand-made copper and checked the rest:
+
+| Step | Script | What it does |
+|---|---|---|
+| 11 | `stripnets.py BOARD NET...` | Removes all copper of the nets that are laid out again (gate signals, comparator and sense lines, and the slow nets in their way) |
+| 12 | `phys1.py IN OUT`, `phys2.py IN OUT`, `phys3.py IN OUT` | Gate signals (top side across the split of the inner power layer, one via, back side under the +5V plane, each leg a matched pair), comparator lines, compact switch-node dividers of leg B and leg A, R343 at the MCU end of the leg-A sense line. The reasoning is in the header of `phys1.py` |
+| 13 | `fillin.py BOARD REG.json NET[:opts] ...` | Routes the open connections of the named nets around the hand-made copper. Options: `b` back side only, `v` vias expensive, `i` inner layer allowed, `r` may push auto-routed nets aside (they are routed again), `k` stay out from under the MCU and away from the crystal, `s` keep a distance from the analog sense lines |
+| 14 | `phys4.py IN REG OUT REG` | Leg-A sense line straight up the gap between the two gate-signal pairs (leg-B pair and the legacy clock move 0.8 mm east to open that gap) |
+| 15 | `usbfix.py IN REG OUT REG`, then `fillin.py` for `SCL_3.3V SWDIO:s` | Rule area on F.Cu under the metal shell of the USB-C receptacle, VBUS and D- links moved under its plastic housing; the two auto-routed nets that ran under the shell are routed again |
+| 16 | `trimtails.py`, `tidy1.py`, `cleanup.py`, `post_route.py`, `planefix.py`, `smooth.py`, `tidy2.py`, `tidy3.py` | Clean-up as in steps 7 and 8, plus three local corrections: SDA lane extended instead of a second track along the plane edge, SWDIO back from the board edge, HRTIM1_EEV1 away from the leg-A sense line |
+| 17 | `finalize.py` (as step 10), then `silkfix.py IN OUT added_refs.json --also TP214,TP215,TP217,X301 --hide-if-stuck TP217` | Reference designators of the added parts set to 0.8 x 0.7 mm and moved to the nearest free place beside their part |
+
+`ripreg.py BOARD REG.json NET...` takes the auto-routed copper of a net out again (hand-made copper stays), for a new `fillin.py` run.
+
+## Checks
+
+| Script | Question it answers |
+|---|---|
+| `drcsum.py BOARD [--all]` | KiCad DRC summary (zones refilled). Copy the project's `.kicad_pro` **and** `.kicad_dru` next to a board copy first: without the `.kicad_dru` the USB-C locating pegs show up as six hole-clearance errors |
+| `audit.py BOARD [REF]` | Every net on the MCU: length per layer, vias, which plane lies under the tracks, which nets run beside it closer than 0.3 mm |
+| `netpath.py BOARD NET...` | The copper of a net as ordered chains with coordinates, and its neighbours within 0.45 mm |
+| `refplane.py BOARD NET...` | Plane net under each track (F.Cu against In1, B.Cu against In2) and where it changes |
+| `planegap.py BOARD [--min MM]` | Outer-layer tracks with no plane copper under them (clearance holes of vias and through-hole pads excluded) |
+| `edgechk.py BOARD [MM]` | Tracks closer than a distance to the board outline |
+
+Helpers: `router.py` (the grid router itself), `pcbdump.py` / `pcbview.py` (board to JSON, JSON to PNG with mm axes), `netq.py` (netlist queries), `win.py` / `win2.py` (list copper in a window).
 
 ## How the router works, and its limits
 
@@ -28,5 +54,6 @@ Helpers: `router.py` (the grid router itself), `pcbdump.py` / `pcbview.py` (boar
 - Clearances are checked by KiCad DRC after every stage; the router itself is conservative by about 0.07 mm.
 - Tracks are 0.2 mm (USB 0.3 mm, supply stubs 0.25 mm), vias 0.6 / 0.3 mm. Nothing is length- or impedance-matched except the hand-routed USB pair, which is simply kept short and parallel.
 - Slow signals listed in `nego.py` (`SLOW`) may use the inner power layer In2, and only inside `router.INNER_BOXES` (the user-interface area west of the MCU). In1 is never touched.
-- The router has no notion of signal quality. The gate signals, the switch-node sense lines and the crystal were laid out or checked by hand, the rest was not optimised: auto-routed tracks consist of many short segments and some take detours.
+- The router has no notion of signal quality beyond two penalties (`fillin.py` options `k` and `s`). The gate signals, the comparator and sense lines, the crystal and the USB pair are hand-made copper; the rest was not optimised and some of it takes detours.
+- A rule area with "no tracks" on a signal layer is an obstacle for the router, so a keep-out drawn in KiCad is honoured.
 - `pcbnew`'s `Remove()` leaves the Python bindings unstable in KiCad 10.0.8 (board loads start to fail in the same process). Rip-up is therefore done by deleting the track / via blocks from the board file itself (`nego.rip_text`).
