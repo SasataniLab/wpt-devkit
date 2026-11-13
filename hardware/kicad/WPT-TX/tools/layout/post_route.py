@@ -15,6 +15,8 @@ from scipy import ndimage
 
 import router as R
 
+R.DEFAULT_CORRIDORS = ()          # every MCU pin has its hand-made escape by now
+
 MM = 1e6
 path = sys.argv[1]
 passes = int(sys.argv[2]) if len(sys.argv) > 2 and sys.argv[2].isdigit() else 3

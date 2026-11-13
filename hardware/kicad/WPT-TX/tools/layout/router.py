@@ -27,6 +27,10 @@ VIA_D, VIA_DRILL = 0.6, 0.3
 EDGE_CLR = 0.3
 SIGNAL_LAYERS = ('F.Cu', 'B.Cu')
 FORBID = 65535
+# Where a slow signal may borrow the inner power layer: the user-interface area west of the MCU only.
+# The plane under the MCU, the crystal and the whole power stage stay untouched.
+INNER_BOXES = ((151.0, 143.2, 176.0, 163.2), (151.0, 163.2, 158.4, 168.0))
+DEFAULT_CORRIDORS = ('U2',)      # fine-pitch parts that get an escape lane reserved in front of every pad
 
 
 def V(x, y):
@@ -99,7 +103,8 @@ def rot_rect(cx, cy, w, h, deg):
 
 
 class Router:
-    def __init__(self, board_path, reg=None, protected=None, corridors=('U2',)):
+    def __init__(self, board_path, reg=None, protected=None, corridors=None):
+        corridors = DEFAULT_CORRIDORS if corridors is None else corridors
         self.path = board_path
         self.board = pcbnew.LoadBoard(board_path)
         b = self.board
@@ -107,6 +112,7 @@ class Router:
         self.nets = {}
         self.cv = Canvas()
         self.added = []
+        self.own_vias = {}                                 # net -> via centres already on the board
         self.reg = reg if reg is not None else {}          # net -> list of keys of copper this router added
         self.protected = protected if protected is not None else set()
         self._softkeys = {k: n for n, ks in self.reg.items() if n not in self.protected for k in ks}
@@ -225,6 +231,7 @@ class Router:
         nid = self.nid(net)
         if t.GetClass() == 'PCB_VIA':
             c = (t.GetPosition().x / MM, t.GetPosition().y / MM)
+            self.own_vias.setdefault(net, []).append(c)
             soft = self.vkey(net, c) in self._softkeys
             for l in cv.img:
                 cv.disk(l, c, t.GetWidth(pcbnew.F_Cu) / MM / 2, nid, soft)
@@ -264,6 +271,7 @@ class Router:
         v.SetNet(self.board.FindNet(net))
         self.board.Add(v)
         self.added.append(v)
+        self.own_vias.setdefault(net, []).append(tuple(c))
         soft = not getattr(self, '_fixed', False)
         if soft:
             self.reg.setdefault(net, []).append(self.vkey(net, c))
@@ -336,6 +344,14 @@ class Router:
         L = list(SIGNAL_LAYERS) + (['In2.Cu'] if inner else [])
         self._L = L
         ok = [free[l] | own[l] for l in L]
+        if inner:
+            gy, gx = np.mgrid[0:hh, 0:ww]
+            wxx, wyy = X0 + (gx + ix0) * RES, Y0 + (gy + iy0) * RES
+            allowed = np.zeros((hh, ww), dtype=bool)
+            for bx0, by0, bx1, by1 in INNER_BOXES:
+                allowed |= (wxx >= bx0) & (wxx <= bx1) & (wyy >= by0) & (wyy <= by1)
+            k = L.index('In2.Cu')
+            ok[k] = ok[k] & allowed
         extra = None
         vextra = None
         need_t = CLR + width / 2 + RES + 0.02
@@ -364,6 +380,14 @@ class Router:
 
         def cell(x, y):
             return int(round((x - X0) / RES)) - ix0, int(round((y - Y0) / RES)) - iy0
+
+        # a via of this net that is already there may be used to change layer (no new via is added)
+        ownvia = np.zeros((hh, ww), dtype=bool)
+        for vx, vy in self.own_vias.get(net, []):
+            cx, cy = cell(vx, vy)
+            if 0 <= cy < hh and 0 <= cx < ww:
+                ownvia[cy, cx] = True
+        self._ownvia = ownvia
 
         def seeds(x, y, layers):
             cx, cy = cell(x, y)
@@ -420,11 +444,12 @@ class Router:
                         par[(li, yy, xx)] = cur
                         ddx, ddy = abs(xx - tcx), abs(yy - tcy)
                         heapq.heappush(pq, (ng + (max(ddx, ddy) + 0.4142 * min(ddx, ddy)), ng, (li, yy, xx)))
-            if via_ok[y, x]:
+            ov = ownvia[y, x]
+            if via_ok[y, x] or ov:
                 for lj in range(len(L)):
-                    if lj == li or not ok[lj][y, x]:
+                    if lj == li or not (ok[lj][y, x] or ov):
                         continue
-                    ng = gc + vc + (vextra[y, x] if vextra is not None else 0.0)
+                    ng = gc + (6.0 if ov else vc + (vextra[y, x] if vextra is not None else 0.0))
                     if ng < g[lj][y, x]:
                         g[lj][y, x] = ng
                         par[(lj, y, x)] = cur
@@ -444,7 +469,7 @@ class Router:
                 info = self._softinfo.get(L[li])
                 if info is not None and info[0][y, x] < need_t:
                     hit.add(inv.get(int(info[1][y, x])))
-                if i + 1 < len(path) and path[i + 1][0] != li:
+                if i + 1 < len(path) and path[i + 1][0] != li and not ownvia[y, x]:
                     for l in ('F.Cu', 'B.Cu', 'In2.Cu'):
                         info = self._softinfo.get(l)
                         if info is not None and info[0][y, x] < need_v:
@@ -465,7 +490,9 @@ class Router:
         while i < len(path) - 1:
             li = path[i][0]
             if path[i + 1][0] != li:
-                self.add_via(net, world(path[i]))
+                wpt = world(path[i])
+                if not any(math.dist(wpt, v) < 0.06 for v in self.own_vias.get(net, [])):
+                    self.add_via(net, wpt)
                 i += 1
                 continue
             j = i + 1

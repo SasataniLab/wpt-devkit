@@ -84,6 +84,8 @@ def rip(path, r, nets):
 
 
 INNER = '--inner' in sys.argv
+if '--no-corridors' in sys.argv:
+    R.DEFAULT_CORRIDORS = ()
 PLANES_ONLY = '--planes-only' in sys.argv
 FAST = ('HRTIM1_CH', '_Sig', 'USB_D', 'U2-PF', 'VSWA_SENSE', 'VSWB_SENSE', 'OutA', 'OutB', 'U301-A', 'VBUS', 'CC')
 
