@@ -18,8 +18,9 @@ from nego import rip_text, SLOW, PROT
 
 R.DEFAULT_CORRIDORS = ()
 path, regfile = sys.argv[1:3]
-names = [a for a in sys.argv[3:] if not a.startswith('--')]
+names = [a for i, a in enumerate(sys.argv[3:], 3) if not a.startswith('--') and sys.argv[i - 1] != '--via-cost']
 INNER = '--inner' in sys.argv
+VIA_COST = float(sys.argv[sys.argv.index('--via-cost') + 1]) if '--via-cost' in sys.argv else 3.0
 MM = 1e6
 
 
@@ -55,7 +56,7 @@ for net in nets:
     pairs = sorted([(a, c) for a, c in allpairs if a['net'] == net], key=lambda p: math.dist((p[0]['x'], p[0]['y']), (p[1]['x'], p[1]['y'])))
     for a, c in pairs:
         A, B = (a['x'], a['y'], a['layers']), (c['x'], c['y'], c['layers'])
-        if not any(r.route(net, A, B, margin=m, max_nodes=8_000_000, inner=INNER and any(k in net for k in SLOW)) for m in (4.0, 10.0, 30.0)):
+        if not any(r.route(net, A, B, margin=m, max_nodes=8_000_000, via_cost=VIA_COST, inner=INNER and any(k in net for k in SLOW)) for m in (4.0, 10.0, 30.0)):
             ok = False
             print('   no path for', net.split('/')[-1])
             break
