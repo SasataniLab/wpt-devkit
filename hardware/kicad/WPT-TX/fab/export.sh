@@ -5,7 +5,8 @@
 #
 # Output:
 #   out/gerber/              Gerbers for the 4 copper layers, mask, paste, silk, edge + Excellon drill (PTH / NPTH) and drill map
-#   out/assembly/<variant>/  BOM and pick-and-place file for each assembly variant (Legacy, HRTIM), DNP parts excluded
+#   out/assembly/<variant>/  BOM and pick-and-place files (all parts / surface-mount only) for each assembly variant
+#                            (Legacy, HRTIM), DNP parts excluded
 #   out/doc/                 schematic PDF and front/back assembly drawings
 set -eu
 
@@ -36,13 +37,16 @@ for v in $variants; do
     echo "== BOM and placement: $v"
     # one line per distinct part; DNP parts are left out
     kicad-cli sch export bom --variant "$v" --exclude-dnp \
-        --fields 'Reference,${QUANTITY},Value,Footprint,Manufacturer,Manufacturer Part Number' \
-        --labels 'Designator,Qty,Value,Footprint,Manufacturer,Mfg Part #' \
+        --fields '${ITEM_NUMBER},Reference,${QUANTITY},Value,Description,Footprint,Manufacturer,Manufacturer Part Number' \
+        --labels 'Line,Designator,Qty,Value,Description,Package,Manufacturer,Mfg Part #' \
         --group-by 'Value,Footprint,Manufacturer Part Number' \
         --ref-range-delimiter '' \
         -o "$d/bom_$v.csv" "$sch"
     kicad-cli pcb export pos --variant "$v" --exclude-dnp --format csv --units mm --side both \
         -o "$d/placement_$v.csv" "$pcb"
+    # the assembler's machine file: surface-mount parts only
+    kicad-cli pcb export pos --variant "$v" --exclude-dnp --smd-only --format csv --units mm --side both \
+        -o "$d/placement_${v}_smd.csv" "$pcb"
 done
 
 echo "== Documents"
