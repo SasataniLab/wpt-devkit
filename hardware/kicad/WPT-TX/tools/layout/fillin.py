@@ -4,7 +4,8 @@
 usage: fillin.py BOARD REG.json NET[:opts] ...
 opts: b = back side only (no vias), v = vias expensive, i = inner layer allowed,
       r = may push auto-routed nets aside; those are then routed again (without pushing anything) at the end
-      k = stay out from under the MCU and away from the crystal, s = keep a distance from the analog sense lines
+      k = stay out from under the MCU and away from the crystal, s = keep a distance from the analog sense lines,
+      n = accept a legal path only within 10 mm of the box around its two ends (with r: rather push others aside than go round the board)
 """
 import gc
 import json
@@ -93,7 +94,9 @@ while queue:
     for a, c in pairs:
         net = a['net']
         A, B = (a['x'], a['y'], a['layers']), (c['x'], c['y'], c['layers'])
-        done = any(r.route(net, A, B, margin=m, max_nodes=12_000_000, **kw) for m in (4.0, 10.0, 30.0, 60.0))
+        # 'n': look for a legal path only near the straight line; a detour around the board then counts as "no path"
+        legal = (4.0, 10.0) if 'n' in opts else (4.0, 10.0, 30.0, 60.0)
+        done = any(r.route(net, A, B, margin=m, max_nodes=12_000_000, **kw) for m in legal)
         if not done and 'r' in opts:
             hit = False
             for m in (6.0, 15.0, 40.0):
@@ -115,7 +118,7 @@ while queue:
                 r = R.Router(path, reg=REG, protected=PROT)
                 if 's' in opts and short(name) not in SHY:
                     kw['penal'] = shy(r, 'i' in opts, keep_away('i' in opts) if 'k' in opts else None)
-                done = any(r.route(net, A, B, margin=m, max_nodes=12_000_000, **kw) for m in (4.0, 10.0, 30.0, 60.0))
+                done = any(r.route(net, A, B, margin=m, max_nodes=12_000_000, **kw) for m in legal)
                 print(f'   {name}: pushed aside {sorted(short(h) for h in hit)} -> {"ok" if done else "FAIL"}', flush=True)
         ok += bool(done)
     r.save()

@@ -27,13 +27,15 @@ The second pass replaced the auto-routed copper of the nets that matter by hand-
 |---|---|---|
 | 11 | `stripnets.py BOARD NET...` | Removes all copper of the nets that are laid out again (gate signals, comparator and sense lines, and the slow nets in their way) |
 | 12 | `phys1.py IN OUT`, `phys2.py IN OUT`, `phys3.py IN OUT` | Gate signals (top side across the split of the inner power layer, one via, back side under the +5V plane, each leg a matched pair), comparator lines, compact switch-node dividers of leg B and leg A, R343 at the MCU end of the leg-A sense line. The reasoning is in the header of `phys1.py` |
-| 13 | `fillin.py BOARD REG.json NET[:opts] ...` | Routes the open connections of the named nets around the hand-made copper. Options: `b` back side only, `v` vias expensive, `i` inner layer allowed, `r` may push auto-routed nets aside (they are routed again), `k` stay out from under the MCU and away from the crystal, `s` keep a distance from the analog sense lines |
+| 13 | `fillin.py BOARD REG.json NET[:opts] ...` | Routes the open connections of the named nets around the hand-made copper. Options: `b` back side only, `v` vias expensive, `i` inner layer allowed, `r` may push auto-routed nets aside (they are routed again), `k` stay out from under the MCU and away from the crystal, `s` keep a distance from the analog sense lines, `n` accept a legal path only near the straight line (with `r`: rather push others aside than go round the board) |
 | 14 | `phys4.py IN REG OUT REG` | Leg-A sense line straight up the gap between the two gate-signal pairs (leg-B pair and the legacy clock move 0.8 mm east to open that gap) |
 | 15 | `usbfix.py IN REG OUT REG`, then `fillin.py` for `SCL_3.3V SWDIO:s` | Rule area on F.Cu under the metal shell of the USB-C receptacle, VBUS and D- links moved under its plastic housing; the two auto-routed nets that ran under the shell are routed again |
 | 16 | `trimtails.py`, `tidy1.py`, `cleanup.py`, `post_route.py`, `planefix.py`, `smooth.py`, `tidy2.py`, `tidy3.py` | Clean-up as in steps 7 and 8, plus three local corrections: SDA lane extended instead of a second track along the plane edge, SWDIO back from the board edge, HRTIM1_EEV1 away from the leg-A sense line |
 | 17 | `finalize.py` (as step 10), then `silkfix.py IN OUT added_refs.json --also TP214,TP215,TP217,X301 --hide-if-stuck TP217` | Reference designators of the added parts set to 0.8 x 0.7 mm and moved to the nearest free place beside their part |
+| 18 | `phys5.py IN REG OUT REG`, `fillin.py` for `'Net-(J1-Pin_1):i'`, clean-up and `finalize.py` again | Display SPI: MOSI straight to the MCU through a back-side passage it shares with HRTIM1_FLT3 (86 mm became 17.5 mm); the BOOT0 jumper net, which lost its place, is routed again |
 
 `ripreg.py BOARD REG.json NET...` takes the auto-routed copper of a net out again (hand-made copper stays), for a new `fillin.py` run.
+`stub.py BOARD REG.json NET LAYER x,y x,y ...` adds one hand-made track. The fill-in router cannot leave a 0.5 mm pitch pad on its own when the escape track ends inside the pad row; extend the escape by 0.6 mm with this first.
 
 ## Checks
 
@@ -45,6 +47,9 @@ The second pass replaced the auto-routed copper of the nets that matter by hand-
 | `refplane.py BOARD NET...` | Plane net under each track (F.Cu against In1, B.Cu against In2) and where it changes |
 | `planegap.py BOARD [--min MM]` | Outer-layer tracks with no plane copper under them (clearance holes of vias and through-hole pads excluded) |
 | `edgechk.py BOARD [MM]` | Tracks closer than a distance to the board outline |
+| `cmpnets.py OLD NEW` | Nets whose length, via count or inner-layer length differ between two boards |
+| `whyblocked.py BOARD REG.json NET` | For an open connection: which auto-routed nets the cheapest path would have to cross |
+| `reach2.py BOARD REG.json NET x y L x y L OUT.png` | Flood fill from both ends of an open connection, with a picture of the two reachable areas |
 
 Helpers: `router.py` (the grid router itself), `pcbdump.py` / `pcbview.py` (board to JSON, JSON to PNG with mm axes), `netq.py` (netlist queries), `win.py` / `win2.py` (list copper in a window).
 
