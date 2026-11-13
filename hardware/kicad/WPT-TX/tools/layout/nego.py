@@ -31,6 +31,11 @@ SLOW = ('USART1', 'SCL', 'SDA', 'ENCODER', 'HV_EN_MCU', 'HV_SW_STATE', 'HV_EN_SW
 USE_INNER = '--inner' in sys.argv
 
 
+# sense lines that stay on the back side under the planes, and nets whose new copper must not be ripped up again
+BONLY = tuple(sys.argv[sys.argv.index('--back-only') + 1].split(',')) if '--back-only' in sys.argv else ()
+KEEP = tuple(sys.argv[sys.argv.index('--keep') + 1].split(',')) if '--keep' in sys.argv else ()
+
+
 def slow_ok(net):
     """Static or kHz-range signals that may use the inner power layer inside router.INNER_BOXES."""
     return USE_INNER and any(k in net for k in SLOW)
@@ -104,7 +109,8 @@ def rip_nets(r, nets):
 
 def attempt(r, c, margins=(4.0, 10.0, 30.0)):
     for m in margins:
-        if r.route(c['net'], c['A'], c['B'], margin=m, max_nodes=6_000_000, inner=slow_ok(c['net'])):
+        if r.route(c['net'], c['A'], c['B'], margin=m, max_nodes=6_000_000, inner=slow_ok(c['net']),
+                   allow_via=short(c['net']) not in BONLY, via_cost=12.0 if short(c['net']) in KEEP else 3.0):
             return True
     return False
 
@@ -115,12 +121,20 @@ def main():
     conns = []
     for a, b in R.parse_unconnected(txt):
         net = a['net']
-        if net in PLANE or net in PROT or 'CN301' in a['desc'] + b['desc'] or 'Zone' in (a['kind'], b['kind']):
+        if net in PLANE or 'CN301' in a['desc'] + b['desc'] or 'Zone' in (a['kind'], b['kind']):
             continue
+        if short(net) in KEEP:
+            PROT.add(net)
         if 'In2.Cu' in a['desc'] or 'In2.Cu' in b['desc']:
             continue
         conns.append({'net': net, 'A': (a['x'], a['y'], a['layers']), 'B': (b['x'], b['y'], b['layers']),
                       'd': math.dist((a['x'], a['y']), (b['x'], b['y'])), 'desc': (a['desc'][:38], b['desc'][:38])})
+    keepfile = path.replace('.kicad_pcb', '_keep.json')
+    try:
+        PROT.update(json.load(open(keepfile)))          # nets protected in an earlier round stay protected
+    except OSError:
+        pass
+    json.dump(sorted(n for n in PROT if short(n) in KEEP), open(keepfile, 'w'))
     # hand-given extra connections (for a supply pad that the pours cannot reach): --extra 'NET;x,y,LAYERS;x,y,LAYERS'
     donefile = path.replace('.kicad_pcb', '_extra_done')
     import os
@@ -179,7 +193,7 @@ def main():
         r.softfac = {n: float((1 + ripcount[n]) ** 2) * (5.0 if prio(n) <= 2 else 1.0) for n in r.nets}
         hit = False
         for sm in (5.0, 12.0, 30.0):
-            hit = r.route(net, c['A'], c['B'], margin=sm, max_nodes=10_000_000, soft=True, inner=slow_ok(net))
+            hit = r.route(net, c['A'], c['B'], margin=sm, max_nodes=10_000_000, soft=True, inner=slow_ok(net), allow_via=short(net) not in BONLY)
             if hit is not False:
                 break
         if hit is False:
