@@ -40,7 +40,11 @@ for fp in b.GetFootprints():
                 g.SetVisible(False)
 print('mounting holes marked board-only:', n)
 dst = os.path.join(prj, name + '.kicad_pcb')
-pcbnew.SaveBoard(dst, b)
+# SaveBoard also writes a project file next to the board. Saving into the repo directly would replace the real
+# project settings (rules, net classes, variants) with defaults, so save beside the temporary copy and move the board only.
+staged = os.path.join(tmp, name + '.kicad_pcb')
+pcbnew.SaveBoard(staged, b)
+shutil.copy(staged, dst)
 rpt = os.path.join(tmp, 'repo_drc.rpt')
 subprocess.run(['kicad-cli', 'pcb', 'drc', '--severity-all', '--schematic-parity', '--refill-zones', '--save-board', '--format', 'report',
                 '-o', rpt, dst], capture_output=True, text=True)

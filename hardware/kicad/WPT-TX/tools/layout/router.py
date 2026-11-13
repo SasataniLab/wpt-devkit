@@ -67,9 +67,10 @@ class Canvas:
         return self._np[layer]
 
     def poly(self, layer, pts, nid, soft=False):
-        self.drw[layer].polygon([px(*p) for p in pts], fill=nid)
+        # the outline is drawn as well: a thin diagonal at an off-grid position must not come out one cell too narrow
+        self.drw[layer].polygon([px(*p) for p in pts], fill=nid, outline=nid)
         if soft:
-            self.sdrw[layer].polygon([px(*p) for p in pts], fill=nid)
+            self.sdrw[layer].polygon([px(*p) for p in pts], fill=nid, outline=nid)
         self.invalidate()
 
     def sarr(self, layer):
