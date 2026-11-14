@@ -6234,7 +6234,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9a4d5c36-3c3f-4ea0-9ed6-ca85f15b5792")
 		(property "Reference" "J4"
@@ -10920,14 +10920,6 @@
 		(at 68.58 124.46)
 		(uuid "d5db1332-5c33-4997-8731-3111586f4ae6")
 	)
-	(no_connect
-		(at 68.58 129.54)
-		(uuid "a8dd4309-90f6-4a98-9ee7-5e170f95793c")
-	)
-	(no_connect
-		(at 68.58 132.08)
-		(uuid "7662477e-55c6-4092-8b74-21f2f8729379")
-	)
 	(symbol
 		(lib_id "power:+3.3V")
 		(at 55.88 101.6 0)
@@ -11191,6 +11183,179 @@
 			(project "WPT-01-TRANSMITTER"
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557"
 					(reference "#PWR0370")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 68.58 129.54) (xy 71.12 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5300162-4f23-4a70-8989-6e095df23874")
+	)
+	(wire
+		(pts
+			(xy 78.74 129.54) (xy 78.74 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77437777-ec40-4518-bda2-5e9d9b26c0c7")
+	)
+	(wire
+		(pts
+			(xy 78.74 142.24) (xy 91.44 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "477ceaa0-05a5-4e94-9af6-441e7c1592a1")
+	)
+	(junction
+		(at 91.44 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7ae8939b-0cbb-4057-85d2-bb699212ed3d")
+	)
+	(wire
+		(pts
+			(xy 68.58 132.08) (xy 73.66 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fcee696-5326-4b90-a01d-42ba6b958613")
+	)
+	(wire
+		(pts
+			(xy 73.66 132.08) (xy 73.66 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f2b51df-c429-447e-bd3d-f716b4f25fb8")
+	)
+	(wire
+		(pts
+			(xy 73.66 144.78) (xy 88.9 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b66497d0-67a2-4f28-9cbc-40e6d3c7192a")
+	)
+	(junction
+		(at 88.9 144.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12b387b6-180e-4879-a0df-f0efc2dba2fa")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 74.93 129.54 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b2524331-3e35-44f9-a9e2-8e1b15eae0f1")
+		(property "Reference" "R12"
+			(at 72.73 127.64 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "560R"
+			(at 77.13 127.64 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 74.93 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 74.93 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 74.93 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 74.93 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07560RL"
+			(at 74.93 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "975908f8-a037-4373-a864-67898f69e681")
+		)
+		(pin "2"
+			(uuid "f5033e1f-c882-4ba6-86b9-2bfdc808e3af")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557"
+					(reference "R12")
 					(unit 1)
 				)
 			)
