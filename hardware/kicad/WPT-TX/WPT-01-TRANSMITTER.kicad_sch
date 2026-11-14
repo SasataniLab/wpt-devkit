@@ -7583,7 +7583,7 @@
 				(justify left)
 			)
 		)
-		(pin "HRTIM1_FLT4" output
+		(pin "ZVS_VTH_DAC" input
 			(at 303.53 184.15 180)
 			(uuid "b0936804-5dd9-47d8-988c-f998f31d86af")
 			(effects
@@ -7879,7 +7879,7 @@
 				(justify right)
 			)
 		)
-		(pin "HRTIM1_FLT4" input
+		(pin "ZVS_VTH_DAC" output
 			(at 134.62 195.58 0)
 			(uuid "8b1c37fb-9423-433f-a55d-0bbcd76c5f0d")
 			(effects
@@ -9780,7 +9780,7 @@
 		)
 		(uuid "4db7b41b-441c-402f-8f0f-cb424762d394")
 	)
-	(label "HRTIM1_FLT4"
+	(label "ZVS_VTH_DAC"
 		(at 139.7 195.58 0)
 		(effects
 			(font
@@ -9940,7 +9940,7 @@
 		)
 		(uuid "8785afaf-256a-4951-a9d1-a4238b6f190c")
 	)
-	(label "HRTIM1_FLT4"
+	(label "ZVS_VTH_DAC"
 		(at 298.45 184.15 180)
 		(effects
 			(font

@@ -4287,8 +4287,8 @@
 		)
 		(uuid "7a51152d-1373-4a12-9976-9950708134d0")
 	)
-	(hierarchical_label "HRTIM1_FLT4"
-		(shape input)
+	(hierarchical_label "ZVS_VTH_DAC"
+		(shape output)
 		(at 172.72 142.24 0)
 		(effects
 			(font

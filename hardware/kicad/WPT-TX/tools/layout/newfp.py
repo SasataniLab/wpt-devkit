@@ -99,8 +99,8 @@ def place(board, comps, ref, x, y, rot=0.0, side='F', ref_at=None, ref_size=0.8,
             pad.SetNet(net(board, nm))
     r = fp.Reference()
     r.SetVisible(not hide_ref)
-    r.SetTextSize(pcbnew.VECTOR2I(int(ref_size * MM), int(ref_size * MM)))
-    r.SetTextThickness(int(0.12 * MM))
+    r.SetTextSize(pcbnew.VECTOR2I(int(0.7 * MM), int(ref_size * MM)))      # the size of the other references on this board
+    r.SetTextThickness(int(0.15 * MM))
     if ref_at is not None:
         r.SetPosition(V(x + ref_at[0], y + ref_at[1]))
     if ref_rot is not None:
@@ -207,14 +207,19 @@ def rename_tracks(board, old, new, layer=None, box=None):
     return k
 
 
-def text(board, s, x, y, layer='F.SilkS', size=0.8, thick=0.12, rot=0.0, mirror=False):
+def text(board, s, x, y, layer='F.SilkS', size=0.8, thick=0.15, rot=0.0, justify='left'):
+    """a line of text on the silkscreen; (x, y) is its left end / centre / right end at mid height"""
     t = pcbnew.PCB_TEXT(board)
     t.SetText(s)
     t.SetLayer(board.GetLayerID(layer))
-    t.SetPosition(V(x, y))
     t.SetTextSize(pcbnew.VECTOR2I(int(size * MM), int(size * MM)))
     t.SetTextThickness(int(thick * MM))
-    t.SetTextAngleDegrees(rot)
-    t.SetMirrored(mirror)
+    t.SetHorizJustify({'left': pcbnew.GR_TEXT_H_ALIGN_LEFT, 'center': pcbnew.GR_TEXT_H_ALIGN_CENTER, 'right': pcbnew.GR_TEXT_H_ALIGN_RIGHT}[justify])
+    t.SetVertJustify(pcbnew.GR_TEXT_V_ALIGN_CENTER)
+    t.SetPosition(V(x, y))
+    if rot:
+        t.SetTextAngleDegrees(rot)
+    if layer.startswith('B.'):
+        t.SetMirrored(True)
     board.Add(t)
     return t

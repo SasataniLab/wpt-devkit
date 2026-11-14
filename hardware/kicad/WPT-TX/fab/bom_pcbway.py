@@ -28,7 +28,7 @@ PACKAGE = {
     'GRM18': '0603', 'R_0603': '0603', 'BLM18': '0603',
     'GRM21': '0805', 'GRM31': '1206', 'R_1206': '1206', 'GRM32': '1210',
     'LQFP-64_10x10mm_P0.5mm': 'LQFP-64 10x10 mm, 0.5 mm pitch',
-    'SOT-23-6': 'SOT-23-6', 'microchip_SOT23-5LD-PL-1': 'SOT-23-5', 'SOT-353_SC-70-5_Diodes': 'SOT-353 (SC-70-5)',
+    'SOT-23-6': 'SOT-23-6', 'SOT-23-5': 'SOT-23-5', 'microchip_SOT23-5LD-PL-1': 'SOT-23-5', 'SOT-353_SC-70-5_Diodes': 'SOT-353 (SC-70-5)',
     'SOT-223-3_TabPin2': 'SOT-223', 'SOD-123FA_OnSemi': 'SOD-123FA', 'SOD-323': 'SOD-323',
     'SOD-523F_STMicroelectronics': 'SOD-523', 'SOD-523F_Diodes': 'SOD-523',
     'Texas_S-PWSON-N10_ThermalVias': 'WSON-10 4x4 mm (DPR)', 'Texas_S-PDSO-G8': 'VSSOP-8 (DCU)',
