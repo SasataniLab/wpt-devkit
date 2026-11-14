@@ -24,13 +24,17 @@ out = subprocess.run([sys.executable, pcb_side, src, synced, net, '--values'], c
 print('\n'.join(l for l in out.stdout.split('\n') if l.startswith('no footprint') or l.startswith('footprint id')))
 b = pcbnew.LoadBoard(synced)
 DESC = {'C13': 'Unpolarized capacitor', 'C14': 'Unpolarized capacitor', 'C15': 'Unpolarized capacitor', 'C16': 'Unpolarized capacitor',
-        'J301': 'Generic connector, single row, 01x10'}
+        'J301': 'Generic connector, single row, 01x10',
+        'J3': 'ST Debug Connector, standard ARM Cortex-M SWD and JTAG interface plus UART'}
+DATASHEET = {'J3': 'https://www.st.com/resource/en/user_manual/um2448-stlinkv3set-debuggerprogrammer-for-stm8-and-stm32-stmicroelectronics.pdf'}
 n = 0
 for fp in b.GetFootprints():
     ref = fp.GetReference()
     if ref.startswith('REF**'):
         fp.SetAttributes(fp.GetAttributes() | pcbnew.FP_BOARD_ONLY | pcbnew.FP_EXCLUDE_FROM_BOM | pcbnew.FP_EXCLUDE_FROM_POS_FILES)
         n += 1
+    if ref in DATASHEET:
+        fp.GetField('Datasheet').SetText(DATASHEET[ref])
     if ref in DESC:                               # footprints added by script carry no Description field yet
         f = fp.GetField('Description') if fp.HasField('Description') else None
         if f is not None:
