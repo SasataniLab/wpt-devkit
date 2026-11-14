@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 """One BOM line per manufacturer part number, in the column layout of PCBWay's assembly BOM.
 
-usage: bom_pcbway.py PARTS.csv PLACEMENT_ALL.csv PLACEMENT_SMD.csv OUT.csv
+usage: bom_pcbway.py PARTS.csv PLACEMENT_ALL.csv PLACEMENT_SMD.csv OUT.csv [EXTRA.csv]
 
 PARTS.csv          one row per fitted part: Ref, Value, Footprint, Manufacturer, MPN, Description, Note
                    (fab/export.sh writes it with `kicad-cli sch export bom`, DNP parts excluded)
 PLACEMENT_ALL.csv  kicad-cli position file with every placed part
 PLACEMENT_SMD.csv  the same with --smd-only; a part that is in the first file but not in this one is through-hole
+EXTRA.csv          lines appended as they are (same columns without "Item #"): things that are needed but are not parts
+                   of the board data, i.e. the jumper shunts of the two supply selectors (fab/bom_extra.csv)
 
 The schematic export groups by value and footprint, so one part number can appear on several lines when the libraries
 name the same part differently ("10k" in Resistor_SMD and "10kF" in yageo). An assembler buys by part number, so this
@@ -18,6 +20,7 @@ import re
 import sys
 
 parts_csv, pos_all_csv, pos_smd_csv, out_csv = sys.argv[1:5]
+extra_csv = sys.argv[5] if len(sys.argv) > 5 else None
 
 # footprint -> package name an assembler recognises
 PACKAGE = {
@@ -33,6 +36,7 @@ PACKAGE = {
     'TSSOP-14_4.4x5mm_P0.65mm': 'TSSOP-14', 'Siliconlabs_MSOP-10_3x3mm_Pitch0.5mm': 'MSOP-10',
     'Crystal_SMD_SeikoEpson_FA128-4Pin_2.0x1.6mm': '2.0 x 1.6 mm, 4 pads', 'FA-238': '3.2 x 2.5 mm, 4 pads',
     'EPC2007C': 'LGA 1.7 x 1.1 mm (bumped die)', 'EPC2038': 'BGA 0.9 x 0.9 mm (bumped die)',
+    'ULO-PH409-1x2SX1': 'pin header 1x02, 2.54 mm', 'ULO-PH409-1x3SX1': 'pin header 1x03, 2.54 mm',
     'PinHeader_1x02_P2.54mm_Vertical': 'pin header 1x02, 2.54 mm', 'PinHeader_1x04_P2.54mm_Vertical': 'pin header 1x04, 2.54 mm',
     'PinHeader_1x10_P2.54mm_Vertical': 'pin header 1x10, 2.54 mm', 'PinHeader_1x12_P2.54mm_Vertical': 'pin header 1x12, 2.54 mm',
     'FTSH-107-01-L-D-K_2x07_P1.27mm_Vertical': 'header 2x07, 1.27 mm, keyed shroud',
@@ -98,11 +102,17 @@ for n, key in enumerate(order, 1):
         text = kind_word + ' ' + text
     rows.append([n, ','.join(refs), len(refs), makers[0] if makers else '', mpn, text, pkgs[0], kinds.pop(), '; '.join(notes)])
 
+n_board = len(rows)
+if extra_csv:
+    with open(extra_csv, newline='', encoding='utf-8') as f:
+        for r in csv.DictReader(f):
+            rows.append([len(rows) + 1, r['Designator'], int(r['Qty']), r['Manufacturer'], r['Mfg Part #'], r['Description / Value'],
+                         r['Package/Footprint'], r['Type'], r['Your Instructions / Notes']])
 with open(out_csv, 'w', newline='', encoding='utf-8') as f:
     w = csv.writer(f)
     w.writerow(['Item #', 'Designator', 'Qty', 'Manufacturer', 'Mfg Part #', 'Description / Value', 'Package/Footprint', 'Type', 'Your Instructions / Notes'])
     w.writerows(rows)
-n_parts = sum(r[2] for r in rows)
-print('%s: %d lines, %d parts (%d surface-mount, %d through-hole), %d lines without a part number'
-      % (out_csv.split('/')[-1], len(rows), n_parts, sum(r[2] for r in rows if r[7] == 'SMD'), sum(r[2] for r in rows if r[7] == 'THT'),
-         sum(1 for r in rows if not r[4])))
+board = rows[:n_board]
+print('%s: %d lines, %d parts on the board (%d surface-mount, %d through-hole), %d extra lines, %d lines without a part number'
+      % (out_csv.split('/')[-1], len(rows), sum(r[2] for r in board), sum(r[2] for r in board if r[7] == 'SMD'),
+         sum(r[2] for r in board if r[7] == 'THT'), len(rows) - n_board, sum(1 for r in rows if not r[4])))

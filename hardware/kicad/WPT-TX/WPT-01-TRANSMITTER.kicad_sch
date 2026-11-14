@@ -6290,7 +6290,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 88.9 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -6301,7 +6301,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" ""
+		(property "Manufacturer Part Number" "61300411121"
 			(at 88.9 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -7186,7 +7186,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 53.34 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -7197,7 +7197,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" ""
+		(property "Manufacturer Part Number" "61301211121"
 			(at 53.34 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -8651,6 +8651,17 @@
 			)
 		)
 		(property "Manufacturer Part Number" "USBLC6-2SC6"
+			(at 82.55 92.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Original STMicroelectronics part only (other makers sell clones under the same number)"
 			(at 82.55 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -10584,7 +10595,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R71C104KA88D"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 78.74 215.9 0)
 			(hide yes)
 			(show_name no)

@@ -53,7 +53,7 @@ for v in $variants; do
         --fields 'Reference,Value,Footprint,Manufacturer,Manufacturer Part Number,Description,Assembly Note' \
         --labels 'Ref,Value,Footprint,Manufacturer,MPN,Description,Note' \
         -o "$d/parts_$v.csv" "$sch"
-    python3 "$here/bom_pcbway.py" "$d/parts_$v.csv" "$d/placement_$v.csv" "$d/placement_${v}_smd.csv" "$d/bom_${v}_pcbway.csv"
+    python3 "$here/bom_pcbway.py" "$d/parts_$v.csv" "$d/placement_$v.csv" "$d/placement_${v}_smd.csv" "$d/bom_${v}_pcbway.csv" "$here/bom_extra.csv"
 done
 
 echo "== Documents"

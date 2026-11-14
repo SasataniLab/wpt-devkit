@@ -7,7 +7,7 @@ Nothing electrical changes. The aim is a BOM an assembler can buy from without a
   * one spelling per manufacturer (the same maker appeared as "Murata Electronics " with a trailing blank, "microchip",
     "ULO Electronic", "EPSON")
   * part numbers written the way the manufacturer writes them (MPN_FIX)
-  * part numbers for the parts that had none (ADD: the 2.54 mm pin headers)
+  * part numbers for the parts that had none, and parts that are no longer made replaced (SET)
   * an "Assembly Note" field on the parts that need an instruction (NOTE); fab/bom_pcbway.py prints it
 
 Run it again after changing the tables: every step only touches what still differs.
@@ -17,15 +17,53 @@ import sys
 
 FILES = ('WPT-01-TRANSMITTER.kicad_sch', 'WPT-01-TRANSMITTER-POWER.kicad_sch', 'WPT-01-TRANSMITTER-TX.kicad_sch', 'MCU.kicad_sch')
 
-MAKER = {'Murata Electronics ': 'Murata Electronics', 'microchip': 'Microchip Technology', 'ULO Electronic': 'ULO Electronics', 'EPSON': 'Epson'}
-# part number as it was -> as the manufacturer writes it
-MPN_FIX = {}
-# reference -> (manufacturer, part number) for parts that had no part number
-ADD = {}
+MAKER = {'Murata Electronics ': 'Murata Electronics', 'microchip': 'Microchip Technology', 'ULO Electronic': 'ULO Electronics', 'EPSON': 'Epson',
+         'ON Semiconductor': 'onsemi', 'Silicon Labs': 'Skyworks Solutions'}      # the makers' names today (the Si5351 went to Skyworks)
+# part number as it was -> as the manufacturer writes it, or the part that replaces it (BOM audit of 2026-11-14)
+MPN_FIX = {
+    'MCP45HV51-104E_ST': 'MCP45HV51-104E/ST',            # the ordering code has a slash
+    'FA-238_25.0000MB-K3': 'FA-238 25.0000MB-K3',        # ... and this one a blank
+    '2929SQ-391JEB': '2929SQ-391JEC',                    # Coilcraft retired packaging code B
+    'NR5040T4R7N': 'LSXND5050YAL4R7NMG',                 # phased out; successor with the same size, terminals and ratings (ex NRS5040T4R7NMGK)
+    'CL31A106KBHNNNE': 'CL31B106KBHNNNE',                # the value says X7R, CL31A is X5R; CL31B is the X7R part of the same size
+    'GRM1555C1HR50BA01D': 'GJM1555C1HR50BB01D',          # 0.5 pF: the GRM part is "not for new designs"
+}
+WURTH = 'Wurth Elektronik'
+# reference -> fields to set (parts that had no part number, parts that change maker, parts merged onto a line that exists already)
+SET = {
+    # 2.54 mm pin headers: Wurth WR-PHD 6130xx11121, xx = number of pins
+    'J1': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61300211121'},
+    'J4': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61300411121'},
+    'J301': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61301011121'},
+    'J2': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61301211121'},
+    # the same kind of header under a brand no distributor carries ("ULO"); one of the two codes was a footprint name
+    'CN203': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61300311121', 'Value': 'PinHeader_1x03'},
+    'CN207': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61300311121', 'Value': 'PinHeader_1x03'},
+    'CN208': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61300211121', 'Value': 'PinHeader_1x02'},
+    'CN209': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61300211121', 'Value': 'PinHeader_1x02'},
+    'CN210': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61300211121', 'Value': 'PinHeader_1x02'},
+    'CN302': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61300211121', 'Value': 'PinHeader_1x02'},
+    'J202': {'Manufacturer': WURTH, 'Manufacturer Part Number': '61300211121', 'Value': 'PinHeader_1x02'},
+    # 1 uF 0402 at VDDA / VREF+: GRM155R61A105KE15D is being discontinued
+    'C7': {'Manufacturer': 'Samsung Electro-Mechanics', 'Manufacturer Part Number': 'CL05A105KA5NQNC'},
+    'C9': {'Manufacturer': 'Samsung Electro-Mechanics', 'Manufacturer Part Number': 'CL05A105KA5NQNC'},
+    # 100 nF and 10 nF 0402 of the MCU section onto the lines the power section already has
+    'C1': {'Manufacturer Part Number': 'GCM155R71H104KE02D'}, 'C2': {'Manufacturer Part Number': 'GCM155R71H104KE02D'},
+    'C3': {'Manufacturer Part Number': 'GCM155R71H104KE02D'}, 'C4': {'Manufacturer Part Number': 'GCM155R71H104KE02D'},
+    'C8': {'Manufacturer Part Number': 'GCM155R71H104KE02D'}, 'C10': {'Manufacturer Part Number': 'GCM155R71H104KE02D'},
+    'C15': {'Manufacturer Part Number': 'GCM155R71H104KE02D'},
+    'C6': {'Manufacturer': 'Yageo', 'Manufacturer Part Number': 'CC0402KRX7R9BB103'},
+    'C16': {'Manufacturer': 'Yageo', 'Manufacturer Part Number': 'CC0402KRX7R9BB103'},
+    # values that were the old part number
+    'U204': {'Value': 'MCP45HV51-104E/ST'}, 'X301': {'Value': 'FA-238 25.0000MB-K3'},
+    'L201': {'Value': '4.7uH'}, 'L202': {'Value': '4.7uH'},
+}
 # reference -> instruction for the assembler
 NOTE = {'J3': 'Keying slot of the shroud faces the board edge; pin 1 is the square pad at the north-west corner',
         'J5': 'Solder the four shell stakes in their plated slots (no paste is printed there)',
-        'SW1': 'Solder both frame lugs (they ground the shaft)'}
+        'SW1': 'Solder both frame lugs (they ground the shaft)',
+        'D201': 'Or equivalent: 3 mm red LED, diffused, high brightness (it runs at 0.6 mA), 2.54 mm lead pitch',
+        'U3': 'Original STMicroelectronics part only (other makers sell clones under the same number)'}
 
 
 def blocks(t):
@@ -83,9 +121,8 @@ for fn in FILES:
         nb = b
         if re.fullmatch(r'TP\d+', ref):
             nb = nb.replace('(in_bom yes)', '(in_bom no)', 1).replace('(in_pos_files yes)', '(in_pos_files no)', 1)
-        if ref in ADD:
-            maker, mpn = ADD[ref]
-            for name, value in (('Manufacturer', maker), ('Manufacturer Part Number', mpn)):
+        for name, value in SET.get(ref, {}).items():
+            if prop(nb, name) != value:
                 nb = set_prop(nb, name, value) if prop(nb, name) is not None else add_prop(nb, name, value)
         if ref in NOTE:
             nb = set_prop(nb, 'Assembly Note', NOTE[ref]) if prop(nb, 'Assembly Note') is not None else add_prop(nb, 'Assembly Note', NOTE[ref])

@@ -68,7 +68,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 2.54 5.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -229,7 +229,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 6.35 -2.4384 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -399,7 +399,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 2.54 5.08 0)
 			(show_name no)
 			(do_not_autoplace no)

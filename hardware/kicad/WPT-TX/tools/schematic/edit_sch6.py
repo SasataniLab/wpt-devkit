@@ -11,6 +11,9 @@
         100 nF here (C4), 22 nF is its level-shift capacitor (C3). Ripple 0.2 V -> 0.04 V on about 4.5 V.
   R339, R341               15 k stays, part ERJ-PA2F1502X (0.2 W) instead of RC0402FR-0715KL (1/16 W): 47 mW at 40 V on
         the bus is 75 % of the standard part's rating and more than its derated rating above 85 degC.
+  R207                     10 k -> 2.2 k (RC0402FR-072K2L). Series resistor of D201, the "high voltage enabled" LED on the
+        enable line. That line was 5 V from the Arduino and is 3.3 V from the STM32 now: with 10 k the LED would get
+        0.14 mA, less than half of what it had. 2.2 k gives 0.6 mA.
   SW1                      symbol Device:RotaryEncoder_Switch -> Device:RotaryEncoder_Switch_MP, frame lugs (MP) to GND.
         The metal shaft and frame of the encoder were floating; a discharge from a hand had no path but the terminals
         on PC6 / PC7 / PC13.
@@ -86,6 +89,16 @@ for ref in ('C302', 'C318'):
             nb = setp(nb, name, getp(c301, name))
         t = t[:j] + nb + t[j + len(b):]
         changed += 1
+open(FN, 'w', encoding='utf-8').write(t)
+FNP = 'WPT-01-TRANSMITTER-POWER.kicad_sch'
+tp = open(FNP, encoding='utf-8').read()
+j, bb = inst(tp, 'R207')
+if getp(bb, 'Manufacturer Part Number') == 'RC0402FR-0710KL':
+    nb = setp(setp(bb, 'Value', '2.2kF'), 'Manufacturer Part Number', 'RC0402FR-072K2L')
+    tp = tp[:j] + nb + tp[j + len(bb):]
+    assert tp.count('(') == tp.count(')')
+    open(FNP, 'w', encoding='utf-8').write(tp)
+    changed += 1
 for ref in ('R339', 'R341'):
     j, b = inst(t, ref)
     if getp(b, 'Manufacturer Part Number') == 'RC0402FR-0715KL':

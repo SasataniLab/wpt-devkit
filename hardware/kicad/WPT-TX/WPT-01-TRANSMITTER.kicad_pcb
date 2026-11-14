@@ -5082,7 +5082,7 @@
 				)
 			)
 		)
-		(property "Value" "ULO-PH409-1*3SF11"
+		(property "Value" "PinHeader_1x03"
 			(at 0 -5.64 180)
 			(layer "F.Fab")
 			(hide yes)
@@ -5116,7 +5116,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronics"
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5129,7 +5129,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "ULO-PH409-1*3SF11"
+		(property "Manufacturer Part Number" "61300311121"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9113,7 +9113,7 @@
 				)
 			)
 		)
-		(property "Value" "FA-238_25.0000MB-K3"
+		(property "Value" "FA-238 25.0000MB-K3"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -9160,7 +9160,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "FA-238_25.0000MB-K3"
+		(property "Manufacturer Part Number" "FA-238 25.0000MB-K3"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9828,7 +9828,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "2929SQ-391JEB"
+		(property "Manufacturer Part Number" "2929SQ-391JEC"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14203,7 +14203,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Silicon Labs"
+		(property "Manufacturer" "Skyworks Solutions"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16521,7 +16521,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "2929SQ-391JEB"
+		(property "Manufacturer Part Number" "2929SQ-391JEC"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18239,7 +18239,7 @@
 				)
 			)
 		)
-		(property "Value" "ULO-PH409-1*2SF11"
+		(property "Value" "PinHeader_1x02"
 			(at 0 -4.37 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18273,7 +18273,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronics"
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18286,7 +18286,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "ULO-PH409-1x2SX1"
+		(property "Manufacturer Part Number" "61300211121"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18544,7 +18544,7 @@
 				)
 			)
 		)
-		(property "Value" "ULO-PH409-1*2SF11"
+		(property "Value" "PinHeader_1x02"
 			(at 0 -4.37 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18578,7 +18578,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronics"
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18591,7 +18591,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "ULO-PH409-1x2SX1"
+		(property "Manufacturer Part Number" "61300211121"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18958,7 +18958,7 @@
 				)
 			)
 		)
-		(property "Value" "ULO-PH409-1*2SF11"
+		(property "Value" "PinHeader_1x02"
 			(at 0 -4.37 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -18992,7 +18992,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronics"
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19005,7 +19005,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "ULO-PH409-1x2SX1"
+		(property "Manufacturer Part Number" "61300211121"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20065,7 +20065,7 @@
 				)
 			)
 		)
-		(property "Value" "10kF"
+		(property "Value" "2.2kF"
 			(at 0 1.8 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -20125,7 +20125,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "RC0402FR-0710KL"
+		(property "Manufacturer Part Number" "RC0402FR-072K2L"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20926,7 +20926,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "CL31A106KBHNNNE"
+		(property "Manufacturer Part Number" "CL31B106KBHNNNE"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21192,7 +21192,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "CL31A106KBHNNNE"
+		(property "Manufacturer Part Number" "CL31B106KBHNNNE"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21458,7 +21458,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "CL31A106KBHNNNE"
+		(property "Manufacturer Part Number" "CL31B106KBHNNNE"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22996,7 +22996,7 @@
 				)
 			)
 		)
-		(property "Value" "NR5040T4R7N"
+		(property "Value" "4.7uH"
 			(at 0.8001 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -23042,7 +23042,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "NR5040T4R7N"
+		(property "Manufacturer Part Number" "LSXND5050YAL4R7NMG"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -23320,6 +23320,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly Note" "Or equivalent: 3 mm red LED, diffused, high brightness (it runs at 0.6 mA), 2.54 mm lead pitch"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8e8b1a8f-2451-4379-8800-b9acbc49f32b")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -23640,7 +23652,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24472,7 +24484,7 @@
 				)
 			)
 		)
-		(property "Value" "MCP45HV51-104E_ST"
+		(property "Value" "MCP45HV51-104E/ST"
 			(at 0 3.55 180)
 			(layer "F.Fab")
 			(uuid "5f79dcb4-6591-4ff6-9b70-0369aaa3021a")
@@ -24518,7 +24530,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "MCP45HV51-104E_ST"
+		(property "Manufacturer Part Number" "MCP45HV51-104E/ST"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25085,7 +25097,7 @@
 				)
 			)
 		)
-		(property "Value" "NR5040T4R7N"
+		(property "Value" "4.7uH"
 			(at 0.8001 0 90)
 			(layer "F.Fab")
 			(hide yes)
@@ -25132,7 +25144,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "NR5040T4R7N"
+		(property "Manufacturer Part Number" "LSXND5050YAL4R7NMG"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25598,7 +25610,7 @@
 				)
 			)
 		)
-		(property "Value" "ULO-PH409-1*2SF11"
+		(property "Value" "PinHeader_1x02"
 			(at 0 -4.37 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25632,7 +25644,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronics"
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25645,7 +25657,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "ULO-PH409-1x2SX1"
+		(property "Manufacturer Part Number" "61300211121"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27805,7 +27817,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28879,7 +28891,7 @@
 				)
 			)
 		)
-		(property "Value" "ULO-PH409-1*3SF11"
+		(property "Value" "PinHeader_1x03"
 			(at 0 -5.64 270)
 			(layer "F.Fab")
 			(hide yes)
@@ -28913,7 +28925,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronics"
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28926,7 +28938,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "ULO-PH409-1*3SF11"
+		(property "Manufacturer Part Number" "61300311121"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30358,7 +30370,7 @@
 				)
 			)
 		)
-		(property "Value" "ULO-PH409-1*2SF11"
+		(property "Value" "PinHeader_1x02"
 			(at 0 -4.37 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30392,7 +30404,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronics"
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30405,7 +30417,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "ULO-PH409-1x2SX1"
+		(property "Manufacturer Part Number" "61300211121"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31926,7 +31938,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36061,7 +36073,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "CL31A106KBHNNNE"
+		(property "Manufacturer Part Number" "CL31B106KBHNNNE"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39803,6 +39815,18 @@
 				)
 			)
 		)
+		(property "Assembly Note" "Original STMicroelectronics part only (other makers sell clones under the same number)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "de3dcaf5-7d93-4050-82d2-276905877de9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/0ca10c43-5f34-476d-82fc-2e7363cfb457")
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
@@ -40144,7 +40168,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -40156,7 +40180,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" ""
+		(property "Manufacturer Part Number" "61300411121"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41202,7 +41226,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41214,7 +41238,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" ""
+		(property "Manufacturer Part Number" "61301211121"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41717,7 +41741,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41729,7 +41753,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" ""
+		(property "Manufacturer Part Number" "61300211121"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -42494,7 +42518,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -42506,7 +42530,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" ""
+		(property "Manufacturer Part Number" "61301011121"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -46501,7 +46525,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -50760,7 +50784,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -52271,7 +52295,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer Part Number" "CL31A106KBHNNNE"
+		(property "Manufacturer Part Number" "CL31B106KBHNNNE"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -52543,7 +52567,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer Part Number" "CL31A106KBHNNNE"
+		(property "Manufacturer Part Number" "CL31B106KBHNNNE"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -53896,7 +53920,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R71C104KA88D"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -55147,7 +55171,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R71C104KA88D"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -55506,7 +55530,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R71C104KA88D"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -56281,7 +56305,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R71C104KA88D"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -56648,7 +56672,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -56660,7 +56684,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R61A105KE15D"
+		(property "Manufacturer Part Number" "CL05A105KA5NQNC"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -58033,7 +58057,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics"
+		(property "Manufacturer" "Yageo"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -58045,7 +58069,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R71H103KA88D"
+		(property "Manufacturer Part Number" "CC0402KRX7R9BB103"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -58226,7 +58250,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -58238,7 +58262,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R61A105KE15D"
+		(property "Manufacturer Part Number" "CL05A105KA5NQNC"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -58426,7 +58450,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R71C104KA88D"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -58983,7 +59007,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM1555C1HR50BA01D"
+		(property "Manufacturer Part Number" "GJM1555C1HR50BB01D"
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -59333,7 +59357,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics"
+		(property "Manufacturer" "Yageo"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -59345,7 +59369,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R71H103KA88D"
+		(property "Manufacturer Part Number" "CC0402KRX7R9BB103"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -59533,7 +59557,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM1555C1HR50BA01D"
+		(property "Manufacturer Part Number" "GJM1555C1HR50BB01D"
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -59714,7 +59738,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R71C104KA88D"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
@@ -60448,7 +60472,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM155R71C104KA88D"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)

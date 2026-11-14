@@ -15,7 +15,7 @@ sh hardware/kicad/WPT-TX/fab/export.sh
 | `out/assembly/Legacy/` | Legacy 構成の同じファイル一式 |
 | `out/doc/` | 構成ごとの回路図 PDF（`schematic_HRTIM.pdf`）と表面・裏面の実装図（`assembly_front_HRTIM.pdf`、`assembly_back_HRTIM.pdf`。実装しない部品は × 印）。**発注には HRTIM の付いたファイルだけを渡す** |
 
-- 発注用 BOM（`bom_<構成>_pcbway.csv`、`fab/bom_pcbway.py` が作る）は**メーカー型番だけ**で 1 行にまとめる。列は Item # / Designator / Qty / Manufacturer / Mfg Part # / Description / Value / Package/Footprint / Type（SMD・THT）/ Your Instructions / Notes。DNP の部品とテストポイント（部品ではない）は含めない。HRTIM 構成で 76 行・194 点（表面実装 177、スルーホール 17）。
+- 発注用 BOM（`bom_<構成>_pcbway.csv`、`fab/bom_pcbway.py` が作る）は**メーカー型番だけ**で 1 行にまとめる。列は Item # / Designator / Qty / Manufacturer / Mfg Part # / Description / Value / Package/Footprint / Type（SMD・THT）/ Your Instructions / Notes。DNP の部品とテストポイント（部品ではない）は含めない。HRTIM 構成で 74 行（うち 1 行は基板データに無いジャンパ 2 個、`fab/bom_extra.csv`）、基板上の部品は 194 点（表面実装 177、スルーホール 17）。型番の無い行は無い。
 - KiCad の書き出しそのままの `bom_<構成>.csv` は「同じ値・フットプリント・型番」で分けるので、同じ型番が複数行に分かれることがある（ライブラリによって値の書き方が違うため）。
 - 部品座標は mm 単位、表裏両面、DNP を除外。実装機用には `_smd.csv`（表面実装部品のみ）を渡す。
 - Legacy / HRTIM の違いは LM5113 入力まわりの 12 点と、スイッチノード検出経路の 4 点（R343 / R344 / C338 / C339、HRTIM のみ実装）。**両方を同時に実装しないこと。**
@@ -50,4 +50,7 @@ PCBWay のウェブサイトに載っている数値（2026-11-14 に取得。�
 - **J3 は Samtec FTSH-107-01-L-D-K**（2×7、1.27 mm ピッチ、スルーホール、キー付きシュラウド）。**シュラウドのキー溝（切り欠き）が基板端（西）側**になる向きで実装する。1 番ピンは北西の角（四角いランド）。表面実装品（-DV-K）とは互換が無い。
 - 取付穴は M3 が 4 個（基板端から 5 mm、間隔 60 × 70 mm、GND のめっき穴）。四隅は取付穴を中心とする R5。
 - スライドスイッチ SW2 の下に、シルクの帯（幅 0.8 mm、四辺）がある。金属カバーの下の絶縁を兼ねているので、シルクを省略・間引きしないこと（`docs/stm32-tx/layout_notes.md` §7.3）。
-- 実装指示（BOM の Notes 列）が付いている部品: J3（キー溝の向き）、J5（シェルの脚 4 か所のはんだ付け）、SW1（枠ラグ 2 か所のはんだ付け）。
+- 実装指示（BOM の Notes 列）が付いている部品: J3（キー溝の向き）、J5（シェルの脚 4 か所のはんだ付け）、SW1（枠ラグ 2 か所のはんだ付け）、D201（同等品可）、U3（ST 純正）、ジャンパ（挿す位置）。
+- **ジャンパ 2 個が要る**: CN207 の 1–2 番（7 V コンバータを DC ジャックから給電）と CN203 の 1–2 番（VPP を基板内のコンバータから供給）。1 番は四角いランド。挿さないと DC ジャックから給電されない。実装業者に挿してもらうか、届いてから挿す。
+- **支払いの前に MCU（STM32G474RET6）の在庫と納期を確認する**。2026-11-14 時点で Digi-Key は在庫 0・納期 52 週だった。入手性の一覧は `docs/stm32-tx/preorder_review.md` §2.5。
+- 包装の記号（リール / カットテープ / トレイ）は問わないと伝える。

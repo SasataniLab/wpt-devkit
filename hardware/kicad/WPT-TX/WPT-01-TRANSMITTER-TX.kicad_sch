@@ -2802,7 +2802,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "ON Semiconductor"
+			(property "Manufacturer" "onsemi"
 				(at 2.54 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4255,7 +4255,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Silicon Labs"
+			(property "Manufacturer" "Skyworks Solutions"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -13794,7 +13794,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 308.61 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -15854,7 +15854,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "2929SQ-391JEB"
+		(property "Manufacturer Part Number" "2929SQ-391JEC"
 			(at 325.12 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -18053,7 +18053,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 308.61 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -20113,7 +20113,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "2929SQ-391JEB"
+		(property "Manufacturer Part Number" "2929SQ-391JEC"
 			(at 325.12 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -20583,7 +20583,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Silicon Labs"
+		(property "Manufacturer" "Skyworks Solutions"
 			(at 111.76 191.77 0)
 			(hide yes)
 			(show_name no)
@@ -20666,7 +20666,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "FA-238_25.0000MB-K3"
+		(property "Value" "FA-238 25.0000MB-K3"
 			(at 62.23 185.42 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20720,7 +20720,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "FA-238_25.0000MB-K3"
+		(property "Manufacturer Part Number" "FA-238 25.0000MB-K3"
 			(at 88.9 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -24945,7 +24945,7 @@
 				)
 			)
 		)
-		(property "Value" "ULO-PH409-1*2SF11"
+		(property "Value" "PinHeader_1x02"
 			(at 353.8982 124.0536 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24987,7 +24987,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronics"
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 349.25 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -24998,7 +24998,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "ULO-PH409-1x2SX1"
+		(property "Manufacturer Part Number" "61300211121"
 			(at 346.71 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -28560,7 +28560,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" ""
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 297.18 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -28571,7 +28571,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" ""
+		(property "Manufacturer Part Number" "61301011121"
 			(at 297.18 231.14 0)
 			(hide yes)
 			(show_name no)
@@ -29036,7 +29036,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM1555C1HR50BA01D"
+		(property "Manufacturer Part Number" "GJM1555C1HR50BB01D"
 			(at 363.22 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -29325,7 +29325,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM1555C1HR50BA01D"
+		(property "Manufacturer Part Number" "GJM1555C1HR50BB01D"
 			(at 393.7 223.52 0)
 			(hide yes)
 			(show_name no)

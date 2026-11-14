@@ -58,6 +58,9 @@ Third revision (2026-11-14):
 | 30 | `silkfix.py` (as step 17, `--also C16,J3`), `finalize.py` | Reference designators, then into the project |
 | 31 | `mech5.py IN OUT` (IN = the project board) | Three tracks out of the reach of the hardware on the holes (`holechk.py` found them), three fiducials per side |
 | 32 | `finalize.py`, `lencheck.py`, `off45.py`, `holechk.py`, `nearchk.py` | Into the project, then the checks |
+| 33 | `../schematic/edit_sch5.py` | BOM clean-up, nothing electrical: test points out of BOM and placement, one spelling per manufacturer, part numbers as the manufacturers write them, replacements for the two parts that are no longer made, part numbers for the pin headers, assembly notes. The jumper shunts of the two supply selectors are in `fab/bom_extra.csv` |
+| 34 | `../schematic/edit_sch6.py`, `mech6.py IN OUT` | Changes from the pre-order review: 560 ohm at the LM5113 inputs, 100 nF bootstrap capacitors, 0.2 W divider resistors, 2.2 k for the enable LED, encoder symbol with frame pins; on the board the two frame lugs of SW1 get the GND net |
+| 35 | `silknote.py IN OUT`, `finalize.py` | "3.3 V MAX" notes for the headers; into the project. `finalize.py` now takes `../schematic/pcb_side.py` (with `sx.py`) as its third argument: it carries values, part numbers, assembly notes, datasheet links and the variant flags from the netlist to the board |
 
 `ripreg.py BOARD REG.json NET...` takes the auto-routed copper of a net out again (hand-made copper stays), for a new `fillin.py` run.
 `stub.py BOARD REG.json NET LAYER x,y x,y ...` adds one hand-made track. The fill-in router cannot leave a 0.5 mm pitch pad on its own when the escape track ends inside the pad row; extend the escape by 0.6 mm with this first.

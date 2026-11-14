@@ -129,6 +129,17 @@ gm_crit = 4 x ESR x (2 pi f)^2 x (C0 + CL)^2 at f = 24 MHz, C0 = 1 pF, CL = 10 p
 
 The assumed crystal passes (gm_crit below 1.5 mA/V). **The real ESR of the FA-128 24 MHz part is not verified**; the margin disappears at about 136 Ohm (CL 10 pF). Whether 1.5 mA/V already includes a gain margin: not stated in DS (defined in AN2867).
 
+**Update 2026-11-14, with the crystal's own data** (Epson FA-128 data sheet Ver 2.1, Table 1; ordering code `FA-128 24.0000MF10Z-W3`: F = +/-10 ppm at 25 degC, 10Z = +/-10 ppm over -20 to +75 degC, **W = 12 pF load**): ESR 80 Ohm max (the feature list on page 1 of the same data sheet says 100 Ohm for 20 to 26 MHz), C0 3.0 pF max, drive level 200 uW max. With C11 = C12 = 12 pF the load the crystal sees is 6 pF plus pin and board capacitance, i.e. 9 to 11 pF, a little below the 12 pF it is trimmed for (it runs 10 to 30 ppm fast, which matters neither for 6.78 MHz nor for USB).
+
+| ESR | C0 | CL in circuit | gm_crit |
+|---|---|---|---|
+| 80 Ohm (max) | 3.0 pF (max) | 9 pF | 1.05 mA/V |
+| 80 Ohm | 3.0 pF | 11 pF | 1.43 mA/V |
+| 80 Ohm | 3.0 pF | 12 pF | 1.64 mA/V (over the limit) |
+| 30 Ohm (assumed typical) | 1.0 pF | 9.5 pF | 0.30 mA/V |
+
+So the worst case of the data sheet passes, with little room. **Do not raise C11 / C12** to pull the frequency onto target; if the last 20 ppm ever matter, order the 9 or 10 pF load variant of the crystal instead (same footprint). Check the HSE start-up cold on the first boards.
+
 ### 4. PLL (Table 46, p.123; RM RCC_PLLCFGR p.293)
 
 - fPLL_IN: **2.66 to 16 MHz**; duty cycle 45-55 %.
