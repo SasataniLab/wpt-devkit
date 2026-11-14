@@ -49,6 +49,16 @@ The third pass is the mechanical revision of 2026-11-14 (board 70 x 80 mm, mount
 | 26 | `silklabel.py IN OUT`, `silkfix.py` (as step 17, `--also C16`) | Pin functions of J2 / J3 / J4 / J301 and the name of the BOOT0 jumper on the top silkscreen; reference designators of the added parts |
 | 27 | `finalize.py` (as step 10) | Into the project; the custom rule for vias under the slide switch is in `WPT-01-TRANSMITTER.kicad_dru` |
 
+Third revision (2026-11-14):
+
+| Step | Script | What it does |
+|---|---|---|
+| 28 | `../schematic/edit_sch3.py`, `../schematic/edit_sch4.py` (in the project directory) | J3 becomes the ST debug connector STDC14 (Samtec FTSH-107-01-L-D-K, footprint in `lib/footprints/Connector_Samtec_FTSH.pretty`); the sense path to the comparators is fitted in variant HRTIM (R343 / R344 100 ohm, C338 / C339 0.5 pF) |
+| 29 | `mech4.py IN OUT ROOT.kicad_sch` | Outline corners as arcs of 5 mm radius around the mounting holes; the new J3 at the west edge with SWDIO / SWCLK / NRST laid in by hand (the old run passed under the washer of the mounting hole) |
+| 30 | `silkfix.py` (as step 17, `--also C16,J3`), `finalize.py` | Reference designators, then into the project |
+| 31 | `mech5.py IN OUT` (IN = the project board) | Three tracks out of the reach of the hardware on the holes (`holechk.py` found them), three fiducials per side |
+| 32 | `finalize.py`, `lencheck.py`, `off45.py`, `holechk.py`, `nearchk.py` | Into the project, then the checks |
+
 `ripreg.py BOARD REG.json NET...` takes the auto-routed copper of a net out again (hand-made copper stays), for a new `fillin.py` run.
 `stub.py BOARD REG.json NET LAYER x,y x,y ...` adds one hand-made track. The fill-in router cannot leave a 0.5 mm pitch pad on its own when the escape track ends inside the pad row; extend the escape by 0.6 mm with this first.
 
@@ -66,6 +76,9 @@ The third pass is the mechanical revision of 2026-11-14 (board 70 x 80 mm, mount
 | `lencheck.py BOARD [REF...] [--min RATIO]` | Every signal net on the MCU and the headers: routed length against the shortest possible on 0 / 45 / 90 degrees (octilinear spanning tree over its pads), vias, length on In2, segments off those angles |
 | `off45.py BOARD BASE` | The segments that are not on 0 / 45 / 90 degrees and are not copper of the base board |
 | `freemap.py BOARD OUT.png [x0 y0 x1 y1]` | Where the board is free of parts on both sides (where a through-hole part could still go) |
+| `holechk.py BOARD [R_COPPER R_PART]` | Tracks, vias and pads of other nets within the reach of a washer / standoff / screw head around every mounting hole (M3: 3.6 mm from the centre, smaller holes: drill / 2 + 2 mm). DRC only checks the clearance to the pad |
+| `nearchk.py BOARD` | Assembly clearances DRC does not look at: SMD pads beside the solder joints of through-hole parts (< 1 mm), courtyards near the board edge, courtyards that touch |
+| `fidspot.py BOARD x,y[,F\|B] ...` | Nearest track, via, pad, courtyard and silkscreen to a spot, for placing fiducials |
 | `whyblocked.py BOARD REG.json NET` | For an open connection: which auto-routed nets the cheapest path would have to cross |
 | `reach2.py BOARD REG.json NET x y L x y L OUT.png` | Flood fill from both ends of an open connection, with a picture of the two reachable areas |
 

@@ -2764,7 +2764,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:RotaryEncoder_Switch"
+		(symbol "Device:RotaryEncoder_Switch_MP"
 			(pin_names
 				(offset 0.254)
 				(hide yes)
@@ -2775,7 +2775,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "SW"
-				(at 0 6.604 0)
+				(at 0 8.89 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2784,8 +2784,8 @@
 					)
 				)
 			)
-			(property "Value" "RotaryEncoder_Switch"
-				(at 0 -6.604 0)
+			(property "Value" "RotaryEncoder_Switch_MP"
+				(at 0 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2806,7 +2806,7 @@
 				)
 			)
 			(property "Datasheet" ""
-				(at 0 6.604 0)
+				(at 0 -12.7 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -2816,8 +2816,8 @@
 					)
 				)
 			)
-			(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch"
-				(at 0 0 0)
+			(property "Description" "Rotary encoder, dual channel, incremental quadrate outputs, with switch and MP Pin"
+				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -2849,7 +2849,7 @@
 					)
 				)
 			)
-			(symbol "RotaryEncoder_Switch_0_1"
+			(symbol "RotaryEncoder_Switch_MP_0_1"
 				(rectangle
 					(start -5.08 5.08)
 					(end 5.08 -5.08)
@@ -3074,7 +3074,7 @@
 					)
 				)
 			)
-			(symbol "RotaryEncoder_Switch_1_1"
+			(symbol "RotaryEncoder_Switch_MP_1_1"
 				(pin passive line
 					(at -7.62 2.54 0)
 					(length 2.54)
@@ -3122,6 +3122,24 @@
 						)
 					)
 					(number "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "MP"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "MP"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6316,7 +6334,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:RotaryEncoder_Switch")
+		(lib_id "Device:RotaryEncoder_Switch_MP")
 		(at 101.6 228.6 180)
 		(unit 1)
 		(body_style 1)
@@ -6402,6 +6420,17 @@
 				)
 			)
 		)
+		(property "Assembly Note" "Solder both frame lugs (they ground the shaft)"
+			(at 101.6 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "A"
 			(uuid "5b7c3114-f6e1-4bc4-b99b-5bf128c16b54")
 		)
@@ -6410,6 +6439,9 @@
 		)
 		(pin "C"
 			(uuid "39ce60fd-e12d-4994-aca9-70f6faa7cdbd")
+		)
+		(pin "MP"
+			(uuid "a15589a3-32dc-4c9c-ba4a-671283550a02")
 		)
 		(pin "S1"
 			(uuid "a5bfe8b1-53cc-4c0e-a626-71ba08a3c9f8")
@@ -6654,6 +6686,17 @@
 			)
 		)
 		(property "Manufacturer Part Number" "USB4105-GF-A"
+			(at 107.95 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Solder the four shell stakes in their plated slots (no paste is printed there)"
 			(at 107.95 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -11051,6 +11094,92 @@
 			(project "WPT-01-TRANSMITTER"
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557"
 					(reference "#PWR0272")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 101.6 220.98) (xy 101.6 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd16d2b2-b013-4eb8-a13f-809ca70615e6")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 101.6 218.44 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "719c4eba-60e1-48b4-8521-bf069ec227fa")
+		(property "Reference" "#PWR0370"
+			(at 107.95 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 105.41 218.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 101.6 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 101.6 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 101.6 218.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8c99a9b9-9ab2-454c-a82a-3837749a18bc")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557"
+					(reference "#PWR0370")
 					(unit 1)
 				)
 			)

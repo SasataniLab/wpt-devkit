@@ -17,6 +17,19 @@ period 800 ticks = 147.493 ns (derived from the RM definitions quoted in items 1
 
 ## 0. Hardware-relevant findings first
 
+**Status on 2026-11-14 (board revision 3).** The table below is the record of what the documents said about the design as it was on 2026-11-13; the "Action" column was written then. What became of each item:
+
+| # | Status |
+|---|---|
+| H1 | **Done.** Leg B is swapped: PB14 = HRTIM1_CHD1 drives the **low-side** input (LI of U305), PB15 = HRTIM1_CHD2 the high-side input. The bootloader therefore parks OutB at GND. Schematic, board and `.ioc` agree (checked again by an independent pin audit on 2026-11-14). |
+| H2 | Handled without a clamp: the dividers are a 40 V design (2.5 V at the pin at 40 V; the schematic limits the external supply to below 40 V), the series resistors R343 / R344 are 100 ohm, and the compensation capacitors C338 / C339 are 0.5 pF so that the tap cannot overshoot. No clamp or trim-capacitor footprint was added; J301 pins 1 / 2 and 3 / 4 are tap / GND pairs where either can be fitted for an experiment. |
+| H3 | The header pins on TT_a inputs are 3.3 V only: J301 pins 7 / 8, J4 pin 1 (USART1_RX on PC5), the SPI / DC / RST pins of J2. Marked on the silkscreen in revision 3. |
+| H4 | No capacitor across R8 (not required). |
+| H5 | Not implemented; PA9 / PA10 are left open (not required: PB4 is tied by the slide switch, PB6 is open). Firmware sets UCPD1_DBDIS. |
+| H6 | Done (dividers at the switch nodes, both taps on the back side to J301); see `layout_notes.md` section 5.2. |
+| H7 | Firmware; C16 (10 nF) was added at PA0. |
+| H8 | Clock plan confirmed again; the crystal ESR is still to be checked against Epson's data. |
+
 | # | Finding | Source | Action |
 |---|---|---|---|
 | H1 | **CONFLICT** - In system-bootloader mode PB14 (HRTIM1_CHD1 = leg B **high-side** input) is an actively driven push-pull output: SPI2_MISO, "set to 3.3 V" at bootloader start-up. A 47 kOhm pull-down cannot hold it low. PB12, PB13, PB15 are inputs. | AN Table 118 + footnote 1, p.286; Figure 69, p.287 | Swap the leg-B nets so PB14 drives the **low-side** LI and PB15 the high-side HI (bootloader then holds OutB at GND instead of VPP). Keep the HV enable interlock (PB0 is not among the bootloader pins of Table 118; the state of unlisted pins is not stated, expected to stay in the reset state so R206 keeps EN low - verify on the bench). See item 16. |
@@ -355,8 +368,8 @@ Interfaces and pins (Table 118, p.284-286):
 | SPI1 | PA7 MOSI | input | push-pull, pull-down | display |
 | | PA6 MISO | **output** | push-pull, pull-down, footnote 1 | display |
 | | PA5 SCK, PA4 NSS | input | no pull / pull-down | display, DISP_RST |
-| **SPI2** | **PB15 MOSI** | input | push-pull, pull-down | leg B low-side |
-| | **PB14 MISO** | **output** | push-pull, pull-down, footnote 1 | **leg B high-side** |
+| **SPI2** | **PB15 MOSI** | input | push-pull, pull-down | leg B high-side (since the swap of 2026-11-13; low-side before) |
+| | **PB14 MISO** | **output** | push-pull, pull-down, footnote 1 | **leg B low-side** (since the swap; high-side before) |
 | | **PB13 SCK** | input | "push-pull, n pull-down mode" (text garbled; SPI1_SCK reads "no pull-up, pull-down") | leg A low-side |
 | | **PB12 NSS** | input | push-pull, pull-down | leg A high-side |
 | USB DFU | PA11 DM, PA12 DP | in/out | input no pull, no external pull-up needed | USB |
@@ -371,7 +384,7 @@ Answers:
 
 - PB12-PB15 are configured as SPI2. **Only PB14 is an actively driven output**, and it is driven high.
 - PC10 / PC11 are USART3 TX (driven) / RX (pull-up).
-- **CONFLICT** with the assumption that 47 kOhm pull-downs keep all four gate-driver inputs low whenever the application is not running. In bootloader mode HI of leg B is high and LI low: the leg-B high-side FET is commanded on (LM5113: HO follows HI while the bootstrap supply is above UVLO). No shoot-through, but OutB is tied to VPP for as long as the bootloader runs.
+- (Written before the swap; recommendation (a) below is implemented, so in bootloader mode it is now LI of leg B that is high and OutB sits at GND.) **CONFLICT** with the assumption that 47 kOhm pull-downs keep all four gate-driver inputs low whenever the application is not running. In bootloader mode HI of leg B is high and LI low: the leg-B high-side FET is commanded on (LM5113: HO follows HI while the bootstrap supply is above UVLO). No shoot-through, but OutB is tied to VPP for as long as the bootloader runs.
   *Inference / recommendation*: (a) swap the nets so PB14 = leg-B low-side and PB15 = leg-B high-side; the same condition then parks OutB at GND, and firmware is unaffected because either output of a complementary pair can serve either FET; (b) keep relying on the HV enable: PB0 is not listed as a bootloader pin, so it is expected to stay floating with R206 holding the HV DC-DC off, provided VPP has no other source (AN2606 does not describe unlisted pins: check PB0 and VPP once in bootloader mode); (c) never enter the bootloader with an external bench supply on VPP.
 - Other board effects (*inference* from the table): PC10 drives 3.3 V into the R7/R8 divider (harmless, < 0.4 mA); PA2 (DISP_CS) idles high and PA4 (DISP_RST) is pulled low, so the display stays quiet although PA6 is driven; PC11 with its 100 kOhm pull-down against the internal pull-up idles high, so a toggling signal on J301 pin 6 could be taken for USART data; the MCU answers as an I2C target at 0x53 on the control bus (no other master present).
 - USB DFU needs only the BOOT0 jumper and USB; clock source HSI48 + CRS.

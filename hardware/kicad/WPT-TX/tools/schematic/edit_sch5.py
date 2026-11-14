@@ -23,7 +23,9 @@ MPN_FIX = {}
 # reference -> (manufacturer, part number) for parts that had no part number
 ADD = {}
 # reference -> instruction for the assembler
-NOTE = {'J3': 'Keying slot of the shroud faces the board edge; pin 1 is the square pad at the north-west corner'}
+NOTE = {'J3': 'Keying slot of the shroud faces the board edge; pin 1 is the square pad at the north-west corner',
+        'J5': 'Solder the four shell stakes in their plated slots (no paste is printed there)',
+        'SW1': 'Solder both frame lugs (they ground the shaft)'}
 
 
 def blocks(t):

@@ -36,6 +36,10 @@ PACKAGE = {
     'PinHeader_1x02_P2.54mm_Vertical': 'pin header 1x02, 2.54 mm', 'PinHeader_1x04_P2.54mm_Vertical': 'pin header 1x04, 2.54 mm',
     'PinHeader_1x10_P2.54mm_Vertical': 'pin header 1x10, 2.54 mm', 'PinHeader_1x12_P2.54mm_Vertical': 'pin header 1x12, 2.54 mm',
     'FTSH-107-01-L-D-K_2x07_P1.27mm_Vertical': 'header 2x07, 1.27 mm, keyed shroud',
+    'USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal': 'USB-C receptacle, 16 pads, top mount',
+    'RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm': 'rotary encoder, vertical, 20 mm shaft',
+    'SW_E-Switch_EG2219_DPDT_Angled': 'slide switch DPDT, right angle',
+    'NR5040': '5.0 x 5.0 mm', '2929SQ': '7.5 x 7.2 mm air core',
 }
 
 

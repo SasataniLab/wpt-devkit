@@ -8,8 +8,8 @@ i.e. the same data "Update PCB from Schematic" consumes.
 
 For every footprint that has a schematic symbol it sets:
   * the DNP attribute (base state),
-  * hidden "Manufacturer" / "Manufacturer Part Number" fields where the symbol has them
-    (added when absent on the footprint),
+  * hidden "Manufacturer" / "Manufacturer Part Number" / "Assembly Note" fields where the symbol has them
+    (added when absent on the footprint), and the datasheet link where the symbol has one,
   * the per-variant DNP overrides carried by the netlist (HRTIM),
   * with --values, the Value field (fixes value drift that predates this work).
 It also registers the variant names and descriptions on the board.
@@ -90,10 +90,12 @@ def main():
                 fp.SetValue(c['value'])
             else:
                 log['value'].append(f"{ref}: board {fp.GetValue()} / schematic {c['value']} (not changed)")
-        for fname in FIELDS:
+        for fname in FIELDS + ('Datasheet',):
             if fname not in c['fields']:
                 continue
             text = c['fields'][fname]
+            if fname == 'Datasheet' and text in ('', '~'):     # only real links are carried over
+                continue
             if fp.HasField(fname):
                 f = fp.GetField(fname)
                 if f.GetText() != text:

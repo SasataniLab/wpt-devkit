@@ -8,7 +8,7 @@
 #   out/assembly/<variant>/  BOM and pick-and-place files (all parts / surface-mount only) for each assembly variant
 #                            (Legacy, HRTIM), DNP parts excluded. bom_<variant>_pcbway.csv is the one to send:
 #                            one line per manufacturer part number (fab/bom_pcbway.py)
-#   out/doc/                 schematic PDF and front/back assembly drawings
+#   out/doc/                 schematic PDF and front/back assembly drawings, one set per variant (parts not fitted are crossed out)
 set -eu
 
 here=$(cd "$(dirname "$0")" && pwd)
@@ -57,11 +57,15 @@ for v in $variants; do
 done
 
 echo "== Documents"
-kicad-cli sch export pdf -o "$out/doc/schematic.pdf" "$sch"
-kicad-cli pcb export pdf --layers F.Fab,Edge.Cuts --sketch-pads-on-fab-layers --crossout-DNP-footprints-on-fab-layers \
-    --mode-single -o "$out/doc/assembly_front.pdf" "$pcb"
-kicad-cli pcb export pdf --layers B.Fab,Edge.Cuts --mirror --sketch-pads-on-fab-layers --crossout-DNP-footprints-on-fab-layers \
-    --mode-single -o "$out/doc/assembly_back.pdf" "$pcb"
+# One set per variant. Without --variant kicad-cli draws the default population, which is the Legacy one: the drawings
+# would then cross out the parts the HRTIM BOM lists and show the parts it leaves out.
+for v in $variants; do
+    kicad-cli sch export pdf --variant "$v" -o "$out/doc/schematic_$v.pdf" "$sch"
+    kicad-cli pcb export pdf --variant "$v" --layers F.Fab,Edge.Cuts --sketch-pads-on-fab-layers \
+        --crossout-DNP-footprints-on-fab-layers --exclude-value --mode-single -o "$out/doc/assembly_front_$v.pdf" "$pcb"
+    kicad-cli pcb export pdf --variant "$v" --layers B.Fab,Edge.Cuts --mirror --sketch-pads-on-fab-layers \
+        --crossout-DNP-footprints-on-fab-layers --exclude-value --mode-single -o "$out/doc/assembly_back_$v.pdf" "$pcb"
+done
 
 echo "== Done"
 find "$out" -type f | sort | sed "s|$out/||"

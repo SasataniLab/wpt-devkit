@@ -13507,7 +13507,7 @@
 		)
 	)
 	(symbol
-		(lib_id "yageo:CC0402KRX7R8BB223")
+		(lib_id "yageo:CC0402KRX7R8BB104")
 		(at 298.45 45.72 0)
 		(unit 1)
 		(body_style 1)
@@ -13528,7 +13528,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22n/25(X7R)"
+		(property "Value" "0.1u/50(X7R)"
 			(at 295.91 52.324 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13550,7 +13550,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.yageo.com/documents/recent/UPY-GPHC_X7R_6.3V-to-50V_18.pdf"
+		(property "Datasheet" "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en"
 			(at 298.45 43.688 0)
 			(hide yes)
 			(show_name no)
@@ -13582,7 +13582,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Murata Electronics"
 			(at 303.53 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -13593,7 +13593,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "CC0402KRX7R8BB223"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 306.07 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -17766,7 +17766,7 @@
 		)
 	)
 	(symbol
-		(lib_id "yageo:CC0402KRX7R8BB223")
+		(lib_id "yageo:CC0402KRX7R8BB104")
 		(at 298.45 144.78 0)
 		(unit 1)
 		(body_style 1)
@@ -17787,7 +17787,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22n/25(X7R)"
+		(property "Value" "0.1u/50(X7R)"
 			(at 295.91 151.384 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17809,7 +17809,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.yageo.com/documents/recent/UPY-GPHC_X7R_6.3V-to-50V_18.pdf"
+		(property "Datasheet" "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en"
 			(at 298.45 142.748 0)
 			(hide yes)
 			(show_name no)
@@ -17841,7 +17841,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Murata Electronics"
 			(at 303.53 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -17852,7 +17852,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "CC0402KRX7R8BB223"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 306.07 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -25065,7 +25065,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "560R"
 			(at 218.44 223.52 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25119,7 +25119,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "RC0402FR-070RL"
+		(property "Manufacturer Part Number" "RC0402FR-07560RL"
 			(at 218.44 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -25398,7 +25398,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "560R"
 			(at 218.44 238.76 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25452,7 +25452,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "RC0402FR-070RL"
+		(property "Manufacturer Part Number" "RC0402FR-07560RL"
 			(at 218.44 236.22 0)
 			(hide yes)
 			(show_name no)
@@ -25731,7 +25731,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "560R"
 			(at 218.44 254 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25785,7 +25785,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "RC0402FR-070RL"
+		(property "Manufacturer Part Number" "RC0402FR-07560RL"
 			(at 218.44 251.46 0)
 			(hide yes)
 			(show_name no)
@@ -26064,7 +26064,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "560R"
 			(at 218.44 269.24 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26118,7 +26118,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "RC0402FR-070RL"
+		(property "Manufacturer Part Number" "RC0402FR-07560RL"
 			(at 218.44 266.7 0)
 			(hide yes)
 			(show_name no)
@@ -27912,7 +27912,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Panasonic Electronic Components"
 			(at 368.3 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -27923,7 +27923,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "RC0402FR-0715KL"
+		(property "Manufacturer Part Number" "ERJ-PA2F1502X"
 			(at 368.3 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -28246,7 +28246,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Panasonic Electronic Components"
 			(at 388.62 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -28257,7 +28257,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "RC0402FR-0715KL"
+		(property "Manufacturer Part Number" "ERJ-PA2F1502X"
 			(at 388.62 223.52 0)
 			(hide yes)
 			(show_name no)
