@@ -28856,7 +28856,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100R"
 			(at 372.11 245.11 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28910,7 +28910,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "RC0402FR-071KL"
+		(property "Manufacturer Part Number" "RC0402FR-07100RL"
 			(at 365.76 245.11 0)
 			(hide yes)
 			(show_name no)
@@ -28932,6 +28932,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R343")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -29054,6 +29058,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "C338")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -29137,7 +29145,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100R"
 			(at 377.19 248.92 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29191,7 +29199,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "RC0402FR-071KL"
+		(property "Manufacturer Part Number" "RC0402FR-07100RL"
 			(at 365.76 248.92 0)
 			(hide yes)
 			(show_name no)
@@ -29213,6 +29221,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R344")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -29335,6 +29347,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "C339")
 					(unit 1)
+					(variant
+						(name "HRTIM")
+						(dnp no)
+					)
 				)
 			)
 		)
