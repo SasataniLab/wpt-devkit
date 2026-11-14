@@ -24,6 +24,8 @@ R.DEFAULT_CORRIDORS = ()
 path, regfile = sys.argv[1:3]
 sweeps = int(sys.argv[3]) if len(sys.argv) > 3 and sys.argv[3].isdigit() else 1
 INNER = '--inner' in sys.argv
+import os
+ONLY = set(os.environ.get('IMP_ONLY', '').split(',')) - {''}     # short net names; empty = every auto-routed net
 MM = 1e6
 FAST = ('HRTIM1_CH', 'VSWA', 'VSWB', 'HRTIM1_EEV', 'HRTIM1_FLT', 'SPI1', 'SWCLK', 'SWDIO', 'NRST')
 
@@ -51,7 +53,7 @@ def stats():
 
 
 def order(cost):
-    nets = [n for n in REG if n not in PROT and REG[n]]
+    nets = [n for n in REG if n not in PROT and REG[n] and (not ONLY or n.split('/')[-1] in ONLY)]
     return sorted(nets, key=lambda n: (0 if any(k in n for k in FAST) else 1, -cost[n]))
 
 

@@ -6,3 +6,11 @@
 (rule "USB4105 NPTH alignment pegs"
 	(condition "A.memberOfFootprint('J5') && A.Pad_Type == 'NPTH, mechanical'")
 	(constraint hole_clearance (min 0.15mm)))
+
+# E-Switch EG2219 (SW2): the metal cover stands on the board along the outline of the
+# switch. The rule area "SW2 metal cover: wall band" is a ring under those walls. Inside
+# it only GND vias are allowed: a via is where the solder mask is thinnest, and the cover
+# must not be able to touch a signal there.
+(rule "SW2 metal cover: no signal vias"
+	(condition "A.Type == 'Via' && A.NetName != 'GND' && A.intersectsArea('SW2 metal cover: wall band')")
+	(constraint disallow via))

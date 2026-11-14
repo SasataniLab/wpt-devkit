@@ -23,18 +23,20 @@ synced = os.path.join(tmp, 'synced.kicad_pcb')
 out = subprocess.run([sys.executable, pcb_side, src, synced, net, '--values'], capture_output=True, text=True)
 print('\n'.join(l for l in out.stdout.split('\n') if l.startswith('no footprint') or l.startswith('footprint id')))
 b = pcbnew.LoadBoard(synced)
+DESC = {'C13': 'Unpolarized capacitor', 'C14': 'Unpolarized capacitor', 'C15': 'Unpolarized capacitor', 'C16': 'Unpolarized capacitor',
+        'J301': 'Generic connector, single row, 01x10'}
 n = 0
 for fp in b.GetFootprints():
     ref = fp.GetReference()
     if ref.startswith('REF**'):
         fp.SetAttributes(fp.GetAttributes() | pcbnew.FP_BOARD_ONLY | pcbnew.FP_EXCLUDE_FROM_BOM | pcbnew.FP_EXCLUDE_FROM_POS_FILES)
         n += 1
-    if ref in ('C13', 'C14', 'C15'):
+    if ref in DESC:                               # footprints added by script carry no Description field yet
         f = fp.GetField('Description') if fp.HasField('Description') else None
         if f is not None:
-            f.SetText('Unpolarized capacitor')
+            f.SetText(DESC[ref])
         else:
-            fp.SetField('Description', 'Unpolarized capacitor')
+            fp.SetField('Description', DESC[ref])
             g = fp.GetField('Description')
             if g is not None:
                 g.SetVisible(False)

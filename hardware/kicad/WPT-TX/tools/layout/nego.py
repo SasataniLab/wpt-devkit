@@ -26,7 +26,7 @@ PROT = {'GND', '+3V3', '+5V', '/VBUS', '/USB_D_P', '/USB_D_N', 'Net-(J5-CC1)', '
         'Net-(U2-PF1)', 'Net-(U301-A)'}
 
 
-SLOW = ('USART1', 'SCL', 'SDA', 'ENCODER', 'HV_EN_MCU', 'HV_SW_STATE', 'HV_EN_SW', 'J1-Pin_1', 'WLAT', 'ALERT', 'GPIO_DISP_CS',
+SLOW = ('USART1', 'SCL', 'SDA', 'ENCODER', 'HV_EN_MCU', 'HV_SW_STATE', 'HV_EN_SW', 'J1-Pin_1', 'BOOT0', 'WLAT', 'ALERT', 'GPIO_DISP_CS',
         'GPIO_DISP_DC', 'GPIO_DISP_RST', 'GPIO_SW_MISC1')
 USE_INNER = '--inner' in sys.argv
 

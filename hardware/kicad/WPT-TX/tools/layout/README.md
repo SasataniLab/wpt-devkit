@@ -34,6 +34,21 @@ The second pass replaced the auto-routed copper of the nets that matter by hand-
 | 17 | `finalize.py` (as step 10), then `silkfix.py IN OUT added_refs.json --also TP214,TP215,TP217,X301 --hide-if-stuck TP217` | Reference designators of the added parts set to 0.8 x 0.7 mm and moved to the nearest free place beside their part |
 | 18 | `phys5.py IN REG OUT REG`, `fillin.py` for `'Net-(J1-Pin_1):i'`, clean-up and `finalize.py` again | Display SPI: MOSI straight to the MCU through a back-side passage it shares with HRTIM1_FLT3 (86 mm became 17.5 mm); the BOOT0 jumper net, which lost its place, is routed again |
 
+The third pass is the mechanical revision of 2026-11-14 (board 70 x 80 mm, mounting holes on a 5 mm grid, tracks on 0 / 45 / 90 degrees).
+`rev2.sh` holds the exact command sequence.
+
+| Step | Script | What it does |
+|---|---|---|
+| 19 | `../schematic/edit_sch2.py` | Schematic: C16 (10 nF at PA0, ADC_VDC), net label BOOT0, J301 becomes 1x10 with +3V3 and GND on pins 9 / 10 |
+| 20 | `mech2.py IN OUT MCU.kicad_sch` | Outline 10 mm more at the top and 5 mm more at the bottom, four M3 holes 5 mm from the edges, USB block to the new top edge, J301 on the 2.54 mm grid of J2, footprint for C16, the net name BOOT0. Then `ripreg.py` for the 20 nets that touch what moved |
+| 21 | `mech3.py IN OUT` | Obsolete hand copper out, J3 to the west edge, the eight resistors of J301 to the top side in one row north of it, the area under the slide switch as a band under the walls of its metal cover (four rectangles of one name) with silkscreen bars, the two solder-mask lines of the old top edge out |
+| 22 | `phys6.py IN REG OUT` | East side of the MCU and the two headers by hand: the pins that go north leave as a comb on the top side without vias (HV_SW_STATE, EEV1, EEV2, SWCLK, SWDIO, then the USB pair), the back side east of the MCU carries only the two divider-tap lines to J301, GPIO_VUSB_SENSE crosses both on In2. The reasoning is in its header |
+| 23 | `restore_old.py OLD BOARD REG NET[=OLDNAME]...`, `after_restore.py`, `hv_en_via.py` | The routes of the nets whose ends did not move come back from the previous board; pieces that now collide (DRC: clearance, short, keep-out) are removed again. Routing those nets from nothing gave longer routes than before |
+| 24 | `fillin.py` for `NRST:sn SCL_3.3V:s SDA_3.3V:s`, `cleanup.py` | The three connections that are really new |
+| 25 | `smooth45.py BOARD REG BASE [--only NET,...]`, `cleanup.py` | Every run of track that is not copper of the base board is laid out again on 0 / 45 / 90 degrees with as few segments as the clearances allow (farthest reachable vertex by one straight piece or one dog-leg, no turn sharper than 90 degrees). KiCad's DRC decides: a net that shows a new violation gets its old copper back. `S45_MARGIN` sets the margin on the raster (default 0.03 mm; 0 for a second try on the nets that kept an off-angle piece) |
+| 26 | `silklabel.py IN OUT`, `silkfix.py` (as step 17, `--also C16`) | Pin functions of J2 / J3 / J4 / J301 and the name of the BOOT0 jumper on the top silkscreen; reference designators of the added parts |
+| 27 | `finalize.py` (as step 10) | Into the project; the custom rule for vias under the slide switch is in `WPT-01-TRANSMITTER.kicad_dru` |
+
 `ripreg.py BOARD REG.json NET...` takes the auto-routed copper of a net out again (hand-made copper stays), for a new `fillin.py` run.
 `stub.py BOARD REG.json NET LAYER x,y x,y ...` adds one hand-made track. The fill-in router cannot leave a 0.5 mm pitch pad on its own when the escape track ends inside the pad row; extend the escape by 0.6 mm with this first.
 
@@ -48,6 +63,9 @@ The second pass replaced the auto-routed copper of the nets that matter by hand-
 | `planegap.py BOARD [--min MM]` | Outer-layer tracks with no plane copper under them (clearance holes of vias and through-hole pads excluded) |
 | `edgechk.py BOARD [MM]` | Tracks closer than a distance to the board outline |
 | `cmpnets.py OLD NEW` | Nets whose length, via count or inner-layer length differ between two boards |
+| `lencheck.py BOARD [REF...] [--min RATIO]` | Every signal net on the MCU and the headers: routed length against the shortest possible on 0 / 45 / 90 degrees (octilinear spanning tree over its pads), vias, length on In2, segments off those angles |
+| `off45.py BOARD BASE` | The segments that are not on 0 / 45 / 90 degrees and are not copper of the base board |
+| `freemap.py BOARD OUT.png [x0 y0 x1 y1]` | Where the board is free of parts on both sides (where a through-hole part could still go) |
 | `whyblocked.py BOARD REG.json NET` | For an open connection: which auto-routed nets the cheapest path would have to cross |
 | `reach2.py BOARD REG.json NET x y L x y L OUT.png` | Flood fill from both ends of an open connection, with a picture of the two reachable areas |
 
@@ -61,4 +79,5 @@ Helpers: `router.py` (the grid router itself), `pcbdump.py` / `pcbview.py` (boar
 - Slow signals listed in `nego.py` (`SLOW`) may use the inner power layer In2, and only inside `router.INNER_BOXES` (the user-interface area west of the MCU). In1 is never touched.
 - The router has no notion of signal quality beyond two penalties (`fillin.py` options `k` and `s`). The gate signals, the comparator and sense lines, the crystal and the USB pair are hand-made copper; the rest was not optimised and some of it takes detours.
 - A rule area with "no tracks" on a signal layer is an obstacle for the router, so a keep-out drawn in KiCad is honoured.
+- The router's own output is a staircase on the 0.05 mm raster. `smooth45.py` turns it into long 0 / 45 / 90 degree pieces afterwards (`smooth.py`, used before, straightened to any angle).
 - `pcbnew`'s `Remove()` leaves the Python bindings unstable in KiCad 10.0.8 (board loads start to fail in the same process). Rip-up is therefore done by deleting the track / via blocks from the board file itself (`nego.rip_text`).

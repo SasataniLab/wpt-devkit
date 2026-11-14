@@ -19,7 +19,7 @@ from scipy import ndimage
 
 MM = 1e6
 RES = 0.05                      # mm per cell
-X0, Y0, X1, Y1 = 149.0, 134.0, 221.0, 201.0
+X0, Y0, X1, Y1 = 149.0, 124.0, 221.0, 206.0   # raster frame: board outline (150..220 x 125..205) plus 1 mm
 W = int(round((X1 - X0) / RES))
 H = int(round((Y1 - Y0) / RES))
 CLR = 0.2
@@ -166,7 +166,9 @@ class Router:
         for l in cv.img:
             m = EDGE_CLR
             cv.drw[l].rectangle([0, 0, W, H], fill=FORBID)
-            cv.drw[l].rectangle([*px(150.0 + m + 0.05, 135.0 + m + 0.05), *px(220.0 - m - 0.1, 200.0 - m - 0.1)], fill=0)
+            bb = b.GetBoardEdgesBoundingBox()
+            ex0, ey0, ex1, ey1 = round(bb.GetLeft() / MM, 1), round(bb.GetTop() / MM, 1), round(bb.GetRight() / MM, 1), round(bb.GetBottom() / MM, 1)
+            cv.drw[l].rectangle([*px(ex0 + m + 0.05, ey0 + m + 0.05), *px(ex1 - m - 0.1, ey1 - m - 0.1)], fill=0)
         # zones with a net other than GND on outer layers, and keep-outs
         for z in b.Zones():
             for li in z.GetLayerSet().Seq():

@@ -12,7 +12,7 @@ import router as R
 R.DEFAULT_CORRIDORS = ()
 MM = 1e6
 path = sys.argv[1]
-WIN = (150.0, 135.0, 200.0, 168.0)
+WIN = (150.0, 125.0, 200.0, 168.0)
 r = R.Router(path)
 b = r.board
 ends = {}
