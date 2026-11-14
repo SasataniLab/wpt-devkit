@@ -65,7 +65,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 2.54 5.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -274,7 +274,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 5.08 7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -448,7 +448,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 5.08 7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -622,7 +622,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 5.08 7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -796,7 +796,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 5.08 7.62 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -970,7 +970,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 5.08 7.62 0)
 			(show_name no)
 			(do_not_autoplace no)

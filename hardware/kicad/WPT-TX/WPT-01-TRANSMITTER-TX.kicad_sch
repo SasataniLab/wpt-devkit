@@ -2170,7 +2170,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "EPSON"
+			(property "Manufacturer" "Epson"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2463,7 +2463,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Murata Electronics "
+			(property "Manufacturer" "Murata Electronics"
 				(at 5.08 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2637,7 +2637,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Murata Electronics "
+			(property "Manufacturer" "Murata Electronics"
 				(at 5.08 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4848,7 +4848,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "ULO Electronic"
+			(property "Manufacturer" "ULO Electronics"
 				(at 2.54 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -12739,7 +12739,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 266.7 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -12852,7 +12852,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 266.7 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -13907,7 +13907,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 264.16 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -14020,7 +14020,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 254 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -16998,7 +16998,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 266.7 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -17111,7 +17111,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 266.7 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -18166,7 +18166,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 264.16 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -18279,7 +18279,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 254 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -20709,7 +20709,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "EPSON"
+		(property "Manufacturer" "Epson"
 			(at 88.9 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -21513,7 +21513,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 88.9 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -21623,7 +21623,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 88.9 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -22305,7 +22305,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 138.43 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -22528,7 +22528,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 88.9 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -23255,7 +23255,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 218.44 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -23444,7 +23444,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 224.79 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -23633,7 +23633,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 218.44 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -23822,7 +23822,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 224.79 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -24987,7 +24987,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "ULO Electronics"
 			(at 349.25 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -28982,7 +28982,7 @@
 				)
 			)
 		)
-		(property "Value" "1p"
+		(property "Value" "0.5p"
 			(at 358.14 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29036,7 +29036,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM1555C1H1R0CA01D"
+		(property "Manufacturer Part Number" "GRM1555C1HR50BA01D"
 			(at 363.22 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -29271,7 +29271,7 @@
 				)
 			)
 		)
-		(property "Value" "1p"
+		(property "Value" "0.5p"
 			(at 398.78 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29325,7 +29325,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM1555C1H1R0CA01D"
+		(property "Manufacturer Part Number" "GRM1555C1HR50BA01D"
 			(at 393.7 223.52 0)
 			(hide yes)
 			(show_name no)

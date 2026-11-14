@@ -10732,6 +10732,17 @@
 				)
 			)
 		)
+		(property "Assembly Note" "Keying slot of the shroud faces the board edge; pin 1 is the square pad at the north-west corner"
+			(at 55.88 119.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b36dffbc-3db6-4e8d-a308-37ccefef9320")
 		)

@@ -6,7 +6,8 @@
 # Output:
 #   out/gerber/              Gerbers for the 4 copper layers, mask, paste, silk, edge + Excellon drill (PTH / NPTH) and drill map
 #   out/assembly/<variant>/  BOM and pick-and-place files (all parts / surface-mount only) for each assembly variant
-#                            (Legacy, HRTIM), DNP parts excluded
+#                            (Legacy, HRTIM), DNP parts excluded. bom_<variant>_pcbway.csv is the one to send:
+#                            one line per manufacturer part number (fab/bom_pcbway.py)
 #   out/doc/                 schematic PDF and front/back assembly drawings
 set -eu
 
@@ -47,6 +48,12 @@ for v in $variants; do
     # the assembler's machine file: surface-mount parts only
     kicad-cli pcb export pos --variant "$v" --exclude-dnp --smd-only --format csv --units mm --side both \
         -o "$d/placement_${v}_smd.csv" "$pcb"
+    # the BOM to send: one line per manufacturer part number, PCBWay's columns, SMD / THT marked
+    kicad-cli sch export bom --variant "$v" --exclude-dnp \
+        --fields 'Reference,Value,Footprint,Manufacturer,Manufacturer Part Number,Description,Assembly Note' \
+        --labels 'Ref,Value,Footprint,Manufacturer,MPN,Description,Note' \
+        -o "$d/parts_$v.csv" "$sch"
+    python3 "$here/bom_pcbway.py" "$d/parts_$v.csv" "$d/placement_$v.csv" "$d/placement_${v}_smd.csv" "$d/bom_${v}_pcbway.csv"
 done
 
 echo "== Documents"

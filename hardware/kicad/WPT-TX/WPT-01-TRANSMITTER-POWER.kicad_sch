@@ -894,7 +894,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "microchip"
+			(property "Manufacturer" "Microchip Technology"
 				(at 0 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1510,7 +1510,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "microchip"
+			(property "Manufacturer" "Microchip Technology"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1808,7 +1808,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Murata Electronics "
+			(property "Manufacturer" "Murata Electronics"
 				(at 2.54 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2017,7 +2017,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Murata Electronics "
+			(property "Manufacturer" "Murata Electronics"
 				(at 5.08 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2191,7 +2191,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Murata Electronics "
+			(property "Manufacturer" "Murata Electronics"
 				(at 5.08 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2365,7 +2365,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Murata Electronics "
+			(property "Manufacturer" "Murata Electronics"
 				(at 5.08 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4687,7 +4687,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "ULO Electronic"
+			(property "Manufacturer" "ULO Electronics"
 				(at 2.54 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -11403,7 +11403,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "microchip"
+		(property "Manufacturer" "Microchip Technology"
 			(at 114.3 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -11585,9 +11585,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c982131")
 		(property "Reference" "TP210"
@@ -11662,9 +11662,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c98258a")
 		(property "Reference" "TP218"
@@ -11739,9 +11739,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c982a4a")
 		(property "Reference" "TP209"
@@ -11816,9 +11816,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c982d69")
 		(property "Reference" "TP208"
@@ -11892,9 +11892,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c983017")
 		(property "Reference" "TP211"
@@ -11968,9 +11968,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c983179")
 		(property "Reference" "TP216"
@@ -12044,9 +12044,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c983500")
 		(property "Reference" "TP217"
@@ -12574,9 +12574,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c9abb46")
 		(property "Reference" "TP213"
@@ -12651,9 +12651,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c9abfa9")
 		(property "Reference" "TP212"
@@ -12728,9 +12728,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005c9ac32d")
 		(property "Reference" "TP206"
@@ -13204,7 +13204,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "ULO Electronics"
 			(at 49.53 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -13314,7 +13314,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 93.98 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -13357,9 +13357,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005ca68f5c")
 		(property "Reference" "TP203"
@@ -13594,7 +13594,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "microchip"
+		(property "Manufacturer" "Microchip Technology"
 			(at 219.71 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -14140,7 +14140,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 195.58 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -14316,7 +14316,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 185.42 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -14416,7 +14416,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 185.42 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -16218,7 +16218,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 370.84 118.11 0)
 			(hide yes)
 			(show_name no)
@@ -17161,9 +17161,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005cde1d2b")
 		(property "Reference" "TP214"
@@ -17467,9 +17467,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005d023c5e")
 		(property "Reference" "TP215"
@@ -17945,7 +17945,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at -39.37 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -18058,7 +18058,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at -19.05 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -18882,9 +18882,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005e5113e1")
 		(property "Reference" "TP221"
@@ -18958,9 +18958,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005e53d9bf")
 		(property "Reference" "TP222"
@@ -19034,9 +19034,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005e5c9cba")
 		(property "Reference" "TP225"
@@ -19109,9 +19109,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005e5ea1a3")
 		(property "Reference" "TP219"
@@ -19742,7 +19742,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 100.33 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -20106,7 +20106,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 134.62 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -20219,7 +20219,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 154.94 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -20868,9 +20868,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005e633473")
 		(property "Reference" "TP223"
@@ -20945,9 +20945,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005e6356ed")
 		(property "Reference" "TP224"
@@ -22224,7 +22224,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "ULO Electronics"
 			(at 261.62 242.57 0)
 			(hide yes)
 			(show_name no)
@@ -22326,7 +22326,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "ULO Electronics"
 			(at 261.62 248.92 0)
 			(hide yes)
 			(show_name no)
@@ -22428,7 +22428,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "ULO Electronics"
 			(at 261.62 255.27 0)
 			(hide yes)
 			(show_name no)
@@ -22471,9 +22471,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005f0040cd")
 		(property "Reference" "TP220"
@@ -23181,7 +23181,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 100.33 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -23621,7 +23621,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 134.62 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -23734,7 +23734,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 154.94 233.68 0)
 			(hide yes)
 			(show_name no)

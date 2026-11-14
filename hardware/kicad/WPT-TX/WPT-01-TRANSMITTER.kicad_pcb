@@ -1183,7 +1183,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1449,7 +1449,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2222,7 +2222,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2489,7 +2489,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2756,7 +2756,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3796,7 +3796,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4063,7 +4063,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4330,7 +4330,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4597,7 +4597,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4864,7 +4864,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6432,7 +6432,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9147,7 +9147,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "EPSON"
+		(property "Manufacturer" "Epson"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9850,7 +9850,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr through_hole)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 7.175 4.38)
@@ -13273,7 +13273,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -13382,7 +13382,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -13491,7 +13491,7 @@
 				(pins "1")
 			)
 		)
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -13599,7 +13599,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -13708,7 +13708,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -16259,7 +16259,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16543,7 +16543,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr through_hole)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 7.175 -4.38)
@@ -16752,7 +16752,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18176,7 +18176,7 @@
 				(pins "1")
 			)
 		)
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -18273,7 +18273,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "ULO Electronics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18578,7 +18578,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "ULO Electronics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18893,7 +18893,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -18992,7 +18992,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "ULO Electronics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21711,7 +21711,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22244,7 +22244,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22511,7 +22511,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22778,7 +22778,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24505,7 +24505,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "microchip"
+		(property "Manufacturer" "Microchip Technology"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24913,7 +24913,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -25022,7 +25022,7 @@
 				(pins "1")
 			)
 		)
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -25632,7 +25632,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "ULO Electronics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27018,7 +27018,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27285,7 +27285,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27552,7 +27552,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29511,7 +29511,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29754,7 +29754,7 @@
 				(pins "1")
 			)
 		)
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -29861,7 +29861,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -29970,7 +29970,7 @@
 				(pins "1")
 			)
 		)
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -30077,7 +30077,7 @@
 				(pins "1")
 			)
 		)
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -30184,7 +30184,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -30293,7 +30293,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -30392,7 +30392,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "ULO Electronics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30697,7 +30697,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "microchip"
+		(property "Manufacturer" "Microchip Technology"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31389,7 +31389,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31828,7 +31828,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -32512,7 +32512,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32781,7 +32781,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34118,7 +34118,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -34227,7 +34227,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -34336,7 +34336,7 @@
 				(pins "1")
 			)
 		)
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -34981,7 +34981,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37095,7 +37095,7 @@
 				(pins "1")
 			)
 		)
-		(attr smd)
+		(attr smd exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -41980,6 +41980,18 @@
 				)
 			)
 		)
+		(property "Assembly Note" "Keying slot of the shroud faces the board edge; pin 1 is the square pad at the north-west corner"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "56c18c27-1292-4e19-b53e-09c704137e9f")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/47b019f6-39e4-48a3-9bf0-3755a408d749")
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
@@ -44577,7 +44589,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -45121,7 +45133,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -53303,7 +53315,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -53575,7 +53587,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -58884,7 +58896,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1p"
+		(property "Value" "0.5p"
 			(at 0 -1.16 0)
 			(layer "B.Fab")
 			(uuid "ea12e37f-5a20-4e4a-9a0d-53e9a8f93141")
@@ -58945,7 +58957,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM1555C1H1R0CA01D"
+		(property "Manufacturer Part Number" "GRM1555C1HR50BA01D"
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)
@@ -59434,7 +59446,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "1p"
+		(property "Value" "0.5p"
 			(at 0 -1.16 0)
 			(layer "B.Fab")
 			(uuid "76e909d4-f394-48a3-bc6f-75a0a10ac430")
@@ -59495,7 +59507,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GRM1555C1H1R0CA01D"
+		(property "Manufacturer Part Number" "GRM1555C1HR50BA01D"
 			(at 0 0 180)
 			(layer "B.Fab")
 			(hide yes)

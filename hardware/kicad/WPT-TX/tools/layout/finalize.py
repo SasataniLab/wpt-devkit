@@ -26,6 +26,7 @@ b = pcbnew.LoadBoard(synced)
 DESC = {'C13': 'Unpolarized capacitor', 'C14': 'Unpolarized capacitor', 'C15': 'Unpolarized capacitor', 'C16': 'Unpolarized capacitor',
         'J301': 'Generic connector, single row, 01x10',
         'J3': 'ST Debug Connector, standard ARM Cortex-M SWD and JTAG interface plus UART'}
+SMD_NOT_THT = ('L301', 'L302')                   # Coilcraft 2929SQ, two SMD pads
 DATASHEET = {'J3': 'https://www.st.com/resource/en/user_manual/um2448-stlinkv3set-debuggerprogrammer-for-stm8-and-stm32-stmicroelectronics.pdf'}
 n = 0
 for fp in b.GetFootprints():
@@ -35,6 +36,10 @@ for fp in b.GetFootprints():
         n += 1
     if ref in DATASHEET:
         fp.GetField('Datasheet').SetText(DATASHEET[ref])
+    if re.fullmatch(r'TP\d+', ref):               # test points are bare pads: not in the BOM, not in the placement files (as in the schematic)
+        fp.SetAttributes(fp.GetAttributes() | pcbnew.FP_EXCLUDE_FROM_BOM | pcbnew.FP_EXCLUDE_FROM_POS_FILES)
+    if ref in SMD_NOT_THT:                        # surface-mount parts whose library footprint said "through hole": they were missing from the SMD placement file
+        fp.SetAttributes((fp.GetAttributes() & ~pcbnew.FP_THROUGH_HOLE) | pcbnew.FP_SMD)
     if ref in DESC:                               # footprints added by script carry no Description field yet
         f = fp.GetField('Description') if fp.HasField('Description') else None
         if f is not None:

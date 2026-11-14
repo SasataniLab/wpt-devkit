@@ -64,7 +64,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "microchip"
+		(property "Manufacturer" "Microchip Technology"
 			(at 0 6.35 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -680,7 +680,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "microchip"
+		(property "Manufacturer" "Microchip Technology"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
