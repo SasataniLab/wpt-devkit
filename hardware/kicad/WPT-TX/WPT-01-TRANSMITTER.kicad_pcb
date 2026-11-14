@@ -41122,6 +41122,18 @@
 				)
 			)
 		)
+		(property "Assembly Note" "Three tented vias lie under each body (no solder there)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e5b11605-e30d-4928-bd53-7d11eac90bd0")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/00000000-0000-0000-0000-00005d28fbb5/2c8ca330-b0ea-4be6-b15d-571265cef40b")
 		(sheetname "WPT-01-TRANSMITTER-TX")
 		(sheetfile "WPT-01-TRANSMITTER-TX.kicad_sch")
@@ -43609,6 +43621,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8a9338e2-9260-4cbc-8aa8-5f33d2f19d87")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly Note" "Three tented vias lie under each body (no solder there)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1474b540-12ad-4700-b18a-bca2d9167ee8")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -56342,6 +56366,18 @@
 				)
 			)
 		)
+		(property "Assembly Note" "C342, C343: back side, 2 mm from the joints of J2"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "6ed2e57e-6dc1-4bda-9cd2-b8c5be32a1f2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/00000000-0000-0000-0000-00005d28fbb5/1594c489-82a4-4a5d-a1bc-795a2295459a")
 		(sheetname "WPT-01-TRANSMITTER-TX")
 		(sheetfile "WPT-01-TRANSMITTER-TX.kicad_sch")
@@ -57367,6 +57403,18 @@
 				)
 			)
 		)
+		(property "Assembly Note" "R12: back side, about 1 mm from the joints of J3 pin 13 and of a lug of SW2; keep it in place when these are soldered"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "8ab67796-33a4-42ef-babb-6e8ee5303bb8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/b2524331-3e35-44f9-a9e2-8e1b15eae0f1")
 		(sheetname "WPT-01-TRANSMITTER")
 		(sheetfile "WPT-01-TRANSMITTER.kicad_sch")
@@ -57833,6 +57881,18 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "1901d9de-8a6c-4be6-b5fb-fbd49d8690b8")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly Note" "Must be fitted (limits the voltage at the MCU inputs). 36 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "074e2062-6abf-4399-b774-c27a1a2a8267")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -59246,6 +59306,18 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "f1fbf207-d0ec-4bc3-9f3b-89fef54a0653")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly Note" "Must be fitted (limits the voltage at the MCU inputs). 36 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "3e22147b-edf4-496e-81cc-11a0081e17e1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60910,6 +60982,18 @@
 				)
 			)
 		)
+		(property "Assembly Note" "C342, C343: back side, 2 mm from the joints of J2"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "529bb2ba-14f3-49ad-914f-952ff6c7f9ae")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/00000000-0000-0000-0000-00005d28fbb5/c2c0cb2b-ee55-42cd-8dec-7a4c09b5e0e5")
 		(sheetname "WPT-01-TRANSMITTER-TX")
 		(sheetfile "WPT-01-TRANSMITTER-TX.kicad_sch")
@@ -61086,6 +61170,18 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "34900a17-5d32-4e37-86b2-aec863135c99")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly Note" "Value-critical (3.3 pF +/-0.1 pF C0G): do not substitute another value, do not leave out"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "cf679e50-4151-44fe-9ae4-4bf74fea9c6e")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -61636,6 +61732,18 @@
 			(layer "B.Fab")
 			(hide yes)
 			(uuid "a036e02e-6464-4237-aa59-dd840932e00c")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly Note" "Value-critical (3.3 pF +/-0.1 pF C0G): do not substitute another value, do not leave out"
+			(at 0 0 0)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "45b25385-7cab-428e-8531-d7161db217eb")
 			(effects
 				(font
 					(size 1.27 1.27)

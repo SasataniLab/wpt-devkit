@@ -63,7 +63,17 @@ NOTE = {'J3': 'Keying slot of the shroud faces the board edge; pin 1 is the squa
         'J5': 'Solder the four shell stakes in their plated slots (no paste is printed there)',
         'SW1': 'Solder both frame lugs (they ground the shaft)',
         'D201': 'Or equivalent: 3 mm red LED, diffused, high brightness (it runs at 0.6 mA), 2.54 mm lead pitch',
-        'U3': 'Original STMicroelectronics part only (other makers sell clones under the same number)'}
+        'U3': 'Original STMicroelectronics part only (other makers sell clones under the same number)',
+        # revision 4: the sense dividers are compensated by these four; a missing or wrong one puts overshoot on MCU inputs
+        'C338': 'Value-critical (3.3 pF +/-0.1 pF C0G): do not substitute another value, do not leave out',
+        'C339': 'Value-critical (3.3 pF +/-0.1 pF C0G): do not substitute another value, do not leave out',
+        'C340': 'Must be fitted (limits the voltage at the MCU inputs). 36 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D',
+        'C341': 'Must be fitted (limits the voltage at the MCU inputs). 36 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D',
+        'U308': 'Three tented vias lie under each body (no solder there)',
+        'U309': 'Three tented vias lie under each body (no solder there)',
+        'R12': 'R12: back side, about 1 mm from the joints of J3 pin 13 and of a lug of SW2; keep it in place when these are soldered',
+        'C342': 'C342, C343: back side, 2 mm from the joints of J2',
+        'C343': 'C342, C343: back side, 2 mm from the joints of J2'}
 
 
 def blocks(t):

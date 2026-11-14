@@ -11123,7 +11123,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "719c4eba-60e1-48b4-8521-bf069ec227fa")
-		(property "Reference" "#PWR0370"
+		(property "Reference" "#PWR0381"
 			(at 107.95 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -11182,7 +11182,7 @@
 		(instances
 			(project "WPT-01-TRANSMITTER"
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557"
-					(reference "#PWR0370")
+					(reference "#PWR0381")
 					(unit 1)
 				)
 			)
@@ -11336,6 +11336,17 @@
 			)
 		)
 		(property "Manufacturer Part Number" "RC0402FR-07560RL"
+			(at 74.93 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "R12: back side, about 1 mm from the joints of J3 pin 13 and of a lug of SW2; keep it in place when these are soldered"
 			(at 74.93 129.54 90)
 			(hide yes)
 			(show_name no)

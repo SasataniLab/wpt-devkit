@@ -72,6 +72,7 @@ Fourth revision (2026-11-14):
 | 39 | `../schematic/edit_sch8.py` | Fast comparators U308 / U309 (TLV3601) with threshold from PB11, capacitor-compensated dividers, test pads; J301, R333 and TP223 removed; net of PB11 renamed |
 | 40 | `mech8.py IN OUT NETLIST` | Placement and routing of step 39: the top strip where J301 stood, C340 / C341 and R343 at the dividers, silkscreen legends |
 | 41 | `finalize.py`, the checks, `../../fab/export.sh` | Into the project; fabrication data |
+| 42 | `../schematic/edit_sch9.py`, `../schematic/edit_sch5.py` (tables extended), `finalize.py`, `../../fab/export.sh` | After the independent review of revision 4: one duplicated power-symbol number, assembly notes for the value-critical capacitors and the parts near through-hole joints; no copper changes |
 
 `newfp.py` holds what `mech7.py` / `mech8.py` share: footprints of new symbols straight from the netlist (symbol link, sheet, value, description, pad nets), tracks, vias, removals. With pcbnew, `board.Remove()` of a track makes later `FootprintLoad()` calls fail, so removals are collected and carried out at the end (`flush`).
 

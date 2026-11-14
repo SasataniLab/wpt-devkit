@@ -28367,6 +28367,17 @@
 				)
 			)
 		)
+		(property "Assembly Note" "Value-critical (3.3 pF +/-0.1 pF C0G): do not substitute another value, do not leave out"
+			(at 363.22 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "016f2b02-4648-4629-bece-e04228189397")
 		)
@@ -28656,6 +28667,17 @@
 				)
 			)
 		)
+		(property "Assembly Note" "Value-critical (3.3 pF +/-0.1 pF C0G): do not substitute another value, do not leave out"
+			(at 393.7 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9340df8e-749c-438a-9fa0-3b9aec6a8593")
 		)
@@ -28823,6 +28845,17 @@
 			)
 		)
 		(property "Manufacturer Part Number" "TLV3601DBVR"
+			(at 314.96 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Three tented vias lie under each body (no solder there)"
 			(at 314.96 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -29233,6 +29266,17 @@
 			)
 		)
 		(property "Manufacturer Part Number" "TLV3601DBVR"
+			(at 322.58 238.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Three tented vias lie under each body (no solder there)"
 			(at 322.58 238.76 0)
 			(hide yes)
 			(show_name no)
@@ -30279,6 +30323,17 @@
 				)
 			)
 		)
+		(property "Assembly Note" "C342, C343: back side, 2 mm from the joints of J2"
+			(at 281.94 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7ab8f7d6-a5cf-4de9-96be-8f5a79ed8e81")
 		)
@@ -30526,6 +30581,17 @@
 			)
 		)
 		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
+			(at 292.1 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "C342, C343: back side, 2 mm from the joints of J2"
 			(at 292.1 273.05 0)
 			(hide yes)
 			(show_name no)
@@ -30880,6 +30946,17 @@
 				)
 			)
 		)
+		(property "Assembly Note" "Must be fitted (limits the voltage at the MCU inputs). 36 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D"
+			(at 363.22 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a3ae2acd-9c84-4382-87e4-cb51f66c62be")
 		)
@@ -31007,6 +31084,17 @@
 			)
 		)
 		(property "Manufacturer Part Number" "GCM1555C1H360GA16D"
+			(at 383.54 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Must be fitted (limits the voltage at the MCU inputs). 36 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D"
 			(at 383.54 233.68 0)
 			(hide yes)
 			(show_name no)
