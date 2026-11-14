@@ -11,7 +11,7 @@ and J301 is removed.
   R335, R337   0 ohm -> 100 ohm: series resistors at the comparator outputs (40 mm of track to the MCU pins).
   R345, C344, C345   threshold: PB11 -> 560 ohm -> ZVS_VTH, 100 nF at each comparator. PB11 is the output of OPAMP6,
                which as a follower repeats DAC3_CH1 - the DAC that is also the threshold of the internal comparators
-               COMP1 / COMP3 (RM0440 tables 196 and 211). The net of PB11 is renamed HRTIM1_FLT4 -> ZVS_VTH_DAC; it
+               COMP1 / COMP3 (RM0440 tables 200 and 204). The net of PB11 is renamed HRTIM1_FLT4 -> ZVS_VTH_DAC; it
                was a spare fault input that only went to J301.
   R334         10 k -> 100 k: PB11 to ground (threshold 0 V while the pin is not driven); 10 k would load the
                operational amplifier with 0.3 mA.     R333 (pull-up, was not fitted) is removed.

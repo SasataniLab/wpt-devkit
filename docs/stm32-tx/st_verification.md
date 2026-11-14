@@ -22,11 +22,11 @@ period 800 ticks = 147.493 ns (derived from the RM definitions quoted in items 1
 | # | Status |
 |---|---|
 | H1 | **Done.** Leg B is swapped: PB14 = HRTIM1_CHD1 drives the **low-side** input (LI of U305), PB15 = HRTIM1_CHD2 the high-side input. The bootloader therefore parks OutB at GND. Schematic, board and `.ioc` agree (checked again by an independent pin audit on 2026-11-14). |
-| H2 | Handled without a clamp: the dividers are a 40 V design (2.5 V at the pin at 40 V; the schematic limits the external supply to below 40 V), the series resistors R343 / R344 are 100 ohm, and the compensation capacitors C338 / C339 are 0.5 pF so that the tap cannot overshoot. No clamp or trim-capacitor footprint was added; J301 pins 1 / 2 and 3 / 4 are tap / GND pairs where either can be fitted for an experiment. |
-| H3 | The header pins on TT_a inputs are 3.3 V only: J301 pins 7 / 8, J4 pin 1 (USART1_RX on PC5), the SPI / DC / RST pins of J2. Marked on the silkscreen in revision 3. |
+| H2 | Handled without a clamp: the dividers are a 40 V design (2.5 V at the pin at 40 V; the schematic limits the external supply to below 40 V) and everything behind the taps sits behind the series resistors R343 / R344 (100 ohm). Since revision 4 the dividers are compensated by capacitors (3.3 pF over 36 pF), which bounds the overshoot at the pins to a few per cent whatever the stray capacitance is (`hrtim_timing_control.md` section 7.9: 2.4 V at 36 V with ringing). Test pads TP301 / TP302 carry the comparator inputs. |
+| H3 | The header pins on TT_a inputs are 3.3 V only: J4 pin 1 (USART1_RX on PC5; J4 is not fitted since revision 4), the SPI / DC / RST pins of J2, test pad TP304 (FLT3 on PB10). Marked on the silkscreen in revision 3. PB11 is an output since revision 4 (threshold for the on-board comparators); J301 is gone. |
 | H4 | No capacitor across R8 (not required). |
 | H5 | Not implemented; PA9 / PA10 are left open (not required: PB4 is tied by the slide switch, PB6 is open). Firmware sets UCPD1_DBDIS. |
-| H6 | Done (dividers at the switch nodes, both taps on the back side to J301); see `layout_notes.md` section 5.2. |
+| H6 | Done (dividers at the switch nodes). Since revision 4 the lines to the top strip start behind R343 / R344 and end at the on-board comparators U308 / U309; see `layout_notes.md` section 5.2. |
 | H7 | Firmware; C16 (10 nF) was added at PA0. |
 | H8 | Clock plan confirmed again; the crystal ESR is still to be checked against Epson's data. |
 
@@ -264,7 +264,7 @@ Pin facts confirmed: PC12 = EEV1 source 1, PC11 = EEV2 source 1.
 | FLT1 | PA12 | COMP2 | EEV1_muxout |
 | FLT2 | PA15 | COMP4 | EEV2_muxout |
 | FLT3 | **PB10** | COMP6 | EEV3_muxout |
-| FLT4 | **PB11** | COMP1 | EEV4_muxout |
+| FLT4 | PB11 (**not available since revision 4**: the pin is the OPAMP6 output that carries the comparator threshold) | COMP1 | EEV4_muxout |
 | FLT5 | PB0/PC7 | COMP3 | EEV5_muxout |
 | FLT6 | PC10 | COMP5 | EEV6_muxout |
 

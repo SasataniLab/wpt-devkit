@@ -62,6 +62,19 @@ Third revision (2026-11-14):
 | 34 | `../schematic/edit_sch6.py`, `mech6.py IN OUT` | Changes from the pre-order review: 560 ohm at the LM5113 inputs, 100 nF bootstrap capacitors, 0.2 W divider resistors, 2.2 k for the enable LED, encoder symbol with frame pins; on the board the two frame lugs of SW1 get the GND net |
 | 35 | `silknote.py IN OUT`, `finalize.py` | "3.3 V MAX" notes for the headers; into the project. `finalize.py` now takes `../schematic/pcb_side.py` (with `sx.py`) as its third argument: it carries values, part numbers, assembly notes, datasheet links and the variant flags from the netlist to the board |
 
+Fourth revision (2026-11-14):
+
+| Step | Script | What it does |
+|---|---|---|
+| 36 | `../schematic/edit_sch7.py` (in the project directory) | The virtual COM port of J3 (pins 13 / 14) to USART1, R12 560 ohm in the receive line, J4 no longer fitted |
+| 37 | `mech7.py IN OUT NETLIST` (IN = the project board, NETLIST = `kicad-cli sch export netlist --format kicadsexpr`) | The two lines through the slide switch: transmit on In2 between the pin columns, receive on the back west of them; one ground stitching via out of the way |
+| 38 | `finalize.py`, the checks | Into the project |
+| 39 | `../schematic/edit_sch8.py` | Fast comparators U308 / U309 (TLV3601) with threshold from PB11, capacitor-compensated dividers, test pads; J301, R333 and TP223 removed; net of PB11 renamed |
+| 40 | `mech8.py IN OUT NETLIST` | Placement and routing of step 39: the top strip where J301 stood, C340 / C341 and R343 at the dividers, silkscreen legends |
+| 41 | `finalize.py`, the checks, `../../fab/export.sh` | Into the project; fabrication data |
+
+`newfp.py` holds what `mech7.py` / `mech8.py` share: footprints of new symbols straight from the netlist (symbol link, sheet, value, description, pad nets), tracks, vias, removals. With pcbnew, `board.Remove()` of a track makes later `FootprintLoad()` calls fail, so removals are collected and carried out at the end (`flush`).
+
 `ripreg.py BOARD REG.json NET...` takes the auto-routed copper of a net out again (hand-made copper stays), for a new `fillin.py` run.
 `stub.py BOARD REG.json NET LAYER x,y x,y ...` adds one hand-made track. The fill-in router cannot leave a 0.5 mm pitch pad on its own when the escape track ends inside the pad row; extend the escape by 0.6 mm with this first.
 
