@@ -73,6 +73,9 @@ Fourth revision (2026-11-14):
 | 40 | `mech8.py IN OUT NETLIST` | Placement and routing of step 39: the top strip where J301 stood, C340 / C341 and R343 at the dividers, silkscreen legends |
 | 41 | `finalize.py`, the checks, `../../fab/export.sh` | Into the project; fabrication data |
 | 42 | `../schematic/edit_sch9.py`, `../schematic/edit_sch5.py` (tables extended), `finalize.py`, `../../fab/export.sh` | After the independent review of revision 4: one duplicated power-symbol number, assembly notes for the value-critical capacitors and the parts near through-hole joints; no copper changes |
+| 43 | `mech9.py IN OUT` | Revision 5, what is decided by hand: R335 / R336 beside the output pin of U308 (the U-turn of HRTIM1_EEV1 is gone), the threshold line, a real 45-degree corner for the leg-A gate pair, the arc of tiny pieces round the 2 mm screw hole, the four off-angle pieces, and every place where copper of one net lay on top of itself |
+| 44 | `shorten.py BOARD BASE --min 0.4 --extra 0.1 --skip 'USB_D_P,USB_D_N,HRTIM1_CHC1,HRTIM1_CHC2,HRTIM1_CHD1,HRTIM1_CHD2,Net-(U2-PF0),Net-(U2-PF1)' --apply OUT --json shorten_rev5.json` | Re-lays every run that is at least 0.4 mm longer than the shortest 45-degree path between its two ends on the same layer (23 runs, 25 mm). Pairs and the crystal lines are left out. DRC after every pass; a change that causes a violation is taken back. To reproduce without the search: `shorten.py BOARD --replay shorten_rev5.json --apply OUT` on the output of step 43 |
+| 45 | `finalize.py`, the checks (`off45.py`: 0 pieces off angle), `../../fab/export.sh` | Into the project; fabrication data |
 
 `newfp.py` holds what `mech7.py` / `mech8.py` share: footprints of new symbols straight from the netlist (symbol link, sheet, value, description, pad nets), tracks, vias, removals. With pcbnew, `board.Remove()` of a track makes later `FootprintLoad()` calls fail, so removals are collected and carried out at the end (`flush`).
 
@@ -91,6 +94,7 @@ Fourth revision (2026-11-14):
 | `edgechk.py BOARD [MM]` | Tracks closer than a distance to the board outline |
 | `cmpnets.py OLD NEW` | Nets whose length, via count or inner-layer length differ between two boards |
 | `lencheck.py BOARD [REF...] [--min RATIO]` | Every signal net on the MCU and the headers: routed length against the shortest possible on 0 / 45 / 90 degrees (octilinear spanning tree over its pads), vias, length on In2, segments off those angles |
+| `shorten.py BOARD BASE [--min MM]` (without `--apply`) | Runs (pad / via / junction to the next one) that are longer than the shortest 45-degree path on their layer with the clearances kept: length, octilinear distance of the ends, shortest possible, corners before and after. Runs made of tiny steps are listed as well |
 | `off45.py BOARD BASE` | The segments that are not on 0 / 45 / 90 degrees and are not copper of the base board |
 | `freemap.py BOARD OUT.png [x0 y0 x1 y1]` | Where the board is free of parts on both sides (where a through-hole part could still go) |
 | `holechk.py BOARD [R_COPPER R_PART]` | Tracks, vias and pads of other nets within the reach of a washer / standoff / screw head around every mounting hole (M3: 3.6 mm from the centre, smaller holes: drill / 2 + 2 mm). DRC only checks the clearance to the pad |
@@ -110,4 +114,5 @@ Helpers: `router.py` (the grid router itself), `pcbdump.py` / `pcbview.py` (boar
 - The router has no notion of signal quality beyond two penalties (`fillin.py` options `k` and `s`). The gate signals, the comparator and sense lines, the crystal and the USB pair are hand-made copper; the rest was not optimised and some of it takes detours.
 - A rule area with "no tracks" on a signal layer is an obstacle for the router, so a keep-out drawn in KiCad is honoured.
 - The router's own output is a staircase on the 0.05 mm raster. `smooth45.py` turns it into long 0 / 45 / 90 degree pieces afterwards (`smooth.py`, used before, straightened to any angle).
+- `shorten.py` moves one run at a time with both ends fixed. It cannot see a detour that comes from where a part or a via stands, and it would pull a pair apart (each member takes its own shortest path), so those cases are hand work (`mech9.py`). New copper keeps 0.1 mm more than the rule; where the old run was tighter (a lane between pads) the new one may only lie exactly on the old line there.
 - `pcbnew`'s `Remove()` leaves the Python bindings unstable in KiCad 10.0.8 (board loads start to fail in the same process). Rip-up is therefore done by deleting the track / via blocks from the board file itself (`nego.rip_text`).

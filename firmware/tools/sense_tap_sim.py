@@ -13,8 +13,9 @@ For every case the script prints how much later the comparator input crosses 15 
 
 Values of the board: Rtop 15 k (R339 / R341), Ctop 3.3 pF (C338 / C339), Rbot 1 k (R340 / R342), Cbot 36 pF (C340 / C341),
 Rs 100 ohm (R343 / R344). Lengths from the layout (tools/layout/netpath.py):
-    leg A   R343 -> junction 14.3 mm, junction -> PA1 20.5 mm, junction -> U308 47.6 mm, 5 vias and 2 pads
-    leg B   R344 -> junction  1.6 mm, junction -> PC1 21.9 mm, junction -> U309 34.5 mm, 3 vias and 2 pads
+    leg A   R343 -> junction 14.3 mm, junction -> PA1 19.4 mm, junction -> U308 46.7 mm, 5 vias and 2 pads
+    leg B   R344 -> junction  1.6 mm, junction -> PC1 19.8 mm, junction -> U309 33.3 mm, 3 vias and 2 pads
+(revision 5 of the layout; revision 4 had 20.5 / 47.6 mm and 21.9 / 34.5 mm, which moved the numbers of the table by 0.1 ns or less)
 Track 0.2 mm wide over a plane at 0.20 mm (about 75 ohm, 0.08 pF/mm) or 0.11 mm (about 55 ohm, 0.11 pF/mm).
 
 usage: sense_tap_sim.py            the table of docs/stm32-tx/hrtim_timing_control.md, section 7.9
@@ -25,8 +26,8 @@ import sys
 import numpy as np
 
 F = 6.78e6
-LEGS = {'A': dict(len0=14.3e-3, len1=20.5e-3, len2=47.6e-3, c_end=1.5e-12),
-        'B': dict(len0=1.6e-3, len1=21.9e-3, len2=34.5e-3, c_end=0.9e-12)}
+LEGS = {'A': dict(len0=14.3e-3, len1=19.4e-3, len2=46.7e-3, c_end=1.5e-12),
+        'B': dict(len0=1.6e-3, len1=19.8e-3, len2=33.3e-3, c_end=0.9e-12)}
 STACKS = {'0.20 mm': dict(z0=75.0, v=3e8 / 1.82), '0.11 mm': dict(z0=55.0, v=3e8 / 1.80)}
 BASE = dict(rtop=15e3, rbot=1e3, ctop=3.3e-12, cbot=36e-12, rs=100.0, c_pin=5e-12, c_cmp=1.3e-12)
 
