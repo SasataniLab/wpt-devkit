@@ -399,7 +399,7 @@ def rebuild(cells, ox, oy, old):
                 return [tof(p0), tof(pn)] if d == dirs[0] else None
             for d2 in ((dirs[0] + 1) % 8, (dirs[0] - 1) % 8):         # not exactly in line: a short piece of a neighbouring direction at the far end
                 m = meet(p0, dirs[0], pn, d2)
-                if m is not None and direction(tof(p0), tof(m)) == dirs[0] and direction(tof(m), tof(pn)) == d2:
+                if m is not None and direction(tof(p0), tof(m)) == dirs[0] and direction(tof(m), tof(pn)) == d2 and math.dist(tof(m), tof(pn)) >= 0.02:
                     return [tof(p0), tof(m), tof(pn)]
             return None
         pts = solve(dirs, anchor)
@@ -431,6 +431,8 @@ def rebuild(cells, ox, oy, old):
         return None
     ds = [direction(tof(a), tof(b)) for a, b in zip(pts, pts[1:])]
     if None in ds or any(turn(d1, d2) > 2 for d1, d2 in zip(ds, ds[1:])):
+        return None
+    if min(math.dist(tof(a), tof(b)) for a, b in zip(pts, pts[1:])) < 0.02:      # a piece of a few micrometres: leave the run as it is
         return None
     return [tof(p) for p in pts]
 
