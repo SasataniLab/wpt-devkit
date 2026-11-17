@@ -4529,15 +4529,8 @@
 		)
 		(uuid "9937aff7-9051-4d59-841c-0d9df772897b")
 	)
-	(hierarchical_label "VSWA_CMP"
-		(shape input)
-		(at 172.72 73.66 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
+	(no_connect
+		(at 172.72 73.66)
 		(uuid "9ceb132d-7aca-4e15-8427-9be224f30a31")
 	)
 	(hierarchical_label "I2C3_SCL_CTRL"
@@ -7421,15 +7414,8 @@
 		)
 		(uuid "ad46b109-5478-4e3c-b28f-5c0845cdf4fa")
 	)
-	(hierarchical_label "VSWB_CMP"
-		(shape input)
-		(at 121.92 96.52 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
+	(no_connect
+		(at 121.92 96.52)
 		(uuid "3d550948-db88-4b5d-9e19-f3fe4a3f6d6c")
 	)
 	(wire
@@ -7958,6 +7944,29 @@
 					(reference "#PWR0382")
 					(unit 1)
 				)
+			)
+		)
+	)
+	(global_label "HSE_EXT"
+		(shape input)
+		(at 81.28 81.28 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bb2228b9-ed03-4d06-ac19-4e93521569d8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 80.01 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 	)

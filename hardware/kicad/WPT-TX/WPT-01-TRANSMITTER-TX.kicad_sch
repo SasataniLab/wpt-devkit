@@ -8081,10 +8081,6 @@
 		(at 120.65 196.85)
 		(uuid "489f5e5c-9f4c-419a-865f-867f3f535b6a")
 	)
-	(no_connect
-		(at 120.65 189.23)
-		(uuid "98733902-dc4c-478d-b45e-2834db80b195")
-	)
 	(wire
 		(pts
 			(xy 294.64 83.82) (xy 302.26 83.82)
@@ -22273,6 +22269,127 @@
 		)
 	)
 	(symbol
+		(lib_id "yageo:RC0402FR-070RL")
+		(at 128.27 189.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "6be6eb06-329c-4fb5-9031-db25cac963e8")
+		(property "Reference" "R346"
+			(at 127.762 186.944 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 129.54 188.468 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 128.27 191.008 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf"
+			(at 128.27 187.198 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.762 0.762)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 128.27 189.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Size" "1005"
+			(at 129.794 189.738 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 0.254 0.254)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 133.35 186.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 134.62 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "R346 (not fitted): link from CLK1 of the Si5351 (U306) to the clock input PF0 of the MCU. To clock the MCU from the Si5351: fit 0 ohm (RC0402FR-070RL), remove Y1, select HSE bypass in the firmware"
+			(at 134.62 185.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0f93e17f-3baf-432b-86ba-da299a5b779d")
+		)
+		(pin "2"
+			(uuid "b72c8028-5aa3-474e-a2a8-2c90fc54ba15")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "R346")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "yageo:CC0402KRX7R8BB104")
 		(at 83.82 165.1 0)
 		(unit 1)
@@ -27584,7 +27701,7 @@
 	)
 	(wire
 		(pts
-			(xy 368.3 227.33) (xy 368.3 229.87)
+			(xy 368.3 227.33) (xy 368.3 228.6)
 		)
 		(stroke
 			(width 0)
@@ -27918,7 +28035,7 @@
 	)
 	(wire
 		(pts
-			(xy 388.62 227.33) (xy 388.62 229.87)
+			(xy 388.62 227.33) (xy 388.62 228.6)
 		)
 		(stroke
 			(width 0)
@@ -28270,8 +28387,7 @@
 		)
 		(uuid "dde3c9e8-1d55-40f0-bac8-52f86ea9ad92")
 	)
-	(hierarchical_label "VSWA_CMP"
-		(shape output)
+	(label "VSWA_CMP"
 		(at 360.68 245.11 180)
 		(effects
 			(font
@@ -28570,8 +28686,7 @@
 		)
 		(uuid "5b917bc0-dc76-4205-83bb-e6ebfdfd7f42")
 	)
-	(hierarchical_label "VSWB_CMP"
-		(shape output)
+	(label "VSWB_CMP"
 		(at 360.68 248.92 180)
 		(effects
 			(font
@@ -29149,8 +29264,7 @@
 			)
 		)
 	)
-	(hierarchical_label "VSWA_CMP"
-		(shape output)
+	(label "VSWA_CMP"
 		(at 302.26 218.44 180)
 		(effects
 			(font
@@ -29570,8 +29684,7 @@
 			)
 		)
 	)
-	(hierarchical_label "VSWB_CMP"
-		(shape output)
+	(label "VSWB_CMP"
 		(at 307.34 236.22 180)
 		(effects
 			(font
@@ -30881,7 +30994,7 @@
 				)
 			)
 		)
-		(property "Value" "36p"
+		(property "Value" "47p"
 			(at 358.14 234.95 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30935,7 +31048,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GCM1555C1H360GA16D"
+		(property "Manufacturer Part Number" "GCM1555C1H470GA16D"
 			(at 363.22 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -30946,7 +31059,7 @@
 				)
 			)
 		)
-		(property "Assembly Note" "Must be fitted (limits the voltage at the MCU inputs). 36 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D"
+		(property "Assembly Note" "Must be fitted (limits the voltage at the MCU inputs). 47 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D"
 			(at 363.22 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -31029,7 +31142,7 @@
 				)
 			)
 		)
-		(property "Value" "36p"
+		(property "Value" "47p"
 			(at 378.46 234.95 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31083,7 +31196,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "GCM1555C1H360GA16D"
+		(property "Manufacturer Part Number" "GCM1555C1H470GA16D"
 			(at 383.54 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -31094,7 +31207,7 @@
 				)
 			)
 		)
-		(property "Assembly Note" "Must be fitted (limits the voltage at the MCU inputs). 36 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D"
+		(property "Assembly Note" "Must be fitted (limits the voltage at the MCU inputs). 47 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D"
 			(at 383.54 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -31166,5 +31279,58 @@
 			(justify left bottom)
 		)
 		(uuid "17a913d8-6b4c-4397-b124-05c61353a497")
+	)
+	(label "VSWA_CMP"
+		(at 368.3 229.87 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "b7102565-994c-43ab-ab8a-a39d260336a8")
+	)
+	(label "VSWB_CMP"
+		(at 388.62 229.87 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2086faf2-eee3-427e-a597-a99817e88c1b")
+	)
+	(wire
+		(pts
+			(xy 120.65 189.23) (xy 127 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23263c5c-005f-4f1a-81e9-7b7ff23b6507")
+	)
+	(global_label "HSE_EXT"
+		(shape output)
+		(at 129.54 189.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f44ccaac-5d44-4045-8e24-ab12a6a18f9b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 130.81 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 	)
 )
