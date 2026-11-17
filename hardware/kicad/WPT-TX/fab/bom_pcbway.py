@@ -52,6 +52,7 @@ PACKAGE = {
     'NR5040': '5.0 x 5.0 mm', '2929SQ': '7.5 x 7.2 mm air core',
     # the display board (hardware/kicad/WPT-TX-DISPLAY)
     'SOT-23': 'SOT-23', 'PinSocket_1x12_P2.54mm_Vertical': 'socket header 1x12, 2.54 mm',
+    'PinHeader_2x06_P2.54mm_Vertical': 'pin header 2x06, 2.54 mm', 'PinSocket_2x06_P2.54mm_Vertical_SMD': 'socket strip 2x06, 2.54 mm, surface mount',
     'TFT_0.96in_80x160_FPC13_P0.7mm_Folded': 'display module, flex tail with 13 contacts on 0.7 mm pitch',
 }
 

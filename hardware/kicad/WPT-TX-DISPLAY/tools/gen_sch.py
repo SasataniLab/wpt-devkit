@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """Schematic of the display board (run inside hardware/kicad/WPT-TX-DISPLAY): writes WPT-TX-DISPLAY.kicad_sch.
 
-The board plugs onto J2 of the transmitter board (1 x 12 header, 3.3 V only) and carries a 0.96 inch IPS TFT with
-ST7735S controller. Signals of J2 (docs/stm32-tx/display_shield_study.md):
+The board plugs onto J2 of the transmitter board (2 x 6 header, 3.3 V only) and carries a 0.96 inch IPS TFT with
+ST7735S controller. Signals of J2 (revision 7 of the transmitter board; docs/stm32-tx/display_shield_study.md):
 
-   1 GND   2 +3V3   3 SCK (PA5)   4 MISO (PA6)   5 MOSI (PA7)   6 ADC (PC2)
-   7 CS (PA2)   8 DC (PA3)   9 RST (PA4)   10 IO (PB3, TIM2_CH2)   11 +3V3   12 GND
+   1 GND   2 +3V3   3 MOSI (PA7)   4 MISO (PA6)   5 SCK (PA5)   6 DC (PA3)
+   7 RST (PA4)   8 CS (PA2)   9 ADC (PC2)   10 IO (PB3, TIM2_CH2)   11 +3V3   12 GND
 
-Used here: SCK, MOSI, CS, DC, RST, and IO as the backlight switch (PWM capable). MISO and ADC are not connected:
-the ST7735S is written to only, and the board has no keys. The supply comes from pin 11, next to the display; pin 2
-is left open (a track from there would have to cross the signals on the narrow strip; 3 mA + 20 mA need one pin).
+Used here: MOSI, SCK, DC, RST, CS, and IO as the backlight switch (PWM capable). MISO and ADC are not connected:
+the ST7735S is written to only, and the board has no keys. The supply comes from pin 11, on the side of the small
+parts; pin 2 is left open (3 mA + 20 mA need one pin).
+
+J1 is drawn as a column of twelve contacts like J2 on the transmitter board; the part has two rows (odd / even).
 
 Backlight: one white LED, 2.9 to 3.1 V at 15 to 20 mA (data sheet of the Wisevision panel; Midas gives 3.2 V at
 15 mA, Focus 2.7 / 3.1 / 3.4 V at 20 mA). From 3.3 V that leaves 0.2 to 0.4 V at best, so the switch has to be a MOSFET
@@ -25,7 +27,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import schgen  # noqa: E402
 
 PRJ = 'WPT-TX-DISPLAY'
-sh = schgen.Sheet(PRJ, 'WPT transmitter: display board (provisional)', '2026-11-17', '0.1', local_dir='lib/symbols',
+sh = schgen.Sheet(PRJ, 'WPT transmitter: display board (provisional)', '2026-11-17', '0.2', local_dir='lib/symbols',
                   comment='Plugs onto J2 of WPT-01-TRANSMITTER. 3.3 V only.')
 YAGEO, MURATA, SAMSUNG = 'Yageo', 'Murata Electronics', 'Samsung Electro-Mechanics'
 
@@ -46,25 +48,25 @@ def gnd(p):
 
 # ------------------------------------------------------------------ J1: the socket that goes onto J2
 J = sh.place('Connector:Conn_01x12_Socket', 'J1', 'to J2 of the transmitter', 60.96, 86.36, mirror=True,
-             fields=part('Wurth Elektronik', '61301211821', 'Connector_PinSocket_2.54mm:PinSocket_1x12_P2.54mm_Vertical',
-                         note='J1: on the back of the board (the side that faces the transmitter board), soldered from the display side '
-                              'before the display is fitted. Body height 8.5 mm: do not substitute another height',
-                         Datasheet='https://www.we-online.com/components/products/datasheet/61301211821.pdf',
-                         Description='Socket header, 2.54 mm, 1 x 12, through hole, vertical, 8.5 mm high'),
+             fields=part('Samtec', 'SSM-106-L-DV', 'Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Vertical_SMD',
+                         note='J1: on the back of the board (the side that faces the transmitter board). Surface mount, 7.37 mm high: '
+                              'do not substitute another height. SSM-106-F-DV (gold flash) is the same part with thinner plating',
+                         Datasheet='https://suddendocs.samtec.com/catalog_english/ssm_sm.pdf',
+                         Description='Socket strip, 2.54 mm, 2 x 6, surface mount, vertical, 7.37 mm high; for square posts of 0.64 mm'),
              ref_at=(58.42, 68.58), val_at=(58.42, 106.68))
-NETS = {3: 'SCK', 5: 'MOSI', 7: '~{CS}', 8: 'DC', 9: '~{RST}', 10: 'BL_PWM'}
+NETS = {3: 'MOSI', 5: 'SCK', 6: 'DC', 7: '~{RST}', 8: '~{CS}', 10: 'BL_PWM'}
 for n in range(1, 13):
     p = J[str(n)]
     if n in NETS:
         sh.wire(p, (p[0] + 15.24, p[1]))
         sh.label(NETS[n], (p[0] + 15.24, p[1]))
-    elif n in (2, 4, 6):
+    elif n in (2, 4, 9):
         sh.nc(p)
     else:                                              # supply pins: the symbols lie on their side, pointing away from the connector
         sh.wire(p, (p[0] + 5.08, p[1]))
         sh.power('power:GND' if n in (1, 12) else 'power:+3V3', (p[0] + 5.08, p[1]), side='right')
-sh.text('Not used: 2 (+3V3, the board is fed from 11),\n4 (MISO) and 6 (ADC)', (45.72, 113.03))
-sh.text('J2 of the transmitter board:\n1 GND  2 +3V3  3 SCK  4 MISO  5 MOSI  6 ADC\n7 CS  8 DC  9 RST  10 IO (PB3)  11 +3V3  12 GND', (45.72, 63.5))
+sh.text('Not used: 2 (+3V3, the board is fed from 11),\n4 (MISO) and 9 (ADC)', (45.72, 113.03))
+sh.text('J2 of the transmitter board (2 x 6; odd pins: inner row):\n1 GND  2 +3V3  3 MOSI  4 MISO  5 SCK  6 DC\n7 RST  8 CS  9 ADC  10 IO (PB3)  11 +3V3  12 GND', (45.72, 63.5))
 
 # ------------------------------------------------------------------ DS1: the display
 X, Y = 165.1, 88.9
@@ -131,17 +133,7 @@ sh.junction(R2['1'])
 gnd(R2['2'])
 sh.text('Backlight off until BL_PWM is driven high.\nOne LED, 3.0 V typ.: R1 sets about 14 mA.', (176.53, 123.19))
 
-# ------------------------------------------------------------------ H1: the screw hole on the spacer
-# Its pad is not joined to the ground of this board. The hole below it on the transmitter board is ground, so a metal
-# spacer would close a loop of about 6 cm2 between the two boards (J1 at one end, the spacer at the other), and this
-# board works next to a 6.78 MHz coil. Ground is joined where the signals are, at J1, and nowhere else.
-H = sh.place('Mechanical:MountingHole_Pad', 'H1', 'M3 on an 11 mm spacer', 220.98, 86.36,
-             fields={'Footprint': 'MountingHole:MountingHole_3.2mm_M3_Pad',
-                     'Description': 'Screw hole for M3, on the 11 mm spacer that stands on the north-east mounting hole of the transmitter board'},
-             ref_at=(224.79, 81.28), val_at=(224.79, 83.82), in_bom=False)
-sh.nc(H['1'])
-sh.text('Pad not joined to ground on purpose:\nground is joined at J1 only (no loop\nbetween the boards next to the coil).', (205.74, 96.52))
-sh.text('Not on this board, needed to fit it:\nspacer M3 x 11 mm, internal thread at both\nends (Harwin R30-1001102), two M3 screws', (205.74, 109.22))
+# ------------------------------------------------------------------ no screw: the board is carried by the socket alone (two rows, in the middle)
 # the ground net is fed through J1: tell ERC so
 sh.power('power:GND', (243.84, 128.27))
 sh.wire((243.84, 128.27), (243.84, 123.19))

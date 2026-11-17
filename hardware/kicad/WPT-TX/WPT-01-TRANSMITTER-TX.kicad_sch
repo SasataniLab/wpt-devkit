@@ -29738,7 +29738,7 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp yes)
-		(uuid "ce57f363-5aa8-4848-9e49-0022132b66d9")
+		(uuid "f6c63cde-1ca1-4f83-9633-ace4bd389b1a")
 		(property "Reference" "R346"
 			(at 124.46 186.69 90)
 			(show_name no)
@@ -29826,10 +29826,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "7a21a4ac-0d9a-4bad-a3cc-421f7939e308")
+			(uuid "efaf5175-0d2a-45c3-bb16-728a117b869d")
 		)
 		(pin "2"
-			(uuid "efd09e9f-8346-4314-8025-87772b518e9e")
+			(uuid "4d6f5ba7-635b-446a-9b39-113916c61cd9")
 		)
 		(instances
 			(project "WPT-01-TRANSMITTER"
@@ -30427,17 +30427,6 @@
 				)
 			)
 		)
-		(property "Assembly Note" "C342, C343: back side, 2 mm from the joints of J2"
-			(at 281.94 273.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
 		(pin "1"
 			(uuid "7ab8f7d6-a5cf-4de9-96be-8f5a79ed8e81")
 		)
@@ -30685,17 +30674,6 @@
 			)
 		)
 		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
-			(at 292.1 273.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Assembly Note" "C342, C343: back side, 2 mm from the joints of J2"
 			(at 292.1 273.05 0)
 			(hide yes)
 			(show_name no)
@@ -31050,7 +31028,7 @@
 				)
 			)
 		)
-		(property "Assembly Note" "Must be fitted (limits the voltage at the MCU inputs). 47 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D"
+		(property "Assembly Note" "Must be fitted (lower leg of the divider: limits the voltage at the comparator input). 47 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H470GB01D, GCM1555C1H470JA16D"
 			(at 363.22 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -31198,7 +31176,7 @@
 				)
 			)
 		)
-		(property "Assembly Note" "Must be fitted (limits the voltage at the MCU inputs). 47 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D"
+		(property "Assembly Note" "Must be fitted (lower leg of the divider: limits the voltage at the comparator input). 47 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H470GB01D, GCM1555C1H470JA16D"
 			(at 383.54 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -31260,7 +31238,7 @@
 		(color 0 0 0 0)
 		(uuid "261a6d2e-03bb-42fe-bb7f-f6bfdd830621")
 	)
-	(text "ZVS detection, revision 4:\nU308 / U309 sit on the divider taps behind\nR343 / R344 (shared with PA1 / PC1).\nThreshold ZVS_VTH: PB11 = OPAMP6 output,\nfollower of DAC3_CH1.\nDivider: 15k || 3.3p over 1k || (36p + 14p\nof track and inputs). C342 / C343: supply\ndecoupling of U308 / U309."
+	(text "ZVS detection, revision 7:\nonly the upper legs (15k || 3.3p) and R343 / R344\nstay at the half bridges. The lower legs\n(1k || 47p) sit at the inputs of U308 / U309.\nThreshold ZVS_VTH: PB11 = OPAMP6 output,\nfollower of DAC3_CH1.\nLeg A reports to HRTIM1_EEV2, leg B to HRTIM1_EEV1.\nC342 / C343: supply decoupling of U308 / U309."
 		(exclude_from_sim no)
 		(at 226.06 285 0)
 		(effects
@@ -31279,7 +31257,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "e9c8951f-dbf0-481f-a12c-e59b72c7cdb9")
+		(uuid "7c6badb4-652d-4d07-aa57-8e4f2c1faaad")
 	)
 	(label "VSWB_CMP"
 		(at 388.62 229.87 180)
@@ -31289,7 +31267,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "3c91fd50-330a-4b14-abaa-509bcbaae767")
+		(uuid "8a42508d-7fd3-4b20-ae01-17ebe720f0e3")
 	)
 	(wire
 		(pts
@@ -31299,7 +31277,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d92c6cf5-99e7-46bf-b3ea-70b310a5a648")
+		(uuid "834ef146-2f0b-4bea-b303-a21407da9498")
 	)
 	(global_label "HSE_EXT"
 		(shape output)
@@ -31310,7 +31288,7 @@
 			)
 			(justify left)
 		)
-		(uuid "6decd80b-f6b8-4716-9478-860ec4d3beaf")
+		(uuid "e323e497-a40a-48e5-8251-c1f89ecb5291")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 133.35 189.23 0)
 			(hide yes)

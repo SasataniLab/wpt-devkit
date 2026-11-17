@@ -241,6 +241,29 @@ if moved:
     assert ys == sorted(y for _, y in ORDER), ys
     done.append('J2: %d signals on other pins' % moved)
 
+# ---- notes that described the old arrangement (transmitter sheet)
+OLD_TEXT = ('ZVS detection, revision 4:\\nU308 / U309 sit on the divider taps behind\\nR343 / R344 (shared with PA1 / PC1).\\nThreshold ZVS_VTH: PB11 = OPAMP6 output,'
+            '\\nfollower of DAC3_CH1.\\nDivider: 15k || 3.3p over 1k || (36p + 14p\\nof track and inputs). C342 / C343: supply\\ndecoupling of U308 / U309.')
+NEW_TEXT = ('ZVS detection, revision 7:\\nonly the upper legs (15k || 3.3p) and R343 / R344\\nstay at the half bridges. The lower legs\\n(1k || 47p) sit at the inputs of U308 / U309.'
+            '\\nThreshold ZVS_VTH: PB11 = OPAMP6 output,\\nfollower of DAC3_CH1.\\nLeg A reports to HRTIM1_EEV2, leg B to HRTIM1_EEV1.\\nC342 / C343: supply decoupling of U308 / U309.')
+if OLD_TEXT in tx:
+    tx = tx.replace(OLD_TEXT, NEW_TEXT, 1)
+    done.append('note on the ZVS detection rewritten')
+OLD_NOTE = ('Must be fitted (limits the voltage at the MCU inputs). 47 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H360GB01D, GCM1555C1H360JA16D')
+NEW_NOTE = ('Must be fitted (lower leg of the divider: limits the voltage at the comparator input). 47 pF C0G 50 V 0402, 5 % or better; '
+            'alternatives: GJM1555C1H470GB01D, GCM1555C1H470JA16D')
+if OLD_NOTE in tx:
+    k = tx.count(OLD_NOTE)
+    assert k == 2, k
+    tx = tx.replace(OLD_NOTE, NEW_NOTE)
+    done.append('assembly note of C340 / C341')
+
+GONE_NOTE = r'\t\t\(property "Assembly Note" "C342, C343: back side, 2 mm from the joints of J2"\n.*?\n\t\t\)\n'
+tx, k = re.subn(GONE_NOTE, '', tx, flags=re.S)                            # C342 / C343 no longer stand beside J2
+if k:
+    assert k == 2, k
+    done.append('assembly note of C342 / C343 removed')
+
 if not done:
     sys.exit('already applied')
 for f, s in ((ROOT, root), (MCU, mcu), (TX, tx)):

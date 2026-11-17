@@ -5,24 +5,23 @@ Write OUT into a scratch directory and copy the .kicad_pcb into the project: pcb
 the board it saves, and that would replace the rules of this project by the defaults.
 
 The coordinates are those of the transmitter board (WPT-01-TRANSMITTER.kicad_pcb): the display board lies
-11 mm above it, so a point (x, y) here is over the same point there. That keeps every check against the
+9.9 mm above it, so a point (x, y) here is over the same point there. That keeps every check against the
 transmitter board (what it covers, what it must leave free) a comparison of numbers.
 
-Shape (see docs/stm32-tx/display_shield_study.md):
-  strip   over J2 (pins at y = 141.50, x = 158.30 ... 186.24), 4.6 mm wide. It leaves the three analog test pads
-          north of it free (their pads end at y = 137.8).
-  block   east of the test pads, over the USB connector: the display, upright (13.5 x 27.95 mm). Its south edge
-          lies 1.6 mm beyond the module: a module of the other make sits 0.58 mm further south and its fold stands
-          up to 1 mm beyond it (tools/make_footprint.py).
-  arm     to the north-east mounting hole (215, 130) of the transmitter board, where an 11 mm spacer carries the board.
+Shape (see docs/stm32-tx/display_shield_study.md): a plain rectangle of 30.4 x 14.8 mm, as large as the display
+module (13.5 x 27.95 mm, lying, tail folded at the east end) with the room its other makes need. The socket J1 sits
+on the back in the middle, over J2 of the transmitter board (2 x 6, odd pins y = 136.42, even pins y = 133.88,
+columns x = 171.00 + 2.54 k). It is a surface-mount part, so nothing of it shows on the display side and the module
+can lie right over it. No screw: two rows of pins in the middle of a board of this size hold it.
 
-Two copper layers. F.Cu is the display side, B.Cu faces the transmitter board and carries J1 and the small parts.
-Signals leave J1 northwards and run east along the strip, four rows per layer; a row further north belongs to a pin
-further west, so nothing crosses. SCK, DC, RST (front) go round the north end of the lands and enter them from there;
-MOSI, CS (back) pass under the lands and come up at their south end; that order needs no crossing either.
-The northernmost row of the back is ground, from pin 1 to the ground of the block: it lies under SCK, so the clock
-has its return 1.6 mm below it instead of in the transmitter board 11 mm below (the comparators of the ZVS
-detection are right under the strip).
+Two copper layers. F.Cu is the display side with the 13 lands of the tail in the middle; B.Cu faces the transmitter
+board and carries J1 and the small parts (east of J1).
+  MOSI, SCK, RST   leave their lands to the west, go south round the lands and change sides below the inner row
+                   of J1, each under its pad.
+  DC, CS           leave their lands to the east (under the tail), go north round the lands and change sides above
+                   the outer row of J1, each over its pad.
+  supply, LED      leave to the east; C1, C2, R1 hang on pin 11, Q1 and R2 on pin 10.
+No track crosses another on its layer.
 """
 import math
 import os
@@ -216,19 +215,17 @@ def text(s, x, y, layer='F.SilkS', size=0.8, rot=0.0, justify='center'):
 
 
 # ------------------------------------------------------------------ geometry taken from the transmitter board and the parts
-J2_X0, J2_Y, PITCH = 158.30, 141.50, 2.54                 # J2 of the transmitter board
-HOLE = (215.0, 130.0)                                     # its north-east mounting hole
-STRIP_N, STRIP_S, STRIP_W = 138.4, 143.0, 156.3
-BLK_W, BLK_E, BLK_N, BLK_S = 189.9, 204.5, 125.3, 155.1
-ARM_S, ARM_R = 134.2, 4.7
-DS = (197.2, 139.525)                                     # centre of the display module (13.5 x 27.95), tail folded at the south end
-LAND_Y0, LAND_Y1 = DS[1] - 0.825, DS[1] + 3.175           # the 13 lands
-land = lambda k: round(DS[0] + 4.2 - 0.7 * (k - 1), 3)    # x of land k (1 = east)
-pin = lambda k: round(J2_X0 + PITCH * (k - 1), 3)
+J2_X0, J2_YI, J2_YO, PITCH = 171.00, 136.42, 133.88, 2.54     # J2 of the transmitter board: pin 1, inner row (odd pins), outer row (even pins)
+JC = (J2_X0 + 2.5 * PITCH, (J2_YI + J2_YO) / 2)              # centre of J2 = centre of the socket = centre of the board
+PAD_I, PAD_O = JC[1] + 2.52, JC[1] - 2.52                    # the two rows of lands of the socket (odd / even pins)
+DS = (JC[0] - 0.70, JC[1])                                   # centre of the display module; its courtyard reaches 0.7 mm further east than west
+W, E, N, S = DS[0] - 14.5, DS[0] + 15.9, DS[1] - 7.4, DS[1] + 7.4
+LAND_X0, LAND_X1 = DS[0] - 0.825, DS[0] + 3.175              # the 13 lands, each 4 mm long; the tail covers them from x = DS + 0.675 eastwards
+land = lambda k: round(DS[1] - 4.2 + 0.7 * (k - 1), 3)       # y of land k (1 = north)
+col = lambda n: round(J2_X0 + PITCH * ((n - 1) // 2), 3)     # x of pin n of J2
 
 # ------------------------------------------------------------------ outline with rounded corners
-OUT = [(STRIP_W, STRIP_N, 1.0), (BLK_W, STRIP_N, 1.0), (BLK_W, BLK_N, 1.0), (HOLE[0], BLK_N, 0), ('arc', HOLE, ARM_R), (HOLE[0] + ARM_R, HOLE[1], 0),
-       (HOLE[0] + ARM_R, ARM_S, 1.5), (BLK_E, ARM_S, 1.0), (BLK_E, BLK_S, 1.0), (BLK_W, BLK_S, 1.0), (BLK_W, STRIP_S, 1.0), (STRIP_W, STRIP_S, 1.0)]
+OUT = [(W, N, 1.0), (E, N, 1.0), (E, S, 1.0), (W, S, 1.0)]
 
 
 def edge_line(a, e):
@@ -294,101 +291,83 @@ def build_outline(spec):
 build_outline(OUT)
 
 # ------------------------------------------------------------------ parts
-# The small parts are on the back, under the tail of the display. Their positions follow from the lands:
-#   land 12 (LEDA) - via - R1 straight below it;  land 10 (VDD) - via - C1 straight below it;  C2 beside C1;
-#   land 11 (LEDK) - via - Q1 drain along one diagonal;  R2 below the gate of Q1.
-S1, S2 = 143.4, 144.3                                     # the two rows of vias south of the lands
-RAIL = 145.81                                             # +3V3 along the lower pad of R1 and the upper pads of C1, C2
-QX, QY = 192.5625, 148.6                                  # Q1: gate and source on x = 191.625, drain at (193.5, 148.6)
-GX = QX - 0.9375
-J1 = place('J1', pin(1), J2_Y, 'B', {'1': (pin(1), J2_Y), '12': (pin(12), J2_Y)}, ref_pos=(pin(1) - 0.2, 139.35))
-DS1 = place('DS1', DS[0], DS[1], 'F', {'1': (land(1), DS[1] + 1.175), '13': (land(13), DS[1] + 1.175)})
-H1 = place('H1', HOLE[0], HOLE[1], 'F', {'1': HOLE})
-R1 = place('R1', land(12), RAIL - 0.51, 'B', {'2': (land(12), RAIL - 1.02), '1': (land(12), RAIL)}, ref_pos=(192.3, 145.0))
-C1 = place('C1', land(10), RAIL + 0.48, 'B', {'1': (land(10), RAIL), '2': (land(10), RAIL + 0.96)}, ref_pos=(195.3, 149.0))
-C2 = place('C2', 196.3, RAIL + 0.48, 'B', {'1': (196.3, RAIL), '2': (196.3, RAIL + 0.96)}, ref_pos=(197.75, RAIL + 0.48))
-Q1 = place('Q1', QX, QY, 'B', {'1': (GX, QY + 0.95), '2': (GX, QY - 0.95), '3': (QX + 0.9375, QY)}, ref_pos=(193.6, 150.85))
-R2 = place('R2', GX, QY + 2.8, 'B', {'1': (GX, QY + 2.29), '2': (GX, QY + 3.31)}, ref_pos=(193.3, 152.5))
+J1 = place('J1', JC[0], JC[1], 'B', {'1': (col(1), PAD_I), '2': (col(2), PAD_O), '3': (col(3), PAD_I), '12': (col(12), PAD_O)}, ref_pos=(JC[0], 129.2))
+DS1 = place('DS1', DS[0], DS[1], 'F', {'1': (DS[0] + 1.175, land(1)), '13': (DS[0] + 1.175, land(13))})
+RAIL = PAD_I                                              # +3V3 leaves pad 11 eastwards along its own row
+C1 = place('C1', 186.3, RAIL - 0.48, 'B', {'1': (186.3, RAIL), '2': (186.3, RAIL - 0.96)}, ref_pos=(186.0, 139.0))
+C2 = place('C2', 187.35, RAIL - 0.48, 'B', {'1': (187.35, RAIL), '2': (187.35, RAIL - 0.96)}, ref_pos=(187.7, 139.0))
+R1 = place('R1', 188.95, RAIL, 'B', {'1': (188.44, RAIL), '2': (189.46, RAIL)}, ref_pos=(191.3, RAIL))
+QX, QY = 189.46, 133.0                                    # Q1: source (north) and gate (south) on x = 188.52, drain at (190.40, 133.0)
+GX, DX = QX - 0.9375, QX + 0.9375
+Q1 = place('Q1', QX, QY, 'B', {'1': (GX, QY + 0.95), '2': (GX, QY - 0.95), '3': (DX, QY)}, ref_pos=(191.4, 134.9))
+R2 = place('R2', GX, QY + 2.75, 'B', {'1': (GX, QY + 2.24), '2': (GX, QY + 3.26)}, ref_pos=(186.9, 134.9))
 t = DS1.Reference()                                       # under the module: seen while the board is assembled
 t.SetVisible(True)
-t.SetPosition(V(DS[0], 134.0))
-# The ground pins of J1 are joined by tracks, not by the zone: on the narrow strip the zone would only reach them as
-# an island of its own. (The lands of DS1 carry "no zone connection" in the footprint. The pad of the screw hole
-# has no net: see gen_sch.py.)
-for pad in J1.Pads():
-    if pad.GetNumber() in ('1', '12'):
-        pad.SetLocalZoneConnection(pcbnew.ZONE_CONNECTION_NONE)
+t.SetPosition(V(168.5, DS[1]))
+t.SetTextAngleDegrees(90)
 
 N3, GND = '+3V3', 'GND'
 SCK, MOSI, CS, DC, RST, BL = '/SCK', '/MOSI', '/~{CS}', '/DC', '/~{RST}', '/BL_PWM'
 LEDA, LEDK = 'Net-(DS1-LEDA)', 'Net-(DS1-LEDK)'
 for nm in (N3, GND, SCK, MOSI, CS, DC, RST, BL, LEDA, LEDK):
     assert b.FindNet(nm) is not None, nm
+assert [J1.FindPadByNumber(str(k)).GetNetname() for k in (3, 5, 6, 7, 8, 10, 11)] == [MOSI, SCK, DC, RST, CS, BL, N3]
 
-# ------------------------------------------------------------------ the strip: four rows north of the pins on each layer
-# front: 0.5 mm apart. back: 0.4 mm apart, because the via of the supply (192.0, 140.3) needs the room south of row C.
-ROWF = {'A': 138.8, 'B': 139.3, 'C': 139.8, 'D': 140.3}
-ROWB = {'A': 138.8, 'B': 139.2, 'C': 139.6, 'D': 140.0}
-
-
-def leave(k, y):
-    """from pin k straight north, a 45-degree corner, then east along the row at y"""
-    return [(pin(k), J2_Y), (pin(k), y + 0.4), (pin(k) + 0.4, y)]
-
-
-# front: SCK (pin 3), DC (8), RST (9) turn north-east together where the block begins (each one 0.2 mm further east
-# than the row north of it: the diagonals stay 0.3 mm apart), run east north of the lands and enter them from there.
-seg(SCK, leave(3, ROWF['A']) + [(190.3, 138.8), (191.9, 137.2), (198.2, 137.2), (199.3, 138.3), (199.3, LAND_Y0 + 0.5)])
-seg(DC, leave(8, ROWF['B']) + [(190.5, 139.3), (192.1, 137.7), (198.0, 137.7), (198.6, 138.3), (198.6, LAND_Y0 + 0.5)])
-seg(RST, leave(9, ROWF['C']) + [(190.7, 139.8), (192.3, 138.2), (197.5, 138.2), (197.9, 138.6), (197.9, LAND_Y0 + 0.5)])
-assert (land(4), land(5), land(6)) == (199.3, 198.6, 197.9)
-# +3V3 (pin 11): straight east into a via, on the back along one diagonal to the via of the VDD land
-VE = (land(10) - (S1 - ROWF['D']), ROWF['D'])
-seg(N3, leave(11, ROWF['D']) + [VE])
-via(N3, VE)
-# ground of pin 12 on the front: to the via of land 13
-G13 = (192.4, 143.9)
-seg(GND, [(pin(12), J2_Y), (G13[0] - (G13[1] - J2_Y), J2_Y), G13], 'F.Cu', 0.4)
-# back: ground (pin 1), MOSI (5), CS (7), backlight switch (10)
-seg(GND, leave(1, ROWB['A']) + [(190.0, 138.8), (191.0, 137.8), (191.0, 136.6)], 'B.Cu')
-via(GND, (191.0, 136.6))
-seg(MOSI, leave(5, ROWB['B']) + [(land(3) - (S1 - ROWB['B']), ROWB['B']), (land(3), S1)], 'B.Cu')
-seg(CS, leave(7, ROWB['C']) + [(land(7) - (S1 - ROWB['C']), ROWB['C']), (land(7), S1)], 'B.Cu')
-seg(BL, leave(10, ROWB['D']) + [(190.0, 140.0), (190.4, 140.4), (190.4, QY + 0.55), (190.8, QY + 0.95), (GX, QY + 0.95)], 'B.Cu')
-seg(BL, [(GX, QY + 0.95), (GX, QY + 2.29)], 'B.Cu')
-
-# ------------------------------------------------------------------ south end of the lands: stubs on the front, vias in two rows
-for k, nm in ((12, LEDA), (10, N3), (7, CS), (3, MOSI)):
-    seg(nm, [(land(k), LAND_Y1 - 0.5), (land(k), S1)])
-    via(nm, (land(k), S1))
-seg(GND, [(land(8), LAND_Y1 - 0.5), (land(8), S2)])
-via(GND, (land(8), S2))
-seg(GND, [(land(13), LAND_Y1 - 0.5), (land(13), G13[1] - (land(13) - G13[0])), G13])
-via(GND, G13)
-LK = (land(11), QY - 0.9)                                 # via of the cathode: one diagonal from here to the drain of Q1
-seg(LEDK, [(land(11), LAND_Y1 - 0.5), LK])
+# ------------------------------------------------------------------ west of the lands: MOSI (land 3), SCK (4), RST (6) to the inner row
+YS1, YS2 = 140.1, 140.9                                    # two rows of vias south of the inner row of J1
+seg(MOSI, [(LAND_X0 + 0.5, land(3)), (col(3), land(3)), (col(3), YS1)])
+via(MOSI, (col(3), YS1))
+seg(MOSI, [(col(3), YS1), (col(3), PAD_I)], 'B.Cu')
+seg(SCK, [(LAND_X0 + 0.5, land(4)), (174.9, land(4)), (174.9, YS2 - 0.4), (175.3, YS2), (col(5), YS2)])
+via(SCK, (col(5), YS2))
+seg(SCK, [(col(5), YS2), (col(5), PAD_I)], 'B.Cu')
+seg(RST, [(LAND_X0 + 0.5, land(6)), (175.35, land(6)), (175.35, YS1 - 0.4), (175.75, YS1), (col(7), YS1)])
+via(RST, (col(7), YS1))
+seg(RST, [(col(7), YS1), (col(7), PAD_I)], 'B.Cu')
+# ------------------------------------------------------------------ east of the lands: DC (land 5), CS (7) to the outer row
+YN1, YN2 = 130.2, 129.5                                    # DC runs south of CS: CS has the shorter way west
+seg(CS, [(LAND_X1 - 0.5, land(7)), (181.0, land(7)), (181.0, YN2 + 0.4), (180.6, YN2), (col(8), YN2)])
+via(CS, (col(8), YN2))
+seg(CS, [(col(8), YN2), (col(8), PAD_O)], 'B.Cu')
+seg(DC, [(LAND_X1 - 0.5, land(5)), (180.5, land(5)), (180.5, YN1 + 0.4), (180.1, YN1), (col(6), YN1)])
+via(DC, (col(6), YN1))
+seg(DC, [(col(6), YN1), (col(6), PAD_O)], 'B.Cu')
+# ------------------------------------------------------------------ supply (land 10) and backlight (11 cathode, 12 anode)
+VV = (182.43, land(10))                                    # between the lands of pins 9 and 11 of J1
+seg(N3, [(LAND_X1 - 0.5, land(10)), VV])
+via(N3, VV)
+seg(N3, [VV, (VV[0] + RAIL - VV[1], RAIL), (188.44, RAIL)], 'B.Cu', 0.3)
+LK, LA = (DX, land(11)), (189.46, land(12))
+seg(LEDK, [(LAND_X1 - 0.5, land(11)), LK])
 via(LEDK, LK)
-seg(LEDK, [LK, (QX + 0.9375, QY)], 'B.Cu')
-
-# supply on the back
-seg(N3, [VE, (land(10), S1), (land(10), RAIL)], 'B.Cu', 0.3)
-seg(N3, [(land(12), RAIL), (196.3, RAIL)], 'B.Cu', 0.3)
-# the anode of the backlight LED through R1
-seg(LEDA, [(land(12), S1), (land(12), RAIL - 1.02)], 'B.Cu')
-# ground: capacitors, the source of Q1, R2
-seg(GND, [(land(10), RAIL + 0.96), (196.3, RAIL + 0.96)], 'B.Cu', 0.3)
-seg(GND, [(195.7, RAIL + 0.96), (195.7, 147.8)], 'B.Cu', 0.3)
-via(GND, (195.7, 147.8))
-seg(GND, [(GX, QY - 0.95), (GX, QY - 2.0)], 'B.Cu', 0.3)
-via(GND, (GX, QY - 2.0))
-seg(GND, [(GX, QY + 3.31), (GX, QY + 4.3)], 'B.Cu', 0.3)
-via(GND, (GX, QY + 4.3))
-for c in ((192.0, 127.6), (202.4, 127.6), (197.2, 132.0), (202.9, 150.6), (198.5, 151.6), (208.0, 133.2), (203.4, 139.0)):
+seg(LEDK, [LK, (DX, QY)], 'B.Cu')
+seg(LEDA, [(LAND_X1 - 0.5, land(12)), LA])
+via(LEDA, LA)
+seg(LEDA, [LA, (189.46, RAIL)], 'B.Cu')
+# backlight switch: pin 10 of J1 - north - east - round the source of Q1 - gate; R2 below the gate
+seg(BL, [(col(10), PAD_O), (col(10), 130.35), (187.0, 130.35), (187.4, 130.75), (187.4, QY + 0.55), (187.8, QY + 0.95), (GX, QY + 0.95)], 'B.Cu')
+seg(BL, [(GX, QY + 0.95), (GX, QY + 2.24)], 'B.Cu')
+# ------------------------------------------------------------------ ground
+GV = (182.43, JC[1])                                       # between the two rows of J1, between the lands of pins 9 / 10 and 11 / 12
+seg(GND, [(LAND_X1 - 0.5, land(8)), (GV[0] - (land(8) - GV[1]), land(8)), GV])
+via(GND, GV)
+seg(GND, [GV, (col(12) - 0.5, GV[1]), (col(12), GV[1] - 0.5), (col(12), PAD_O)], 'B.Cu', 0.3)
+seg(GND, [(LAND_X1 - 0.5, land(13)), (180.6, land(13)), (181.2, land(13) + 0.6)])
+via(GND, (181.2, land(13) + 0.6))
+seg(GND, [(186.3, RAIL - 0.96), (187.35, RAIL - 0.96)], 'B.Cu', 0.3)       # C1, C2
+seg(GND, [(186.8, RAIL - 0.96), (186.8, RAIL - 1.9)], 'B.Cu', 0.3)
+via(GND, (186.8, RAIL - 1.9))
+seg(GND, [(GX, QY - 0.95), (GX, QY - 1.9)], 'B.Cu', 0.3)                   # source of Q1
+via(GND, (GX, QY - 1.9))
+seg(GND, [(GX, QY + 3.26), (GX + 0.9, QY + 3.26)], 'B.Cu', 0.3)            # R2
+via(GND, (GX + 0.9, QY + 3.26))
+seg(GND, [(col(1), PAD_I), (169.6, PAD_I)], 'B.Cu', 0.3)                   # pin 1
+via(GND, (169.6, PAD_I))
+for c in ((164.0, 129.5), (164.0, 140.8), (167.0, 135.15), (172.3, 129.4), (184.6, 141.0), (191.2, 141.0), (191.3, 136.0), (185.9, 129.0)):
     via(GND, c)
 
 # ------------------------------------------------------------------ ground on both layers
-poly = [(STRIP_W, STRIP_N), (BLK_W, STRIP_N), (BLK_W, BLK_N), (HOLE[0] + ARM_R, BLK_N), (HOLE[0] + ARM_R, ARM_S), (BLK_E, ARM_S), (BLK_E, BLK_S),
-        (BLK_W, BLK_S), (BLK_W, STRIP_S), (STRIP_W, STRIP_S)]
+poly = [(W, N), (E, N), (E, S), (W, S)]
 for layer in (pcbnew.F_Cu, pcbnew.B_Cu):
     z = pcbnew.ZONE(b)
     z.SetLayer(layer)
@@ -406,20 +385,16 @@ for layer in (pcbnew.F_Cu, pcbnew.B_Cu):
         o.Append(int(x * MM), int(y * MM))
     b.Add(z)
 
-# ------------------------------------------------------------------ silkscreen
-text('WPT-TX', 208.1, 127.4)
-text('DISPLAY', 208.1, 128.9)
-text('v0.1', 208.1, 130.4)
-text('2026-11', 208.1, 131.9)
-text('1', 156.95, 139.4)
-text('12', 188.4, 139.4)
-text('to J2', 172.3, 139.4, 'B.SilkS')
+# ------------------------------------------------------------------ silkscreen (back: the side one sees when the board is unplugged)
+text('WPT-TX DISPLAY', 168.6, 129.3, 'B.SilkS')
+text('v0.2  2026-11', 168.4, 141.2, 'B.SilkS')
+text('to J2', JC[0], 141.3, 'B.SilkS')
 
 tb = b.GetTitleBlock()
 tb.SetTitle('WPT transmitter: display board (provisional)')
-tb.SetRevision('0.1')
+tb.SetRevision('0.2')
 tb.SetDate('2026-11-17')
-tb.SetComment(0, 'Plugs onto J2 of WPT-01-TRANSMITTER, 11 mm above it. Coordinates are those of that board.')
+tb.SetComment(0, 'Plugs onto J2 of WPT-01-TRANSMITTER, 9.9 mm above it. Coordinates are those of that board.')
 
 pcbnew.SaveBoard(out_path, b)
 print('saved', out_path)
