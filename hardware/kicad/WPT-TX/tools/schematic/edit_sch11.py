@@ -11,12 +11,20 @@
                        the sheet pins; VSWA_CMP / VSWB_CMP are now nets inside the transmitter sheet
      C340 / C341       36 pF -> 47 pF: the lower leg now also carries the line (firmware/tools/sense_tap_sim.py)
 
-2. J2 becomes a header of 2 x 6 pins (2.54 mm). Pin n keeps its net, so the odd pins form one row and the even pins the
-   other. The symbol stays the column of twelve pins; value, description and a note say that the part has two rows.
+2. J2 becomes a header of 2 x 6 pins (2.54 mm): the odd pins form one row and the even pins the other. The symbol stays
+   the column of twelve pins; value, description and a note say that the part has two rows. The signals are dealt out
+   again in the order in which their tracks arrive from the MCU, so that no two of them cross on the way:
+     pin  1 GND   2 +3V3   3 MOSI (PA7)   4 MISO (PA6)   5 SCK (PA5)   6 RST (PA4)
+          7 DC (PA3)   8 CS (PA2)   9 ADC (PC2)   10 IO (PB3)   11 +3V3   12 GND
+   (before: 3 SCK, 4 MISO, 5 MOSI, 6 ADC, 7 CS, 8 DC, 9 RST). The supply pins stay at the ends of the rows.
 
 3. Clock link R346 (0 ohm, not fitted) from CLK1 of the Si5351 (U306 pin 9) to PF0 of the MCU (net HSE_EXT, a global
    label). Fitted - and Y1 removed - it lets the Si5351 clock the MCU, which makes the HRTIM frequency adjustable in
    fine steps (the period register alone gives steps of 8.5 kHz).
+
+4. The two comparator outputs change places: leg A (U308) now reports to HRTIM1_EEV2 (PC11), leg B (U309) to HRTIM1_EEV1
+   (PC12). On the board the output of U309 runs straight to the MCU and the output of U308 takes a detour on an inner
+   layer; under the MCU the western of the two lines can only reach PC12. Firmware reads: EEV1 = leg B, EEV2 = leg A.
 
 Each edit is skipped if the schematic already has it.
 """
@@ -141,7 +149,7 @@ if 'PinHeader_1x12_P2.54mm_Vertical' in b:
     assert nb.count('61301221121') == 1 and 'PinHeader_2x06' in nb
     root = root[:j] + nb + root[j + len(b):]
     k = root.rindex('\n\t(sheet_instances') if '\n\t(sheet_instances' in root else root.rindex('\n)')
-    root = root[:k] + ('\n\t(text "J2: 2 x 6 pins. Odd pins: outer row (board edge),\\neven pins: inner row."\n\t\t(exclude_from_sim no)\n\t\t(at 39.37 191.77 0)\n'
+    root = root[:k] + ('\n\t(text "J2: 2 x 6 pins. Odd pins: inner row (MCU side),\\neven pins: outer row (board edge)."\n\t\t(exclude_from_sim no)\n\t\t(at 39.37 191.77 0)\n'
                        '\t\t(effects\n\t\t\t(font\n\t\t\t\t(size 1.27 1.27)\n\t\t\t)\n\t\t\t(justify left bottom)\n\t\t)\n\t\t(uuid "%s")\n\t)' % uuid.uuid4()) + root[k:]
     done.append('J2 -> 2 x 6')
 
@@ -209,6 +217,30 @@ if '(global_label "HSE_EXT"' not in mcu:
     assert '(xy 129.54 81.28) (xy 81.28 81.28)' in mcu and '(xy 81.28 81.28) (xy 81.28 87.63)' in mcu
     mcu = add(mcu, GLABEL % ('input', '81.28', '81.28', '180', 'right', uuid.uuid4(), '80.01', '81.28', 'right'))
     done.append('MCU sheet: global label HSE_EXT at PF0')
+
+# ---- the outputs change places (transmitter sheet): the label at the output of U308 becomes HRTIM1_EEV2, that of U309 HRTIM1_EEV1
+A_AT, B_AT = ('349.25', '220.98'), ('349.25', '236.22')
+ja, ba = find_block(tx, 'hierarchical_label "HRTIM1_EEV1"', A_AT)
+jb, bb = find_block(tx, 'hierarchical_label "HRTIM1_EEV2"', B_AT)
+if ja is not None and jb is not None:
+    for j, bk, new in sorted(((ja, ba, 'HRTIM1_EEV2'), (jb, bb, 'HRTIM1_EEV1')), reverse=True):
+        tx = tx[:j] + re.sub(r'hierarchical_label "HRTIM1_EEV\d"', 'hierarchical_label "%s"' % new, bk, count=1) + tx[j + len(bk):]
+    done.append('leg A -> HRTIM1_EEV2, leg B -> HRTIM1_EEV1')
+
+# ---- J2: the signals in the order of arrival (root sheet): the sheet pins of the MCU sheet change places along its edge
+ORDER = (('SPI1_MOSI_DISP', '163.83'), ('SPI1_MISO_DISP', '166.37'), ('SPI1_CLK_DISP', '168.91'), ('GPIO_DISP_RST', '171.45'),
+         ('GPIO_DISP_DC', '173.99'), ('GPIO_DISP_CS', '176.53'), ('ADC2_IN8_EXTERNAL', '179.07'), ('GPIO_SW_MISC1', '181.61'))
+moved = 0
+for name, y in ORDER:
+    m = re.search(r'(\(pin "%s" input\n\t\t\t\(at 68\.58 )([\d.]+)( 180\))' % name, root)
+    assert m, name
+    if m.group(2) != y:
+        root = root[:m.start(2)] + y + root[m.end(2):]
+        moved += 1
+if moved:
+    ys = sorted(re.search(r'\(pin "%s" input\n\t\t\t\(at 68\.58 ([\d.]+) 180\)' % n, root).group(1) for n, _ in ORDER)
+    assert ys == sorted(y for _, y in ORDER), ys
+    done.append('J2: %d signals on other pins' % moved)
 
 if not done:
     sys.exit('already applied')

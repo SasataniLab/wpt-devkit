@@ -7680,7 +7680,7 @@
 			)
 		)
 		(pin "ADC2_IN8_EXTERNAL" input
-			(at 68.58 171.45 180)
+			(at 68.58 179.07 180)
 			(uuid "2bd86a0d-edba-4135-9640-964e5a6c1eb3")
 			(effects
 				(font
@@ -7690,7 +7690,7 @@
 			)
 		)
 		(pin "GPIO_DISP_CS" input
-			(at 68.58 173.99 180)
+			(at 68.58 176.53 180)
 			(uuid "7b10fe06-f348-428d-8980-a3b4920d3bca")
 			(effects
 				(font
@@ -7700,7 +7700,7 @@
 			)
 		)
 		(pin "GPIO_DISP_DC" input
-			(at 68.58 176.53 180)
+			(at 68.58 173.99 180)
 			(uuid "d3461ea5-232a-4d6a-81a2-a20957b9a708")
 			(effects
 				(font
@@ -7710,7 +7710,7 @@
 			)
 		)
 		(pin "GPIO_DISP_RST" input
-			(at 68.58 179.07 180)
+			(at 68.58 171.45 180)
 			(uuid "e2888818-503d-4b5b-8c93-e66dbb7dfb10")
 			(effects
 				(font
@@ -7890,7 +7890,7 @@
 			)
 		)
 		(pin "SPI1_CLK_DISP" input
-			(at 68.58 163.83 180)
+			(at 68.58 168.91 180)
 			(uuid "8aaba575-6646-4eb9-9a44-ac829c3e5f58")
 			(effects
 				(font
@@ -7910,7 +7910,7 @@
 			)
 		)
 		(pin "SPI1_MOSI_DISP" input
-			(at 68.58 168.91 180)
+			(at 68.58 163.83 180)
 			(uuid "4c049f48-f563-42cf-b57b-ed062606a702")
 			(effects
 				(font
@@ -11345,7 +11345,7 @@
 			)
 		)
 	)
-	(text "J2: 2 x 6 pins. Odd pins: outer row (board edge),\neven pins: inner row."
+	(text "J2: 2 x 6 pins. Odd pins: inner row (MCU side),\neven pins: outer row (board edge)."
 		(exclude_from_sim no)
 		(at 39.37 191.77 0)
 		(effects
