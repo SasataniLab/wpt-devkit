@@ -3,7 +3,7 @@
 
 For every mounting hole (footprints without a schematic symbol that carry a drilled pad of 2 mm or more) lists
   * tracks and vias of nets other than the hole's own net whose copper comes closer to the hole centre than R_COPPER
-    (default: M3 -> 3.6 mm, the reach of a 7 mm washer plus 0.1 mm; smaller holes -> drill/2 + 2.0 mm)
+    (default: M3 -> 3.6 mm, the reach of a 7 mm washer plus 0.1 mm; smaller holes (M2) -> 3.0 mm, a 5 mm washer plus 0.5 mm)
   * pads of other footprints closer than R_PART (same radii), on either side
 A washer, screw head or the hexagon of a standoff bears on the solder mask there; a signal track under it can end up shorted to the screw.
 """
@@ -33,7 +33,7 @@ for fp in b.GetFootprints():
 bad = 0
 for fp, p, d in holes:
     cx, cy = p.GetPosition().x * MM, p.GetPosition().y * MM
-    R = float(sys.argv[2]) if len(sys.argv) > 2 else (3.6 if d >= 3.0 else d / 2 + 2.0)
+    R = float(sys.argv[2]) if len(sys.argv) > 2 else (3.6 if d >= 3.0 else 3.0)
     pad_d = p.GetSize(pcbnew.F_Cu).x * MM
     print('hole %s at (%.2f, %.2f)  drill %.2f  pad %.2f  net %s  check radius %.2f' % (fp.GetReference(), cx, cy, d, pad_d, p.GetNetname() or '-', R))
     own = p.GetNetname()

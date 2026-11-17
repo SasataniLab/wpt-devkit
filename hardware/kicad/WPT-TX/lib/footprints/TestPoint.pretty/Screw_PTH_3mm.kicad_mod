@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Screw_PTH_3mm")
+	(descr "Plated mounting hole for an M3 screw: drill 3.2 mm, pad 5.5 mm")
 	(tags "screw pth 3mm")
 	(property "Reference" "REF**"
 		(at 0 -2.55 0)
@@ -78,7 +78,7 @@
 	(pad "1" thru_hole circle
 		(at 0 0)
 		(size 5.5 5.5)
-		(drill 3)
+		(drill 3.2)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "ef1d25c8-4bce-43ae-8899-dba67fc9f09d")

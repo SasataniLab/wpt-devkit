@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(descr "Screw_PTH_2mm")
+	(descr "Plated hole for an M2 or 2-56 screw (heat-sink bar): drill 2.4 mm, pad 3.5 mm")
 	(tags "screw pth 2mm")
 	(property "Reference" "REF**"
 		(at 0 -2.55 0)
@@ -78,7 +78,7 @@
 	(pad "1" thru_hole circle
 		(at 0 0)
 		(size 3.5 3.5)
-		(drill 2)
+		(drill 2.4)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "f292e817-3c28-4fb7-b9f6-7e686e63cf54")

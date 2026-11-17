@@ -43,6 +43,7 @@ PACKAGE = {
     'USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal': 'USB-C receptacle, 16 pads, top mount',
     'RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm': 'rotary encoder, vertical, 20 mm shaft',
     'SW_E-Switch_EG2219_DPDT_Angled': 'slide switch DPDT, right angle',
+    'SW_SPST_B3U-3000P-B_BoardEdge': 'tactile switch 3.0 x 2.5 mm, side-actuated, 2 pads and a locating boss',
     'NR5040': '5.0 x 5.0 mm', '2929SQ': '7.5 x 7.2 mm air core',
 }
 

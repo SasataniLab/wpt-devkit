@@ -25,7 +25,8 @@ print('\n'.join(l for l in out.stdout.split('\n') if l.startswith('no footprint'
 b = pcbnew.LoadBoard(synced)
 DESC = {'C13': 'Unpolarized capacitor', 'C14': 'Unpolarized capacitor', 'C15': 'Unpolarized capacitor', 'C16': 'Unpolarized capacitor',
         'J301': 'Generic connector, single row, 01x10',
-        'J3': 'ST Debug Connector, standard ARM Cortex-M SWD and JTAG interface plus UART'}
+        'J3': 'ST Debug Connector, standard ARM Cortex-M SWD and JTAG interface plus UART',
+        'SW3': 'Tactile switch, SPST-NO, side-actuated, with locating boss, 3 x 2.5 mm'}
 SMD_NOT_THT = ('L301', 'L302')                   # Coilcraft 2929SQ, two SMD pads
 DATASHEET = {'J3': 'https://www.st.com/resource/en/user_manual/um2448-stlinkv3set-debuggerprogrammer-for-stm8-and-stm32-stmicroelectronics.pdf'}
 n = 0

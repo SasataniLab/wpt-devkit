@@ -1,5 +1,6 @@
 (fp_lib_table
 	(version 7)
+	(lib (name "Button_Switch_BoardEdge") (type "KiCad") (uri "${KIPRJMOD}/lib/footprints/Button_Switch_BoardEdge.pretty") (options "") (descr "Project-local footprints added in the STM32 redesign (stock footprint without the silkscreen beyond the board edge)"))
 	(lib (name "Coilcraft") (type "KiCad") (uri "${KIPRJMOD}/lib/footprints/Coilcraft.pretty") (options "") (descr "Project-local legacy footprints (copies of the footprints used on this board)"))
 	(lib (name "Connector_Samtec_FTSH") (type "KiCad") (uri "${KIPRJMOD}/lib/footprints/Connector_Samtec_FTSH.pretty") (options "") (descr "Project-local footprints added in the STM32 redesign (stock footprints with changed holes)"))
 	(lib (name "Diodes_SMD") (type "KiCad") (uri "${KIPRJMOD}/lib/footprints/Diodes_SMD.pretty") (options "") (descr "Project-local legacy footprints (copies of the footprints used on this board)"))
