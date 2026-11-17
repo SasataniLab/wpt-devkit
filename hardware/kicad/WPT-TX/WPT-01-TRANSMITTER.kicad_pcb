@@ -39438,7 +39438,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "08eacb05-cbb0-4f02-87d3-000b1afc9235")
+			(uuid "21cf18d9-63e7-41d0-8d88-d594f0d85359")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39450,7 +39450,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "3d2ff3a1-0ca4-41f0-b0bb-f6e430d1254d")
+			(uuid "66b7eba5-d9a1-4d29-bf54-c2ff33a5c111")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39458,11 +39458,11 @@
 				)
 			)
 		)
-		(property "Assembly Note" "SW3: plunger towards the board edge. Not washable: no-clean process, or fit after washing. B3U-3000P (same switch without the locating boss) is an accepted substitute"
+		(property "Assembly Note" "SW3: front of the body on the board edge, plunger towards the outside (it stands 0.7 mm over the edge: no V-cut along the top edge). Not washable: no-clean process, or fit after washing. B3U-3000P (same switch without the locating boss) is an accepted substitute"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "45f82ace-7cf3-418f-9daa-fcc475bce473")
+			(uuid "757cd890-a241-4a4e-8edd-021821a8afb7")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44423,7 +44423,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "bffad3d6-f856-4c36-96ee-826b9504e490")
+			(uuid "f858ff56-52e3-4d04-912e-a6328beebc35")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58807,7 +58807,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "492e1388-c260-4996-9aa2-6fde9a9ede44")
+			(uuid "23348e67-8cc1-40b2-a7e7-b32b9fa39012")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58819,7 +58819,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "98287d47-4021-40a6-997d-65c1468af283")
+			(uuid "c13c5b78-266e-43c7-b6e9-0a68af6e391e")
 			(effects
 				(font
 					(size 1.27 1.27)

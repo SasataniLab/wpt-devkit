@@ -7859,7 +7859,7 @@
 				)
 			)
 		)
-		(property "Assembly Note" "SW3: plunger towards the board edge. Not washable: no-clean process, or fit after washing. B3U-3000P (same switch without the locating boss) is an accepted substitute"
+		(property "Assembly Note" "SW3: front of the body on the board edge, plunger towards the outside (it stands 0.7 mm over the edge: no V-cut along the top edge). Not washable: no-clean process, or fit after washing. B3U-3000P (same switch without the locating boss) is an accepted substitute"
 			(at 85.09 68.58 0)
 			(hide yes)
 			(show_name no)

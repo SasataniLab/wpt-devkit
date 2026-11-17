@@ -174,7 +174,8 @@ if todo['SW3']:
     sw = prop(sw, 'Manufacturer', 'Omron')
     sw = prop(sw, 'Manufacturer Part Number', 'B3U-3000P-B')
     sw = add_prop(sw, 'Manufacturer Part Number', 'Assembly Note',
-                  'SW3: plunger towards the board edge. Not washable: no-clean process, or fit after washing. '
+                  'SW3: front of the body on the board edge, plunger towards the outside (it stands 0.7 mm over the edge: '
+                  'no V-cut along the top edge). Not washable: no-clean process, or fit after washing. '
                   'B3U-3000P (same switch without the locating boss) is an accepted substitute')
     nums = []
     for fn in glob.glob('*.kicad_sch'):
