@@ -39438,7 +39438,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "6bbe9e54-18e3-492b-85b2-7ed2278a421f")
+			(uuid "08eacb05-cbb0-4f02-87d3-000b1afc9235")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39450,7 +39450,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "4fd525a4-8c79-4763-b1c8-0849e9ed2fda")
+			(uuid "3d2ff3a1-0ca4-41f0-b0bb-f6e430d1254d")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -39462,7 +39462,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "943afb53-67f9-4781-9aae-86394fdbe9e6")
+			(uuid "45f82ace-7cf3-418f-9daa-fcc475bce473")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -44412,6 +44412,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "96246ddd-0f2e-4fcd-b019-183628bcc5d6")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Assembly Note" "U2: STM32G474RET6 was out of stock at the franchised distributors on 2026-11-17. Accepted substitutes, same package and pinout, no change to the board: STM32G474RET6TR, STM32G474RET3, STM32G474RET3TR, STM32G484RET6. Ask before using any other part number (STM32G474RBT6 and RCT6 have less flash memory)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bffad3d6-f856-4c36-96ee-826b9504e490")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58795,7 +58807,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "13efa108-54c7-4c99-b610-c06f2f465911")
+			(uuid "492e1388-c260-4996-9aa2-6fde9a9ede44")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -58807,7 +58819,7 @@
 			(at 0 0 0)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "094b5bbc-9800-4b28-a11f-0ec9e0b6725a")
+			(uuid "98287d47-4021-40a6-997d-65c1468af283")
 			(effects
 				(font
 					(size 1.27 1.27)

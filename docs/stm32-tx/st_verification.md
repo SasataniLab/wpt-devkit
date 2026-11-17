@@ -25,7 +25,7 @@ period 800 ticks = 147.493 ns (derived from the RM definitions quoted in items 1
 | H2 | Handled without a clamp: the dividers are a 40 V design (2.5 V at the pin at 40 V; the schematic limits the external supply to below 40 V) and everything behind the taps sits behind the series resistors R343 / R344 (100 ohm). Since revision 4 the dividers are compensated by capacitors (3.3 pF over 36 pF), which bounds the overshoot at the pins to a few per cent whatever the stray capacitance is (`hrtim_timing_control.md` section 7.9: 2.4 V at 36 V with ringing) **as long as C340 / C341 are fitted**: without them the step at the tap is 2.3 to 2.6 times too high (3.5 to 4.0 V at 24 V), so the first power-up checks the edge at TP301 / TP302 with 5 V on the bus. Test pads TP301 / TP302 carry the comparator inputs. |
 | H3 | The header pins on TT_a inputs are 3.3 V only: J4 pin 1 (USART1_RX on PC5; J4 is not fitted since revision 4), the SPI / DC / RST pins of J2, test pad TP304 (FLT3 on PB10). Marked on the silkscreen in revision 3. PB11 is an output since revision 4 (threshold for the on-board comparators); J301 is gone. |
 | H4 | No capacitor across R8 (not required). |
-| H5 | Not implemented; PA9 / PA10 are left open (not required: PB4 is tied by the slide switch, PB6 is open). Firmware sets UCPD1_DBDIS. |
+| H5 | Not implemented; PA9 / PA10 are left open (not required: PB4 is tied by the slide switch, since revision 6 through R13 = 1 kOhm; PB6 is open). Firmware sets UCPD1_DBDIS. |
 | H6 | Done (dividers at the switch nodes). Since revision 4 the lines to the top strip start behind R343 / R344 and end at the on-board comparators U308 / U309; see `layout_notes.md` section 5.2. |
 | H7 | Firmware; C16 (10 nF) was added at PA0. |
 | H8 | Clock plan confirmed again; the crystal ESR is still to be checked against Epson's data. |
@@ -109,7 +109,7 @@ Footnotes (p.72):
 
 RM PWR_CR3 (p.255): "After exiting reset, the USB Type-C 'dead battery' behavior is enabled ... It is recommended to disable it in all cases".
 
-If PA9 / PA10 float: the Rd on PB6 / PB4 may switch on unpredictably until firmware sets UCPD1_DBDIS (already planned: "Disable Dead Battery Signals"). PB4 is driven hard by SW2, so its logic level stays valid (3.3 V / 5.1 kOhm = 0.65 mA when tied high). PB6 is unused. What the ROM bootloader does with UCPD1_DBDIS: not stated.
+If PA9 / PA10 float: the Rd on PB6 / PB4 may switch on unpredictably until firmware sets UCPD1_DBDIS (already planned: "Disable Dead Battery Signals"). PB4 is driven by SW2, so its logic level stays valid (3.3 V / 5.1 kOhm = 0.65 mA when tied high). Revision 6 (2026-11-17) put R13 = 1 kOhm between SW2 and PB4: with the Rd active a high level reads 3.3 V x 5.1 / 6.1 = 2.76 V (2.65 V with Rd 20 % low), above VIH = 0.7 x VDD = 2.31 V; a low level is unaffected. *Inference*: computed here, not a document statement. PB6 is unused. What the ROM bootloader does with UCPD1_DBDIS: not stated.
 
 ### 3. HSE oscillator (Table 41, p.117; "Guaranteed by design")
 

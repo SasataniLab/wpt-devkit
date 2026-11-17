@@ -5503,6 +5503,17 @@
 				)
 			)
 		)
+		(property "Assembly Note" "U2: STM32G474RET6 was out of stock at the franchised distributors on 2026-11-17. Accepted substitutes, same package and pinout, no change to the board: STM32G474RET6TR, STM32G474RET3, STM32G474RET3TR, STM32G484RET6. Ask before using any other part number (STM32G474RBT6 and RCT6 have less flash memory)"
+			(at 147.32 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "0ea2b857-4d7c-4707-a02a-58bc650cad3f")
 		)
