@@ -14,8 +14,8 @@
 2. J2 becomes a header of 2 x 6 pins (2.54 mm): the odd pins form one row and the even pins the other. The symbol stays
    the column of twelve pins; value, description and a note say that the part has two rows. The signals are dealt out
    again in the order in which their tracks arrive from the MCU, so that no two of them cross on the way:
-     pin  1 GND   2 +3V3   3 MOSI (PA7)   4 MISO (PA6)   5 SCK (PA5)   6 RST (PA4)
-          7 DC (PA3)   8 CS (PA2)   9 ADC (PC2)   10 IO (PB3)   11 +3V3   12 GND
+     pin  1 GND   2 +3V3   3 MOSI (PA7)   4 MISO (PA6)   5 SCK (PA5)   6 DC (PA3)
+          7 RST (PA4)   8 CS (PA2)   9 ADC (PC2)   10 IO (PB3)   11 +3V3   12 GND
    (before: 3 SCK, 4 MISO, 5 MOSI, 6 ADC, 7 CS, 8 DC, 9 RST). The supply pins stay at the ends of the rows.
 
 3. Clock link R346 (0 ohm, not fitted) from CLK1 of the Si5351 (U306 pin 9) to PF0 of the MCU (net HSE_EXT, a global
@@ -192,17 +192,16 @@ if '(property "Reference" "R346"' not in tx:
     jn, nc = find_block(tx, 'no_connect', ('120.65', '189.23'))
     assert jn is not None
     tx = cut(tx, jn, nc)
-    j, r = symbol(tx, 'R313')
-    assert '(at 92.71 191.77 0)' in r and '"Value" "0"' in r
-    dx, dy = 128.27 - 92.71, 189.23 - 191.77                          # this symbol lies: pins at x = 127.00 and 129.54
+    j, r = symbol(tx, 'R345')                                             # a plain Device:R, lying, with the fields of the newer parts
+    assert '(at 281.94 251.46 90)' in r and '"Value" "560R"' in r and '(lib_id "Device:R")' in r
+    dx, dy = 128.27 - 281.94, 189.23 - 251.46                             # pins at x = 124.46 and 132.08
     fmt = lambda v: ('%.4f' % v).rstrip('0').rstrip('.')
     nr = re.sub(r'\(at (-?[\d.]+) (-?[\d.]+) (\d+)\)', lambda q: '(at %s %s %s)' % (fmt(float(q.group(1)) + dx), fmt(float(q.group(2)) + dy), q.group(3)), r)
     nr = re.sub(r'\(uuid "[^"]+"\)', lambda _: '(uuid "%s")' % uuid.uuid4(), nr)
-    nr = nr.replace('(property "Reference" "R313"', '(property "Reference" "R346"', 1).replace('(reference "R313")', '(reference "R346")')
+    nr = nr.replace('(property "Reference" "R345"', '(property "Reference" "R346"', 1).replace('(reference "R345")', '(reference "R346")')
     nr = re.sub(r'\n\t+\(variant\n\t+\(name "[^"]+"\)\n\t+\(dnp \w+\)\n\t+\)', '', nr)
-    nr = nr.replace('(dnp no)', '(dnp yes)', 1).replace('"Footprint" "yageo:R_0402"', '"Footprint" "Resistor_SMD:R_0402_1005Metric"')
-    assert nr.count('"R346"') == 2 and '(dnp yes)' in nr and '(variant' not in nr
-
+    nr = nr.replace('"Value" "560R"', '"Value" "0"').replace('RC0402FR-07560RL', 'RC0402FR-070RL')
+    assert nr.count('"R346"') == 2 and '(dnp yes)' in nr and '(variant' not in nr and 'RC0402FR-070RL' in nr
     if '(property "Assembly Note"' in nr:
         nr = re.sub(PROP % 'Assembly Note', lambda _: '(property "Assembly Note" "%s"' % NOTE, nr, count=1)
     else:
@@ -210,8 +209,8 @@ if '(property "Reference" "R346"' not in tx:
         new = re.sub(PROP % 'Manufacturer Part Number', lambda _: '(property "Assembly Note" "%s"' % NOTE, mm.group(0), count=1)
         nr = nr[:mm.end()] + new + nr[mm.end():]
     tx = tx[:j + len(r)] + '\n\t' + nr + tx[j + len(r):]
-    tx = add(tx, WIRE % ('120.65', '189.23', '127', '189.23', uuid.uuid4()))
-    tx = add(tx, GLABEL % ('output', '129.54', '189.23', '0', 'left', uuid.uuid4(), '130.81', '189.23', 'left'))
+    tx = add(tx, WIRE % ('120.65', '189.23', '124.46', '189.23', uuid.uuid4()))
+    tx = add(tx, GLABEL % ('output', '132.08', '189.23', '0', 'left', uuid.uuid4(), '133.35', '189.23', 'left'))
     done.append('R346 and the global label HSE_EXT at CLK1 of U306')
 if '(global_label "HSE_EXT"' not in mcu:
     assert '(xy 129.54 81.28) (xy 81.28 81.28)' in mcu and '(xy 81.28 81.28) (xy 81.28 87.63)' in mcu
@@ -228,8 +227,8 @@ if ja is not None and jb is not None:
     done.append('leg A -> HRTIM1_EEV2, leg B -> HRTIM1_EEV1')
 
 # ---- J2: the signals in the order of arrival (root sheet): the sheet pins of the MCU sheet change places along its edge
-ORDER = (('SPI1_MOSI_DISP', '163.83'), ('SPI1_MISO_DISP', '166.37'), ('SPI1_CLK_DISP', '168.91'), ('GPIO_DISP_RST', '171.45'),
-         ('GPIO_DISP_DC', '173.99'), ('GPIO_DISP_CS', '176.53'), ('ADC2_IN8_EXTERNAL', '179.07'), ('GPIO_SW_MISC1', '181.61'))
+ORDER = (('SPI1_MOSI_DISP', '163.83'), ('SPI1_MISO_DISP', '166.37'), ('SPI1_CLK_DISP', '168.91'), ('GPIO_DISP_DC', '171.45'),
+         ('GPIO_DISP_RST', '173.99'), ('GPIO_DISP_CS', '176.53'), ('ADC2_IN8_EXTERNAL', '179.07'), ('GPIO_SW_MISC1', '181.61'))
 moved = 0
 for name, y in ORDER:
     m = re.search(r'(\(pin "%s" input\n\t\t\t\(at 68\.58 )([\d.]+)( 180\))' % name, root)

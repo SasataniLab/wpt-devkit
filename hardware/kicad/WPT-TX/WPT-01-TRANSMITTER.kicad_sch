@@ -7700,7 +7700,7 @@
 			)
 		)
 		(pin "GPIO_DISP_DC" input
-			(at 68.58 173.99 180)
+			(at 68.58 171.45 180)
 			(uuid "d3461ea5-232a-4d6a-81a2-a20957b9a708")
 			(effects
 				(font
@@ -7710,7 +7710,7 @@
 			)
 		)
 		(pin "GPIO_DISP_RST" input
-			(at 68.58 171.45 180)
+			(at 68.58 173.99 180)
 			(uuid "e2888818-503d-4b5b-8c93-e66dbb7dfb10")
 			(effects
 				(font
@@ -11354,7 +11354,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "b93aebbe-18f3-4048-94c4-1e7d23a6b36f")
+		(uuid "82c298fa-621a-44b6-a4cd-37284e50ddcf")
 	)
 	(sheet_instances
 		(path "/"

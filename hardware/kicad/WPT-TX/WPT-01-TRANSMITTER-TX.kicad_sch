@@ -22269,127 +22269,6 @@
 		)
 	)
 	(symbol
-		(lib_id "yageo:RC0402FR-070RL")
-		(at 128.27 189.23 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "6be6eb06-329c-4fb5-9031-db25cac963e8")
-		(property "Reference" "R346"
-			(at 127.762 186.944 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 129.54 188.468 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 128.27 191.008 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_Group_51_RoHS_L_3.pdf"
-			(at 128.27 187.198 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.762 0.762)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 128.27 189.23 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Size" "1005"
-			(at 129.794 189.738 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 0.254 0.254)
-				)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 133.35 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part Number" "RC0402FR-070RL"
-			(at 134.62 185.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Assembly Note" "R346 (not fitted): link from CLK1 of the Si5351 (U306) to the clock input PF0 of the MCU. To clock the MCU from the Si5351: fit 0 ohm (RC0402FR-070RL), remove Y1, select HSE bypass in the firmware"
-			(at 134.62 185.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0f93e17f-3baf-432b-86ba-da299a5b779d")
-		)
-		(pin "2"
-			(uuid "b72c8028-5aa3-474e-a2a8-2c90fc54ba15")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
-					(reference "R346")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "yageo:CC0402KRX7R8BB104")
 		(at 83.82 165.1 0)
 		(unit 1)
@@ -29849,6 +29728,118 @@
 			)
 		)
 	)
+	(symbol
+		(lib_id "Device:R")
+		(at 128.27 189.23 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "ce57f363-5aa8-4848-9e49-0022132b66d9")
+		(property "Reference" "R346"
+			(at 124.46 186.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 132.08 186.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "R346 (not fitted): link from CLK1 of the Si5351 (U306) to the clock input PF0 of the MCU. To clock the MCU from the Si5351: fit 0 ohm (RC0402FR-070RL), remove Y1, select HSE bypass in the firmware"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7a21a4ac-0d9a-4bad-a3cc-421f7939e308")
+		)
+		(pin "2"
+			(uuid "efd09e9f-8346-4314-8025-87772b518e9e")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "R346")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(wire
 		(pts
 			(xy 270.51 251.46) (xy 278.13 251.46)
@@ -31288,7 +31279,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "b7102565-994c-43ab-ab8a-a39d260336a8")
+		(uuid "e9c8951f-dbf0-481f-a12c-e59b72c7cdb9")
 	)
 	(label "VSWB_CMP"
 		(at 388.62 229.87 180)
@@ -31298,30 +31289,30 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "2086faf2-eee3-427e-a597-a99817e88c1b")
+		(uuid "3c91fd50-330a-4b14-abaa-509bcbaae767")
 	)
 	(wire
 		(pts
-			(xy 120.65 189.23) (xy 127 189.23)
+			(xy 120.65 189.23) (xy 124.46 189.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "23263c5c-005f-4f1a-81e9-7b7ff23b6507")
+		(uuid "d92c6cf5-99e7-46bf-b3ea-70b310a5a648")
 	)
 	(global_label "HSE_EXT"
 		(shape output)
-		(at 129.54 189.23 0)
+		(at 132.08 189.23 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "f44ccaac-5d44-4045-8e24-ab12a6a18f9b")
+		(uuid "6decd80b-f6b8-4716-9478-860ec4d3beaf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 130.81 189.23 0)
+			(at 133.35 189.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
