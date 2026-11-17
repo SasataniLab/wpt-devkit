@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """One BOM line per manufacturer part number, in the column layout of PCBWay's assembly BOM.
 
-usage: bom_pcbway.py PARTS.csv PLACEMENT_ALL.csv PLACEMENT_SMD.csv OUT.csv [EXTRA.csv]
+usage: bom_pcbway.py PARTS.csv PLACEMENT_ALL.csv PLACEMENT_SMD.csv OUT.csv [EXTRA.csv] [--loose=REF,REF...]
 
 PARTS.csv          one row per fitted part: Ref, Value, Footprint, Manufacturer, MPN, Description, Note
                    (fab/export.sh writes it with `kicad-cli sch export bom`, DNP parts excluded)
@@ -9,6 +9,9 @@ PLACEMENT_ALL.csv  kicad-cli position file with every placed part
 PLACEMENT_SMD.csv  the same with --smd-only; a part that is in the first file but not in this one is through-hole
 EXTRA.csv          lines appended as they are (same columns without "Item #"): things that are needed but are not parts
                    of the board data, i.e. the jumper shunts of the two supply selectors (fab/bom_extra.csv)
+--loose=REF,...    parts of the board data that the assembler does not fit (they are not in the placement files on
+                   purpose): listed with the type LOOSE instead of stopping with an error. Used by the display board
+                   for its display, which is fitted by hand.
 
 The schematic export groups by value and footprint, so one part number can appear on several lines when the libraries
 name the same part differently ("10k" in Resistor_SMD and "10kF" in yageo). An assembler buys by part number, so this
@@ -19,8 +22,10 @@ import csv
 import re
 import sys
 
-parts_csv, pos_all_csv, pos_smd_csv, out_csv = sys.argv[1:5]
-extra_csv = sys.argv[5] if len(sys.argv) > 5 else None
+argv = [a for a in sys.argv[1:] if not a.startswith('--loose=')]
+loose = {r for a in sys.argv[1:] if a.startswith('--loose=') for r in a.split('=', 1)[1].split(',') if r}
+parts_csv, pos_all_csv, pos_smd_csv, out_csv = argv[:4]
+extra_csv = argv[4] if len(argv) > 4 else None
 
 # footprint -> package name an assembler recognises
 PACKAGE = {
@@ -45,6 +50,9 @@ PACKAGE = {
     'SW_E-Switch_EG2219_DPDT_Angled': 'slide switch DPDT, right angle',
     'SW_SPST_B3U-3000P-B_BoardEdge': 'tactile switch 3.0 x 2.5 mm, side-actuated, 2 pads and a locating boss',
     'NR5040': '5.0 x 5.0 mm', '2929SQ': '7.5 x 7.2 mm air core',
+    # the display board (hardware/kicad/WPT-TX-DISPLAY)
+    'SOT-23': 'SOT-23', 'PinSocket_1x12_P2.54mm_Vertical': 'socket header 1x12, 2.54 mm',
+    'TFT_0.96in_80x160_FPC13_P0.7mm_Folded': 'display module, flex tail with 13 contacts on 0.7 mm pitch',
 }
 
 
@@ -68,7 +76,7 @@ for p in sorted(parts, key=lambda r: natural(r['Ref'])):
     ref = p['Ref']
     mpn = p['MPN'].strip()
     fp = p['Footprint'].split(':')[-1]
-    if ref not in pos_all:
+    if ref not in pos_all and ref not in loose:
         problems.append('%s is in the BOM but not in the placement file' % ref)
     key = mpn if mpn else ('', p['Value'], fp)
     if key not in groups:
@@ -84,7 +92,7 @@ for n, key in enumerate(order, 1):
     refs = [p['Ref'] for p in g]
     fps = sorted({p['Footprint'].split(':')[-1] for p in g})
     pkgs = sorted({PACKAGE.get(x, x) for x in fps})
-    kinds = {'SMD' if r in pos_smd else 'THT' for r in refs}
+    kinds = {'LOOSE' if r in loose else 'SMD' if r in pos_smd else 'THT' for r in refs}
     values = sorted({p['Value'] for p in g}, key=len)
     desc = sorted({p['Description'] for p in g if p['Description'] and p['Description'] != '~'}, key=len)
     makers = sorted({p['Manufacturer'].strip() for p in g if p['Manufacturer'].strip()})
@@ -114,6 +122,8 @@ with open(out_csv, 'w', newline='', encoding='utf-8') as f:
     w.writerow(['Item #', 'Designator', 'Qty', 'Manufacturer', 'Mfg Part #', 'Description / Value', 'Package/Footprint', 'Type', 'Your Instructions / Notes'])
     w.writerows(rows)
 board = rows[:n_board]
-print('%s: %d lines, %d parts on the board (%d surface-mount, %d through-hole), %d extra lines, %d lines without a part number'
+n_loose = sum(r[2] for r in board if r[7] == 'LOOSE')
+print('%s: %d lines, %d parts on the board (%d surface-mount, %d through-hole%s), %d extra lines, %d lines without a part number'
       % (out_csv.split('/')[-1], len(rows), sum(r[2] for r in board), sum(r[2] for r in board if r[7] == 'SMD'),
-         sum(r[2] for r in board if r[7] == 'THT'), len(rows) - n_board, sum(1 for r in rows if not r[4])))
+         sum(r[2] for r in board if r[7] == 'THT'), ', %d not fitted by the assembler' % n_loose if n_loose else '',
+         len(rows) - n_board, sum(1 for r in rows if not r[4])))

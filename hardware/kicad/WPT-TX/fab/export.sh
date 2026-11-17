@@ -1,14 +1,19 @@
 #!/bin/sh
 # Build the fabrication / assembly package for WPT-01-TRANSMITTER with kicad-cli (KiCad 10).
 #
-#   fab/export.sh            -> writes everything into fab/out/
+#   fab/export.sh            -> writes everything into fab/out/ for the HRTIM assembly variant, the one that is ordered
+#   fab/export.sh all        -> the same for both variants (HRTIM and Legacy)
+#   fab/export.sh Legacy     -> the Legacy variant only (the fall-back population: the 2020 drive from the Si5351)
 #
 # Output:
 #   out/gerber/              Gerbers for the 4 copper layers, mask, paste, silk, edge + Excellon drill (PTH / NPTH) and drill map
-#   out/assembly/<variant>/  BOM and pick-and-place files (all parts / surface-mount only) for each assembly variant
-#                            (Legacy, HRTIM), DNP parts excluded. bom_<variant>_pcbway.csv is the one to send:
-#                            one line per manufacturer part number (fab/bom_pcbway.py)
-#   out/doc/                 schematic PDF and front/back assembly drawings, one set per variant (parts not fitted are crossed out)
+#   out/assembly/<variant>/  BOM and pick-and-place files (all parts / surface-mount only), DNP parts excluded.
+#                            bom_<variant>_pcbway.csv is the one to send: one line per manufacturer part number
+#                            (fab/bom_pcbway.py)
+#   out/doc/                 schematic PDF and front/back assembly drawings of the variant (parts not fitted are crossed out)
+#
+# Only one variant is written by default so that files of the other population cannot be sent by mistake: the two
+# differ in 25 parts and must not be fitted together.
 set -eu
 
 here=$(cd "$(dirname "$0")" && pwd)
@@ -16,7 +21,11 @@ prj=$(dirname "$here")
 pcb="$prj/WPT-01-TRANSMITTER.kicad_pcb"
 sch="$prj/WPT-01-TRANSMITTER.kicad_sch"
 out="$here/out"
-variants="Legacy HRTIM"
+case "${1:-HRTIM}" in
+    all) variants="Legacy HRTIM" ;;
+    HRTIM|Legacy) variants="${1:-HRTIM}" ;;
+    *) echo "usage: $0 [HRTIM|Legacy|all]" >&2; exit 2 ;;
+esac
 
 rm -rf "$out"
 mkdir -p "$out/gerber" "$out/doc"

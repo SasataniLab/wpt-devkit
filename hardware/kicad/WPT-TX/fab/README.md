@@ -3,8 +3,12 @@
 `fab/export.sh` を実行すると、`fab/out/` に製造・実装用のデータ一式が出力される（KiCad 10 の `kicad-cli` が必要、`fab/out/` は git 管理外）。
 
 ```sh
-sh hardware/kicad/WPT-TX/fab/export.sh
+sh hardware/kicad/WPT-TX/fab/export.sh          # HRTIM 構成（発注する構成）だけ
+sh hardware/kicad/WPT-TX/fab/export.sh all      # HRTIM と Legacy の両方
+sh hardware/kicad/WPT-TX/fab/export.sh Legacy   # Legacy 構成だけ
 ```
+
+何も指定しなければ HRTIM 構成だけを書き出す。2 つの構成は 25 点の部品が違い、同時には実装できないので、もう一方のファイルを誤って渡さないようにするため。
 
 ## 出力内容
 
@@ -12,7 +16,7 @@ sh hardware/kicad/WPT-TX/fab/export.sh
 |---|---|
 | `out/gerber/` | 4 層分の銅箔（F / In1 / In2 / B）、レジスト、ペースト、シルク、外形のガーバーと、Excellon ドリル（PTH / NPTH 別ファイル）、ドリルマップ |
 | `out/assembly/HRTIM/` | HRTIM 構成（**今回発注する構成**）。`bom_HRTIM_pcbway.csv` が発注用 BOM（型番単位で 1 行、PCBWay の列構成、SMD / THT の別、実装指示つき）。`placement_HRTIM.csv` は全部品の座標、`placement_HRTIM_smd.csv` は表面実装部品のみ。`bom_HRTIM.csv`・`parts_HRTIM.csv` は KiCad の書き出しそのまま（参考） |
-| `out/assembly/Legacy/` | Legacy 構成の同じファイル一式 |
+| `out/assembly/Legacy/` | Legacy 構成の同じファイル一式（`all` または `Legacy` を指定したときだけ） |
 | `out/doc/` | 構成ごとの回路図 PDF（`schematic_HRTIM.pdf`）と表面・裏面の実装図（`assembly_front_HRTIM.pdf`、`assembly_back_HRTIM.pdf`。実装しない部品は × 印）。**発注には HRTIM の付いたファイルだけを渡す** |
 
 - 発注用 BOM（`bom_<構成>_pcbway.csv`、`fab/bom_pcbway.py` が作る）は**メーカー型番だけ**で 1 行にまとめる。列は Item # / Designator / Qty / Manufacturer / Mfg Part # / Description / Value / Package/Footprint / Type（SMD・THT）/ Your Instructions / Notes。DNP の部品とテストポイント（部品ではない）は含めない。HRTIM 構成で 75 行（うち 1 行は基板データに無いジャンパ 2 個、`fab/bom_extra.csv`）、基板上の部品は 204 点（表面実装 189、スルーホール 15）。型番の無い行は無い。
