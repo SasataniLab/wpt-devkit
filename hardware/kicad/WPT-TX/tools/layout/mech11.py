@@ -11,22 +11,26 @@ In2 track ("finger") that starts in the +3V3 plane. The pad of TP213 (through ho
 middle; the line of leg B passes north of it, the line of leg A south of it.
 
   U309 (leg B)  (180.80, 164.65), pins towards east: OUT north, GND, IN+ south. Ground via under the body.
-                C341 and R342 (lower leg) directly across the GND and IN+ pins; R337 at the output.
+                C341 and R342 (lower leg) directly across the GND and IN+ pins; R337 and R338 at the output.
   U308 (leg A)  (179.10, 169.60), turned by 90 degrees: OUT, GND, IN+ on the north row, IN+ at the east end.
                 C340 across the GND and IN+ pins, R340 on the line, R335 at the output.
-  lines         leg B: R344 - north - west along y = 165.55 - R342 - C341 - IN+ (9.6 mm, was 55 mm).
+  lines         leg B: R344 - north - west along y = 165.55 - R342 - C341 - IN+ (10.8 mm, was 55 mm).
                 leg A: R343 - the old diagonal - north along x = 187.15 - west - between TP213 and the gate line of
-                HRTIM1_CHC2 - west along y = 168.46 - R340 - IN+ (19.6 mm, was 80 mm).
-  outputs       EEV2: R337 - x = 186.0 north - via under the MCU - front side - pin 53 (PC11).
-                EEV1: R335 - via H1 - In2 (11.6 mm, in the +5V plane just south of its edge) - via (185.3, 161.4) -
-                back side x = 185.3 - via under the MCU - front side - pin 54 (PC12). On one layer this output would have
-                to cross the line of leg B; the hop is the price of keeping both lines on one layer without a via.
-  supply        +3V3 of U309: via in the strip between the I2C line "SDA" and the comparator (the SDA track on the back
-                moves 0.4 mm north for it, to the usual 0.45 mm pitch beside SCL). +3V3 of U308: via in R2, In2 finger.
-  threshold     ZVS_VTH_DAC comes on In2 from the via under the MCU to a via in R2; R345 (560 ohm), R334, C345 there;
-                the filtered threshold goes east to U309 and south to U308 (C344).
-  test pads     TP301 / TP302 / TP303 on the front side: TP302 on the line of leg B, TP301 on a 3 mm branch of the line of
-                leg A, TP303 on the threshold. The front side has no room for them at the comparators.
+                HRTIM1_CHC2 - west along y = 168.46 - R340 - IN+ (19.2 mm, was 80 mm).
+  outputs       leg B = HRTIM1_EEV1: R337 - R338 - x = 185.3 north - via under the MCU - front side - pin 54 (PC12), 12.9 mm.
+                leg A = HRTIM1_EEV2: R335 - between the two comparators - via (182.3, 166.45) - In2 (9.3 mm) -
+                via (188.6, 160.8) with R336 beside it - back side - via under the MCU - front side - pin 53 (PC11),
+                23.8 mm. On one layer this output would have to cross the line of leg B; the hop is the price of
+                keeping both lines on one layer without a via. Under the MCU the western of the two vias can only
+                reach pin 54, which is why the two event inputs changed places (edit_sch11.py).
+  supply        +3V3 of U309: via in the strip between the I2C track "SDA" and the comparator, directly into the +3V3
+                plane (the SDA track on the back moves 0.4 mm north for it, to 0.45 mm beside SCL).
+                +3V3 of U308: via in R2 on a finger of the +3V3 plane (4.9 mm on In2).
+  threshold     ZVS_VTH_DAC comes on In2 (6.5 mm) from the via under the MCU to a via in the same strip; R334, R345
+                and C345 there; the filtered threshold goes east to U309 and south, round the west side of U308,
+                to C344 and U308.
+  test pads     TP302 on the line of leg B, TP301 on a 3 mm branch of the line of leg A, TP303 on the threshold
+                (front-side track from a via). The front side has no room for them at the comparators.
 
 Everything of the old arrangement goes: the parts of the top strip, both long lines, the branches to PA1 / PC1.
 """

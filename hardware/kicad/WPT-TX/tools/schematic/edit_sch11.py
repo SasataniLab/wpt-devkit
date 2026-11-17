@@ -9,7 +9,7 @@
      R340, C340 (leg A), R342, C341 (leg B)   from the tap VSWx_SENSE to the comparator net VSWx_CMP
      PA1 / PC1 (MCU)   no longer connected: the lines to the MCU's own comparators would hang on the divider. With them go
                        the sheet pins; VSWA_CMP / VSWB_CMP are now nets inside the transmitter sheet
-     C340 / C341       36 pF -> 47 pF: the lower leg now also carries the line (firmware/tools/sense_tap_sim.py)
+     C340 / C341       36 pF -> 47 pF: the lower leg now also carries the line (firmware/tools/sense_line_sim.py)
 
 2. J2 becomes a header of 2 x 6 pins (2.54 mm): the odd pins form one row and the even pins the other. The symbol stays
    the column of twelve pins; value, description and a note say that the part has two rows. The signals are dealt out
