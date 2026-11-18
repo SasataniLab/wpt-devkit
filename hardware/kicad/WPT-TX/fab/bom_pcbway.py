@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""One BOM line per manufacturer part number, in the column layout of PCBWay's assembly BOM.
+
+usage: bom_pcbway.py PARTS.csv PLACEMENT_ALL.csv PLACEMENT_SMD.csv OUT.csv [EXTRA.csv] [--loose=REF,REF...]
+
+PARTS.csv          one row per fitted part: Ref, Value, Footprint, Manufacturer, MPN, Description, Note
+                   (fab/export.sh writes it with `kicad-cli sch export bom`, DNP parts excluded)
+PLACEMENT_ALL.csv  kicad-cli position file with every placed part
+PLACEMENT_SMD.csv  the same with --smd-only; a part that is in the first file but not in this one is through-hole
+EXTRA.csv          lines appended as they are (same columns without "Item #"): things that are needed but are not parts
+                   of the board data, i.e. the jumper shunts of the two supply selectors (fab/bom_extra.csv)
+--loose=REF,...    parts of the board data that the assembler does not fit (they are not in the placement files on
+                   purpose): listed with the type LOOSE instead of stopping with an error. Used by the display board
+                   for its display, which is fitted by hand.
+
+The schematic export groups by value and footprint, so one part number can appear on several lines when the libraries
+name the same part differently ("10k" in Resistor_SMD and "10kF" in yageo). An assembler buys by part number, so this
+script groups by part number alone and lists every designator once. Parts without a part number are grouped by value and
+footprint and marked; the script stops with an error if a fitted part has neither a part number nor a placement.
+"""
+import csv
+import re
+import sys
+
+argv = [a for a in sys.argv[1:] if not a.startswith('--loose=')]
+loose = {r for a in sys.argv[1:] if a.startswith('--loose=') for r in a.split('=', 1)[1].split(',') if r}
+parts_csv, pos_all_csv, pos_smd_csv, out_csv = argv[:4]
+extra_csv = argv[4] if len(argv) > 4 else None
+
+# footprint -> package name an assembler recognises
+PACKAGE = {
+    'C_0402_1005Metric': '0402', 'R_0402_1005Metric': '0402', 'GRM15': '0402', 'R_0402': '0402',
+    'GRM18': '0603', 'R_0603': '0603', 'BLM18': '0603',
+    'GRM21': '0805', 'GRM31': '1206', 'R_1206': '1206', 'GRM32': '1210',
+    'LQFP-64_10x10mm_P0.5mm': 'LQFP-64 10x10 mm, 0.5 mm pitch',
+    'SOT-23-6': 'SOT-23-6', 'SOT-23-5': 'SOT-23-5', 'microchip_SOT23-5LD-PL-1': 'SOT-23-5', 'SOT-353_SC-70-5_Diodes': 'SOT-353 (SC-70-5)',
+    'SOT-223-3_TabPin2': 'SOT-223', 'SOD-123FA_OnSemi': 'SOD-123FA', 'SOD-323': 'SOD-323',
+    'SOD-523F_STMicroelectronics': 'SOD-523', 'SOD-523F_Diodes': 'SOD-523',
+    'Texas_S-PWSON-N10_ThermalVias': 'WSON-10 4x4 mm (DPR)', 'Texas_S-PDSO-G8': 'VSSOP-8 (DCU)',
+    'QFN-16-1EP_3x3mm_Pitch0.5mm_Semtech': 'QFN-16 3x3 mm', 'DFN-10-1EP_3x3mm_Pitch0.5mm_microchip_9Q': 'DFN-10 3x3 mm',
+    'TSSOP-14_4.4x5mm_P0.65mm': 'TSSOP-14', 'Siliconlabs_MSOP-10_3x3mm_Pitch0.5mm': 'MSOP-10',
+    'Crystal_SMD_SeikoEpson_FA128-4Pin_2.0x1.6mm': '2.0 x 1.6 mm, 4 pads', 'FA-238': '3.2 x 2.5 mm, 4 pads',
+    'EPC2007C': 'LGA 1.7 x 1.1 mm (bumped die)', 'EPC2038': 'BGA 0.9 x 0.9 mm (bumped die)',
+    'ULO-PH409-1x2SX1': 'pin header 1x02, 2.54 mm', 'ULO-PH409-1x3SX1': 'pin header 1x03, 2.54 mm',
+    'PinHeader_1x02_P2.54mm_Vertical': 'pin header 1x02, 2.54 mm', 'PinHeader_1x04_P2.54mm_Vertical': 'pin header 1x04, 2.54 mm',
+    'PinHeader_1x10_P2.54mm_Vertical': 'pin header 1x10, 2.54 mm', 'PinHeader_1x12_P2.54mm_Vertical': 'pin header 1x12, 2.54 mm',
+    'FTSH-107-01-L-D-K_2x07_P1.27mm_Vertical': 'header 2x07, 1.27 mm, keyed shroud',
+    'USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal': 'USB-C receptacle, 16 pads, top mount',
+    'RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm': 'rotary encoder, vertical, 20 mm shaft',
+    'SW_E-Switch_EG2219_DPDT_Angled': 'slide switch DPDT, right angle',
+    'SW_SPST_B3U-3000P-B_BoardEdge': 'tactile switch 3.0 x 2.5 mm, side-actuated, 2 pads and a locating boss',
+    'NR5040': '5.0 x 5.0 mm', '2929SQ': '7.5 x 7.2 mm air core',
+    # the display board (hardware/kicad/WPT-TX-DISPLAY)
+    'SOT-23': 'SOT-23', 'PinSocket_1x12_P2.54mm_Vertical': 'socket header 1x12, 2.54 mm',
+    'PinHeader_2x06_P2.54mm_Vertical': 'pin header 2x06, 2.54 mm', 'PinSocket_2x06_P2.54mm_Vertical_SMD': 'socket strip 2x06, 2.54 mm, surface mount',
+    'TFT_0.96in_80x160_FPC13_P0.7mm_Folded': 'display module, flex tail with 13 contacts on 0.7 mm pitch',
+}
+
+
+def natural(ref):
+    m = re.match(r'([A-Za-z]+)(\d+)', ref)
+    return (m.group(1), int(m.group(2))) if m else (ref, 0)
+
+
+def placed(path):
+    with open(path, newline='', encoding='utf-8') as f:
+        return {r['Ref']: r for r in csv.DictReader(f)}
+
+
+pos_all, pos_smd = placed(pos_all_csv), placed(pos_smd_csv)
+with open(parts_csv, newline='', encoding='utf-8') as f:
+    parts = list(csv.DictReader(f))
+
+groups, order = {}, []
+problems = []
+for p in sorted(parts, key=lambda r: natural(r['Ref'])):
+    ref = p['Ref']
+    mpn = p['MPN'].strip()
+    fp = p['Footprint'].split(':')[-1]
+    if ref not in pos_all and ref not in loose:
+        problems.append('%s is in the BOM but not in the placement file' % ref)
+    key = mpn if mpn else ('', p['Value'], fp)
+    if key not in groups:
+        groups[key] = []
+        order.append(key)
+    groups[key].append(p)
+if problems:
+    sys.exit('\n'.join(problems))
+
+rows = []
+for n, key in enumerate(order, 1):
+    g = groups[key]
+    refs = [p['Ref'] for p in g]
+    fps = sorted({p['Footprint'].split(':')[-1] for p in g})
+    pkgs = sorted({PACKAGE.get(x, x) for x in fps})
+    kinds = {'LOOSE' if r in loose else 'SMD' if r in pos_smd else 'THT' for r in refs}
+    values = sorted({p['Value'] for p in g}, key=lambda v: (len(v), v))            # same length: by name, so that two runs give the same file
+    desc = sorted({p['Description'] for p in g if p['Description'] and p['Description'] != '~'}, key=lambda v: (len(v), v))
+    makers = sorted({p['Manufacturer'].strip() for p in g if p['Manufacturer'].strip()})
+    notes = sorted({p['Note'].strip() for p in g if p.get('Note', '').strip()})
+    mpn = key if isinstance(key, str) else ''
+    if not mpn:
+        notes.insert(0, 'no manufacturer part number in the design data')
+    if len(makers) > 1 or len(pkgs) > 1 or len(kinds) > 1:
+        sys.exit('one part number, different manufacturers / packages / mounting: %s %s %s %s' % (mpn, makers, pkgs, kinds))
+    kind_word = {'C': 'capacitor', 'R': 'resistor', 'L': 'inductor', 'FB': 'ferrite bead', 'D': 'diode'}.get(re.match(r'[A-Za-z]+', refs[0]).group(0), '')
+    generic = {'Unpolarized capacitor', 'Resistor', ''}
+    text = ' / '.join(values)
+    if desc and desc[0] not in generic and desc[0] not in values:
+        text += ' - ' + desc[0]
+    elif kind_word and text != mpn:
+        text = kind_word + ' ' + text
+    rows.append([n, ','.join(refs), len(refs), makers[0] if makers else '', mpn, text, pkgs[0], kinds.pop(), '; '.join(notes)])
+
+n_board = len(rows)
+if extra_csv:
+    with open(extra_csv, newline='', encoding='utf-8') as f:
+        for r in csv.DictReader(f):
+            rows.append([len(rows) + 1, r['Designator'], int(r['Qty']), r['Manufacturer'], r['Mfg Part #'], r['Description / Value'],
+                         r['Package/Footprint'], r['Type'], r['Your Instructions / Notes']])
+with open(out_csv, 'w', newline='', encoding='utf-8') as f:
+    w = csv.writer(f)
+    w.writerow(['Item #', 'Designator', 'Qty', 'Manufacturer', 'Mfg Part #', 'Description / Value', 'Package/Footprint', 'Type', 'Your Instructions / Notes'])
+    w.writerows(rows)
+board = rows[:n_board]
+n_loose = sum(r[2] for r in board if r[7] == 'LOOSE')
+print('%s: %d lines, %d parts on the board (%d surface-mount, %d through-hole%s), %d extra lines, %d lines without a part number'
+      % (out_csv.split('/')[-1], len(rows), sum(r[2] for r in board), sum(r[2] for r in board if r[7] == 'SMD'),
+         sum(r[2] for r in board if r[7] == 'THT'), ', %d not fitted by the assembler' % n_loose if n_loose else '',
+         len(rows) - n_board, sum(1 for r in rows if not r[4])))

@@ -1,0 +1,2 @@
+Designator,Qty,Manufacturer,Mfg Part #,Description / Value,Package/Footprint,Type,Your Instructions / Notes
+SH1,1,Wurth Elektronik,60900213421,"jumper shunt, 2.54 mm","2.54 mm, 2 positions",LOOSE,"Not on the board data. Fit on CN203 pins 1-2 (VPP from the on-board converter); pin 1 is the square pad. On pins 2-3 it is only parked (VPP off). Any 2.54 mm shunt will do."
