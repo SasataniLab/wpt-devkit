@@ -27,6 +27,7 @@ DESC = {'C13': 'Unpolarized capacitor', 'C14': 'Unpolarized capacitor', 'C15': '
         'J301': 'Generic connector, single row, 01x10',
         'J3': 'ST Debug Connector, standard ARM Cortex-M SWD and JTAG interface plus UART',
         'SW3': 'Tactile switch, SPST-NO, side-actuated, with locating boss, 3 x 2.5 mm',
+        'SW4': 'Tactile switch, SPST-NO, side-actuated, with locating boss, 3 x 2.5 mm',
         'J2': 'Pin header, 2 x 6, 2.54 mm. Pins 1, 3 ... 11 form one row and 2, 4 ... 12 the other; drawn here as one column'}
 SMD_NOT_THT = ('L301', 'L302')                   # Coilcraft 2929SQ, two SMD pads
 DATASHEET = {'J3': 'https://www.st.com/resource/en/user_manual/um2448-stlinkv3set-debuggerprogrammer-for-stm8-and-stm32-stmicroelectronics.pdf'}

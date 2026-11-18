@@ -67,9 +67,10 @@ for n in range(1, 13):
     assert abs(a[0] - e[0]) < 0.01 and abs(abs(a[1] - JC[1]) - abs(e[1] - JC[1]) - 1.25) < 0.01 and (a[1] - JC[1]) * (e[1] - JC[1]) > 0, (n, a, e)
 J3_1, J3_14 = pad_xy(main, 'J3', '1'), pad_xy(main, 'J3', '14')
 SW3 = pos(main, 'SW3')
+SW4 = pos(main, 'SW4')                                               # BOOT0, the same switch 5.75 mm east of the reset switch
 ENC = (pos(main, 'SW1')[0] + 7.5, pos(main, 'SW1')[1] + 2.5)       # shaft axis of the EC11E footprint
 J5 = court(main, 'J5')
-CN = (court(main, 'CN210')[0], court(main, 'CN210')[1], court(main, 'CN208')[2], court(main, 'CN208')[3])
+CN = court(main, 'CN208')                                            # CN209 / CN210 went with revision 8 of the transmitter board
 TP = {r: pos(main, r) for r in ('TP301', 'TP302', 'TP303', 'TP304', 'TP214', 'TP215', 'TP224', 'TP225')}
 assert (ENC, SW3) == ((167.9, 150.6), (162.0, 126.25)), (ENC, SW3)
 inside = lambda p: poly.Contains(pcbnew.VECTOR2I(int(p[0] * MM), int(p[1] * MM)))
@@ -78,6 +79,7 @@ for r in FREE:
     assert not inside(TP[r]), r + ' is under the display board'
 assert inside(TP['TP304'])                                            # the fault input: a digital check point
 assert not inside(SW3) and OY0 > SW3[1] + 1.25, 'the reset button is under the display board'
+assert not inside(SW4) and OY0 > SW4[1] + 1.25, 'the BOOT0 button is under the display board'
 
 # ---- not in the board files (mm). Sources: Samtec catalogue pages F-226 (SSM, socket 7.37 high) and FFSD / print
 # FTSH-1XX-XX-XXX-D-XXX-XX sheet 3; Alps EC11E catalogue (update 2510), drawing No. 3; GCT USB4105 drawing (3.31 high) and
@@ -190,6 +192,7 @@ d.rectangle(box(CN), outline=GREEN + (255,), width=4, fill=GREEN + (28,))
 rk = KNOB_MAX / 2
 dashed(d, [(X(ENC[0] + rk * math.cos(t / 30 * math.pi)), Y(ENC[1] + rk * math.sin(t / 30 * math.pi))) for t in range(61)], RED + (255,), width=4, dash=9, gap=6)
 arrow(d, (X(SW3[0]), Y(EDGE[1] - 4.4)), (X(SW3[0]), Y(EDGE[1] - 0.9)), GREEN + (255,))
+arrow(d, (X(SW4[0]), Y(EDGE[1] - 4.4)), (X(SW4[0]), Y(EDGE[1] - 0.9)), GREEN + (255,))
 ux = (J5[0] + J5[2]) / 2
 arrow(d, (X(ux), Y(EDGE[1] - 4.4)), (X(ux), Y(EDGE[1] - 0.3)), GREEN + (255,))
 # the dimension from the board to the shaft axis
@@ -214,11 +217,11 @@ label(d, (X(WIN[0] + 0.5), Y(172.0)), 'アナログの確認点 VTH・B・A：',
 label(d, (X(WIN[0] + 0.5), Y(174.4)), '隠れない', 22, GREEN, 'lb')
 label(d, (X(157.0), Y(117.4)), '隠れる確認点：FLT3（ディジタル）', 20, ORANGE, 'mb')
 label(d, (X(SW3[0] - 4.0), Y(EDGE[1] - 5.8)), 'リセット', 22, GREEN, 'mm')
+label(d, (X(SW4[0] + 3.5), Y(EDGE[1] - 5.8)), 'BOOT0', 22, GREEN, 'mm')
 label(d, (X(ux), Y(EDGE[1] - 5.8)), 'USB（付けたまま挿せる）', 22, GREEN, 'mm')
 label(d, (X(WIN[0] + 0.5), Y(135.0)), 'STDC14 のソケット', 22, GREEN, 'la')
 label(d, (X(WIN[0] + 0.5), Y(140.6)), 'ケーブルは西へ', 20, GREEN, 'la')
-label(d, (X(CN[2] + 0.6), Y((CN[1] + CN[3]) / 2 - 1.1)), '5 V の', 22, GREEN, 'lm')
-label(d, (X(CN[2] + 0.6), Y((CN[1] + CN[3]) / 2 + 1.1)), 'ヘッダ：使える', 22, GREEN, 'lm')
+label(d, (X((CN[0] + CN[2]) / 2 - 1.0), Y(CN[1] - 0.4)), '5 V のヘッダ：使える', 22, GREEN, 'mb')    # above it: the board's name stands to the east
 label(d, (X(214.2), Y(152.6)), '+3V3・GND の確認点', 20, GREEN, 'mm')
 label(d, (X(214.2), Y(158.4)), '（4 つとも見える）', 20, GREEN, 'mm')
 label(d, (X(ENC[0] - rk - 0.5), Y(ENC[1] + 5.0)), 'つまみ ø14 以下', 22, RED, 'ra')
@@ -266,8 +269,7 @@ label(d, (U((OX0 + OX1) / 2), V(top + 1.6)), '表示基板と表示器', 24, BLU
 label(d, (U(ENC[0]), V(KNOB[3] + KNOB[2] + 1.2)), 'つまみ %s（例）' % KNOB[0], 22, RED, 'mb', box=False)
 label(d, (U(STDC_SOCKET[0] - 0.5), V(H_STDC + 1.0)), 'STDC14 %.1f' % H_STDC, 20, INK, 'mb', box=False)
 label(d, (U((J5[0] + J5[2]) / 2), V(H_USB + 0.8)), 'USB %.1f（北の縁、表示基板の外）' % H_USB, 20, INK, 'mb', box=False)
-label(d, (U((CN[0] + CN[2]) / 2), V(H_HDR / 2 + 1.0)), '5 V ヘッダ', 20, INK, 'mm', box=False)
-label(d, (U((CN[0] + CN[2]) / 2), V(H_HDR / 2 - 1.0)), '%.1f' % H_HDR, 20, INK, 'mm', box=False)
+label(d, (U(CN[2] + 0.6), V(H_HDR / 2)), '5 V ヘッダ %.1f' % H_HDR, 20, INK, 'lm', box=False)
 label(d, (U((jx0 + jx1) / 2), V(H_DISP / 2)), 'J2 + ソケット', 20, (255, 255, 255), 'mm', box=False)
 label(d, (10, V(0)), '基板面 0', 20, GREY, 'lm', box=False)
 label(d, (10, V(Z0) - 30), '南から見た高さ（mm）。奥行きの違う部品を重ねて描いてある（つまみは表示基板より手前）', 20, GREY, 'lb', box=False)
