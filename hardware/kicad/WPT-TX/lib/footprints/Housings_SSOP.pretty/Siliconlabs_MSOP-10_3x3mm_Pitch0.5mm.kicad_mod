@@ -1,0 +1,318 @@
+(footprint "Siliconlabs_MSOP-10_3x3mm_Pitch0.5mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "MSE Package; 10-Lead Plastic MSOP, Exposed Die Pad (see Linear Technology 05081664_I_MSE.pdf)")
+	(tags "SSOP 0.5")
+	(property "Reference" "REF**"
+		(at 0.925 -3.781 270)
+		(layer "F.SilkS")
+		(uuid "f6a11467-9342-4d77-9e1f-5393a36a3ef7")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Siliconlabs_MSOP-10_3x3mm_Pitch0.5mm"
+		(at 0 2.55 180)
+		(layer "F.Fab")
+		(uuid "fa0fab7e-5573-4d2f-9fd0-d7fd4ee10896")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "304c8a3e-5aa0-44a1-adc7-68bca3f21b12")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "38e696b8-1bbd-48d2-bddc-999af1b78ada")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.625 -1.625)
+		(end -1.625 -1.475)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "32d82984-f551-4778-92cd-bc85729ecd89")
+	)
+	(fp_line
+		(start -1.625 -1.625)
+		(end 1.625 -1.625)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3298bdca-50c4-4232-a220-9d87cc20f73d")
+	)
+	(fp_line
+		(start -1.625 -1.475)
+		(end -2.55 -1.475)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6a405a78-cd40-4d3c-9120-eacb120284f9")
+	)
+	(fp_line
+		(start -1.625 1.625)
+		(end -1.625 1.3775)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6e072e89-e137-438c-9217-944924683020")
+	)
+	(fp_line
+		(start -1.625 1.625)
+		(end 1.625 1.625)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1af7cdb2-8206-4e67-9f22-fc353174c36c")
+	)
+	(fp_line
+		(start 1.625 -1.625)
+		(end 1.625 -1.3775)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "41b61a4f-d28a-4e85-89e8-bccf82f409b2")
+	)
+	(fp_line
+		(start 1.625 1.625)
+		(end 1.625 1.3775)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bfcdc64b-65a2-4d37-afbe-46c495785b1c")
+	)
+	(fp_line
+		(start -3.15 -1.8)
+		(end -3.15 1.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ca2c25ab-6bea-4026-acf0-c98d6a9d56d7")
+	)
+	(fp_line
+		(start -3.15 -1.8)
+		(end 3.15 -1.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "52cdfac2-6480-4f5a-9f2f-aed24c9ea07c")
+	)
+	(fp_line
+		(start -3.15 1.8)
+		(end 3.15 1.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "58c3f915-2739-46bc-9bc8-168e9b8a9bb4")
+	)
+	(fp_line
+		(start 3.15 -1.8)
+		(end 3.15 1.8)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "15e4d26b-b2b9-4c95-a401-2fdd29d3adbb")
+	)
+	(fp_line
+		(start -1.55 -1.55)
+		(end 1.55 -1.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1ba88127-1e13-45fd-b482-53e2b1902aff")
+	)
+	(fp_line
+		(start -1.55 1.55)
+		(end -1.55 -1.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "823ca10f-2863-4132-8f2f-7f12167486ae")
+	)
+	(fp_line
+		(start -0.5 0)
+		(end 0.5 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "059880fa-f01e-44f4-8343-69c60bba2867")
+	)
+	(fp_line
+		(start 0 -0.5)
+		(end 0 0.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8a11f7fa-155d-4eae-b271-24e67b8fa7a5")
+	)
+	(fp_line
+		(start 1.55 -1.55)
+		(end 1.55 1.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a3eee9d2-bfae-4826-b82d-8647f7f39184")
+	)
+	(fp_line
+		(start 1.55 1.55)
+		(end -1.55 1.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "862f57b1-7477-4979-a51d-dca5dcea20e8")
+	)
+	(fp_circle
+		(center -1 -1)
+		(end -0.646447 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "0a5e4f4b-d9ce-407f-8cfd-c6dfd86e2cf1")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0.875 -2.181 0)
+		(layer "F.Fab")
+		(uuid "a37df0a5-4ad2-45a5-903c-a742b22b7ccd")
+		(effects
+			(font
+				(size 0.3 0.3)
+				(thickness 0.05)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -2.2 -1)
+		(size 1.4 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "17cf8814-7f61-45ac-b41f-5755be9a9b1f")
+	)
+	(pad "2" smd rect
+		(at -2.2 -0.5)
+		(size 1.4 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e63c7471-9cba-4228-abc3-71746d3d59d5")
+	)
+	(pad "3" smd rect
+		(at -2.2 0)
+		(size 1.4 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "586a7515-4f52-4f4c-b171-2237766ccf11")
+	)
+	(pad "4" smd rect
+		(at -2.2 0.5)
+		(size 1.4 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "1ddf6121-6d03-42e2-a15e-727e04c6370a")
+	)
+	(pad "5" smd rect
+		(at -2.2 1)
+		(size 1.4 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7eb9a678-6701-42e8-9afa-a2aafc4ec5e9")
+	)
+	(pad "6" smd rect
+		(at 2.2 1)
+		(size 1.4 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "79442730-9c3d-4db0-a21e-60cb94ec72e5")
+	)
+	(pad "7" smd rect
+		(at 2.2 0.5)
+		(size 1.4 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2e0b92bc-7026-45d4-b695-44d06805b6d5")
+	)
+	(pad "8" smd rect
+		(at 2.2 0)
+		(size 1.4 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b91a7036-befd-4e02-b0c5-44427207abf6")
+	)
+	(pad "9" smd rect
+		(at 2.2 -0.5)
+		(size 1.4 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3743ac7d-1d5c-46d0-821c-77c751fcfaa1")
+	)
+	(pad "10" smd rect
+		(at 2.2 -1)
+		(size 1.4 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ccd5b375-842c-4fdc-8a63-fac38443e077")
+	)
+	(embedded_fonts no)
+	(model "${KISYS3DMOD}/Housings_SSOP.3dshapes/MSOP-10-1EP_3x3mm_P0.5mm_EP1.68x1.88mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -533,27 +533,8 @@
         "line_style": 0,
         "microvia_diameter": 0.2,
         "microvia_drill": 0.1,
-        "name": "Power",
-        "pcb_color": "rgba(0, 170, 0, 1.000)",
-        "priority": 0,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.5,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
-        "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
-        "line_style": 0,
-        "microvia_diameter": 0.2,
-        "microvia_drill": 0.1,
         "name": "HV",
-        "pcb_color": "rgba(255, 140, 0, 1.000)",
+        "pcb_color": "rgb(255, 140, 0)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 1.0,
@@ -572,10 +553,29 @@
         "microvia_diameter": 0.2,
         "microvia_drill": 0.1,
         "name": "HV_SW",
-        "pcb_color": "rgba(230, 0, 0, 1.000)",
+        "pcb_color": "rgb(230, 0, 0)",
         "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 2.0,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.2,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "pcb_color": "rgb(0, 170, 0)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -591,7 +591,7 @@
         "microvia_diameter": 0.2,
         "microvia_drill": 0.1,
         "name": "USB",
-        "pcb_color": "rgba(0, 120, 255, 1.000)",
+        "pcb_color": "rgb(0, 120, 255)",
         "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.3,
@@ -1141,7 +1141,16 @@
       }
     ],
     "used_designators": "SW1,R1-6,C1-12,#PWR251-273,J1-5,Y1,U1-2",
-    "variants": []
+    "variants": [
+      {
+        "description": "HRTIM build (same as the base schematic and board; the population that is ordered): R320, R323, R326, R329, U308, U309 and the sense parts fitted; R305, R307, R315, R318, D305, D306, D311, D312 not fitted",
+        "name": "HRTIM"
+      },
+      {
+        "description": "Legacy build (fall-back, the 2020 drive from the Si5351): R305, R307, R315, R318, D305, D306, D311, D312 fitted; R320, R323, R326, R329, R343 - R345, C338 - C345, U308, U309 not fitted",
+        "name": "Legacy"
+      }
+    ]
   },
   "sheets": [
     [

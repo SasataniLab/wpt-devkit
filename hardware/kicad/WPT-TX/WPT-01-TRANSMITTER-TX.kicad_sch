@@ -2170,7 +2170,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "EPSON"
+			(property "Manufacturer" "Epson"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2463,7 +2463,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Murata Electronics "
+			(property "Manufacturer" "Murata Electronics"
 				(at 5.08 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2637,7 +2637,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Murata Electronics "
+			(property "Manufacturer" "Murata Electronics"
 				(at 5.08 7.62 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2802,7 +2802,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "ON Semiconductor"
+			(property "Manufacturer" "onsemi"
 				(at 2.54 5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2903,8 +2903,12 @@
 		)
 		(symbol "power:+3.3V"
 			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2922,7 +2926,7 @@
 					)
 				)
 			)
-			(property "Value" "power_+3.3V"
+			(property "Value" "+3.3V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2954,7 +2958,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2972,7 +2987,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -2984,7 +2999,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -2996,7 +3011,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3007,8 +3022,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+3V3"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3028,8 +3042,12 @@
 		)
 		(symbol "power:+5V"
 			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3047,7 +3065,7 @@
 					)
 				)
 			)
-			(property "Value" "power_+5V"
+			(property "Value" "+5V"
 				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3079,7 +3097,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3097,7 +3126,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3109,7 +3138,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3121,7 +3150,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3132,8 +3161,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "+5V"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3153,8 +3181,12 @@
 		)
 		(symbol "power:GND"
 			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3172,7 +3204,7 @@
 					)
 				)
 			)
-			(property "Value" "power_GND"
+			(property "Value" "GND"
 				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3204,7 +3236,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3222,7 +3265,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3233,8 +3276,7 @@
 				(pin power_in line
 					(at 0 0 270)
 					(length 0)
-					(hide yes)
-					(name "GND"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3277,7 +3319,7 @@
 					)
 				)
 			)
-			(property "Value" "power_PWR_FLAG"
+			(property "Value" "PWR_FLAG"
 				(at 0 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3309,7 +3351,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Special symbol for telling ERC where power comes from"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "flag power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3324,7 +3377,7 @@
 				(pin power_out line
 					(at 0 0 90)
 					(length 0)
-					(name "pwr"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3347,7 +3400,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3358,8 +3411,12 @@
 		)
 		(symbol "power:VPP"
 			(power global)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
+				(hide yes)
 			)
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3377,8 +3434,8 @@
 					)
 				)
 			)
-			(property "Value" "power_VPP"
-				(at 0 3.81 0)
+			(property "Value" "VPP"
+				(at 0 3.556 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3409,7 +3466,18 @@
 					)
 				)
 			)
-			(property "Description" ""
+			(property "Description" "Power symbol creates a global label with name \"VPP\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3427,7 +3495,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3439,7 +3507,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3451,7 +3519,7 @@
 					)
 					(stroke
 						(width 0)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type none)
@@ -3462,8 +3530,7 @@
 				(pin power_in line
 					(at 0 0 90)
 					(length 0)
-					(hide yes)
-					(name "VPP"
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4188,7 +4255,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "Silicon Labs"
+			(property "Manufacturer" "Skyworks Solutions"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4781,7 +4848,7 @@
 					)
 				)
 			)
-			(property "Manufacturer" "ULO Electronic"
+			(property "Manufacturer" "ULO Electronics"
 				(at 2.54 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -7070,6 +7137,335 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "testpooint:TP1.0"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+					(justify bottom)
+				)
+			)
+			(property "Value" "testpooint_TP1.0"
+				(at 0 1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Footprint" "TestPoint:TP_1mm"
+				(at -2.54 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TP_1mm TP*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TP1.0_0_1"
+				(circle
+					(center 0 0)
+					(radius 1.27)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TP1.0_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.016 1.016)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "texas_instruments:TLV3601DBV"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -1.27 6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TLV3601DBV"
+				(at -1.27 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at -2.54 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv3601.pdf"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "325 MHz high-speed comparator, 2.5 ns propagation delay, push-pull output, SOT-23-5"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer" "Texas Instruments"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Manufacturer Part Number" "TLV3601DBVR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cmp fast"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TLV3601DBV_0_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLV3601DBV_1_1"
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Connector for \nAntenna"
 		(exclude_from_sim no)
@@ -7684,10 +8080,6 @@
 	(no_connect
 		(at 120.65 196.85)
 		(uuid "489f5e5c-9f4c-419a-865f-867f3f535b6a")
-	)
-	(no_connect
-		(at 120.65 189.23)
-		(uuid "98733902-dc4c-478d-b45e-2834db80b195")
 	)
 	(wire
 		(pts
@@ -12163,7 +12555,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 266.7 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -12276,7 +12668,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 266.7 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -12931,7 +13323,7 @@
 		)
 	)
 	(symbol
-		(lib_id "yageo:CC0402KRX7R8BB223")
+		(lib_id "yageo:CC0402KRX7R8BB104")
 		(at 298.45 45.72 0)
 		(unit 1)
 		(body_style 1)
@@ -12952,7 +13344,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22n/25(X7R)"
+		(property "Value" "0.1u/50(X7R)"
 			(at 295.91 52.324 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12974,7 +13366,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.yageo.com/documents/recent/UPY-GPHC_X7R_6.3V-to-50V_18.pdf"
+		(property "Datasheet" "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en"
 			(at 298.45 43.688 0)
 			(hide yes)
 			(show_name no)
@@ -13006,7 +13398,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Murata Electronics"
 			(at 303.53 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -13017,7 +13409,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "CC0402KRX7R8BB223"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 306.07 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -13218,7 +13610,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 308.61 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -13331,7 +13723,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 264.16 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -13444,7 +13836,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 254 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -13642,7 +14034,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c7a43df")
 		(property "Reference" "R305"
 			(at 232.41 92.71 0)
@@ -13739,6 +14131,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R305")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -13752,7 +14148,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c7a76ff")
 		(property "Reference" "D305"
 			(at 232.41 85.5472 0)
@@ -13839,6 +14235,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D305")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -13852,7 +14252,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c7a7785")
 		(property "Reference" "D306"
 			(at 232.41 105.41 0)
@@ -13939,6 +14339,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D306")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -15266,7 +15670,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "2929SQ-391JEB"
+		(property "Manufacturer Part Number" "2929SQ-391JEC"
 			(at 325.12 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -16410,7 +16814,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 266.7 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -16523,7 +16927,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 266.7 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -17178,7 +17582,7 @@
 		)
 	)
 	(symbol
-		(lib_id "yageo:CC0402KRX7R8BB223")
+		(lib_id "yageo:CC0402KRX7R8BB104")
 		(at 298.45 144.78 0)
 		(unit 1)
 		(body_style 1)
@@ -17199,7 +17603,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22n/25(X7R)"
+		(property "Value" "0.1u/50(X7R)"
 			(at 295.91 151.384 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17221,7 +17625,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://www.yageo.com/documents/recent/UPY-GPHC_X7R_6.3V-to-50V_18.pdf"
+		(property "Datasheet" "http://www.murata.com/~/media/webrenewal/support/library/catalog/products/capacitor/mlcc/c02e.ashx?la=en"
 			(at 298.45 142.748 0)
 			(hide yes)
 			(show_name no)
@@ -17253,7 +17657,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "Murata Electronics"
 			(at 303.53 137.16 0)
 			(hide yes)
 			(show_name no)
@@ -17264,7 +17668,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "CC0402KRX7R8BB223"
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
 			(at 306.07 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -17465,7 +17869,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ON Semiconductor"
+		(property "Manufacturer" "onsemi"
 			(at 308.61 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -17578,7 +17982,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 264.16 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -17691,7 +18095,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 254 207.01 0)
 			(hide yes)
 			(show_name no)
@@ -17889,7 +18293,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c85c741")
 		(property "Reference" "R315"
 			(at 232.41 191.77 0)
@@ -17986,6 +18390,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R315")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -17999,7 +18407,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c85c74b")
 		(property "Reference" "D311"
 			(at 232.41 184.6072 0)
@@ -18086,6 +18494,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D311")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -18099,7 +18511,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c85c753")
 		(property "Reference" "D312"
 			(at 232.41 204.47 0)
@@ -18186,6 +18598,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "D312")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -19513,7 +19929,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "2929SQ-391JEB"
+		(property "Manufacturer Part Number" "2929SQ-391JEC"
 			(at 325.12 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -19983,7 +20399,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Silicon Labs"
+		(property "Manufacturer" "Skyworks Solutions"
 			(at 111.76 191.77 0)
 			(hide yes)
 			(show_name no)
@@ -20066,7 +20482,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "FA-238_25.0000MB-K3"
+		(property "Value" "FA-238 25.0000MB-K3"
 			(at 62.23 185.42 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20109,7 +20525,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "EPSON"
+		(property "Manufacturer" "Epson"
 			(at 88.9 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -20120,7 +20536,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "FA-238_25.0000MB-K3"
+		(property "Manufacturer Part Number" "FA-238 25.0000MB-K3"
 			(at 88.9 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -20621,7 +21037,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005ca1442e")
 		(property "Reference" "R307"
 			(at 232.41 97.79 0)
@@ -20718,6 +21134,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R307")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -20731,7 +21151,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005ca14c78")
 		(property "Reference" "R318"
 			(at 232.41 196.85 0)
@@ -20828,6 +21248,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R318")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp no)
+					)
 				)
 			)
 		)
@@ -20841,7 +21265,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005ca4c696")
 		(property "Reference" "C332"
 			(at 83.82 190.246 0)
@@ -20905,7 +21329,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 88.9 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -20951,7 +21375,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005ca4d258")
 		(property "Reference" "C330"
 			(at 83.82 175.006 0)
@@ -21015,7 +21439,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 88.9 168.91 0)
 			(hide yes)
 			(show_name no)
@@ -21289,7 +21713,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005cadd8bc")
 		(property "Reference" "R312"
 			(at 94.488 181.356 0)
@@ -21697,7 +22121,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 138.43 189.23 0)
 			(hide yes)
 			(show_name no)
@@ -21920,7 +22344,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 88.9 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -22647,7 +23071,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 218.44 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -22836,7 +23260,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 224.79 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -23025,7 +23449,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 218.44 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -23214,7 +23638,7 @@
 				(justify left)
 			)
 		)
-		(property "Manufacturer" "Murata Electronics "
+		(property "Manufacturer" "Murata Electronics"
 			(at 224.79 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -23677,7 +24101,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005d1e8a5c")
 		(property "Reference" "C333"
 			(at 170.18 199.39 90)
@@ -24337,7 +24761,7 @@
 				)
 			)
 		)
-		(property "Value" "ULO-PH409-1*2SF11"
+		(property "Value" "PinHeader_1x02"
 			(at 353.8982 124.0536 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24379,7 +24803,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "ULO Electronic"
+		(property "Manufacturer" "Wurth Elektronik"
 			(at 349.25 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -24390,7 +24814,7 @@
 				)
 			)
 		)
-		(property "Manufacturer Part Number" "ULO-PH409-1x2SX1"
+		(property "Manufacturer Part Number" "61300211121"
 			(at 346.71 119.38 0)
 			(hide yes)
 			(show_name no)
@@ -24445,7 +24869,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "cc824cf6-9b7c-4684-801d-410c896a1445")
 		(property "Reference" "R320"
 			(at 218.44 218.44 90)
@@ -24457,7 +24881,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "560R"
 			(at 218.44 223.52 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24500,6 +24924,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07560RL"
+			(at 218.44 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "43049d92-4c72-444e-987a-d34578b4c642")
 		)
@@ -24511,6 +24957,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R320")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -24600,6 +25050,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -24730,7 +25202,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "41064da2-19e8-4dca-9ca6-5268ec20fde9")
 		(property "Reference" "R323"
 			(at 218.44 233.68 90)
@@ -24742,7 +25214,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "560R"
 			(at 218.44 238.76 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24785,6 +25257,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07560RL"
+			(at 218.44 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fc70ac91-fe24-4661-828a-ecffdc346ff1")
 		)
@@ -24796,6 +25290,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R323")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -24885,6 +25383,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -25015,7 +25535,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "074b5dde-dc9f-4ea8-b330-3626182327b4")
 		(property "Reference" "R326"
 			(at 218.44 248.92 90)
@@ -25027,7 +25547,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "560R"
 			(at 218.44 254 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25070,6 +25590,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07560RL"
+			(at 218.44 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8e6ad59e-3815-4753-bd63-1b31a5a420c5")
 		)
@@ -25081,6 +25623,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R326")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -25095,7 +25641,7 @@
 		)
 		(uuid "02aad0e4-b1fc-4ccb-a115-9aaf64ab1de3")
 	)
-	(hierarchical_label "HRTIM1_CHD1"
+	(hierarchical_label "HRTIM1_CHD2"
 		(shape input)
 		(at 224.79 251.46 0)
 		(effects
@@ -25170,6 +25716,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 256.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 256.54 0)
 			(hide yes)
 			(show_name no)
@@ -25300,7 +25868,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "2e3e6b45-9032-486f-92e4-79c5769c00f0")
 		(property "Reference" "R329"
 			(at 218.44 264.16 90)
@@ -25312,7 +25880,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "560R"
 			(at 218.44 269.24 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25355,6 +25923,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 218.44 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07560RL"
+			(at 218.44 266.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8ab61de6-055b-48c0-8004-6e26c77f4326")
 		)
@@ -25366,6 +25956,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R329")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -25380,7 +25974,7 @@
 		)
 		(uuid "e77cfa30-d92f-444a-96e6-09a58a80fc24")
 	)
-	(hierarchical_label "HRTIM1_CHD2"
+	(hierarchical_label "HRTIM1_CHD1"
 		(shape input)
 		(at 224.79 266.7 0)
 		(effects
@@ -25455,6 +26049,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 203.2 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 203.2 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0747KL"
 			(at 203.2 271.78 0)
 			(hide yes)
 			(show_name no)
@@ -25657,6 +26273,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 214.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0710KL"
+			(at 270.51 214.63 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "18774a13-dd4f-4231-b96d-eda91d015edb")
 		)
@@ -25822,6 +26460,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-0710KL"
+			(at 270.51 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bea47146-6497-41d1-a36a-de1ae3dc9d4d")
 		)
@@ -25913,8 +26573,8 @@
 			)
 		)
 	)
-	(hierarchical_label "HRTIM1_FLT4"
-		(shape output)
+	(hierarchical_label "ZVS_VTH_DAC"
+		(shape input)
 		(at 262.89 251.46 180)
 		(effects
 			(font
@@ -25939,171 +26599,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "636b7a82-dfe1-4b94-9d45-b92d634522f1")
-	)
-	(wire
-		(pts
-			(xy 270.51 248.92) (xy 270.51 251.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68decada-203c-42fc-904f-5913bce9ff0c")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 270.51 245.11 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "37ad3937-030c-45f0-980c-85a44ff0e991")
-		(property "Reference" "R333"
-			(at 273.685 243.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 273.685 246.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 270.51 245.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 270.51 245.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 270.51 245.11 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "294ed0e2-b04f-465f-9509-134b92ed8649")
-		)
-		(pin "2"
-			(uuid "7f9267c2-5644-430d-a23e-335d289e6927")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
-					(reference "R333")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 270.51 241.3 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "198e9814-521c-436e-8e0c-3c8d514dc657")
-		(property "Reference" "#PWR0361"
-			(at 270.51 237.49 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 270.51 236.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 270.51 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 270.51 241.3 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 270.51 241.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f6387a0a-3cca-4cba-b78f-7e49597a7b10")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
-					(reference "#PWR0361")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(wire
 		(pts
@@ -26136,7 +26631,7 @@
 				)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "100k"
 			(at 273.685 259.08 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26169,6 +26664,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 270.51 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 270.51 257.81 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100KL"
 			(at 270.51 257.81 0)
 			(hide yes)
 			(show_name no)
@@ -26311,7 +26828,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "100R"
 			(at 340.36 223.52 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26354,6 +26871,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 340.36 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100RL"
+			(at 340.36 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fd13f32b-e961-4f0c-a7fb-6fb10728f3e4")
 		)
@@ -26385,7 +26924,7 @@
 		(color 0 0 0 0)
 		(uuid "6701902f-3d95-485c-9df9-250a666bb14b")
 	)
-	(hierarchical_label "HRTIM1_EEV1"
+	(hierarchical_label "HRTIM1_EEV2"
 		(shape output)
 		(at 349.25 220.98 0)
 		(effects
@@ -26460,6 +26999,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 346.71 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 346.71 226.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100KL"
 			(at 346.71 226.06 0)
 			(hide yes)
 			(show_name no)
@@ -26602,7 +27163,7 @@
 				)
 			)
 		)
-		(property "Value" "0"
+		(property "Value" "100R"
 			(at 340.36 238.76 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -26645,6 +27206,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 340.36 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100RL"
+			(at 340.36 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0c775fdc-7e42-4414-86c0-e20a029c13b7")
 		)
@@ -26676,7 +27259,7 @@
 		(color 0 0 0 0)
 		(uuid "cd5d2098-d57c-460c-9715-bb0451161277")
 	)
-	(hierarchical_label "HRTIM1_EEV2"
+	(hierarchical_label "HRTIM1_EEV1"
 		(shape output)
 		(at 349.25 236.22 0)
 		(effects
@@ -26751,6 +27334,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 346.71 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 346.71 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100KL"
 			(at 346.71 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -26936,6 +27541,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 368.3 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "ERJ-PA2F1502X"
+			(at 368.3 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "3a12a2cf-835c-4c8a-9181-20b57fa63552")
 		)
@@ -26953,7 +27580,7 @@
 	)
 	(wire
 		(pts
-			(xy 368.3 227.33) (xy 368.3 229.87)
+			(xy 368.3 227.33) (xy 368.3 228.6)
 		)
 		(stroke
 			(width 0)
@@ -27041,6 +27668,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 368.3 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 368.3 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-071KL"
 			(at 368.3 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -27226,6 +27875,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Panasonic Electronic Components"
+			(at 388.62 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "ERJ-PA2F1502X"
+			(at 388.62 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "68741151-ac76-4c64-84ff-1f7522bae668")
 		)
@@ -27243,7 +27914,7 @@
 	)
 	(wire
 		(pts
-			(xy 388.62 227.33) (xy 388.62 229.87)
+			(xy 388.62 227.33) (xy 388.62 228.6)
 		)
 		(stroke
 			(width 0)
@@ -27331,6 +28002,28 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 388.62 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 388.62 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-071KL"
 			(at 388.62 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -27432,266 +28125,7 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "Connector:Conn_01x08_Pin")
-		(at 297.18 228.6 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0a64df48-9f50-4190-8b48-902da8c33e17")
-		(property "Reference" "J301"
-			(at 297.18 215.9 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x08_Pin"
-			(at 297.18 241.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
-			(at 297.18 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 297.18 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x08"
-			(at 297.18 228.6 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "59446b77-03e6-4447-ba37-f2e0e2bdba17")
-		)
-		(pin "2"
-			(uuid "38c6e48a-fac1-41f9-a47b-b60cc786f96f")
-		)
-		(pin "3"
-			(uuid "b1d8b8a8-af26-44e1-9337-16a33dbee09a")
-		)
-		(pin "4"
-			(uuid "c497d339-c988-4f9e-862c-b7e3bca22d7f")
-		)
-		(pin "5"
-			(uuid "2177387c-1cc0-4373-acd7-8a42b39b0b66")
-		)
-		(pin "6"
-			(uuid "214f05a0-3115-4bd7-ae3d-27632908f6b3")
-		)
-		(pin "7"
-			(uuid "08636d15-3a39-4b4e-86cd-207486f69808")
-		)
-		(pin "8"
-			(uuid "a949052f-931f-45b0-b93a-c057c181a0c4")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
-					(reference "J301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 302.26 220.98) (xy 304.8 220.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b468333d-8307-4d5d-b5f7-cd0f3538a134")
-	)
-	(label "VSWA_SENSE"
-		(at 304.8 220.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e24db8a9-0db8-4232-9551-57640a453f0f")
-	)
-	(wire
-		(pts
-			(xy 302.26 223.52) (xy 304.8 223.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad853e58-b9e2-4331-a37e-ea6a8d925de0")
-	)
-	(label "GND"
-		(at 304.8 223.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "417d3c62-2781-4c84-95f5-a9e1d5319f4b")
-	)
-	(wire
-		(pts
-			(xy 302.26 226.06) (xy 304.8 226.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ffcb8f7-6ae0-4083-b090-cbeffa761b4d")
-	)
-	(label "VSWB_SENSE"
-		(at 304.8 226.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c50b8a72-a285-49de-9ec1-7705eaa9a17e")
-	)
-	(wire
-		(pts
-			(xy 302.26 228.6) (xy 304.8 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2409923b-5c8a-41c1-9e08-8be500a7685e")
-	)
-	(label "GND"
-		(at 304.8 228.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "541b2bb0-321d-4460-afd0-b9fdc9af078a")
-	)
-	(wire
-		(pts
-			(xy 302.26 231.14) (xy 304.8 231.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6076c408-41cc-4c2f-a6af-6efd46a1a05b")
-	)
-	(label "ZVS_A_IN"
-		(at 304.8 231.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b7827a4c-8672-4fbd-8579-d1d12387a0d6")
-	)
-	(wire
-		(pts
-			(xy 302.26 233.68) (xy 304.8 233.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "42ba901e-5ec6-4787-899d-014e65be3f9f")
-	)
-	(label "ZVS_B_IN"
-		(at 304.8 233.68 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "580bb0fd-96e4-4340-bde2-07ab435c0f04")
-	)
-	(wire
-		(pts
-			(xy 302.26 236.22) (xy 304.8 236.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4c1c2281-2d04-43bf-80f0-8c261ff57869")
-	)
-		(hierarchical_label "HRTIM1_FLT3"
-		(shape output)
-		(at 304.8 236.22 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d6267713-79b8-404f-a262-c79414827244")
-	)
-	(wire
-		(pts
-			(xy 302.26 238.76) (xy 304.8 238.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae255247-684c-4e2e-8d26-e70e32fbbb73")
-	)
-		(hierarchical_label "HRTIM1_FLT4"
-		(shape output)
-		(at 304.8 238.76 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "21aeca07-0b82-4da8-b7ed-27b4c90f9d2f")
-	)
-	(junction
+			(junction
 		(at 370.84 228.6)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -27726,7 +28160,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "f2926e44-89e5-43b2-bfb7-394ec215dc3f")
 		(property "Reference" "R343"
 			(at 361.95 242.57 90)
@@ -27738,7 +28172,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100R"
 			(at 372.11 245.11 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27781,6 +28215,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 365.76 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100RL"
+			(at 365.76 245.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7000c6bc-4a34-40c4-a5d6-4a4d1e8e0069")
 		)
@@ -27792,6 +28248,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R343")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -27806,8 +28266,7 @@
 		)
 		(uuid "dde3c9e8-1d55-40f0-bac8-52f86ea9ad92")
 	)
-	(hierarchical_label "VSWA_CMP"
-		(shape output)
+	(label "VSWA_CMP"
 		(at 360.68 245.11 180)
 		(effects
 			(font
@@ -27826,7 +28285,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "0ff9d534-dbb9-4ba4-b24b-af0211731273")
 		(property "Reference" "C338"
 			(at 358.14 222.25 0)
@@ -27838,7 +28297,7 @@
 				)
 			)
 		)
-		(property "Value" "1p"
+		(property "Value" "3.3p"
 			(at 358.14 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27881,6 +28340,39 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 363.22 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GJM1555C1H3R3BB01D"
+			(at 363.22 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Value-critical (3.3 pF +/-0.1 pF C0G): do not substitute another value, do not leave out"
+			(at 363.22 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "016f2b02-4648-4629-bece-e04228189397")
 		)
@@ -27892,6 +28384,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "C338")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -27963,7 +28459,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "d2b0b75a-3abe-4af5-a3bf-74a6765521be")
 		(property "Reference" "R344"
 			(at 372.11 248.92 90)
@@ -27975,7 +28471,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100R"
 			(at 377.19 248.92 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28018,6 +28514,28 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Yageo"
+			(at 365.76 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07100RL"
+			(at 365.76 248.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "05b1c07c-f6d9-440a-9422-31b883206f39")
 		)
@@ -28029,6 +28547,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "R344")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -28043,8 +28565,7 @@
 		)
 		(uuid "5b917bc0-dc76-4205-83bb-e6ebfdfd7f42")
 	)
-	(hierarchical_label "VSWB_CMP"
-		(shape output)
+	(label "VSWB_CMP"
 		(at 360.68 248.92 180)
 		(effects
 			(font
@@ -28063,7 +28584,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "85a6435e-c573-4757-ae20-510eb2abb518")
 		(property "Reference" "C339"
 			(at 398.78 222.25 0)
@@ -28075,7 +28596,7 @@
 				)
 			)
 		)
-		(property "Value" "1p"
+		(property "Value" "3.3p"
 			(at 398.78 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28118,6 +28639,39 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 393.7 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GJM1555C1H3R3BB01D"
+			(at 393.7 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Value-critical (3.3 pF +/-0.1 pF C0G): do not substitute another value, do not leave out"
+			(at 393.7 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9340df8e-749c-438a-9fa0-3b9aec6a8593")
 		)
@@ -28129,6 +28683,10 @@
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
 					(reference "C339")
 					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
 				)
 			)
 		)
@@ -28204,5 +28762,2555 @@
 			(type default)
 		)
 		(uuid "4c3c4b61-63d7-4cb0-a838-8bfc1c622ce9")
+	)
+	(symbol
+		(lib_id "texas_instruments:TLV3601DBV")
+		(at 314.96 220.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "344aa416-7ef1-4035-bfcf-0694824289b4")
+		(property "Reference" "U308"
+			(at 318.77 214.63 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLV3601DBV"
+			(at 324.485 224.79 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 314.96 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv3601.pdf"
+			(at 314.96 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "325 MHz high-speed comparator, 2.5 ns propagation delay, push-pull output, SOT-23-5"
+			(at 314.96 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 314.96 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "TLV3601DBVR"
+			(at 314.96 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Three tented vias lie under each body (no solder there)"
+			(at 314.96 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ede0aeb5-ba05-406b-9be1-3fe652d673f0")
+		)
+		(pin "2"
+			(uuid "97a28af6-d72b-47f3-8cbe-35ce7b7aa564")
+		)
+		(pin "3"
+			(uuid "4eec41fa-86e1-4c8b-a4d9-5f07c0d57325")
+		)
+		(pin "4"
+			(uuid "ab9b4baa-9b8f-46e4-a904-3f5b8df2fb00")
+		)
+		(pin "5"
+			(uuid "e8d7273e-5556-4844-b210-ce5e2166f426")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "U308")
+					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 312.42 213.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "71ceff03-9a22-4374-bfe4-9b294a37eb8d")
+		(property "Reference" "#PWR0371"
+			(at 312.42 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 312.42 208.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 312.42 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 312.42 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 312.42 213.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9636866e-2549-400e-bfe5-685e9f9baaa6")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "#PWR0371")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 312.42 228.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "f9b8c73c-4ebd-43b9-b69b-4bb9b6828341")
+		(property "Reference" "#PWR0372"
+			(at 312.42 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 312.42 232.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 312.42 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 312.42 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 312.42 228.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6e3016cc-c5e1-48d0-af77-4b7bdcac2578")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "#PWR0372")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 307.34 218.44) (xy 304.8 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87caba68-586e-41a4-baa6-71fe73e56f81")
+	)
+	(wire
+		(pts
+			(xy 304.8 218.44) (xy 302.26 218.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85eb283b-29c4-4676-9d23-57f432968b55")
+	)
+	(junction
+		(at 304.8 218.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b14044d0-0653-4267-8246-07e4667f4a38")
+	)
+	(symbol
+		(lib_id "testpooint:TP1.0")
+		(at 304.8 218.44 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "c99f926e-38b8-4d87-9d49-98f5fdfd9537")
+		(property "Reference" "TP301"
+			(at 302.8 215 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TP1.0"
+			(at 307.34 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TP_1mm"
+			(at 302.26 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 304.8 218.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 304.8 218.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f6ae855b-9c13-4c34-b765-774dd541d4ef")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "TP301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VSWA_CMP"
+		(at 302.26 218.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "49fb8155-57b3-4085-8eb7-710262b8014a")
+	)
+	(wire
+		(pts
+			(xy 307.34 223.52) (xy 304.8 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d91a2714-67b3-4b73-8462-ff79a76d0e66")
+	)
+	(label "ZVS_VTH"
+		(at 304.8 223.52 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "806580d6-e3d6-4713-af99-ab9e9897b372")
+	)
+	(wire
+		(pts
+			(xy 322.58 220.98) (xy 335.28 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "848fdb7b-50ce-4f2f-804c-bf058912bd17")
+	)
+	(symbol
+		(lib_id "texas_instruments:TLV3601DBV")
+		(at 322.58 238.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2c8ca330-b0ea-4be6-b15d-571265cef40b")
+		(property "Reference" "U309"
+			(at 326.39 232.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLV3601DBV"
+			(at 332.105 242.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 322.58 238.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv3601.pdf"
+			(at 322.58 238.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "325 MHz high-speed comparator, 2.5 ns propagation delay, push-pull output, SOT-23-5"
+			(at 322.58 238.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 322.58 238.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "TLV3601DBVR"
+			(at 322.58 238.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Three tented vias lie under each body (no solder there)"
+			(at 322.58 238.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "95521b2f-bcbc-4ed4-8e42-6c592342d16e")
+		)
+		(pin "2"
+			(uuid "eb89610b-6cf0-4c97-8b7e-7ec2391f1c96")
+		)
+		(pin "3"
+			(uuid "a3ad36ac-511d-4501-8cc0-a2111684a5d7")
+		)
+		(pin "4"
+			(uuid "9933a253-00bb-4270-ac61-ec8e61b9b20b")
+		)
+		(pin "5"
+			(uuid "e97c7c48-fd76-4842-a67f-06feebd95b3a")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "U309")
+					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 320.04 231.14 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2bc74a88-0ff3-4aa9-af6b-4b43e6e0c95b")
+		(property "Reference" "#PWR0373"
+			(at 320.04 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 320.04 226.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 320.04 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 320.04 231.14 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 320.04 231.14 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "639fc8ba-f938-4fd4-80ee-b8723b2fed28")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "#PWR0373")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 320.04 246.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a48e2486-a0ad-46b3-ac08-a7f7f7271555")
+		(property "Reference" "#PWR0374"
+			(at 320.04 252.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 320.04 250.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 320.04 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 320.04 246.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 320.04 246.38 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e68e05b4-ef3d-484b-8125-a7b3e7b45d63")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "#PWR0374")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 314.96 236.22) (xy 309.88 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3e230a5-a3ff-4c5f-a7d9-cda31f3c6b6b")
+	)
+	(wire
+		(pts
+			(xy 309.88 236.22) (xy 307.34 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b76e124-9547-4d38-9bc6-7f54c48da649")
+	)
+	(junction
+		(at 309.88 236.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f9a658e-64fc-49ef-9064-b6b94b832606")
+	)
+	(symbol
+		(lib_id "testpooint:TP1.0")
+		(at 309.88 236.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "91274e24-fd24-4b81-9d1e-28f1bd7f0064")
+		(property "Reference" "TP302"
+			(at 308 238.5 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TP1.0"
+			(at 312.42 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TP_1mm"
+			(at 307.34 236.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 236.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 309.88 236.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3ffac1b2-f3fc-4a21-9f6e-dda6366090eb")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "TP302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "VSWB_CMP"
+		(at 307.34 236.22 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9b0d0c84-501f-451d-a7dc-8fcad1682ac5")
+	)
+	(wire
+		(pts
+			(xy 314.96 241.3) (xy 312.42 241.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4bb57b06-2cd6-4216-9928-08988195baa3")
+	)
+	(label "ZVS_VTH"
+		(at 312.42 241.3 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ea5e380c-6a3a-40b3-aba6-51c4b7ae6d01")
+	)
+	(wire
+		(pts
+			(xy 330.2 238.76) (xy 332.74 238.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f78e2487-8827-4311-9717-d404752edcde")
+	)
+	(wire
+		(pts
+			(xy 332.74 238.76) (xy 332.74 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d03cb467-2d9e-45b8-92d1-e43266b1b9b6")
+	)
+	(wire
+		(pts
+			(xy 332.74 236.22) (xy 335.28 236.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dce847ca-9e9d-4a01-b83f-db664ed41dc7")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 281.94 251.46 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "bef0b72a-052b-421b-b91a-d5647d78e917")
+		(property "Reference" "R345"
+			(at 278.13 248.92 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "560R"
+			(at 285.75 248.92 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 281.94 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 281.94 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 281.94 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-07560RL"
+			(at 281.94 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "aca3f154-de48-4ff2-9299-7cee03650e51")
+		)
+		(pin "2"
+			(uuid "5e71b03b-e6a6-45a2-b7ec-f0322b08ff08")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "R345")
+					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 128.27 189.23 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp yes)
+		(uuid "f6c63cde-1ca1-4f83-9633-ace4bd389b1a")
+		(property "Reference" "R346"
+			(at 124.46 186.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 132.08 186.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "RC0402FR-070RL"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "R346 (not fitted): link from CLK1 of the Si5351 (U306) to the clock input PF0 of the MCU. To clock the MCU from the Si5351: fit 0 ohm (RC0402FR-070RL), remove Y1, select HSE bypass in the firmware"
+			(at 128.27 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "efaf5175-0d2a-45c3-bb16-728a117b869d")
+		)
+		(pin "2"
+			(uuid "4d6f5ba7-635b-446a-9b39-113916c61cd9")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "R346")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 270.51 251.46) (xy 278.13 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "120ba1ef-b7cf-49e7-ba49-97963f6267b6")
+	)
+	(wire
+		(pts
+			(xy 285.75 251.46) (xy 287.02 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b12c747-95ec-439d-b265-852231de6a9a")
+	)
+	(wire
+		(pts
+			(xy 287.02 251.46) (xy 295.91 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a87dfa60-f069-49e3-91d5-69808b3eee1a")
+	)
+	(wire
+		(pts
+			(xy 295.91 251.46) (xy 298.45 251.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "654da0f1-2404-440a-a012-3b20777fe899")
+	)
+	(junction
+		(at 287.02 251.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9a37b4df-599e-414b-a674-c25630ea9dd6")
+	)
+	(junction
+		(at 295.91 251.46)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "98af3fdb-3607-416d-aacd-1dcc8dc6f687")
+	)
+	(label "ZVS_VTH"
+		(at 288.29 251.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1f26cd1f-0e2a-41cc-a5c3-be3aa6d62a98")
+	)
+	(symbol
+		(lib_id "testpooint:TP1.0")
+		(at 298.45 251.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "387cd4bd-6b21-4347-b875-054030a1abf2")
+		(property "Reference" "TP303"
+			(at 296.45 248.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TP1.0"
+			(at 300.99 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TP_1mm"
+			(at 295.91 251.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 298.45 251.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 298.45 251.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1e7b872d-b92a-4929-963f-2c7b0d5be83a")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "TP303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 287.02 255.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "51147ab4-4367-4c7d-aeaa-23d114396fc2")
+		(property "Reference" "C344"
+			(at 281.94 254 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n"
+			(at 281.94 256.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 287.02 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 287.02 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 287.02 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 287.02 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
+			(at 287.02 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "29a6835b-5c25-4cbe-8589-b44bcfa6df5b")
+		)
+		(pin "2"
+			(uuid "ffddd18c-cd47-45cf-b7ed-07ba2d4ec824")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "C344")
+					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 287.02 259.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d417d366-52df-439e-af11-6ef59e062a81")
+		(property "Reference" "#PWR0375"
+			(at 287.02 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 287.02 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 287.02 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 287.02 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 287.02 259.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "84ccb580-ac28-4587-8945-9c25c8f02d36")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "#PWR0375")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 295.91 255.27 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6e5f6083-42cd-4a15-9599-5776242c343d")
+		(property "Reference" "C345"
+			(at 291.5 254 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n"
+			(at 291.5 256.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 295.91 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 295.91 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 295.91 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 295.91 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
+			(at 295.91 255.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a9ec85b4-51c8-4f27-a5a8-13d529dea953")
+		)
+		(pin "2"
+			(uuid "972e5208-cf28-4034-82e1-476979b888ab")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "C345")
+					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 295.91 259.08 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "62451b00-9f7d-4737-bddd-9839c3d906da")
+		(property "Reference" "#PWR0376"
+			(at 295.91 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 295.91 262.89 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 295.91 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 295.91 259.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 295.91 259.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "73f9f4d9-1ebd-427f-9100-358dde40d56c")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "#PWR0376")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 281.94 273.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1594c489-82a4-4a5d-a1bc-795a2295459a")
+		(property "Reference" "C342"
+			(at 276.86 271.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n"
+			(at 276.86 274.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 281.94 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 281.94 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 281.94 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 281.94 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
+			(at 281.94 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7ab8f7d6-a5cf-4de9-96be-8f5a79ed8e81")
+		)
+		(pin "2"
+			(uuid "f7b86475-eccd-41ce-961e-942645643b04")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "C342")
+					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 281.94 269.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "11e48b1d-5b5c-4425-82ec-219075a6ce7d")
+		(property "Reference" "#PWR0377"
+			(at 281.94 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 281.94 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 281.94 269.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 281.94 269.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 281.94 269.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "58d2d7c2-bfb8-4011-8874-3e1f8d31ffb3")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "#PWR0377")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 281.94 276.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e3dffa09-a95d-4af2-836f-903dd9048d64")
+		(property "Reference" "#PWR0378"
+			(at 281.94 283.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 281.94 280.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 281.94 276.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 281.94 276.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 281.94 276.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8098272e-d6e1-4a8b-8e8e-bea0e5e16cbc")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "#PWR0378")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 292.1 273.05 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c2c0cb2b-ee55-42cd-8dec-7a4c09b5e0e5")
+		(property "Reference" "C343"
+			(at 287.02 271.78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100n"
+			(at 287.02 274.32 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 292.1 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 292.1 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 292.1 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 292.1 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GCM155R71H104KE02D"
+			(at 292.1 273.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "db21dcf9-2f9c-4bf9-9764-5370accf7472")
+		)
+		(pin "2"
+			(uuid "2ee197d8-2c50-4567-bebf-0d1ce19aad0a")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "C343")
+					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 292.1 269.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3fce73d9-0458-4f6a-8129-b45d208d4521")
+		(property "Reference" "#PWR0379"
+			(at 292.1 265.43 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 292.1 264.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 292.1 269.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 292.1 269.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 292.1 269.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1832350d-c961-43a3-8463-5eb74a221476")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "#PWR0379")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 292.1 276.86 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "25a2a4e2-e58c-49ee-acce-9f570ec7071a")
+		(property "Reference" "#PWR0380"
+			(at 292.1 283.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 292.1 280.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 292.1 276.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 292.1 276.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 292.1 276.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fbb8040d-fbc4-4270-84c1-13c3a8fbf1ca")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "#PWR0380")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 270.51 220.98) (xy 278.13 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bac8ac30-80c2-49a6-aab7-4c46c0e03cec")
+	)
+	(symbol
+		(lib_id "testpooint:TP1.0")
+		(at 278.13 220.98 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files no)
+		(dnp no)
+		(uuid "2c8f75ab-138c-4866-93fb-2299bb8af573")
+		(property "Reference" "TP304"
+			(at 276.13 217.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TP1.0"
+			(at 280.67 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TP_1mm"
+			(at 275.59 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 278.13 220.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 278.13 220.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "16cd2aaa-f5b7-4ac1-811c-ea90f3b40e5a")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "TP304")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 363.22 233.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b3f87ae9-e7c9-4fb9-a648-b59be4d464a2")
+		(property "Reference" "C340"
+			(at 358.14 232.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47p"
+			(at 358.14 234.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 363.22 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 363.22 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 363.22 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 363.22 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GCM1555C1H470GA16D"
+			(at 363.22 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Must be fitted (lower leg of the divider: limits the voltage at the comparator input). 47 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H470GB01D, GCM1555C1H470JA16D"
+			(at 363.22 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a3ae2acd-9c84-4382-87e4-cb51f66c62be")
+		)
+		(pin "2"
+			(uuid "7ee5b117-fbde-42f3-b791-4c951fc0d2d1")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "C340")
+					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 363.22 229.87) (xy 368.3 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25dc7e77-1e5d-4f07-9474-f291018eed86")
+	)
+	(wire
+		(pts
+			(xy 363.22 237.49) (xy 368.3 237.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "206698c5-192e-4e65-b697-14aa127bff66")
+	)
+	(junction
+		(at 368.3 229.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bfbae251-3682-4a57-aad4-c46308675b74")
+	)
+	(junction
+		(at 368.3 237.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a8eee230-17fa-4f21-aa01-5e125c42eb83")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 383.54 233.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cf3d2fec-9d13-4844-8dea-6b18f61cc348")
+		(property "Reference" "C341"
+			(at 378.46 232.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "47p"
+			(at 378.46 234.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 383.54 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 383.54 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 383.54 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 383.54 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer Part Number" "GCM1555C1H470GA16D"
+			(at 383.54 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Assembly Note" "Must be fitted (lower leg of the divider: limits the voltage at the comparator input). 47 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H470GB01D, GCM1555C1H470JA16D"
+			(at 383.54 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0f683cbe-be0a-4c0c-b741-7086efb77698")
+		)
+		(pin "2"
+			(uuid "85db7522-e4e7-48b4-9f73-4dcaca1f7834")
+		)
+		(instances
+			(project "WPT-01-TRANSMITTER"
+				(path "/8d93dcf8-c351-4228-94c4-516db1fed557/00000000-0000-0000-0000-00005d28fbb5"
+					(reference "C341")
+					(unit 1)
+					(variant
+						(name "Legacy")
+						(dnp yes)
+					)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 383.54 229.87) (xy 388.62 229.87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea6ec0ef-3a77-46fd-8d75-8ab117401fc0")
+	)
+	(wire
+		(pts
+			(xy 383.54 237.49) (xy 388.62 237.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da8996c0-b0cf-431c-b632-cb0208095309")
+	)
+	(junction
+		(at 388.62 229.87)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e242c15-c5d1-4692-97b8-a063bb272713")
+	)
+	(junction
+		(at 388.62 237.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "261a6d2e-03bb-42fe-bb7f-f6bfdd830621")
+	)
+	(text "ZVS detection, revision 7:\nonly the upper legs (15k || 3.3p) and R343 / R344\nstay at the half bridges. The lower legs\n(1k || 47p) sit at the inputs of U308 / U309.\nThreshold ZVS_VTH: PB11 = OPAMP6 output,\nfollower of DAC3_CH1.\nLeg A reports to HRTIM1_EEV2, leg B to HRTIM1_EEV1.\nC342 / C343: supply decoupling of U308 / U309."
+		(exclude_from_sim no)
+		(at 226.06 285 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "17a913d8-6b4c-4397-b124-05c61353a497")
+	)
+	(label "VSWA_CMP"
+		(at 368.3 229.87 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "7c6badb4-652d-4d07-aa57-8e4f2c1faaad")
+	)
+	(label "VSWB_CMP"
+		(at 388.62 229.87 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8a42508d-7fd3-4b20-ae01-17ebe720f0e3")
+	)
+	(wire
+		(pts
+			(xy 120.65 189.23) (xy 124.46 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "834ef146-2f0b-4bea-b303-a21407da9498")
+	)
+	(global_label "HSE_EXT"
+		(shape output)
+		(at 132.08 189.23 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e323e497-a40a-48e5-8251-c1f89ecb5291")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 133.35 189.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+	)
+	(text "Populations\nDefault (drawn here, ordered): HRTIM build. The MCU drives the gate drivers through\nR320, R323, R326, R329; U308 / U309 with C338 .. C345, R343 .. R345 report the switch nodes.\nVariant \"Legacy\" (fall-back, the 2020 drive from the Si5351): fit D305, D306, D311, D312,\nR305, R307, R315, R318 and take out R320, R323, R326, R329 (the 74LVC outputs are 5 V, the MCU\npins take 3.6 V); U308 / U309 and their parts are not needed then.\nNever fit both sets."
+		(exclude_from_sim no)
+		(at 25.4 262.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "84e64feb-bb56-40ad-be16-b67cf4155b0e")
 	)
 )

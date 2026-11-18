@@ -1,0 +1,87 @@
+(footprint "Screw_PTH_3mm"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Plated mounting hole for an M3 screw: drill 3.2 mm, pad 5.5 mm")
+	(tags "screw pth 3mm")
+	(property "Reference" "REF**"
+		(at 0 -2.55 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b633a700-c784-488c-9656-a090a0c3aab9")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Screw_PTH_3mm"
+		(at 0 -1.55 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dfc7c05d-4115-424c-bd23-2503cf7979c9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "307f1dae-db6c-40b3-936e-b060804080ad")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e999f8b3-6055-4e08-89cc-1f56cfac5e06")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 3 0)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "94531b53-09ea-47fe-9d8f-7a3646cb6cbb")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 3 0)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "d4cd7144-283d-4383-859b-d1aff48938b1")
+	)
+	(pad "1" thru_hole circle
+		(at 0 0)
+		(size 5.5 5.5)
+		(drill 3.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "ef1d25c8-4bce-43ae-8899-dba67fc9f09d")
+	)
+	(embedded_fonts no)
+)

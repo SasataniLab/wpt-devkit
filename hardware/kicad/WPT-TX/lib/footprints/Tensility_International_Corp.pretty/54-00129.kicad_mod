@@ -1,0 +1,311 @@
+(footprint "54-00129"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Wuerth electronics barrel jack connector (5.5mm outher diameter, inner diameter 2.05mm or 2.55mm depending on exact order number), See: http://katalog.we-online.de/em/datasheet/6941xx301002.pdf")
+	(tags "connector barrel jack")
+	(property "Reference" "REF**"
+		(at 0.51 -7.5 90)
+		(layer "F.SilkS")
+		(uuid "6d175624-8e15-4869-b1f0-f17fb83ec209")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "54-00129"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "9a1221b2-ab35-4077-afdb-b619ebc3da6b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7cf53b54-f608-4558-8552-d96abf0de785")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d676c2c3-3373-443d-9253-fd4ec8554181")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.94 -4.5)
+		(end 7.2 -4.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "992967a3-d158-4d90-b993-77312c59638d")
+	)
+	(fp_line
+		(start 1.55 4.6)
+		(end -4.94 4.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f5503628-6131-4bcb-8f10-580b3fc607a5")
+	)
+	(fp_line
+		(start 7.2 -4.5)
+		(end 7.2 -2.55)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "453f3988-cea8-4d6c-acae-0cc21f5cd723")
+	)
+	(fp_line
+		(start 7.2 2.55)
+		(end 7.2 4.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cbfbef8f-d558-4865-b011-cde614893349")
+	)
+	(fp_line
+		(start 7.2 4.6)
+		(end 5.65 4.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c14295a3-7794-49c2-b6e8-dd17c36e4ec8")
+	)
+	(fp_line
+		(start 7.6 -4.9)
+		(end 6 -4.9)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "58de6dc3-ca67-4eed-be05-1392f71a5459")
+	)
+	(fp_line
+		(start 7.6 -3.2)
+		(end 7.6 -4.9)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ce1f00cb-8e43-4564-ad0a-e7bbd4a50f4f")
+	)
+	(fp_line
+		(start -7.45 -4.75)
+		(end -7.45 4.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0c768a67-3698-4de4-8cad-7b353e028f82")
+	)
+	(fp_line
+		(start -7.45 4.75)
+		(end 0.8 4.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e07db04e-52b2-49ff-839b-89211bbad729")
+	)
+	(fp_line
+		(start 0.8 5.85)
+		(end 0.8 4.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "45f62667-9b90-45f9-a26d-1ec8cef9d8c9")
+	)
+	(fp_line
+		(start 5.8 4.75)
+		(end 7.45 4.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e2535080-17a3-4dfb-981d-f2ecc968e2d4")
+	)
+	(fp_line
+		(start 5.8 5.85)
+		(end 0.8 5.85)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "624b26a4-283f-4765-ad3f-e05f3d30bd2b")
+	)
+	(fp_line
+		(start 5.8 5.85)
+		(end 5.8 4.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "e154f68c-6564-4548-8996-bd0ccdc038bc")
+	)
+	(fp_line
+		(start 7.45 -4.75)
+		(end -7.45 -4.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "005580f1-9510-40ba-9cf5-a9ed1ce77af5")
+	)
+	(fp_line
+		(start 7.45 4.75)
+		(end 7.45 -4.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "698beff8-0962-4cd6-9344-259f63f953a9")
+	)
+	(fp_line
+		(start -7.2 -4.5)
+		(end 7.2 -4.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "9f93ceef-63d9-4da0-b73f-028faae18a63")
+	)
+	(fp_line
+		(start -7.2 4.5)
+		(end -7.2 -4.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "8ac838ce-45e0-4bee-992b-64e0c0047433")
+	)
+	(fp_line
+		(start -2 0)
+		(end 2 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "972c9a62-6a8f-4460-8e44-fdab62a715f8")
+	)
+	(fp_line
+		(start 0 -2)
+		(end 0 2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6ee7839e-df5a-4bf2-b644-60d66bd8ae2d")
+	)
+	(fp_line
+		(start 7.2 4.5)
+		(end -7.2 4.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "50b33772-5627-4364-a1d7-4b8330c7826a")
+	)
+	(fp_line
+		(start 7.2 4.5)
+		(end 7.2 -4.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "80920e16-1366-4c1b-ac5d-369f36b5cd25")
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.94 3.55 0)
+		(layer "F.Fab")
+		(uuid "0bae74d7-f628-4fa2-b756-c1e421c19bbb")
+		(effects
+			(font
+				(size 0.3 0.3)
+				(thickness 0.05)
+			)
+		)
+	)
+	(pad "1" thru_hole rect
+		(at 6.4 0 270)
+		(size 4.5 1.8)
+		(drill oval 3.5 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c13b0f87-30da-478e-93b0-e7382b21c00d")
+	)
+	(pad "2" thru_hole oval
+		(at 0.5 0 270)
+		(size 3.5 1.8)
+		(drill oval 2.5 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "cfded757-daaa-42af-96d3-106885915862")
+	)
+	(pad "3" thru_hole oval
+		(at 3.6 4.7)
+		(size 3.5 1.8)
+		(drill oval 2.5 0.8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "5fbe0e40-888a-4011-9f8d-0142aa206984")
+	)
+	(embedded_fonts no)
+	(model "${KISYS3DMOD}/Tensility_International_Corp.3dshapes/54-00129.STEP"
+		(offset
+			(xyz -7.2 0 6.5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 90)
+		)
+	)
+)
