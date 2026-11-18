@@ -122,3 +122,18 @@ Helpers: `router.py` (the grid router itself), `pcbdump.py` / `pcbview.py` (boar
 - The router's own output is a staircase on the 0.05 mm raster. `smooth45.py` turns it into long 0 / 45 / 90 degree pieces afterwards (`smooth.py`, used before, straightened to any angle).
 - `shorten.py` moves one run at a time with both ends fixed. It cannot see a detour that comes from where a part or a via stands, and it would pull a pair apart (each member takes its own shortest path), so those cases are hand work (`mech9.py`). New copper keeps 0.1 mm more than the rule; where the old run was tighter (a lane between pads) the new one may only lie exactly on the old line there.
 - `pcbnew`'s `Remove()` leaves the Python bindings unstable in KiCad 10.0.8 (board loads start to fail in the same process). Rip-up is therefore done by deleting the track / via blocks from the board file itself (`nego.rip_text`).
+
+## Revision 7a (2026-11-18): joints and detours after the hand edit `8d7f39e`
+
+Start from the board of `8d7f39e`. Every step writes a new file; copy the last one into the project (do not let `pcbnew.SaveBoard` write into the project directory: it replaces `.kicad_pro` with defaults).
+
+| Step | Command | What it does |
+|---|---|---|
+| check | `joints.py BOARD [--all]` | Track ends that are connected only because copper overlaps: inside a pad or via but off its centre, on the middle of another piece, inside another piece's copper; also two pieces in one line with a plain point between them. Without `--all` only the nets of the STM32 part |
+| 1 | `weld.py IN OUT` | Repairs those by rule (extend along the own line, shift sideways by at most 0.25 mm with the neighbour following, cut at the crossing, split at a T, merge collinear pieces). 0 / 45 / 90 degrees kept |
+| 2 | `mech14.py IN OUT` | The places where the rule gave a poor shape, by hand; R336, C340, C344, R346 move by 0.005 to 0.03 mm |
+| 3 | `mech15.py IN OUT` | The last eleven ends (encoder RC parts, I2C pull-ups, USB D-, crystal); R4, R5, C13, C14, C11 move by 0.01 to 0.025 mm |
+| 4 | `shorten.py IN --replay shorten_rev7a.json --apply OUT` | Four detours: HV_EN_SW on the back (61.6 -> 53.3 mm), SDA_3.3V front, SCL_3.3V back, Net-(U301-A) front. Found with `--all-copper --min 0.15`; left out on purpose: `~{WLAT}` (would leave its bundle of three), NRST and GPIO_VUSB_SENSE (0.3 mm gain, no fewer corners), pairs, sense lines, and everything outside the STM32 part |
+| 5 | `kicad-cli pcb drc --refill-zones --save-board` in a scratch copy, then copy the board into the project | Zones filled |
+
+Result: `joints.py` reports nothing for the STM32 part; DRC with parity as before (one old unconnected item at CN301). The two kinks that remain in HV_EN_SW keep the clearance to J201 pad 2 and CN207 pad 1.
