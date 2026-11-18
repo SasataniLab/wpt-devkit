@@ -1,0 +1,347 @@
+(footprint "TFT_0.96in_80x160_FPC13_P0.7mm_Folded"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "0.96 inch IPS TFT 80 x 160 with ST7735S: Wisevision N096-1608TBBIG11-H13, Midas MDT0096A2IS-SPI, Focus LCDs E096GA-SW500-N. Module 13.5 x 27.95 x 1.5 mm, flex tail with 13 contacts on 0.7 mm pitch folded back under the module and soldered to the board. Origin: centre of the module; the tail folds round the edge at +y. Seen from above with that edge at the bottom, contact 1 is on the right. Solder the tail first (its two holes over the two circles), cover the joints with polyimide tape, then fold the module over. The back of the module is a metal frame: no bare copper under it")
+	(tags "TFT IPS 0.96 ST7735S FPC")
+	(property "Reference" "REF**"
+		(at 0 -15.175 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TFT_0.96in_80x160_FPC13_P0.7mm_Folded"
+		(at 0 16.755 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd exclude_from_pos_files)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -6.75 -13.975)
+		(end 6.75 13.975)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -4 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -6.2 0.675)
+		(end 6.2 0.675)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 6.2 0.675)
+		(end 6.2 5.675)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 6.2 5.675)
+		(end 4.6 5.675)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 4.6 5.675)
+		(end 4.6 14.775)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start 4.6 14.775)
+		(end -4.6 14.775)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -4.6 14.775)
+		(end -4.6 5.675)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -4.6 5.675)
+		(end -6.2 5.675)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_line
+		(start -6.2 5.675)
+		(end -6.2 0.675)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+	)
+	(fp_text user "tail folded under"
+		(at 0 7.675 0)
+		(layer "F.Fab")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+		)
+	)
+	(fp_rect
+		(start -5.4 -12.275)
+		(end 5.4 9.425)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+	)
+	(fp_text user "active area 10.8 x 21.7"
+		(at 0 -10.275 0)
+		(layer "Dwgs.User")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.1)
+			)
+		)
+	)
+	(fp_line
+		(start -6.2 0.675)
+		(end -4.9 0.675)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_circle
+		(center -5.2 4.675)
+		(end -4.7 4.675)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -6.95 -12.375)
+		(end -6.95 -10.375)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start -6.95 10.375)
+		(end -6.95 12.375)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 6.2 0.675)
+		(end 4.9 0.675)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_circle
+		(center 5.2 4.675)
+		(end 5.7 4.675)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 6.95 -12.375)
+		(end 6.95 -10.375)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_line
+		(start 6.95 10.375)
+		(end 6.95 12.375)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+	)
+	(fp_text user "1"
+		(at 5.55 1.975 0)
+		(layer "F.SilkS")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_rect
+		(start -7 -14.225)
+		(end 7 15.605)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+	)
+	(pad "1" smd rect
+		(at 4.2 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "2" smd rect
+		(at 3.5 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "3" smd rect
+		(at 2.8 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "4" smd rect
+		(at 2.1 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "5" smd rect
+		(at 1.4 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "6" smd rect
+		(at 0.7 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "7" smd rect
+		(at 0 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "8" smd rect
+		(at -0.7 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "9" smd rect
+		(at -1.4 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "10" smd rect
+		(at -2.1 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "11" smd rect
+		(at -2.8 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "12" smd rect
+		(at -3.5 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(pad "13" smd rect
+		(at -4.2 1.175)
+		(size 0.4 4)
+		(layers "F.Cu" "F.Mask")
+		(zone_connect 0)
+	)
+	(embedded_fonts no)
+)
