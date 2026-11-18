@@ -2,14 +2,23 @@
 
 `fab/out/` は git 管理外なので、発注にそのまま使える一式をここに置いてある。作り直すときは各プロジェクトで `sh fab/export.sh` を実行する（内容と PCBWay への指定は各 `fab/README.md`）。
 
-| ファイル | 中身 |
+| 置き場所 | 中身 |
 |---|---|
-| `WPT-01-TRANSMITTER_rev8_HRTIM.zip` | 送電基板 改訂 8 + レビュー後の変更（基板のシルク表示は「WPT TX v0.2.0」。36 V までの入力、VPP 35 V まで、I2C を 3.3 V に統一、試作用の部品を整理、BOOT0 は押しボタン SW4。`docs/stm32-tx/preorder_review.md` 10 章）、HRTIM 構成。`gerber/`（4 層のガーバー、ドリル）、`assembly/HRTIM/`（`bom_HRTIM_pcbway.csv` が送る BOM、`placement_HRTIM.csv` が部品座標）、`doc/`（回路図、実装図） |
+| `WPT-01-TRANSMITTER_rev8/` | 送電基板 改訂 8 + レビュー後の変更（基板のシルク表示は「WPT TX v0.2.0」）、HRTIM 構成。**PCBWay に渡すファイルだけ**を、渡す欄ごとに置いた（下の表） |
 | `WPT-TX-DISPLAY_v0.2.zip` | 表示基板 v0.2（仮設計）。`gerber/`（2 層）、`assembly/`（`bom_pcbway.csv`、`placement.csv`）、`doc/` |
+
+送電基板のファイルと、PCBWay の注文画面の欄:
+
+| ファイル | 渡す欄 |
+|---|---|
+| `gerber_WPT-01-TRANSMITTER_rev8.zip` | ガーバー（基板製造）。4 層のガーバーとドリルだけが入っている |
+| `bom.csv` | 部品リスト（BOM）。型番ごとに 1 行、実装指示とジャンパの行つき |
+| `placement.csv` | Centroid（部品座標） |
+| `assembly_front.pdf`、`assembly_back.pdf`、`schematic.pdf` | 他のファイル（任意）。実装図は実装しない部品に × 印 |
 
 - 送電基板: 回路図の ERC 0 件、基板の DRC（回路図との照合つき）で未接続 0 件、新しい指摘 0 件。発注前の確認事項は `docs/stm32-tx/preorder_review.md`。
 - 表示基板: ERC 0 件、DRC 0 件。表示器 DS1 は実装業者に付けさせない（BOM では LOOSE）。
-- この zip は基板ファイルを変えたら古くなる。変えたら出力し直して置き換える。
+- これらは基板ファイルを変えたら古くなる。変えたら `sh fab/export.sh` で出力し直して置き換える（`fab/out/gerber` を zip に、`assembly/HRTIM/bom_HRTIM_pcbway.csv` を `bom.csv` に、`placement_HRTIM.csv` を `placement.csv` に）。
 
 ## 電源（送電基板）
 

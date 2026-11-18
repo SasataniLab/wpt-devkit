@@ -634,3 +634,7 @@ KiCad の画面で DRC を回すと 59 件（エラー 14、警告 45）が出�
 
 結果: DRC（回路図との照合、ライブラリとの照合つき）は **0 件**。ERC 0 件。作り方は `tools/layout/mech23.py` と `libsilk.py`。
 
+
+### 10.13 発注用ファイルの置き方（2026-11-18）
+
+1 つの zip（ガーバー・BOM・座標・参考用 CSV が同居）は、PCBWay の画面で渡すものを取り違えやすかった。`hardware/kicad/release/WPT-01-TRANSMITTER_rev8/` に、渡すファイルだけを欄ごとに置いた: `gerber_WPT-01-TRANSMITTER_rev8.zip`（ガーバーとドリルだけ）、`bom.csv`、`placement.csv`、図面の PDF 3 枚。以前の `WPT-01-TRANSMITTER_rev8_HRTIM.zip` は無くした。

@@ -1,0 +1,76 @@
+Item #,Designator,Qty,Manufacturer,Mfg Part #,Description / Value,Package/Footprint,Type,Your Instructions / Notes
+1,"C1,C2,C3,C4,C8,C10,C203,C204,C207,C208,C209,C211,C301,C302,C303,C311,C312,C317,C318,C319,C321,C328,C329,C334,C342,C343,C344,C345",28,Murata Electronics,GCM155R71H104KE02D,capacitor 100n / 0.1u/50(X7R),0402,SMD,
+2,C5,1,Murata Electronics,GRM155R60J475ME47D,capacitor 4.7u,0402,SMD,
+3,"C6,C16,C221,C223",4,Yageo,CC0402KRX7R9BB103,capacitor 10n / 10n/50(X7R),0402,SMD,
+4,"C7,C9",2,Samsung Electro-Mechanics,CL05A105KA5NQNC,capacitor 1u,0402,SMD,
+5,"C11,C12",2,Murata Electronics,GRM1555C1H120JA01D,capacitor 12p,0402,SMD,
+6,"C201,C202,C212,C218,C220,C222",6,Samsung Electro-Mechanics,CL31B106KBHNNNE,capacitor 10u/50(X7R),1206,SMD,
+7,"C205,C206",2,Murata Electronics,GRM155R71H223KA12D,capacitor 0.022u/50(X7R),0402,SMD,
+8,"C213,C214,C314,C335",4,Samsung Electro-Mechanics,CL21B105KBFNNNG,capacitor 1u/50(X7R),0805,SMD,
+9,"C215,C216",2,Murata Electronics,GRM188R61E106MA73D,capacitor 10u/25(X5R),0603,SMD,
+10,"C217,C219",2,Samsung Electro-Mechanics,CL21A226MOCLRNC,capacitor 22u/16(X5R),0805,SMD,
+11,C224,1,Panasonic,EEE-FK1H101P,"100u/50(AL) - Aluminium electrolytic capacitor, 100 uF, 50 V, 8 x 10.2 mm, surface mount",CP_Elec_8x10,SMD,"Polarised: pad 1 is +, the marked side of the can goes to GND. Damps the plug-in overshoot of the 36 V input: must be fitted. Alternative: Nichicon UCD1H101MNL1GS"
+12,"C304,C320",2,Yageo,CC0402KRX7R8BB223,capacitor 22n/25(X7R),0402,SMD,
+13,"C305,C306,C307,C308,C322,C323,C324,C325",8,Samsung Electro-Mechanics,CL10B103KC8WPNC,capacitor 10n/100(X7R),0603,SMD,
+14,"C309,C310,C326,C327",4,Samsung Electro-Mechanics,CL32B225KCJZW6E,capacitor 2.2u/100(X7R),1210,SMD,
+15,"C313,C331",2,Samsung Electro-Mechanics,CL05A475MO5NUNC,capacitor 4.7u/16(X5R),0402,SMD,
+16,"C315,C316,C336,C337",4,Murata Electronics,GCM1555C1H220JA16D,capacitor 22p/50(C0G),0402,SMD,
+17,"C338,C339",2,Murata Electronics,GJM1555C1H3R3BB01D,capacitor 3.3p,0402,SMD,"Value-critical (3.3 pF +/-0.1 pF C0G): do not substitute another value, do not leave out"
+18,"C340,C341",2,Murata Electronics,GCM1555C1H470GA16D,capacitor 47p,0402,SMD,"Must be fitted (lower leg of the divider: limits the voltage at the comparator input). 47 pF C0G 50 V 0402, 5 % or better; alternatives: GJM1555C1H470GB01D, GCM1555C1H470JA16D"
+19,CN203,1,Wurth Elektronik,61300311121,PinHeader_1x03,"pin header 1x03, 2.54 mm",THT,
+20,"CN208,CN302,J202",3,Wurth Elektronik,61300211121,PinHeader_1x02,"pin header 1x02, 2.54 mm",THT,
+21,CN301,1,RF Solutions,CON-SMA-EDGE-S,CON-SMA-EDGE-S,CON-SMA-EDGE-S,THT,
+22,D201,1,OptoSupply,OSR5JA3Z74A,OSR5JA3Z74A,LED_D3.0mm,THT,"Or equivalent: 3 mm red LED, diffused, high brightness (it runs at 0.6 mA), 2.54 mm lead pitch"
+23,"D202,D203,D204",3,onsemi,S210FA,S210FA,SOD-123FA,SMD,
+24,"D301,D307",2,onsemi,MM3Z5V1T1G,MM3Z5V1T1G,SOD-323,SMD,
+25,"D302,D308",2,STMicroelectronics,BAT54KFILM,BAT54KFILM,SOD-523,SMD,
+26,"D303,D304,D309,D310",4,Diodes Incorporated,SDM03U40-7,SDM03U40-7,SOD-523,SMD,
+27,"FB201,FB202",2,Murata Electronics,BLM18PG330SN1D,BLM18PG330SN1D,0603,SMD,
+28,J2,1,Wurth Elektronik,61301221121,"Conn_02x06_Odd_Even - Pin header, 2 x 6, 2.54 mm. Pins 1, 3 ... 11 form one row and 2, 4 ... 12 the other; drawn here as one column","pin header 2x06, 2.54 mm",THT,
+29,J3,1,Samtec,FTSH-107-01-L-D-K,"STDC14 - ST Debug Connector, standard ARM Cortex-M SWD and JTAG interface plus UART","header 2x07, 1.27 mm, keyed shroud",THT,Keying slot of the shroud faces the board edge; pin 1 is the square pad at the north-west corner
+30,J5,1,GCT,USB4105-GF-A,"USB4105-GF-A - USB 2.0-only Type-C Receptacle connector, 16 pin (GCT USB4105)","USB-C receptacle, 16 pads, top mount",SMD,Solder the four shell stakes in their plated slots (no paste is printed there)
+31,J201,1,Tensility International Corp,54-00130,54-00130,54-00129,THT,"For plugs 5.5 x 2.5 mm (XP Power ACM36US36). Land pattern identical to 54-00129 (the version for 5.5 x 2.1 mm plugs), whose footprint is used"
+32,"L201,L202",2,Taiyo Yuden,LSXND5050YAL4R7NMG,inductor 4.7uH,5.0 x 5.0 mm,SMD,
+33,"L301,L302",2,Coilcraft,2929SQ-391JEC,inductor 390nH,7.5 x 7.2 mm air core,SMD,
+34,"Q301,Q304",2,EPC,EPC2038,EPC2038,BGA 0.9 x 0.9 mm (bumped die),SMD,
+35,"Q302,Q303,Q305,Q306",4,EPC,EPC2007C,EPC2007C,LGA 1.7 x 1.1 mm (bumped die),SMD,
+36,"R1,R213,R219,R220,R221,R222,R224,R313",8,Yageo,RC0402FR-070RL,resistor 0,0402,SMD,
+37,"R2,R7,R206,R209,R212,R225,R234,R314,R332",9,Yageo,RC0402FR-0710KL,resistor 10k / 10kF,0402,SMD,
+38,"R4,R5,R207",3,Yageo,RC0402FR-072K2L,resistor 2.2k / 2.2kF,0402,SMD,
+39,R6,1,Yageo,RC0402FR-073K3L,resistor 3.3k,0402,SMD,
+40,R8,1,Yageo,RC0402FR-0715KL,resistor 15k,0402,SMD,
+41,"R9,R10",2,Yageo,RC0402FR-075K1L,resistor 5.1k,0402,SMD,
+42,"R12,R320,R323,R326,R329,R345",6,Yageo,RC0402FR-07560RL,resistor 560R,0402,SMD,"R12: back side, about 1 mm from the joints of J3 pin 13 and of a lug of SW2; keep it in place when these are soldered"
+43,"R13,R340,R342",3,Yageo,RC0402FR-071KL,resistor 1k,0402,SMD,
+44,R201,1,Yageo,RC0402FR-0775KL,resistor 75kF,0402,SMD,
+45,R202,1,Yageo,RC0402FR-073K6L,resistor 3.6kF,0402,SMD,
+46,R205,1,Yageo,RL1206FR-070R027L,resistor 27mF(1/4W),1206,SMD,
+47,R208,1,Yageo,RC0402FR-0768KL,resistor 68kF,0402,SMD,
+48,R210,1,Yageo,RC0402FR-072KL,resistor 2.0kF,0402,SMD,
+49,"R211,R335,R337,R343,R344",5,Yageo,RC0402FR-07100RL,resistor 100F / 100R,0402,SMD,
+50,"R215,R216",2,Yageo,RC0402FR-074K7L,resistor 4.7kF,0402,SMD,
+51,"R301,R308",2,Panasonic Electronic Components,ERJ-2GEJ4R7X,resistor 4.7J(1/10W),0402,SMD,
+52,"R302,R309",2,Yageo,RC0402FR-072K7L,resistor 2.7kF,0402,SMD,
+53,"R303,R310",2,Yageo,RC0402FR-0720RL,resistor 20F,0402,SMD,
+54,"R304,R306,R311,R316",4,Yageo,RC0402FR-072R2L,resistor 2.2F,0402,SMD,
+55,"R321,R324,R327,R330",4,Yageo,RC0402FR-0747KL,resistor 47k,0402,SMD,
+56,"R334,R336,R338",3,Yageo,RC0402FR-07100KL,resistor 100k,0402,SMD,
+57,"R339,R341",2,Panasonic Electronic Components,ERJ-PA2F1502X,resistor 15k,0402,SMD,
+58,SW1,1,Alps Alpine,EC11E09244AQ,"EC11E09244AQ - Rotary encoder, dual channel, incremental quadrate outputs, with switch","rotary encoder, vertical, 20 mm shaft",THT,Solder both frame lugs (they ground the shaft)
+59,SW2,1,E-Switch,EG2219,"EG2219 - Switch, dual pole double throw, separate symbols","slide switch DPDT, right angle",THT,
+60,"SW3,SW4",2,Omron,B3U-3000P-B,"BOOT0 / RESET - Tactile switch, SPST-NO, side-actuated, with locating boss, 3 x 2.5 mm","tactile switch 3.0 x 2.5 mm, side-actuated, 2 pads and a locating boss",SMD,"SW3, SW4: front of the body on the board edge, plunger towards the outside (it stands 0.7 mm over the edge: no V-cut along the top edge). Not washable: no-clean process, or fit after washing. B3U-3000P (same switch without the locating boss) is an accepted substitute"
+61,U2,1,STMicroelectronics,STM32G474RET6,"STM32G474RETx - STMicroelectronics Arm Cortex-M4 MCU, 512KB flash, 128KB RAM, 170 MHz, 1.71-3.6V, 52 GPIO, LQFP64","LQFP-64 10x10 mm, 0.5 mm pitch",SMD,"U2: STM32G474RET6 was out of stock at the franchised distributors on 2026-11-17. Accepted substitutes, same package and pinout, no change to the board: STM32G474RET6TR, STM32G474RET3, STM32G474RET3TR, STM32G484RET6. Ask before using any other part number (STM32G474RBT6 and RCT6 have less flash memory)"
+62,U3,1,STMicroelectronics,USBLC6-2SC6,"USBLC6-2SC6 - Very low capacitance ESD protection diode, 2 data-line, SOT-23-6",SOT-23-6,SMD,Original STMicroelectronics part only (other makers sell clones under the same number)
+63,"U201,U207",2,Semtech,TS30042-M000QFNR,TS30042-M000QFNR,QFN-16 3x3 mm,SMD,
+64,U203,1,Microchip Technology,PAC1720-1-AIA-TR,PAC1720-1-AIA-TR,DFN-10 3x3 mm,SMD,
+65,U204,1,Microchip Technology,MCP45HV51-104E/ST,MCP45HV51-104E/ST,TSSOP-14,SMD,
+66,U205,1,onsemi,NCP1117LPST50T3G,NCP1117LPST50T3G,SOT-223,SMD,
+67,U206,1,Microchip Technology,MIC5504-3.3YM5-TR,MIC5504-3.3YM5-TR,SOT-23-5,SMD,
+68,"U301,U307",2,Diodes Incorporated,74LVC1G34SE-7,74LVC1G34SE-7,SOT-353 (SC-70-5),SMD,
+69,"U302,U305",2,Texas Instruments,LM5113QDPRRQ1,LM5113QDPRRQ1,WSON-10 4x4 mm (DPR),SMD,
+70,"U303,U304",2,Diodes Incorporated,74LVC1G04SE-7,74LVC1G04SE-7,SOT-353 (SC-70-5),SMD,
+71,U306,1,Skyworks Solutions,SI5351A-B-GTR,SI5351A-B-GTR,MSOP-10,SMD,
+72,"U308,U309",2,Texas Instruments,TLV3601DBVR,"TLV3601DBV - 325 MHz high-speed comparator, 2.5 ns propagation delay, push-pull output, SOT-23-5",SOT-23-5,SMD,Three tented vias lie under each body (no solder there)
+73,X301,1,Epson,FA-238 25.0000MB-K3,FA-238 25.0000MB-K3,"3.2 x 2.5 mm, 4 pads",SMD,
+74,Y1,1,Epson,FA-128 24.0000MF10Z-W3,"FA-128 24.0000MF10Z-W3 - Four pin crystal, GND on pins 2 and 4","2.0 x 1.6 mm, 4 pads",SMD,
+75,SH1,1,Wurth Elektronik,60900213421,"jumper shunt, 2.54 mm","2.54 mm, 2 positions",LOOSE,Not on the board data. Fit on CN203 pins 1-2 (VPP from the on-board converter); pin 1 is the square pad. On pins 2-3 it is only parked (VPP off). Any 2.54 mm shunt will do.
