@@ -11042,7 +11042,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2d00c614-4164-48c7-9a65-f0ff8740851b")
+		(uuid "52bfaa55-a5f3-42e2-9bf1-d5305849a4c1")
 	)
 	(wire
 		(pts
@@ -11052,7 +11052,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "abbac4f0-f12e-4097-bff2-c726f5bb0c85")
+		(uuid "6f73e6d1-950b-41b2-b19d-2ffd0363b0df")
 	)
 	(sheet_instances
 		(path "/"

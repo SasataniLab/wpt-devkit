@@ -10,6 +10,7 @@ Input
   J202           in parallel with the jack J201 through D204 (S210FA, as D202 / D203): reverse protection of the
                  hand-wired input, and the adapter cannot feed back into whatever hangs on the pins.
   CN203          pin 3 (was: J202) is no longer connected. Jumper on 1-2 = VPP from the converter, on 2-3 = parked.
+  TP211, TP216, TP217   removed: the board needs their place for C224.
   DC_IN          name of the input net (jack, both converters, V+ of the pot, divider of ADC_VDC).
   C224           100 uF / 50 V aluminium electrolytic at the jack. Plugging a live adapter into ceramic capacitors alone
                  rings to 55 .. 65 V (cable 1 .. 1.5 uH, 0.1 .. 0.2 ohm; TS30042: 42 V absolute maximum); with 100 uF
@@ -20,7 +21,8 @@ VPP
                  -20 %. The converter itself ends about 1.5 V below its input. Power-on default (mid-scale): 23 V.
 I2C at 3.3 V
   U202 (PCA9306), R214, C210, R217, R218   removed.
-  U203 (PAC1720) VDD, U204 (MCP45HV51) VL and SHDN   +5V -> +3V3 (3.0 .. 5.5 V and 2.7 .. 5.5 V by their datasheets).
+  U204 (MCP45HV51) VL and SHDN   +5V -> +3V3 (2.7 .. 5.5 V; its inputs switch at 0.7 x VL).
+  U203 (PAC1720)                 stays on +5V: its inputs switch at 2.0 V whatever the supply, its outputs are open drain.
   R221, R222     now fitted (0 ohm): they join the section of U203 / U204 to the MCU's bus, as R219 / R220 join the
                  section of the Si5351. The net names SCL_5V / SDA_5V stay.
   R215, R216     10 k -> 4.7 k (one pair of pull-ups for the whole bus).
@@ -218,7 +220,11 @@ pw.add_wire((59.69, 182.88), (59.69, 181.61))
 pw.add_wire((59.69, 181.61), (64.77, 181.61))
 pw.add_wire((59.69, 187.96), (59.69, 189.23))
 pw.del_power('PWR_FLAG', (73.66, 223.52))                      # the input net keeps the flag at the jack
-pw.log.append('CN207 removed, U207 on the input net, J202 through D204, CN203 pin 3 open')
+# three test pads make room for C224 on the board: TP211 (now the same net as TP208), TP216 (J202 itself can be probed), TP217 (GND; TP209 is beside the jack)
+for ref, p in (('TP211', (64.77, 186.69)), ('TP216', (59.69, 227.33)), ('TP217', (59.69, 234.95))):
+    pw.del_symbol(ref)
+    pw.del_junction(p)
+pw.log.append('CN207 removed, U207 on the input net, J202 through D204, CN203 pin 3 open; TP211, TP216, TP217 removed')
 
 # C224: polarised capacitor from the system library, on the input wire between the jack and C201
 lib = open(DEVICE_LIB, encoding='utf-8').read()
@@ -300,13 +306,13 @@ for ref in ('R215', 'R216'):
     b = n.text(pw.s)
     assert '"Value" "10kF"' in b
     pw.replace_node(n, setp(setp(b, 'Value', '4.7kF'), 'Manufacturer Part Number', 'RC0402FR-074K7L'))
-for p in ((101.6, 142.24), (96.52, 172.72), (203.2, 127.0)):     # VL and SHDN of U204, VDD of U203
+for p in ((101.6, 142.24), (96.52, 172.72)):                     # VL and SHDN of U204
     n = pw.power('+5V', p)
     b = n.text(pw.s)
     pw.replace_node(n, setp(b.replace('(lib_id "power:+5V")', '(lib_id "power:+3.3V")', 1), 'Value', '+3V3'))
-pw.add_text('I2C at 3.3 V (revision 8): U203 and the logic side of U204 run from +3V3.\nR219 .. R222 (0 ohm) join the three sections of the bus;\n'
+pw.add_text('I2C at 3.3 V (revision 8): the logic side of U204 runs from +3V3;\nU203 stays on +5V (VIH 2.0 V, open-drain outputs).\nR219 .. R222 (0 ohm) join the three sections of the bus;\n'
             'the names SCL_5V / SDA_5V are kept from the 5 V bus of 2020.', (289.56, 157.48))
-pw.log.append('PCA9306 and its parts removed; U203 / U204 logic from +3V3; R221 / R222 fitted; R215 / R216 4.7 k')
+pw.log.append('PCA9306 and its parts removed; U204 logic from +3V3; R221 / R222 fitted; R215 / R216 4.7 k')
 
 # ================================================================= CN209, CN210
 for ref in ('CN209', 'CN210'):
