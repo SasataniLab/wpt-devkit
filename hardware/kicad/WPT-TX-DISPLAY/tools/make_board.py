@@ -36,6 +36,7 @@ P = lambda v: (round(v.x / MM, 4), round(v.y / MM, 4))
 STOCK = '/usr/share/kicad/footprints'
 LAYER = {'F.Cu': pcbnew.F_Cu, 'B.Cu': pcbnew.B_Cu, 'F.SilkS': pcbnew.F_SilkS, 'B.SilkS': pcbnew.B_SilkS}
 LOCAL = 'lib/footprints'
+TITLE_ROT = 270.0                                            # seen from the back: read from the bottom, as on the transmitter board
 
 
 # ------------------------------------------------------------------ netlist (kicad s-expression) -> components
@@ -198,7 +199,8 @@ def via(netname, c):
     b.Add(v)
 
 
-def text(s, x, y, layer='F.SilkS', size=0.8, rot=0.0, justify='center'):
+def text(s, x, y, layer='F.SilkS', size=0.8, rot=0.0, justify='center', knockout=False):
+    """(x, y): centre of the text, also for several lines (the lines themselves are aligned by `justify`)."""
     t = pcbnew.PCB_TEXT(b)
     t.SetText(s)
     t.SetLayer(LAYER[layer])
@@ -211,7 +213,12 @@ def text(s, x, y, layer='F.SilkS', size=0.8, rot=0.0, justify='center'):
         t.SetTextAngleDegrees(rot)
     if layer.startswith('B.'):
         t.SetMirrored(True)
+    t.SetIsKnockout(knockout)
+    if '\n' in s or justify != 'center':                      # the anchor is not the centre then: shift by what the box says
+        c = t.GetBoundingBox().Centre()
+        t.Move(pcbnew.VECTOR2I(int(round(x * MM)) - c.x, int(round(y * MM)) - c.y))
     b.Add(t)
+    return t
 
 
 # ------------------------------------------------------------------ geometry taken from the transmitter board and the parts
@@ -386,14 +393,21 @@ for layer in (pcbnew.F_Cu, pcbnew.B_Cu):
     b.Add(z)
 
 # ------------------------------------------------------------------ silkscreen (back: the side one sees when the board is unplugged)
-text('WPT-TX DISPLAY', 168.6, 129.3, 'B.SilkS')
-text('v0.2  2026-11', 168.4, 141.2, 'B.SilkS')
+# The title is that of the transmitter board ("WPT TX v0.2.0 / T. Sasatani / Nov. 18, 2026": inverted, along an edge,
+# read from the bottom, lines aligned at their start). The name is longer here and the board is 14.8 mm wide: four
+# lines of 0.8 mm instead of three of 1.0 mm, in the strip between the socket and the west edge.
+JW = J1.GetCourtyard(pcbnew.B_CrtYd).BBox().GetLeft() / MM
+tt = text('WPT TX DISPLAY\nv0.2.0\nT. Sasatani\nNov. 18, 2026', (W + JW) / 2, (N + S) / 2, 'B.SilkS', rot=TITLE_ROT, justify='left', knockout=True)
+bb = tt.GetBoundingBox()
+box = (bb.GetLeft() / MM, bb.GetTop() / MM, bb.GetRight() / MM, bb.GetBottom() / MM)
+assert box[0] > W + 0.5 and box[2] < JW - 0.5 and box[1] > N + 0.5 and box[3] < S - 0.5, (box, W, JW, N, S)
+print('title: x %.2f .. %.2f, y %.2f .. %.2f (strip x %.2f .. %.2f)' % (box[0], box[2], box[1], box[3], W, JW))
 text('to J2', JC[0], 141.3, 'B.SilkS')
 
 tb = b.GetTitleBlock()
 tb.SetTitle('WPT transmitter: display board (provisional)')
-tb.SetRevision('0.2')
-tb.SetDate('2026-11-17')
+tb.SetRevision('0.2.0')
+tb.SetDate('2026-11-18')
 tb.SetComment(0, 'Plugs onto J2 of WPT-01-TRANSMITTER, 9.9 mm above it. Coordinates are those of that board.')
 
 pcbnew.SaveBoard(out_path, b)

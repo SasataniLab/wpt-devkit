@@ -9,8 +9,8 @@
 	(paper "A4")
 	(title_block
 		(title "WPT transmitter: display board (provisional)")
-		(date "2026-11-17")
-		(rev "0.2")
+		(date "2026-11-18")
+		(rev "0.2.0")
 		(comment 1 "Plugs onto J2 of WPT-01-TRANSMITTER, 9.9 mm above it. Coordinates are those of that board.")
 	)
 	(layers
@@ -2586,30 +2586,6 @@
 		(layer "Edge.Cuts")
 		(uuid "46736eb2-2ffe-4779-a7a9-fdaeb15e875e")
 	)
-	(gr_text "v0.2  2026-11"
-		(at 168.4 141.2 0)
-		(layer "B.SilkS")
-		(uuid "fe8a1d67-e261-45fe-9221-70acd0922a10")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
-	(gr_text "WPT-TX DISPLAY"
-		(at 168.6 129.3 0)
-		(layer "B.SilkS")
-		(uuid "ad4abb76-43f8-4c1f-a18e-3748784da84e")
-		(effects
-			(font
-				(size 0.8 0.8)
-				(thickness 0.15)
-			)
-			(justify mirror)
-		)
-	)
 	(gr_text "to J2"
 		(at 177.35 141.3 0)
 		(layer "B.SilkS")
@@ -2620,6 +2596,18 @@
 				(thickness 0.15)
 			)
 			(justify mirror)
+		)
+	)
+	(gr_text "WPT TX DISPLAY\nv0.2.0\nT. Sasatani\nNov. 18, 2026"
+		(at 165.6775 140.133096 270)
+		(layer "B.SilkS" knockout)
+		(uuid "c95ac06c-d91c-4409-af1e-47b6f47e3e9c")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+			(justify left mirror)
 		)
 	)
 	(segment
