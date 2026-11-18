@@ -8636,7 +8636,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_E-Switch_EG2219_DPDT_Angled"
+		(property "Footprint" "Button_Switch_BoardEdge:SW_E-Switch_EG2219_DPDT_Angled"
 			(at 152.4 213.36 0)
 			(hide yes)
 			(show_name no)
@@ -8936,7 +8936,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Button_Switch_THT:SW_E-Switch_EG2219_DPDT_Angled"
+		(property "Footprint" "Button_Switch_BoardEdge:SW_E-Switch_EG2219_DPDT_Angled"
 			(at 152.4 233.68 0)
 			(hide yes)
 			(show_name no)
