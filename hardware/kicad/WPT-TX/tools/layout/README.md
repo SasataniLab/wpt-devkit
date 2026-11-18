@@ -172,3 +172,5 @@ Checks afterwards: `joints.py --all` (three wide power pieces, ten track ends in
 
 After revision 8 (same day): `../schematic/edit_sch13.py` makes the HRTIM build the default population of the schematic (the variant "Legacy" carries the overrides); `finalize.py` brings the board along through `pcb_side.py`, which now also removes variant overrides that the schematic no longer has. `fab/export.sh` refuses to export when the default population and the variant "HRTIM" differ.
 
+After the hand edit `d47c658` ("minor trace edits", 2026-11-18): `mech20.py IN OUT`, then `weld.py --all --skip VBUS` and `finalize.py`. It removes a 0.43 mm stub of SDA_5V at R222 (DRC: track_dangling), lets the new SDA_5V branch join the bus on the front side instead of going through two vias, and makes the ADC_VDC diagonals end on the via the edit had moved.
+
