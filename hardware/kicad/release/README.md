@@ -5,7 +5,7 @@
 | 置き場所 | 中身 |
 |---|---|
 | `WPT-01-TRANSMITTER_rev8/` | 送電基板 改訂 8 + レビュー後の変更（基板のシルク表示は「WPT TX v0.2.0」）、HRTIM 構成。**PCBWay に渡すファイルだけ**を、渡す欄ごとに置いた（下の表） |
-| `WPT-TX-DISPLAY_v0.2.zip` | 表示基板 v0.2（仮設計）。`gerber/`（2 層）、`assembly/`（`bom_pcbway.csv`、`placement.csv`）、`doc/` |
+| `WPT-TX-DISPLAY_v0.2/` | 表示基板 v0.2（仮設計）。同じ形: `gerber_WPT-TX-DISPLAY_v0.2.zip`（2 層のガーバーとドリルだけ）、`bom.csv`、`placement.csv`、図面の PDF 3 枚。表示器 DS1 は BOM で同梱扱い（実装させず、手ではんだ付けする） |
 
 送電基板のファイルと、PCBWay の注文画面の欄:
 

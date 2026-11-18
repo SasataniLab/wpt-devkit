@@ -32,7 +32,7 @@ python3 tools/drawings.py ../WPT-TX/WPT-01-TRANSMITTER.kicad_pcb WPT-TX-DISPLAY.
 
 - 回路図と基板はスクリプトが書く。定数や寸法を変えるときはスクリプトを直して `tools/build.sh` を実行する。KiCad で開いて手で直すこともできるが、スクリプトを再実行すると上書きされる。
 - 基板の座標は送電基板と同じにしてある。この基板の点 (x, y) は、送電基板の同じ座標の点の 9.9 mm 上にある。
-- `fab/out/` は git 管理外。発注用の一式は `../release/WPT-TX-DISPLAY_v0.2.zip` に置いてある。
+- `fab/out/` は git 管理外。発注用の一式は `../release/WPT-TX-DISPLAY_v0.2/` に置いてある。
 
 ## 発注するとき
 

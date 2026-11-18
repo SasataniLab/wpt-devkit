@@ -1,0 +1,7 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"C1","100n","C_0402_1005Metric",186.300000,-137.190000,90.000000,bottom
+"C2","1u","C_0402_1005Metric",187.350000,-137.190000,90.000000,bottom
+"J1","to J2 of the transmitter","PinSocket_2x06_P2.54mm_Vertical_SMD",177.350000,-135.150000,-90.000000,bottom
+"Q1","AO3400A","SOT-23",189.460000,-133.000000,0.000000,bottom
+"R1","22R","R_0402_1005Metric",188.950000,-137.670000,0.000000,bottom
+"R2","100k","R_0402_1005Metric",188.522500,-135.750000,-90.000000,bottom
