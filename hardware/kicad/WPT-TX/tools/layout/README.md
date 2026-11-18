@@ -137,3 +137,20 @@ Start from the board of `8d7f39e`. Every step writes a new file; copy the last o
 | 5 | `kicad-cli pcb drc --refill-zones --save-board` in a scratch copy, then copy the board into the project | Zones filled |
 
 Result: `joints.py` reports nothing for the STM32 part; DRC with parity as before (one old unconnected item at CN301). The two kinks that remain in HV_EN_SW keep the clearance to J201 pad 2 and CN207 pad 1.
+
+## Revision 7b (2026-11-18): the same for the whole board, CN301, ADC_VDC
+
+Start from the board of revision 7a (`22f6da9`).
+
+| Step | Command | What it does |
+|---|---|---|
+| 1 | `weld.py IN OUT --all --skip VBUS` | Joints by rule on every net. VBUS is left out: at the USB connector its tracks stand 0.2 mm beside the pad centres to clear the locating holes |
+| 2 | `snap.py IN OUT --all --skip VBUS` | Ends inside a pad or via but beside its centre: a two-pad part moves by at most 0.05 mm if that puts its centres on the lines; otherwise the last piece gets a 45-degree piece onto the centre |
+| 3 | `weld.py IN OUT --all --skip VBUS` | Extends the ends that step 2 put in line |
+| 4 | `mech16.py IN OUT` | What the rules leave, by hand: doubled and floating pieces, VBUS, five vias moved by 0.005 to 0.05 mm, C338 / D311 / R201 nudged. Three vias in the front lug of CN301 at (217.25, 174.52): the lug had no copper to the back lug, the unconnected item that every DRC since revision 1 had shown |
+| 5 | `shorten.py IN --replay shorten_rev7b.json --apply OUT` | 13 detours of the power part (SCL_5V, SDA_5V, PWRGD_5V, lines of CN203 / CN207 and of test pads). Gate lines, the current-sense pair and `~{WLAT}` are left alone; one run of Net-(CN207-P2) was taken out again because the zone left a sliver beside it |
+| 6 | `mech17.py IN OUT` | ADC_VDC: 82.8 -> 64.4 mm, 6 -> 4 vias, by 14.7 mm on In2 between the encoder and the MCU. `router.py` finds nothing shorter on the outer layers (80 mm, 7 vias) |
+| 7 | `mech18.py IN OUT` | Four signal lines lose a piece of a few hundredths of a millimetre; pieces of no length go |
+| 8 | DRC with `--refill-zones --save-board` in a scratch copy, copy into the project, `fab/export.sh` | |
+
+Result: `joints.py --all` lists three wide power pieces that end inside other copper of their net and ten track ends in planes or zones; DRC with parity: 0 unconnected, the rest as before. Signals on In2: 54.4 mm.
