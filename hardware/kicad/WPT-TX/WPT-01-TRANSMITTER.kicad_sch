@@ -5102,16 +5102,6 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 137.16) (xy 88.9 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6ad96e47-0cf8-466b-bd9c-32685bfbfab1")
-	)
-	(wire
-		(pts
 			(xy 58.42 179.07) (xy 68.58 179.07)
 		)
 		(stroke
@@ -5212,16 +5202,6 @@
 	)
 	(wire
 		(pts
-			(xy 91.44 137.16) (xy 91.44 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2b7c50c-299e-4e41-be4d-8a2ff8cfc0d9")
-	)
-	(wire
-		(pts
 			(xy 58.42 168.91) (xy 68.58 168.91)
 		)
 		(stroke
@@ -5239,16 +5219,6 @@
 			(type default)
 		)
 		(uuid "aac15f8f-47da-447c-abd4-c6601b68c5ab")
-	)
-	(wire
-		(pts
-			(xy 134.62 162.56) (xy 168.91 162.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "adde5414-d6aa-4d1a-aae5-c528d020fad0")
 	)
 	(wire
 		(pts
@@ -5796,82 +5766,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 86.36 137.16 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "658658f4-8d1a-496e-9a89-ea5b9b3d5691")
-		(property "Reference" "#PWR0271"
-			(at 86.36 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 85.979 141.3764 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 86.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 86.36 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 86.36 137.16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d7749b92-f374-4ba6-8951-ce9f67f825ca")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557"
-					(reference "#PWR0271")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 58.42 190.5 0)
 		(unit 1)
@@ -6220,114 +6114,6 @@
 			(project "WPT-01-TRANSMITTER"
 				(path "/8d93dcf8-c351-4228-94c4-516db1fed557"
 					(reference "R5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x04_Pin")
-		(at 88.9 132.08 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(fields_autoplaced yes)
-		(uuid "9a4d5c36-3c3f-4ea0-9ed6-ca85f15b5792")
-		(property "Reference" "J4"
-			(at 87.63 127 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x04_Pin"
-			(at 87.63 129.54 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
-			(at 88.9 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 88.9 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 88.9 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Wurth Elektronik"
-			(at 88.9 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer Part Number" "61300411121"
-			(at 88.9 132.08 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "49ef8681-b1fc-4407-b0a5-d6bf680f3eca")
-		)
-		(pin "4"
-			(uuid "ab151254-ef9d-427e-a4d4-75e2b575e0fc")
-		)
-		(pin "3"
-			(uuid "0061d1dc-0d0b-43a0-91a1-a31b9495322e")
-		)
-		(pin "2"
-			(uuid "f2035865-baa8-434c-b9e1-22439f84f7b5")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557"
-					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -7253,82 +7039,6 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 83.82 137.16 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ed642c3f-6e9d-460d-b87e-2ab156fbb8e7")
-		(property "Reference" "#PWR0270"
-			(at 83.82 143.51 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 80.518 139.192 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 83.82 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 83.82 137.16 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 83.82 137.16 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "996e4167-b378-4339-9362-8988cac235e7")
-		)
-		(instances
-			(project "WPT-01-TRANSMITTER"
-				(path "/8d93dcf8-c351-4228-94c4-516db1fed557"
-					(reference "#PWR0270")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(sheet
 		(at 168.91 147.32)
 		(size 64.77 55.88)
@@ -7430,16 +7140,6 @@
 		(pin "~{ALERT}" input
 			(at 168.91 160.02 180)
 			(uuid "ae29ee11-f0b5-46c5-b3c9-9cb02975a2d0")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "~{WLAT}" input
-			(at 168.91 162.56 180)
-			(uuid "6915a689-33f8-411c-99a4-af979d58f99c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7742,16 +7442,6 @@
 		(pin "GPIO_N_ALERT" input
 			(at 134.62 160.02 0)
 			(uuid "fbd6f92a-cde9-4236-93ef-778a9e083f47")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "GPIO_N_WLAT" input
-			(at 134.62 162.56 0)
-			(uuid "6ae4c931-7c9a-41ea-ae61-6fa3005f0de6")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11088,12 +10778,6 @@
 		)
 		(uuid "477ceaa0-05a5-4e94-9af6-441e7c1592a1")
 	)
-	(junction
-		(at 91.44 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7ae8939b-0cbb-4057-85d2-bb699212ed3d")
-	)
 	(wire
 		(pts
 			(xy 68.58 132.08) (xy 73.66 132.08)
@@ -11123,12 +10807,6 @@
 			(type default)
 		)
 		(uuid "b66497d0-67a2-4f28-9cbc-40e6d3c7192a")
-	)
-	(junction
-		(at 88.9 144.78)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "12b387b6-180e-4879-a0df-f0efc2dba2fa")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -11355,6 +11033,26 @@
 			(justify left bottom)
 		)
 		(uuid "11286dc3-0f92-470a-ac9b-8c750a14ea36")
+	)
+	(wire
+		(pts
+			(xy 91.44 142.24) (xy 91.44 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d00c614-4164-48c7-9a65-f0ff8740851b")
+	)
+	(wire
+		(pts
+			(xy 88.9 144.78) (xy 88.9 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abbac4f0-f12e-4097-bff2-c726f5bb0c85")
 	)
 	(sheet_instances
 		(path "/"

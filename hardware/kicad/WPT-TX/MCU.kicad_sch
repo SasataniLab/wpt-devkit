@@ -4287,15 +4287,8 @@
 		)
 		(uuid "1efd7718-70bf-4f35-87c0-4b53ce82a54a")
 	)
-	(hierarchical_label "GPIO_N_WLAT"
-		(shape input)
-		(at 172.72 116.84 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
+	(no_connect
+		(at 172.72 116.84)
 		(uuid "243fb035-6ed1-466c-adab-c2678af4e8c8")
 	)
 	(hierarchical_label "TIM3_CH2_ENCODER"
