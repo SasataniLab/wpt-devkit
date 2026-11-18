@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Make track ends meet as nodes. usage: weld.py BOARD_IN BOARD_OUT [--all]
+"""Make track ends meet as nodes. usage: weld.py BOARD_IN BOARD_OUT [--all] [--skip NET,...]
 
 Repairs what joints.py reports, keeping every piece on 0 / 45 / 90 degrees:
   collinear   two pieces in one line whose ends overlap or meet at a plain point become one piece
@@ -14,6 +14,7 @@ Pieces are changed in place (no Remove), pieces that become superfluous get zero
 import math, sys, collections, re
 import pcbnew
 src, dst = sys.argv[1:3]
+SKIP = set(sys.argv[sys.argv.index('--skip') + 1].split(',')) if '--skip' in sys.argv else set()
 b = pcbnew.LoadBoard(src); MM = 1e6
 P = lambda v: (round(v.x / MM, 4), round(v.y / MM, 4))
 V = lambda p: pcbnew.VECTOR2I(int(round(p[0] * MM)), int(round(p[1] * MM)))
@@ -25,7 +26,7 @@ EPS = 0.0015
 tracks = collections.defaultdict(list); vias = collections.defaultdict(list); pads = collections.defaultdict(list)
 for t in b.GetTracks():
     n = t.GetNetname()
-    if want is not None and n not in want:
+    if (want is not None and n not in want) or n.split('/')[-1] in SKIP:
         continue
     if t.Type() == pcbnew.PCB_VIA_T:
         vias[n].append((P(t.GetPosition()), t.GetWidth(pcbnew.F_Cu) / 2 / MM))
