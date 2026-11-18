@@ -1,9 +1,10 @@
 #!/bin/sh
 # Build the fabrication / assembly package for WPT-01-TRANSMITTER with kicad-cli (KiCad 10).
 #
-#   fab/export.sh            -> writes everything into fab/out/ for the HRTIM assembly variant, the one that is ordered
+#   fab/export.sh            -> writes everything into fab/out/ for the HRTIM build, the one that is ordered. It is also
+#                               the default population of the schematic and of the board (since 2026-11-18)
 #   fab/export.sh all        -> the same for both variants (HRTIM and Legacy)
-#   fab/export.sh Legacy     -> the Legacy variant only (the fall-back population: the 2020 drive from the Si5351)
+#   fab/export.sh Legacy     -> the variant "Legacy" only (the fall-back population: the 2020 drive from the Si5351)
 #
 # Output:
 #   out/gerber/              Gerbers for the 4 copper layers, mask, paste, silk, edge + Excellon drill (PTH / NPTH) and drill map
@@ -29,6 +30,21 @@ esac
 
 rm -rf "$out"
 mkdir -p "$out/gerber" "$out/doc"
+
+# What a file shows without a variant chosen (the GUI, a plug-in, a third-party BOM tool) must be what is ordered:
+# the default population and the variant "HRTIM" have to list the same parts, in the schematic and on the board.
+echo "== Default population = HRTIM build?"
+chk="$out/.default_check"; mkdir -p "$chk"
+for v in default HRTIM; do
+    if [ "$v" = default ]; then opt=""; else opt="--variant $v"; fi
+    kicad-cli sch export bom $opt --exclude-dnp --fields 'Reference' --labels 'Ref' --group-by 'Reference' -o "$chk/sch_$v.csv" "$sch" > /dev/null
+    kicad-cli pcb export pos $opt --exclude-dnp --format csv --units mm --side both -o "$chk/pcb_$v.csv" "$pcb" > /dev/null
+done
+if ! cmp -s "$chk/sch_default.csv" "$chk/sch_HRTIM.csv" || ! cmp -s "$chk/pcb_default.csv" "$chk/pcb_HRTIM.csv"; then
+    echo "The default population differs from the HRTIM build (schematic or board). Nothing exported." >&2
+    exit 1
+fi
+rm -rf "$chk"
 
 echo "== Gerbers"
 kicad-cli pcb export gerbers \
@@ -66,8 +82,8 @@ for v in $variants; do
 done
 
 echo "== Documents"
-# One set per variant. Without --variant kicad-cli draws the default population, which is the Legacy one: the drawings
-# would then cross out the parts the HRTIM BOM lists and show the parts it leaves out.
+# One set per variant, named after it. (Until 2026-11-18 the default population was the Legacy one, and drawings made
+# without --variant crossed out the parts the HRTIM BOM lists.)
 for v in $variants; do
     kicad-cli sch export pdf --variant "$v" -o "$out/doc/schematic_$v.pdf" "$sch"
     kicad-cli pcb export pdf --variant "$v" --layers F.Fab,Edge.Cuts --sketch-pads-on-fab-layers \

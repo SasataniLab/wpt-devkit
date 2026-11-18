@@ -559,3 +559,12 @@ TS30041/42 Final Datasheet Rev 2.2（Semtech、Farnell 掲載）、MCP45HVX1 デ
 
 回路図: `tools/schematic/edit_sch12.py`（1 回だけ実行）。基板: `tools/layout/rev8.sh BASE WORKDIR`（`mech19.py` → `weld.py` → `finalize.py`、BASE は `b593d54` の基板）。発注用の一式は `hardware/kicad/release/WPT-01-TRANSMITTER_rev8_HRTIM.zip`。
 
+### 10.8 既定の状態を発注する構成に合わせた（2026-11-18）
+
+それまで、回路図と基板の既定の状態は Legacy 構成（2020 年の駆動）で、発注する HRTIM 構成はその上の切り替え（バリアント）だった。構成を選ばずにファイルを読むもの（KiCad の画面、画面から印刷した図面、PCBWay のプラグイン、外部の BOM ツール）は Legacy 構成を見ていた。§1 の指摘 2（図面が Legacy で出ていた）と同じ種類の取り違えが、発注の経路によっては再び起こり得た。
+
+- 既定の状態 = HRTIM 構成。バリアント「HRTIM」は既定と同じ（書き出しスクリプトが使う名前として残した）。バリアント「Legacy」が切り替え先: D305、D306、D311、D312、R305、R307、R315、R318 を付け、R320、R323、R326、R329、R343〜R345、C338〜C345、U308、U309 を外す。
+- 対象は 25 部品。部品ごとに「既定の実装フラグ」と「バリアントの上書き」を入れ替えただけで、回路・配線・部品は変えていない（`tools/schematic/edit_sch13.py`、基板は `pcb_side.py` が追随）。送電部の回路図に、2 つの構成で付け替える部品の一覧を注記した。
+- 確かめたこと: 入れ替えの前後で、HRTIM・Legacy それぞれの BOM（発注用を含む）と部品座標が 1 行も変わらない。既定の状態と HRTIM の部品一覧が一致する（`fab/export.sh` が毎回確かめる）。ERC 0、DRC（照合つき）は変化なし。
+- PCBWay のプラグインについて: ソースを読んだ限り、基板の既定の状態から BOM と座標を作り、構成は見ない。型番は `MPN` などの欄名を探すので、この設計の「Manufacturer Part Number」は型番欄に入らない（別の列としては出る）。未実装の部品も「DNP」の印つきで BOM に載り、座標ファイルにはそのまま載る。ジャンパの行と実装指示の列は無い。**発注には `release/` の一式（`bom_HRTIM_pcbway.csv`、`placement_HRTIM.csv`）を使うこと**。プラグインで上げた場合も、注文画面で BOM と座標を差し替える。プラグインを実際に動かしての確認はしていない。
+

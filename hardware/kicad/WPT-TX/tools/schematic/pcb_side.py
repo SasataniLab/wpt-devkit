@@ -10,7 +10,8 @@ For every footprint that has a schematic symbol it sets:
   * the DNP attribute (base state),
   * hidden "Manufacturer" / "Manufacturer Part Number" / "Assembly Note" fields where the symbol has them
     (added when absent on the footprint), and the datasheet link where the symbol has one,
-  * the per-variant DNP overrides carried by the netlist (HRTIM),
+  * the per-variant DNP overrides carried by the netlist; an override the schematic no longer has is removed
+    (since 2026-11-18 the base state is the HRTIM build and the overrides belong to the variant "Legacy"),
   * with --values, the Value field (fixes value drift that predates this work).
 It also registers the variant names and descriptions on the board.
 Nothing is moved, added or removed; symbols without a footprint are only reported.
@@ -114,6 +115,10 @@ def main():
                 v = fp.GetVariant(vname) if fp.HasVariant(vname) else fp.AddVariant(vname)
                 v.SetDNP(vp['dnp'] == '1')
                 log['variant'].append(f"{ref}: {vname} {'DNP' if vp['dnp'] == '1' else 'fitted'}")
+        for vname in sorted(design_variants):                 # overrides that are gone from the schematic
+            if fp.HasVariant(vname) and 'dnp' not in c['variants'].get(vname, {}):
+                fp.DeleteVariant(vname)
+                log['variant'].append(f"{ref}: {vname} override removed")
     pcbnew.SaveBoard(board_out, board)
     for k, v in log.items():
         print(f"{k}: {len(v)}")

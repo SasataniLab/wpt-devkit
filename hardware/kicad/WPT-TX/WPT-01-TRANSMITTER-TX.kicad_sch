@@ -14034,7 +14034,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c7a43df")
 		(property "Reference" "R305"
 			(at 232.41 92.71 0)
@@ -14132,8 +14132,8 @@
 					(reference "R305")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp yes)
+						(name "Legacy")
+						(dnp no)
 					)
 				)
 			)
@@ -14148,7 +14148,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c7a76ff")
 		(property "Reference" "D305"
 			(at 232.41 85.5472 0)
@@ -14236,8 +14236,8 @@
 					(reference "D305")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp yes)
+						(name "Legacy")
+						(dnp no)
 					)
 				)
 			)
@@ -14252,7 +14252,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c7a7785")
 		(property "Reference" "D306"
 			(at 232.41 105.41 0)
@@ -14340,8 +14340,8 @@
 					(reference "D306")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp yes)
+						(name "Legacy")
+						(dnp no)
 					)
 				)
 			)
@@ -18293,7 +18293,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c85c741")
 		(property "Reference" "R315"
 			(at 232.41 191.77 0)
@@ -18391,8 +18391,8 @@
 					(reference "R315")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp yes)
+						(name "Legacy")
+						(dnp no)
 					)
 				)
 			)
@@ -18407,7 +18407,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c85c74b")
 		(property "Reference" "D311"
 			(at 232.41 184.6072 0)
@@ -18495,8 +18495,8 @@
 					(reference "D311")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp yes)
+						(name "Legacy")
+						(dnp no)
 					)
 				)
 			)
@@ -18511,7 +18511,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005c85c753")
 		(property "Reference" "D312"
 			(at 232.41 204.47 0)
@@ -18599,8 +18599,8 @@
 					(reference "D312")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp yes)
+						(name "Legacy")
+						(dnp no)
 					)
 				)
 			)
@@ -21037,7 +21037,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005ca1442e")
 		(property "Reference" "R307"
 			(at 232.41 97.79 0)
@@ -21135,8 +21135,8 @@
 					(reference "R307")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp yes)
+						(name "Legacy")
+						(dnp no)
 					)
 				)
 			)
@@ -21151,7 +21151,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "00000000-0000-0000-0000-00005ca14c78")
 		(property "Reference" "R318"
 			(at 232.41 196.85 0)
@@ -21249,8 +21249,8 @@
 					(reference "R318")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp yes)
+						(name "Legacy")
+						(dnp no)
 					)
 				)
 			)
@@ -24869,7 +24869,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "cc824cf6-9b7c-4684-801d-410c896a1445")
 		(property "Reference" "R320"
 			(at 218.44 218.44 90)
@@ -24958,8 +24958,8 @@
 					(reference "R320")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -25202,7 +25202,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "41064da2-19e8-4dca-9ca6-5268ec20fde9")
 		(property "Reference" "R323"
 			(at 218.44 233.68 90)
@@ -25291,8 +25291,8 @@
 					(reference "R323")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -25535,7 +25535,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "074b5dde-dc9f-4ea8-b330-3626182327b4")
 		(property "Reference" "R326"
 			(at 218.44 248.92 90)
@@ -25624,8 +25624,8 @@
 					(reference "R326")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -25868,7 +25868,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "2e3e6b45-9032-486f-92e4-79c5769c00f0")
 		(property "Reference" "R329"
 			(at 218.44 264.16 90)
@@ -25957,8 +25957,8 @@
 					(reference "R329")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -28160,7 +28160,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "f2926e44-89e5-43b2-bfb7-394ec215dc3f")
 		(property "Reference" "R343"
 			(at 361.95 242.57 90)
@@ -28249,8 +28249,8 @@
 					(reference "R343")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -28285,7 +28285,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "0ff9d534-dbb9-4ba4-b24b-af0211731273")
 		(property "Reference" "C338"
 			(at 358.14 222.25 0)
@@ -28385,8 +28385,8 @@
 					(reference "C338")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -28459,7 +28459,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "d2b0b75a-3abe-4af5-a3bf-74a6765521be")
 		(property "Reference" "R344"
 			(at 372.11 248.92 90)
@@ -28548,8 +28548,8 @@
 					(reference "R344")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -28584,7 +28584,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "85a6435e-c573-4757-ae20-510eb2abb518")
 		(property "Reference" "C339"
 			(at 398.78 222.25 0)
@@ -28684,8 +28684,8 @@
 					(reference "C339")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -28772,7 +28772,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "344aa416-7ef1-4035-bfcf-0694824289b4")
 		(property "Reference" "U308"
 			(at 318.77 214.63 0)
@@ -28881,8 +28881,8 @@
 					(reference "U308")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -29192,7 +29192,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "2c8ca330-b0ea-4be6-b15d-571265cef40b")
 		(property "Reference" "U309"
 			(at 326.39 232.41 0)
@@ -29301,8 +29301,8 @@
 					(reference "U309")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -29632,7 +29632,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "bef0b72a-052b-421b-b91a-d5647d78e917")
 		(property "Reference" "R345"
 			(at 278.13 248.92 90)
@@ -29721,8 +29721,8 @@
 					(reference "R345")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -29988,7 +29988,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "51147ab4-4367-4c7d-aeaa-23d114396fc2")
 		(property "Reference" "C344"
 			(at 281.94 254 0)
@@ -30077,8 +30077,8 @@
 					(reference "C344")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -30169,7 +30169,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "6e5f6083-42cd-4a15-9599-5776242c343d")
 		(property "Reference" "C345"
 			(at 291.5 254 0)
@@ -30258,8 +30258,8 @@
 					(reference "C345")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -30350,7 +30350,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "1594c489-82a4-4a5d-a1bc-795a2295459a")
 		(property "Reference" "C342"
 			(at 276.86 271.78 0)
@@ -30439,8 +30439,8 @@
 					(reference "C342")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -30607,7 +30607,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "c2c0cb2b-ee55-42cd-8dec-7a4c09b5e0e5")
 		(property "Reference" "C343"
 			(at 287.02 271.78 0)
@@ -30696,8 +30696,8 @@
 					(reference "C343")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -30951,7 +30951,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "b3f87ae9-e7c9-4fb9-a648-b59be4d464a2")
 		(property "Reference" "C340"
 			(at 358.14 232.41 0)
@@ -31051,8 +31051,8 @@
 					(reference "C340")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -31099,7 +31099,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp yes)
+		(dnp no)
 		(uuid "cf3d2fec-9d13-4844-8dea-6b18f61cc348")
 		(property "Reference" "C341"
 			(at 378.46 232.41 0)
@@ -31199,8 +31199,8 @@
 					(reference "C341")
 					(unit 1)
 					(variant
-						(name "HRTIM")
-						(dnp no)
+						(name "Legacy")
+						(dnp yes)
 					)
 				)
 			)
@@ -31301,5 +31301,16 @@
 				(justify left)
 			)
 		)
+	)
+	(text "Populations\nDefault (drawn here, ordered): HRTIM build. The MCU drives the gate drivers through\nR320, R323, R326, R329; U308 / U309 with C338 .. C345, R343 .. R345 report the switch nodes.\nVariant \"Legacy\" (fall-back, the 2020 drive from the Si5351): fit D305, D306, D311, D312,\nR305, R307, R315, R318 and take out R320, R323, R326, R329 (the 74LVC outputs are 5 V, the MCU\npins take 3.6 V); U308 / U309 and their parts are not needed then.\nNever fit both sets."
+		(exclude_from_sim no)
+		(at 25.4 262.89 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "84e64feb-bb56-40ad-be16-b67cf4155b0e")
 	)
 )

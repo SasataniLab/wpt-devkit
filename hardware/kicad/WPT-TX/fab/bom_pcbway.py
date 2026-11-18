@@ -94,8 +94,8 @@ for n, key in enumerate(order, 1):
     fps = sorted({p['Footprint'].split(':')[-1] for p in g})
     pkgs = sorted({PACKAGE.get(x, x) for x in fps})
     kinds = {'LOOSE' if r in loose else 'SMD' if r in pos_smd else 'THT' for r in refs}
-    values = sorted({p['Value'] for p in g}, key=len)
-    desc = sorted({p['Description'] for p in g if p['Description'] and p['Description'] != '~'}, key=len)
+    values = sorted({p['Value'] for p in g}, key=lambda v: (len(v), v))            # same length: by name, so that two runs give the same file
+    desc = sorted({p['Description'] for p in g if p['Description'] and p['Description'] != '~'}, key=lambda v: (len(v), v))
     makers = sorted({p['Manufacturer'].strip() for p in g if p['Manufacturer'].strip()})
     notes = sorted({p['Note'].strip() for p in g if p.get('Note', '').strip()})
     mpn = key if isinstance(key, str) else ''

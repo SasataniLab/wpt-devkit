@@ -170,3 +170,5 @@ Schematic first: `../schematic/edit_sch12.py` (run once inside the project direc
 
 Checks afterwards: `joints.py --all` (three wide power pieces, ten track ends in planes or zones, as before), `off45.py`, `nearchk.py`, `holechk.py`, `fab/export.sh`. Background and numbers: `docs/stm32-tx/preorder_review.md`, chapter 10.
 
+After revision 8 (same day): `../schematic/edit_sch13.py` makes the HRTIM build the default population of the schematic (the variant "Legacy" carries the overrides); `finalize.py` brings the board along through `pcb_side.py`, which now also removes variant overrides that the schematic no longer has. `fab/export.sh` refuses to export when the default population and the variant "HRTIM" differ.
+
