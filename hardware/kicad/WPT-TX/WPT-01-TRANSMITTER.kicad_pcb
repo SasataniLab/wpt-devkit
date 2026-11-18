@@ -61146,46 +61146,6 @@
 		(uuid "d7f5d0ce-b1e3-4972-9a03-237f38650c4a")
 	)
 	(gr_line
-		(start 176 161.75)
-		(end 192 161.75)
-		(stroke
-			(width 0.15)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "a4d9cb93-5f34-4497-9911-075ed1a17bca")
-	)
-	(gr_line
-		(start 176 163.75)
-		(end 176 161.75)
-		(stroke
-			(width 0.15)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "00000000-0000-0000-0000-00005e51600f")
-	)
-	(gr_line
-		(start 192 161.75)
-		(end 192 163.75)
-		(stroke
-			(width 0.15)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "e7356eae-a97f-42ad-ac5a-3e8f014ac38c")
-	)
-	(gr_line
-		(start 192 163.75)
-		(end 176 163.75)
-		(stroke
-			(width 0.15)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "65d24a32-17e0-494e-8db3-1314f59abd86")
-	)
-	(gr_line
 		(start 204.75 137.75)
 		(end 200 137.75)
 		(stroke
@@ -61546,6 +61506,18 @@
 			)
 		)
 	)
+	(gr_text "WPT TX v0.2.0\nT. Sasatani\nNov. 18, 2026"
+		(at 218.7 146 90)
+		(layer "F.SilkS" knockout)
+		(uuid "d6575194-f8e7-4fb1-b8eb-ecad01c44309")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "1"
 		(at 155 160 270)
 		(layer "F.SilkS")
@@ -61553,17 +61525,6 @@
 		(effects
 			(font
 				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
-	(gr_text "WPT-Transmitter"
-		(at 184 162.75 0)
-		(layer "F.SilkS")
-		(uuid "be52e51f-ccd4-4c08-ad6a-6f4318b9c98f")
-		(effects
-			(font
-				(size 1.2 1.2)
 				(thickness 0.15)
 			)
 		)
