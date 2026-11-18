@@ -154,3 +154,19 @@ Start from the board of revision 7a (`22f6da9`).
 | 8 | DRC with `--refill-zones --save-board` in a scratch copy, copy into the project, `fab/export.sh` | |
 
 Result: `joints.py --all` lists three wide power pieces that end inside other copper of their net and ten track ends in planes or zones; DRC with parity: 0 unconnected, the rest as before. Signals on In2: 54.4 mm.
+
+## Revision 8 (2026-11-18): 36 V input, I2C at 3.3 V, legacy extras removed
+
+Schematic first: `../schematic/edit_sch12.py` (run once inside the project directory; a second run stops with "already applied"). Then
+
+    git show b593d54:hardware/kicad/WPT-TX/WPT-01-TRANSMITTER.kicad_pcb > BASE.kicad_pcb
+    sh rev8.sh BASE.kicad_pcb WORKDIR
+
+| Step | What it does |
+|---|---|
+| `mech19.py IN OUT NETLIST` | Removes CN207, TP211, TP216, TP217, J4, U202, R214, C210, R217, R218, R223, R226, CN209, CN210 with their copper; moves J202 and CN208; places C224 and D204; one input net `DC_IN`; the logic supply of U204 on the track that was `~{WLAT}`; every pad gets the net of the netlist; silkscreen labels of J202 |
+| `weld.py IN OUT --all --skip VBUS` | Merges the pieces that the removals left in one line |
+| `finalize.py OUT PROJECT ../schematic/pcb_side.py` | Values, fields and DNP flags from the schematic, DRC with parity, zones filled, board written into the project |
+
+Checks afterwards: `joints.py --all` (three wide power pieces, ten track ends in planes or zones, as before), `off45.py`, `nearchk.py`, `holechk.py`, `fab/export.sh`. Background and numbers: `docs/stm32-tx/preorder_review.md`, chapter 10.
+

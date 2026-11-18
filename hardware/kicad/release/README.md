@@ -4,7 +4,7 @@
 
 | ファイル | 中身 |
 |---|---|
-| `WPT-01-TRANSMITTER_rev7b_HRTIM.zip` | 送電基板 改訂 7b（改訂 7 に手編集 `8d7f39e`、継ぎ目と遠回りの修正、CN301 の接続を加えたもの。回路図と BOM は改訂 7 のまま、9 部品が 0.03 mm 以内で移動）、HRTIM 構成。`gerber/`（4 層のガーバー、ドリル）、`assembly/HRTIM/`（`bom_HRTIM_pcbway.csv` が送る BOM、`placement_HRTIM.csv` が部品座標）、`doc/`（回路図、実装図） |
+| `WPT-01-TRANSMITTER_rev8_HRTIM.zip` | 送電基板 改訂 8（36 V 入力、VPP 35 V まで、I2C を 3.3 V に統一、試作用の部品を整理。`docs/stm32-tx/preorder_review.md` 10 章）、HRTIM 構成。`gerber/`（4 層のガーバー、ドリル）、`assembly/HRTIM/`（`bom_HRTIM_pcbway.csv` が送る BOM、`placement_HRTIM.csv` が部品座標）、`doc/`（回路図、実装図） |
 | `WPT-TX-DISPLAY_v0.2.zip` | 表示基板 v0.2（仮設計）。`gerber/`（2 層）、`assembly/`（`bom_pcbway.csv`、`placement.csv`）、`doc/` |
 
 - 送電基板: 回路図の ERC 0 件、基板の DRC（回路図との照合つき）で未接続 0 件、新しい指摘 0 件。発注前の確認事項は `docs/stm32-tx/preorder_review.md`。
