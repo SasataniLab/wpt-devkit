@@ -300,6 +300,7 @@ build_outline(OUT)
 # ------------------------------------------------------------------ parts
 J1 = place('J1', JC[0], JC[1], 'B', {'1': (col(1), PAD_I), '2': (col(2), PAD_O), '3': (col(3), PAD_I), '12': (col(12), PAD_O)}, ref_pos=(JC[0], 129.2))
 DS1 = place('DS1', DS[0], DS[1], 'F', {'1': (DS[0] + 1.175, land(1)), '13': (DS[0] + 1.175, land(13))})
+DS1.SetDNP(True)                                          # as in the schematic: bought and fitted by hand, not by the assembler
 RAIL = PAD_I                                              # +3V3 leaves pad 11 eastwards along its own row
 C1 = place('C1', 186.3, RAIL - 0.48, 'B', {'1': (186.3, RAIL), '2': (186.3, RAIL - 0.96)}, ref_pos=(186.0, 139.0))
 C2 = place('C2', 187.35, RAIL - 0.48, 'B', {'1': (187.35, RAIL), '2': (187.35, RAIL - 0.96)}, ref_pos=(187.7, 139.0))

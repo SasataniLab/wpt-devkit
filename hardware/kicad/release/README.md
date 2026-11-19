@@ -5,7 +5,7 @@
 | 置き場所 | 中身 |
 |---|---|
 | `WPT-01-TRANSMITTER_rev8/` | 送電基板 改訂 8 + レビュー後の変更（基板のシルク表示は「WPT TX v0.2.0」）、HRTIM 構成。**PCBWay に渡すファイルだけ**を、渡す欄ごとに置いた（下の表） |
-| `WPT-TX-DISPLAY_v0.2/` | 表示基板 v0.2（仮設計、基板のシルク表示は「WPT TX DISPLAY v0.2.0」）。同じ形: `gerber_WPT-TX-DISPLAY_v0.2.zip`（2 層のガーバーとドリルだけ）、`bom.csv`、`placement.csv`、図面の PDF 3 枚。表示器 DS1 は BOM で同梱扱い（実装させず、手ではんだ付けする） |
+| `WPT-TX-DISPLAY_v0.2/` | 表示基板 v0.2（仮設計、基板のシルク表示は「WPT TX DISPLAY v0.2.0」）。同じ形: `gerber_WPT-TX-DISPLAY_v0.2.zip`（2 層のガーバーとドリルだけ）、`bom.csv`、`placement.csv`、図面の PDF 3 枚。表示器 DS1 は DNP（BOM に入れていない。別に買って手ではんだ付けする） |
 
 送電基板のファイルと、PCBWay の注文画面の欄:
 
@@ -17,7 +17,7 @@
 | `assembly_front.pdf`、`assembly_back.pdf`、`schematic.pdf` | 他のファイル（任意）。実装図は実装しない部品に × 印 |
 
 - 送電基板: 回路図の ERC 0 件、基板の DRC（回路図との照合つき）で未接続 0 件、新しい指摘 0 件。発注前の確認事項は `docs/stm32-tx/preorder_review.md`。
-- 表示基板: ERC 0 件、DRC 0 件。表示器 DS1 は実装業者に付けさせない（BOM では LOOSE）。
+- 表示基板: ERC 0 件、DRC 0 件。表示器 DS1 は DNP で、BOM と部品座標に入っていない（実装業者は買わず、付けない）。型番と付け方は `docs/stm32-tx/display_shield_study.md` の §3 と §6.2。
 - これらは基板ファイルを変えたら古くなる。変えたら `sh fab/export.sh` で出力し直して置き換える（`fab/out/gerber` を zip に、`assembly/HRTIM/bom_HRTIM_pcbway.csv` を `bom.csv` に、`placement_HRTIM.csv` を `placement.csv` に）。
 
 ## 電源（送電基板）

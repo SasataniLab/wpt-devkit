@@ -93,7 +93,7 @@ class Sheet:
 
     # ---- parts
     def place(self, lib_id, ref, value, x, y, rot=0, fields=None, ref_at=None, val_at=None, in_bom=True, on_board=True, hide_value=False,
-              mirror=False, in_pos=None, hide_ref=False, val_just='left', val_angle=0):
+              mirror=False, in_pos=None, hide_ref=False, val_just='left', val_angle=0, dnp=False):
         """mirror: flip the symbol left-right (KiCad's "mirror y"), only with rot 0"""
         s = self.lib(lib_id)
         assert not (mirror and rot), 'mirror is only implemented for rot 0'
@@ -113,7 +113,7 @@ class Sheet:
             in_pos = on_board
         out += ['\t\t(unit 1)', '\t\t(body_style 1)',
                 '\t\t(exclude_from_sim no)', '\t\t(in_bom %s)' % ('yes' if in_bom else 'no'), '\t\t(on_board %s)' % ('yes' if on_board else 'no'),
-                '\t\t(in_pos_files %s)' % ('yes' if in_pos else 'no'), '\t\t(dnp no)', '\t\t(uuid "%s")' % _uuid()]
+                '\t\t(in_pos_files %s)' % ('yes' if in_pos else 'no'), '\t\t(dnp %s)' % ('yes' if dnp else 'no'), '\t\t(uuid "%s")' % _uuid()]
         for name, val, at, hide, just in props:
             ang = val_angle if name == 'Value' else 0      # a field turns with its symbol: 90 on a symbol lying on its side reads level
             out += ['\t\t(property "%s" "%s"' % (name, esc(val)), '\t\t\t(at %s %s %d)' % (fmt(at[0]), fmt(at[1]), ang)]

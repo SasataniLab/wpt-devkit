@@ -9,8 +9,9 @@
 #                   placement.csv / placement_smd.csv (all placed parts / surface-mount only)
 #   out/doc/        schematic PDF and front / back assembly drawings
 #
-# The display DS1 is in the BOM with the type LOOSE and is in no placement file: it is fitted by hand after assembly
-# (its Assembly Note says how). The BOM script is the one of the transmitter board (../WPT-TX/fab/bom_pcbway.py).
+# The display DS1 is marked DNP: it is in neither the BOM nor the placement file, and the assembly drawing shows it
+# crossed out. It is bought separately and fitted by hand after assembly (docs/stm32-tx/display_shield_study.md, 6.2).
+# The BOM script is the one of the transmitter board (../WPT-TX/fab/bom_pcbway.py).
 set -eu
 
 here=$(cd "$(dirname "$0")" && pwd)
@@ -35,19 +36,19 @@ kicad-cli pcb export drill --format excellon --excellon-units mm --excellon-sepa
 
 echo "== BOM and placement"
 d="$out/assembly"
-kicad-cli pcb export pos --format csv --units mm --side both -o "$d/placement.csv" "$pcb"
-kicad-cli pcb export pos --smd-only --format csv --units mm --side both -o "$d/placement_smd.csv" "$pcb"
+kicad-cli pcb export pos --exclude-dnp --format csv --units mm --side both -o "$d/placement.csv" "$pcb"
+kicad-cli pcb export pos --exclude-dnp --smd-only --format csv --units mm --side both -o "$d/placement_smd.csv" "$pcb"
 kicad-cli sch export bom --exclude-dnp \
     --fields 'Reference,Value,Footprint,Manufacturer,Manufacturer Part Number,Description,Assembly Note' \
     --labels 'Ref,Value,Footprint,Manufacturer,MPN,Description,Note' \
     -o "$d/parts.csv" "$sch"
-python3 "$prj/../WPT-TX/fab/bom_pcbway.py" "$d/parts.csv" "$d/placement.csv" "$d/placement_smd.csv" "$d/bom_pcbway.csv" "$here/bom_extra.csv" --loose=DS1
+python3 "$prj/../WPT-TX/fab/bom_pcbway.py" "$d/parts.csv" "$d/placement.csv" "$d/placement_smd.csv" "$d/bom_pcbway.csv" "$here/bom_extra.csv"
 
 echo "== Documents"
 kicad-cli sch export pdf -o "$out/doc/schematic.pdf" "$sch"
-kicad-cli pcb export pdf --layers F.Fab,Edge.Cuts --sketch-pads-on-fab-layers --exclude-value --mode-single \
+kicad-cli pcb export pdf --layers F.Fab,Edge.Cuts --sketch-pads-on-fab-layers --crossout-DNP-footprints-on-fab-layers --exclude-value --mode-single \
     -o "$out/doc/assembly_front.pdf" "$pcb"
-kicad-cli pcb export pdf --layers B.Fab,Edge.Cuts --mirror --sketch-pads-on-fab-layers --exclude-value --mode-single \
+kicad-cli pcb export pdf --layers B.Fab,Edge.Cuts --mirror --sketch-pads-on-fab-layers --crossout-DNP-footprints-on-fab-layers --exclude-value --mode-single \
     -o "$out/doc/assembly_back.pdf" "$pcb"
 
 echo "== Done"

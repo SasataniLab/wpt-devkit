@@ -72,11 +72,11 @@ sh.text('J2 of the transmitter board (2 x 6; odd pins: inner row):\n1 GND  2 +3V
 X, Y = 165.1, 88.9
 D = sh.place('WPT_Display:TFT_0.96in_80x160_ST7735S_FPC13', 'DS1', 'N096-1608TBBIG11-H13', X, Y,
              fields=part('Wisevision', 'N096-1608TBBIG11-H13', 'WPT_Display:TFT_0.96in_80x160_FPC13_P0.7mm_Folded',
-                         note='DS1: not fitted by the assembler. By hand, after everything else: solder the 13 contacts of the flex tail to the '
+                         note='DS1: not bought and not fitted by the assembler (DNP: not in the BOM that is sent). By hand, after everything else: solder the 13 contacts of the flex tail to the '
                               'lands with the module lying face down beside the board (the two holes of the tail over the two circles of the '
                               'silkscreen, contact 1 at the "1"), cover the joints with polyimide tape, then fold the module over onto '
                               'double-sided tape. Same tail and pins: Midas MDT0096A2IS-SPI, Focus LCDs E096GA-SW500-N'),
-             ref_at=(154.94, 74.93), val_at=(176.53, 104.14), in_pos=False)
+             ref_at=(154.94, 74.93), val_at=(176.53, 104.14), in_pos=False, dnp=True)
 for num, name in (('3', 'MOSI'), ('4', 'SCK'), ('5', 'DC'), ('6', '~{RST}'), ('7', '~{CS}')):
     p = D[num]
     sh.wire(p, (p[0] - 5.08, p[1]))

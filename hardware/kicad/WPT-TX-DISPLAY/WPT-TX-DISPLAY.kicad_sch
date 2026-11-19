@@ -2490,7 +2490,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files no)
-		(dnp no)
+		(dnp yes)
 		(uuid "54e89174-4f18-44aa-a3b3-23bd37fba20b")
 		(property "Reference" "DS1"
 			(at 154.94 74.93 0)
@@ -2569,7 +2569,7 @@
 				)
 			)
 		)
-		(property "Assembly Note" "DS1: not fitted by the assembler. By hand, after everything else: solder the 13 contacts of the flex tail to the lands with the module lying face down beside the board (the two holes of the tail over the two circles of the silkscreen, contact 1 at the \"1\"), cover the joints with polyimide tape, then fold the module over onto double-sided tape. Same tail and pins: Midas MDT0096A2IS-SPI, Focus LCDs E096GA-SW500-N"
+		(property "Assembly Note" "DS1: not bought and not fitted by the assembler (DNP: not in the BOM that is sent). By hand, after everything else: solder the 13 contacts of the flex tail to the lands with the module lying face down beside the board (the two holes of the tail over the two circles of the silkscreen, contact 1 at the \"1\"), cover the joints with polyimide tape, then fold the module over onto double-sided tape. Same tail and pins: Midas MDT0096A2IS-SPI, Focus LCDs E096GA-SW500-N"
 			(at 165.1 88.9 0)
 			(hide yes)
 			(show_name no)
